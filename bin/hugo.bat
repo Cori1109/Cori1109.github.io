@@ -1,0 +1,1 @@
+%userprofile%\go\bin\windows_386\hugo.exe %*

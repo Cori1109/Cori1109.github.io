@@ -1,0 +1,52 @@
+baseURL = "http://jamesmoriarty.github.io/"
+languageCode = "en-us"
+title = "James Moriarty"
+theme = "soho"
+
+summarylength = 10
+enableEmoji = true
+
+[params]
+author = "James Moriarty"
+description = ""
+
+## Set one of:
+# gravatar = "jamespaulmoriarty@gmail.com"
+profilePicture = "images/james-moriarty.jpg"
+
+copyright = "James Moriarty"
+license = "CC BY-SA 4.0"
+licenseURL = "https://creativecommons.org/licenses/by-sa/4.0"
+
+## Set custom theme color.
+# themeColor = "#50A6C2"
+
+  ## Set as many as you want.
+  [[params.socialIcons]]
+  icon = "fa-linkedin"
+  title = "Linkedin"
+  url = "https://www.linkedin.com/in/jamespaulmoriarty"
+
+  [[params.socialIcons]]
+  icon = "fa-github"
+  title = "GitHub"
+  url = "https://github.com/jamesmoriarty"
+
+  [[params.socialIcons]]
+  icon = "fa-twitter"
+  title = "Twitter"
+  url = "https://twitter.com/jamespmoriarty"
+
+[menu]
+
+  [[menu.main]]
+  name = "Posts"
+  weight = 100
+  identifier = "posts"
+  url = "/posts/"
+
+  [[menu.main]]
+  name = "About"
+  identifier = "about"
+  weight = 300
+  url = "/about/"
