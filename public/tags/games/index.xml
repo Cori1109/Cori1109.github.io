@@ -1,24 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>James Moriarty</title>
-    <link>http://jamesmoriarty.github.io/</link>
-    <description>Recent content on James Moriarty</description>
+    <title>games on James Moriarty</title>
+    <link>http://jamesmoriarty.github.io/tags/games/</link>
+    <description>Recent content in games on James Moriarty</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 10 Jun 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://jamesmoriarty.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://jamesmoriarty.github.io/tags/games/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>About</title>
-      <link>http://jamesmoriarty.github.io/about/</link>
-      <pubDate>Wed, 10 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://jamesmoriarty.github.io/about/</guid>
-      <description>I’m a husband and farther of two boys. I’m originally from Havelock North, New Zealand but currently based in Melbourne, Australia.</description>
-    </item>
     
     <item>
       <title>Game Exploit Retrospective</title>
