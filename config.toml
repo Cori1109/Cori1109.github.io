@@ -19,7 +19,7 @@ license = "CC BY-SA 4.0"
 licenseURL = "https://creativecommons.org/licenses/by-sa/4.0"
 
 ## Set custom theme color.
-# themeColor = "#50A6C2"
+themeColor = "#3895D3"
 
   ## Set as many as you want.
   [[params.socialIcons]]
