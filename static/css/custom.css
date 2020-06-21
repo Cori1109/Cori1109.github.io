@@ -1,8 +1,11 @@
-footer a, .content a, .related-posts li a:hover {
+footer a, .content a, .related-posts li a:hover, .content a:hover {
   color: #313131;
   text-decoration: underline;
 }
 
+.content h1 a {
+  text-decoration: none;
+}
 
 .read-more-link a {
   display: block;
