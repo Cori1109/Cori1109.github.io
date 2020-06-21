@@ -3,6 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://jamesmoriarty.github.io/tags/aws/</loc>
+    <lastmod>2020-06-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jamesmoriarty.github.io/post/aws-cheap-nat/</loc>
+    <lastmod>2020-06-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jamesmoriarty.github.io/</loc>
+    <lastmod>2020-06-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jamesmoriarty.github.io/post/</loc>
+    <lastmod>2020-06-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jamesmoriarty.github.io/tags/</loc>
+    <lastmod>2020-06-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://jamesmoriarty.github.io/about/</loc>
     <lastmod>2020-06-10T00:00:00+00:00</lastmod>
   </url>
@@ -23,22 +48,7 @@
   </url>
   
   <url>
-    <loc>http://jamesmoriarty.github.io/</loc>
-    <lastmod>2020-06-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://jamesmoriarty.github.io/post/</loc>
-    <lastmod>2020-06-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://jamesmoriarty.github.io/tags/security/</loc>
-    <lastmod>2020-06-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://jamesmoriarty.github.io/tags/</loc>
     <lastmod>2020-06-10T00:00:00+00:00</lastmod>
   </url>
   
