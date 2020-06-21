@@ -9,6 +9,7 @@ enableEmoji = true
 [params]
 author = "James Moriarty"
 description = ""
+customCss = [ "css/custom.css" ]
 
 ## Set one of:
 # gravatar = "jamespaulmoriarty@gmail.com"

@@ -81,7 +81,7 @@
 
 
 
-  
+  <link type="text/css" rel="stylesheet" href="http://jamesmoriarty.github.io/css/custom.css">
 
   <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap">
@@ -156,7 +156,7 @@
     <time datetime="2020-06-21T00:00:00Z">Jun 21, 2020</time> · 1 min read
   </div>
 
-  <p>My work often involves restricted private networks found in large enterprises. I run a personal <a href="https://github.com/jamesmoriarty/cfn-vpc">similarly provisioned AWS VPC</a> for learning. This creates a challenge in providing internet egress for <code>RFC1918</code> private subnet instances.</p>
+  <p>My work often involves restricted private networks found in large enterprises. I run a personal <a href="https://github.com/jamesmoriarty/cfn-vpc">similarly provisioned AWS VPC</a> for learning. This creates the challenge of providing internet egress for <code>RFC1918</code> private subnet instances.</p>
 <p>AWS provides several solutions for internet egress. After spending some time considering these solutions, I settled on NAT instance running on Spot. This is primarily because the cost drives my solution. <a href="https://github.com/jamesmoriarty/cfn-cheapest-nat">I’ve recorded my findings here</a>.</p>
 <h3 id="reliability">Reliability</h3>
 <p>I&rsquo;ve noticed issues when the NAT instance rolls and other private subnet instances do not update their route table to the new NAT instance&rsquo;s IP. I think a potential solution would be for the NAT instance to use a static IP. This would allow the instance to change while reducing the impact of cached routes.</p>
