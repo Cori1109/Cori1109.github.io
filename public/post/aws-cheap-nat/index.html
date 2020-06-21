@@ -12,10 +12,10 @@
   
 
 <meta itemprop="name" content="AWS Cheap NAT&#39;ing">
-<meta itemprop="description" content="My work often involves restricted private networks found in large enterprises.">
+<meta itemprop="description" content="My work often involves restricted private networks often found in large enterprises.">
 <meta itemprop="datePublished" content="2020-06-21T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-06-21T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="200">
+<meta itemprop="wordCount" content="201">
 
 
 
@@ -23,11 +23,11 @@
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="AWS Cheap NAT&#39;ing"/>
-<meta name="twitter:description" content="My work often involves restricted private networks found in large enterprises."/>
+<meta name="twitter:description" content="My work often involves restricted private networks often found in large enterprises."/>
 
 
 <meta property="og:title" content="AWS Cheap NAT&#39;ing" />
-<meta property="og:description" content="My work often involves restricted private networks found in large enterprises." />
+<meta property="og:description" content="My work often involves restricted private networks often found in large enterprises." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://jamesmoriarty.github.io/post/aws-cheap-nat/" />
 <meta property="article:published_time" content="2020-06-21T00:00:00+00:00" />
@@ -156,7 +156,7 @@
     <time datetime="2020-06-21T00:00:00Z">Jun 21, 2020</time> · 1 min read
   </div>
 
-  <p>My work often involves restricted private networks found in large enterprises. I run a personal <a href="https://github.com/jamesmoriarty/cfn-vpc">similarly provisioned AWS VPC</a> for learning. This comes with the challenge of providing internet egress for <code>RFC1918</code> private subnet instances.</p>
+  <p>My work often involves restricted private networks often found in large enterprises. I run a personal <a href="https://github.com/jamesmoriarty/cfn-vpc">similarly provisioned AWS VPC</a> for learning. This comes with the challenge of providing internet egress for <code>RFC1918</code> private subnet instances.</p>
 <p>AWS provides several solutions for internet egress. After spending some time considering these, I settled on NAT instance running on Spot. The primary driver of this solution is cost. <a href="https://github.com/jamesmoriarty/cfn-cheapest-nat">I’ve recorded my findings here</a>.</p>
 <h3 id="reliability">Reliability</h3>
 <p>I’ve noticed when the NAT instance rolls - existing instances do not update their route table. If the NAT’s IP changes, the existing route tables are incorrect and the instance will lose internet egress. I think a potential solution would be for the NAT instance to use a static IP. This would allow the instance to change while reducing the impact of cached routes.</p>
