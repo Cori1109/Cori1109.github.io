@@ -15,7 +15,7 @@
 <meta itemprop="description" content="My work often involves restricted private networks often found in large enterprises.">
 <meta itemprop="datePublished" content="2020-06-21T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-06-21T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="175">
+<meta itemprop="wordCount" content="172">
 
 
 
@@ -159,7 +159,7 @@
   <p>My work often involves restricted private networks often found in large enterprises. I run a personal <a href="https://github.com/jamesmoriarty/cfn-vpc">similarly provisioned AWS VPC</a> for experiments. This comes with the challenge of providing internet egress for <code>RFC1918</code> private subnet instances.</p>
 <p>AWS provides several solutions for internet egress. After spending some time considering these, I settled on NAT instance running on Spot. The primary driver of this solution is cost. <a href="https://github.com/jamesmoriarty/cfn-cheapest-nat">I’ve recorded my findings here</a>.</p>
 <h3 id="reliability">Reliability</h3>
-<p>The route <code>0.0.0.0/0</code> associates with the NAT’s network interface. Existing instances lose internet egress when this interface changes. I’m experimenting with persistent elastic network interfaces and static IPs to allow the NAT instance to change with minimal impact.</p>
+<p>The route <code>0.0.0.0/0</code> associates with the NAT’s network interface. Existing instances loses internet egress when this interface changes. I’m experimenting with persistent elastic network interfaces to allow the NAT instance to change with minimal impact.</p>
 <h3 id="cost">Cost</h3>
 <p>Despite running on Spot as <code>t3.nano</code> or <code>t3a.nano</code> instance, I&rsquo;ve had great uptime for a reduced price. e.g.</p>
 <blockquote>

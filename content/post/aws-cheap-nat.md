@@ -14,7 +14,7 @@ AWS provides several solutions for internet egress. After spending some time con
 
 ### Reliability
 
-The route `0.0.0.0/0` associates with the NAT’s network interface. Existing instances lose internet egress when this interface changes. I’m experimenting with persistent elastic network interfaces and static IPs to allow the NAT instance to change with minimal impact.
+The route `0.0.0.0/0` associates with the NAT’s network interface. Existing instances loses internet egress when this interface changes. I’m experimenting with persistent elastic network interfaces to allow the NAT instance to change with minimal impact.
 
 ### Cost
 
