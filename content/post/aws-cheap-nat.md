@@ -39,6 +39,8 @@ That's four nines of reliability with the introduction of Spot. I've also used a
 
 Cost is variable but current data suggests I'm saving 69% on on-demand pricing.
 
+> t3a.nano (1)	48 vCPU hours	12 mem(GiB)-hours	$0.04 total	69% savings
+
 ### Performance
 
 The `t3.nano` instances provide several Gbps up and down.
