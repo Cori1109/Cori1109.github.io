@@ -1,6 +1,6 @@
 +++
 author = "James Moriarty"
-title = "AWS Cheap NAT'ing"
+title = "AWS Spot NAT Instance"
 date = "2020-06-21"
 description = ""
 tags = [
