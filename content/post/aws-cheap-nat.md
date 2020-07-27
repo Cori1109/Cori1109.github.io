@@ -35,7 +35,6 @@ That's four nines of reliability with the introduction of Spot. I've also used a
 
 \** Based on `April 2, 2020 at 8:36:05 PM UTC+11 (1919 hours)` uptime.
 
-
 ### Cost
 
 Despite running on Spot as `t3.nano` or `t3a.nano` instance, I've had great uptime for a reduced price.
