@@ -37,7 +37,7 @@ That's four nines of reliability with the introduction of Spot. I've also used a
 
 ### Cost
 
-Cost is variable but current data suggests I'm saving 69% on on-demand pricing.
+Spot market costs are variable but current data suggests:
 
 > t3a.nano (1) ... total 69% savings
 
