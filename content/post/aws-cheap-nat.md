@@ -37,7 +37,7 @@ That's four nines of reliability with the introduction of Spot. I've also used a
 
 ### Cost
 
-Despite running on Spot as `t3.nano` or `t3a.nano` instance, I've had great uptime for a reduced price.
+Cost is variable but current data suggests I'm saving 69% on on-demand pricing.
 
 ### Performance
 
