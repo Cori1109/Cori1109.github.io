@@ -14,13 +14,31 @@ AWS provides several solutions for internet egress. After spending some time con
 
 ### Reliability
 
-The route `0.0.0.0/0` associates with the NAT’s network interface. Existing instances loses internet egress when this interface changes. I’m experimenting with persistent elastic network interfaces to allow the NAT instance to change with minimal impact.
+| Risk         | ETTD | ETTR | EETF     | Impact | Notes
+|--------------|------|------|----------|--------|-
+| Spot Restart | 5m   | 5m   | 90 days  | 100%   | Every three months**
+| EC2 Fails    | 5m   | 5m   | 90 days  | 100%   | Every three months*
+| AZ Fails     | 5m   | 2h   | 170 days | 100%   | Every six months*
+| Region Fails | 5m   | 4h   | 730 days | 100%   | Every two years*
+
+Looking at `Spot Restarts`:
+
+```
+129,600 = 60 * 24 * 90           (Valid minutes in three months)
+10      = 5 + 5                  (Bad minutes in three months)
+0.9999  = (129600 - 10) / 129600 (Fraction of good minutes)
+```
+
+That's four nines of reliability with the introduction of Spot. I've also used a generous minimum ETTD & ETTR despite the autoscale group generally recovering within two minutes.
+
+\* [90% SLA](https://aws.amazon.com/compute/sla/)
+
+\** Based on `April 2, 2020 at 8:36:05 PM UTC+11 (1919 hours)`
+
 
 ### Cost
 
-Despite running on Spot as `t3.nano` or `t3a.nano` instance, I've had great uptime for a reduced price. e.g.
-
-> April 2, 2020 at 8:36:05 PM UTC+11 (1919 hours)
+Despite running on Spot as `t3.nano` or `t3a.nano` instance, I've had great uptime for a reduced price.
 
 ### Performance
 
@@ -31,4 +49,4 @@ The `t3.nano` instances provide several Gbps up and down.
 
 ### Conclusion
 
-While not perfect, the tradeoffs seem to justify the cost. The solution has proven acceptable for a small non-production like VPC.
+This solution has proven acceptable for small egress bandwidth requirements in the range of 0-5 Gbps.

@@ -15,7 +15,7 @@
 <meta itemprop="description" content="My work often involves restricted private networks often found in large enterprises.">
 <meta itemprop="datePublished" content="2020-06-21T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-06-21T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="172">
+<meta itemprop="wordCount" content="248">
 
 
 
@@ -153,18 +153,67 @@
   <h1>AWS Cheap NAT&#39;ing</h1>
 
   <div class="post-date">
-    <time datetime="2020-06-21T00:00:00Z">Jun 21, 2020</time> · 1 min read
+    <time datetime="2020-06-21T00:00:00Z">Jun 21, 2020</time> · 2 min read
   </div>
 
   <p>My work often involves restricted private networks often found in large enterprises. I run a personal <a href="https://github.com/jamesmoriarty/cfn-vpc">similarly provisioned AWS VPC</a> for experiments. This comes with the challenge of providing internet egress for <code>RFC1918</code> private subnet instances.</p>
 <p>AWS provides several solutions for internet egress. After spending some time considering these, I settled on NAT instance running on Spot. The primary driver of this solution is cost. <a href="https://github.com/jamesmoriarty/cfn-cheapest-nat">I’ve recorded my findings here</a>.</p>
 <h3 id="reliability">Reliability</h3>
-<p>The route <code>0.0.0.0/0</code> associates with the NAT’s network interface. Existing instances loses internet egress when this interface changes. I’m experimenting with persistent elastic network interfaces to allow the NAT instance to change with minimal impact.</p>
+<table>
+<thead>
+<tr>
+<th>Risk</th>
+<th>ETTD</th>
+<th>ETTR</th>
+<th>EETF</th>
+<th>Impact</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Spot Restart</td>
+<td>5m</td>
+<td>5m</td>
+<td>90 days</td>
+<td>100%</td>
+<td>Every three months**</td>
+</tr>
+<tr>
+<td>EC2 Fails</td>
+<td>5m</td>
+<td>5m</td>
+<td>90 days</td>
+<td>100%</td>
+<td>Every three months*</td>
+</tr>
+<tr>
+<td>AZ Fails</td>
+<td>5m</td>
+<td>2h</td>
+<td>170 days</td>
+<td>100%</td>
+<td>Every six months*</td>
+</tr>
+<tr>
+<td>Region Fails</td>
+<td>5m</td>
+<td>4h</td>
+<td>730 days</td>
+<td>100%</td>
+<td>Every two years*</td>
+</tr>
+</tbody>
+</table>
+<p>Looking at <code>Spot Restarts</code>:</p>
+<pre><code>129,600 = 60 * 24 * 90           (Valid minutes in three months)
+10      = 5 + 5                  (Bad minutes in three months)
+0.9999  = (129600 - 10) / 129600 (Fraction of good minutes)
+</code></pre><p>That&rsquo;s four nines of reliability with the introduction of Spot. I&rsquo;ve also used a generous minimum ETTD &amp; ETTR despite the autoscale group generally recovering within two minutes.</p>
+<p>* <a href="https://aws.amazon.com/compute/sla/">90% SLA</a></p>
+<p>** Based on <code>April 2, 2020 at 8:36:05 PM UTC+11 (1919 hours)</code></p>
 <h3 id="cost">Cost</h3>
-<p>Despite running on Spot as <code>t3.nano</code> or <code>t3a.nano</code> instance, I&rsquo;ve had great uptime for a reduced price. e.g.</p>
-<blockquote>
-<p>April 2, 2020 at 8:36:05 PM UTC+11 (1919 hours)</p>
-</blockquote>
+<p>Despite running on Spot as <code>t3.nano</code> or <code>t3a.nano</code> instance, I&rsquo;ve had great uptime for a reduced price.</p>
 <h3 id="performance">Performance</h3>
 <p>The <code>t3.nano</code> instances provide several Gbps up and down.</p>
 <blockquote>
@@ -172,7 +221,7 @@
 Upload: 2274.26 Mbit/s</p>
 </blockquote>
 <h3 id="conclusion">Conclusion</h3>
-<p>While not perfect, the tradeoffs seem to justify the cost. The solution has proven acceptable for a small non-production like VPC.</p>
+<p>This solution has proven acceptable for small egress bandwidth requirements in the range of 0-5 Gbps.</p>
 
 </div>
 
