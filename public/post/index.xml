@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on James Moriarty</title>
-    <link>https://jamesmoriarty.github.io/post/</link>
+    <link>https://www.jamesmoriarty.xyz/post/</link>
     <description>Recent content in Posts on James Moriarty</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 21 Jun 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://jamesmoriarty.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.jamesmoriarty.xyz/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>AWS Spot NAT Instance</title>
-      <link>https://jamesmoriarty.github.io/post/aws-spot-nat-instance/</link>
+      <link>https://www.jamesmoriarty.xyz/post/aws-spot-nat-instance/</link>
       <pubDate>Sun, 21 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://jamesmoriarty.github.io/post/aws-spot-nat-instance/</guid>
+      <guid>https://www.jamesmoriarty.xyz/post/aws-spot-nat-instance/</guid>
       <description>My work often involves restricted private networks often found in large enterprises.</description>
     </item>
     
     <item>
       <title>Game Exploit Retrospective</title>
-      <link>https://jamesmoriarty.github.io/post/game-exploits-retro/</link>
+      <link>https://www.jamesmoriarty.xyz/post/game-exploits-retro/</link>
       <pubDate>Wed, 10 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://jamesmoriarty.github.io/post/game-exploits-retro/</guid>
+      <guid>https://www.jamesmoriarty.xyz/post/game-exploits-retro/</guid>
       <description>I recently dedicated some time to explore the software security space and gain some hands-on experience through exercises like developing game exploits.</description>
     </item>
     
     <item>
       <title>Big Ol&#39; List Of Quotes</title>
-      <link>https://jamesmoriarty.github.io/post/big-ol-list-of-quotes/</link>
+      <link>https://www.jamesmoriarty.xyz/post/big-ol-list-of-quotes/</link>
       <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://jamesmoriarty.github.io/post/big-ol-list-of-quotes/</guid>
+      <guid>https://www.jamesmoriarty.xyz/post/big-ol-list-of-quotes/</guid>
       <description>&amp;ldquo;I find that the harder I work, the more luck I seem to have.</description>
     </item>
     
