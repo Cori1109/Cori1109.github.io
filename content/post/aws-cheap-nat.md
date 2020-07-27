@@ -48,4 +48,4 @@ The `t3.nano` instances provide several Gbps up and down.
 
 ### Conclusion
 
-This solution has proven acceptable for small egress bandwidth requirements in the range of 0-5 Gbps.
+This solution has proven acceptable for small egress bandwidth requirements in the range of 0-5 Gbps. The Github project can be found [here](https://github.com/jamesmoriarty/cfn-cheapest-nat).
