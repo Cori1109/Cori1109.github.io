@@ -13,10 +13,10 @@
     
     <item>
       <title>AWS Spot NAT Instance</title>
-      <link>http://jamesmoriarty.github.io/post/aws-cheap-nat/</link>
+      <link>http://jamesmoriarty.github.io/post/aws-spot-nat-instance/</link>
       <pubDate>Sun, 21 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://jamesmoriarty.github.io/post/aws-cheap-nat/</guid>
+      <guid>http://jamesmoriarty.github.io/post/aws-spot-nat-instance/</guid>
       <description>My work often involves restricted private networks often found in large enterprises.</description>
     </item>
     
