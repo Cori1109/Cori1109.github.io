@@ -15,7 +15,7 @@
 <meta itemprop="description" content="My work often involves restricted private networks often found in large enterprises.">
 <meta itemprop="datePublished" content="2020-06-21T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-06-21T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="248">
+<meta itemprop="wordCount" content="257">
 
 
 
@@ -205,13 +205,13 @@
 </tr>
 </tbody>
 </table>
-<p>Looking at <code>Spot Restarts</code>:</p>
+<p>Looking specifically at <code>Spot Restarts</code>:</p>
 <pre><code>129,600 = 60 * 24 * 90           (Valid minutes in three months)
 10      = 5 + 5                  (Bad minutes in three months)
 0.9999  = (129600 - 10) / 129600 (Fraction of good minutes)
 </code></pre><p>That&rsquo;s four nines of reliability with the introduction of Spot. I&rsquo;ve also used a generous minimum ETTD &amp; ETTR despite the autoscale group generally recovering within two minutes.</p>
-<p>* <a href="https://aws.amazon.com/compute/sla/">90% SLA</a></p>
-<p>** Based on <code>April 2, 2020 at 8:36:05 PM UTC+11 (1919 hours)</code></p>
+<p>* <a href="https://aws.amazon.com/compute/sla/">90% SLA</a> the SLO appears to be much higher.</p>
+<p>** Based on <code>April 2, 2020 at 8:36:05 PM UTC+11 (1919 hours)</code> uptime.</p>
 <h3 id="cost">Cost</h3>
 <p>Despite running on Spot as <code>t3.nano</code> or <code>t3a.nano</code> instance, I&rsquo;ve had great uptime for a reduced price.</p>
 <h3 id="performance">Performance</h3>

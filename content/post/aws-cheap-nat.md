@@ -21,7 +21,7 @@ AWS provides several solutions for internet egress. After spending some time con
 | AZ Fails     | 5m   | 2h   | 170 days | 100%   | Every six months*
 | Region Fails | 5m   | 4h   | 730 days | 100%   | Every two years*
 
-Looking at `Spot Restarts`:
+Looking specifically at `Spot Restarts`:
 
 ```
 129,600 = 60 * 24 * 90           (Valid minutes in three months)
@@ -31,9 +31,9 @@ Looking at `Spot Restarts`:
 
 That's four nines of reliability with the introduction of Spot. I've also used a generous minimum ETTD & ETTR despite the autoscale group generally recovering within two minutes.
 
-\* [90% SLA](https://aws.amazon.com/compute/sla/)
+\* [90% SLA](https://aws.amazon.com/compute/sla/) the SLO appears to be much higher.
 
-\** Based on `April 2, 2020 at 8:36:05 PM UTC+11 (1919 hours)`
+\** Based on `April 2, 2020 at 8:36:05 PM UTC+11 (1919 hours)` uptime.
 
 
 ### Cost
