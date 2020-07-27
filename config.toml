@@ -1,4 +1,4 @@
-baseURL = "http://jamesmoriarty.github.io/"
+baseURL = "https://www.jamesmoriarty.xyz/"
 languageCode = "en-us"
 title = "James Moriarty"
 theme = "soho"
