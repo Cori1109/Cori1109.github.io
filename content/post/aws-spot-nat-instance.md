@@ -16,20 +16,20 @@ AWS provides several solutions for internet egress. After spending some time con
 
 | Risk         | ETTD | ETTR | EETF     | Impact | Notes
 |--------------|------|------|----------|--------|-
-| Spot Restart | 5m   | 5m   | 90 days  | 100%   | Every three months**
+| Spot Restart | 5m   | 5m   | 30 days  | 100%   | Every month**
 | EC2 Fails    | 5m   | 5m   | 90 days  | 100%   | Every three months*
-| AZ Fails     | 5m   | 2h   | 170 days | 100%   | Every six months*
+| AZ Fails     | 5m   | 2h   | 180 days | 100%   | Every six months*
 | Region Fails | 5m   | 4h   | 730 days | 100%   | Every two years*
 
-Looking specifically at `Spot Restarts`:
+Looking specifically at `Spot Restart`:
 
 ```
-129,600 = 60 * 24 * 90             (Valid minutes in three months)
-10      = 5 + 5                    (Bad minutes in three months)
-0.9999  = (129,600 - 10) / 129,600 (Fraction of good minutes)
+43,200 = 60 * 24 * 30           (Valid minutes in three months)
+10     = 5 + 5                  (Bad minutes in three months)
+0.999  = (43,200 - 10) / 43,200 (Fraction of good minutes)
 ```
 
-That's four nines of reliability with the introduction of Spot. I've also used a generous minimum ETTD & ETTR despite the autoscale group generally recovering within two minutes.
+That's nearly four nines of reliability with the introduction of Spot. I've also used a generous minimum ETTD & ETTR despite the autoscale group generally recovering within two minutes.
 
 \* [90% SLA](https://aws.amazon.com/compute/sla/) the SLO appears to be much higher.
 

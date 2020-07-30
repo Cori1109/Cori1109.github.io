@@ -175,9 +175,9 @@
 <td>Spot Restart</td>
 <td>5m</td>
 <td>5m</td>
-<td>90 days</td>
+<td>30 days</td>
 <td>100%</td>
-<td>Every three months**</td>
+<td>Every month**</td>
 </tr>
 <tr>
 <td>EC2 Fails</td>
@@ -191,7 +191,7 @@
 <td>AZ Fails</td>
 <td>5m</td>
 <td>2h</td>
-<td>170 days</td>
+<td>180 days</td>
 <td>100%</td>
 <td>Every six months*</td>
 </tr>
@@ -205,11 +205,11 @@
 </tr>
 </tbody>
 </table>
-<p>Looking specifically at <code>Spot Restarts</code>:</p>
-<pre><code>129,600 = 60 * 24 * 90             (Valid minutes in three months)
-10      = 5 + 5                    (Bad minutes in three months)
-0.9999  = (129,600 - 10) / 129,600 (Fraction of good minutes)
-</code></pre><p>That&rsquo;s four nines of reliability with the introduction of Spot. I&rsquo;ve also used a generous minimum ETTD &amp; ETTR despite the autoscale group generally recovering within two minutes.</p>
+<p>Looking specifically at <code>Spot Restart</code>:</p>
+<pre><code>43,200 = 60 * 24 * 30           (Valid minutes in three months)
+10     = 5 + 5                  (Bad minutes in three months)
+0.999  = (43,200 - 10) / 43,200 (Fraction of good minutes)
+</code></pre><p>That&rsquo;s nearly four nines of reliability with the introduction of Spot. I&rsquo;ve also used a generous minimum ETTD &amp; ETTR despite the autoscale group generally recovering within two minutes.</p>
 <p>* <a href="https://aws.amazon.com/compute/sla/">90% SLA</a> the SLO appears to be much higher.</p>
 <p>** Based on <code>April 2, 2020 at 8:36:05 PM UTC+11 (1919 hours)</code> uptime.</p>
 <h3 id="cost">Cost</h3>
