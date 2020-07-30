@@ -15,7 +15,7 @@
 <meta itemprop="description" content="My work often involves restricted private networks often found in large enterprises.">
 <meta itemprop="datePublished" content="2020-06-21T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-06-21T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="272">
+<meta itemprop="wordCount" content="263">
 
 
 
@@ -206,9 +206,9 @@
 </tbody>
 </table>
 <p>Looking specifically at <code>Spot Restart</code>:</p>
-<pre><code>43,200 = 60 min * 24 hours * 30 days              (Valid minutes in three months)
-10     = 5 ettr + 5 ettd                          (Bad minutes in three months)
-99.98% = (43,200 min - 10 min) / 43,200 min * 100 (Fraction of good minutes)
+<pre><code>43,200 = 60 min * 24 hours * 30 days (valid minutes)
+10     = 5 ettr + 5 ettd             (bad minutes)
+99.98% = (valid - bad) / valid * 100 (fraction of good minutes)
 </code></pre><p>That&rsquo;s nearly four nines of reliability with the introduction of Spot. I&rsquo;ve also used a generous minimum ETTD &amp; ETTR despite the autoscale group generally recovering within two minutes.</p>
 <p>* <a href="https://aws.amazon.com/compute/sla/">90% SLA</a> the SLO appears to be much higher.</p>
 <p>** Based on <code>April 2, 2020 at 8:36:05 PM UTC+11 (1919 hours)</code> uptime.</p>

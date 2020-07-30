@@ -24,9 +24,9 @@ AWS provides several solutions for internet egress. After spending some time con
 Looking specifically at `Spot Restart`:
 
 ```
-43,200 = 60 min * 24 hours * 30 days              (Valid minutes in three months)
-10     = 5 ettr + 5 ettd                          (Bad minutes in three months)
-99.98% = (43,200 min - 10 min) / 43,200 min * 100 (Fraction of good minutes)
+43,200 = 60 min * 24 hours * 30 days (valid minutes)
+10     = 5 ettr + 5 ettd             (bad minutes)
+99.98% = (valid - bad) / valid * 100 (fraction of good minutes)
 ```
 
 That's nearly four nines of reliability with the introduction of Spot. I've also used a generous minimum ETTD & ETTR despite the autoscale group generally recovering within two minutes.
