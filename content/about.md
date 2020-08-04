@@ -28,5 +28,5 @@ I’m a husband and father of two boys. I’m originally from Havelock North, Ne
 
 <div id="root" class="clearfix">
 </div>
-<script type="text/javascript" src="http://www.jamesmoriarty.xyz/react-instagram-authless-feed/static/js/main.7bf43dc1.js">
+<script type="text/javascript" src="//www.jamesmoriarty.xyz/react-instagram-authless-feed/static/js/main.7bf43dc1.js">
 </script>
