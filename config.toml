@@ -2,9 +2,11 @@ baseURL = "https://www.jamesmoriarty.xyz/"
 languageCode = "en-us"
 title = "James Moriarty"
 theme = "soho"
-
 summarylength = 10
 enableEmoji = true
+
+[markup.goldmark.renderer]
+unsafe = true
 
 [params]
 author = "James Moriarty"
