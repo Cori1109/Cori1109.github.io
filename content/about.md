@@ -6,7 +6,7 @@ aliases = []
 author = "James Moriarty"
 +++
 
-I’m a husband and father of two boys. I’m originally from Havelock North, New Zealand but currently based in Melbourne, Australia. I’ve been working the software industry for around a decade.
+I’m a husband and father of two boys. I’m originally from Havelock North, New Zealand but currently based in Melbourne, Australia. I’ve been working in the software industry for around a decade.
 
 <style>
   body {
