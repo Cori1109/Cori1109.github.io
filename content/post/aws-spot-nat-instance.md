@@ -33,7 +33,9 @@ That's nearly four nines of reliability with the introduction of Spot. I've also
 
 \* [90% SLA](https://aws.amazon.com/compute/sla/) the SLO appears to be much higher.
 
-\** Based on `April 2, 2020 at 8:36:05 PM UTC+11 (1919 hours)` uptime.
+\** Based on uptime.
+
+> April 2, 2020 at 8:36:05 PM UTC+11 (1919 hours)
 
 ### Cost
 
