@@ -13,7 +13,7 @@ I’m a husband and father of two boys. I’m originally from Havelock North, Ne
     overflow: auto;
   }
 
-  .Feed .Media img{
+  .Feed a img{
     margin:1% 1%;
     width:23%;
     float:left
