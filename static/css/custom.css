@@ -12,3 +12,7 @@ footer a, .content a, .related-posts li a:hover, .content a:hover {
   border: none;
   padding: 0;
 }
+
+.social-icons a {
+  margin-right: 0.33em;
+}
