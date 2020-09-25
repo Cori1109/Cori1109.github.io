@@ -2,11 +2,13 @@
 author = "James Moriarty"
 title = "React Retrospective"
 date = "2020-08-12"
-description = ""
+description = "Frontend technologies are looking great."
 tags = [
   "react"
 ]
 +++
+
+Frontend technologies are looking great.
 
 ## Typescript
 
