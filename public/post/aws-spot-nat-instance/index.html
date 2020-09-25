@@ -15,7 +15,7 @@
 <meta itemprop="description" content="My work often involves restricted private networks often found in large enterprises.">
 <meta itemprop="datePublished" content="2020-06-21T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-06-21T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="263">
+<meta itemprop="wordCount" content="320">
 
 
 
@@ -157,7 +157,7 @@
   </div>
 
   <p>My work often involves restricted private networks often found in large enterprises. I run a personal <a href="https://github.com/jamesmoriarty/cfn-vpc">similarly provisioned AWS VPC</a> for experiments. This comes with the challenge of providing internet egress for <code>RFC1918</code> private subnet instances.</p>
-<p>AWS provides several solutions for internet egress. After spending some time considering these, I settled on NAT instance running on Spot. The primary driver of this solution is cost. <a href="https://github.com/jamesmoriarty/cfn-cheapest-nat">I’ve recorded my findings here</a>.</p>
+<p>AWS provides several solutions for internet egress. After spending some time considering these, I settled on NAT instance running on Spot. The primary driver of this solution is cost.</p>
 <h3 id="reliability">Reliability</h3>
 <table>
 <thead>
@@ -216,18 +216,58 @@
 <p>April 2, 2020 at 8:36:05 PM UTC+11 (1919 hours)</p>
 </blockquote>
 <h3 id="cost">Cost</h3>
+<p>The following costs are an estimate:</p>
+<table>
+<thead>
+<tr>
+<th>solution</th>
+<th>network</th>
+<th>cost/GB</th>
+<th>cost/hour</th>
+<th>cost/month</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NAT Gateway</td>
+<td>5-45 Gbps</td>
+<td>0.059</td>
+<td>0.059</td>
+<td>42.48</td>
+</tr>
+<tr>
+<td>NAT Instance</td>
+<td>0-5  Gbps</td>
+<td>0-0.114</td>
+<td>0.0059</td>
+<td>4.25</td>
+</tr>
+<tr>
+<td>NAT Instance (spot)</td>
+<td>0-5  Gbps</td>
+<td>0-0.114</td>
+<td>0.0018</td>
+<td>1.30</td>
+</tr>
+</tbody>
+</table>
 <p>Spot market costs are variable but current data suggests:</p>
 <blockquote>
 <p>t3a.nano (1) &hellip; total 69% savings</p>
 </blockquote>
 <h3 id="performance">Performance</h3>
-<p>The <code>t3.nano</code> instances provide several Gbps up and down.</p>
+<p>The performance test can be reproduced with the following command:</p>
+<pre><code>yum install python python-pip -y \
+ &amp;&amp; pip install --upgrade pip \
+ &amp;&amp; pip install speedtest-cli \
+ &amp;&amp; speedtest-cli
+</code></pre><p>The <code>t3.nano</code> instances provide several Gbps up and down.</p>
 <blockquote>
 <p>Download: 3283.42 Mbit/s
 Upload: 2274.26 Mbit/s</p>
 </blockquote>
 <h3 id="conclusion">Conclusion</h3>
-<p>This solution has proven acceptable for small egress bandwidth requirements in the range of 0-5 Gbps. The Github project can be found <a href="https://github.com/jamesmoriarty/cfn-cheapest-nat">here</a>.</p>
+<p>This solution has proven acceptable for small egress bandwidth requirements in the range of 1-5 Gbps. The Github project can be found <a href="https://github.com/jamesmoriarty/cfn-cheapest-nat">here</a>.</p>
 
 </div>
 

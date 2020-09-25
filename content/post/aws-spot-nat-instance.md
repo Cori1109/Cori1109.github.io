@@ -10,7 +10,7 @@ tags = [
 
 My work often involves restricted private networks often found in large enterprises. I run a personal [similarly provisioned AWS VPC](https://github.com/jamesmoriarty/cfn-vpc) for experiments. This comes with the challenge of providing internet egress for `RFC1918` private subnet instances.
 
-AWS provides several solutions for internet egress. After spending some time considering these, I settled on NAT instance running on Spot. The primary driver of this solution is cost. [I’ve recorded my findings here](https://github.com/jamesmoriarty/cfn-cheapest-nat).
+AWS provides several solutions for internet egress. After spending some time considering these, I settled on NAT instance running on Spot. The primary driver of this solution is cost.
 
 ### Reliability
 
@@ -39,11 +39,28 @@ That's nearly four nines of reliability with the introduction of Spot. I've also
 
 ### Cost
 
+The following costs are an estimate:
+
+|solution            |network  |cost/GB|cost/hour|cost/month|
+|--------------------|---------|-------|---------|----------|
+|NAT Gateway         |5-45 Gbps|  0.059|0.059    |42.48     |
+|NAT Instance        |0-5  Gbps|0-0.114|0.0059   | 4.25     |
+|NAT Instance (spot) |0-5  Gbps|0-0.114|0.0018   | 1.30     |
+
 Spot market costs are variable but current data suggests:
 
 > t3a.nano (1) ... total 69% savings
 
 ### Performance
+
+The performance test can be reproduced with the following command:
+
+```
+yum install python python-pip -y \
+ && pip install --upgrade pip \
+ && pip install speedtest-cli \
+ && speedtest-cli
+```
 
 The `t3.nano` instances provide several Gbps up and down.
 
@@ -52,4 +69,4 @@ The `t3.nano` instances provide several Gbps up and down.
 
 ### Conclusion
 
-This solution has proven acceptable for small egress bandwidth requirements in the range of 0-5 Gbps. The Github project can be found [here](https://github.com/jamesmoriarty/cfn-cheapest-nat).
+This solution has proven acceptable for small egress bandwidth requirements in the range of 1-5 Gbps. The Github project can be found [here](https://github.com/jamesmoriarty/cfn-cheapest-nat).

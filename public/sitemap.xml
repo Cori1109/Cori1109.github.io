@@ -3,27 +3,37 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.jamesmoriarty.xyz/</loc>
+    <lastmod>2020-08-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.jamesmoriarty.xyz/post/</loc>
+    <lastmod>2020-08-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.jamesmoriarty.xyz/tags/react/</loc>
+    <lastmod>2020-08-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.jamesmoriarty.xyz/post/react-retro/</loc>
+    <lastmod>2020-08-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.jamesmoriarty.xyz/tags/</loc>
+    <lastmod>2020-08-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.jamesmoriarty.xyz/tags/aws/</loc>
     <lastmod>2020-06-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://www.jamesmoriarty.xyz/post/aws-spot-nat-instance/</loc>
-    <lastmod>2020-06-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.jamesmoriarty.xyz/</loc>
-    <lastmod>2020-06-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.jamesmoriarty.xyz/post/</loc>
-    <lastmod>2020-06-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.jamesmoriarty.xyz/tags/</loc>
     <lastmod>2020-06-21T00:00:00+00:00</lastmod>
   </url>
   

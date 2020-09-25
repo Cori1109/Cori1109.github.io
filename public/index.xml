@@ -6,10 +6,19 @@
     <description>Recent content on James Moriarty</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 21 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 12 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.jamesmoriarty.xyz/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>React Retrospective</title>
+      <link>https://www.jamesmoriarty.xyz/post/react-retro/</link>
+      <pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jamesmoriarty.xyz/post/react-retro/</guid>
+      <description>Typescript I found components of more than a few hundred lines of code increasingly difficult to refactor or extend.</description>
+    </item>
     
     <item>
       <title>AWS Spot NAT Instance</title>
