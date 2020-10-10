@@ -15,7 +15,7 @@
 <meta itemprop="description" content="About James Moriarty">
 <meta itemprop="datePublished" content="2020-06-10T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-06-10T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="100">
+<meta itemprop="wordCount" content="121">
 
 
 
@@ -156,40 +156,52 @@
 
   <p>I’m a husband and father of two boys. I’m originally from Havelock North, New Zealand but currently based in Melbourne, Australia. I’ve been working in the software industry for around a decade.</p>
 <style>
-  .clearfix {
-    overflow: auto;
-    overflow-y: hidden;
-  }
+.Loading {
+  animation: spin 2s linear infinite;
+  position: block;
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #444; /* Blue */
+  border-radius: 50%;
+  width: 5vh;
+  height: 5vh;
+}
 
-  .Loading {
-    border: 16px solid #f3f3f3; /* Light grey */
-    border-top: 16px solid #444; /* Blue */
-    border-radius: 50%;
-    width: 10vh;
-    height: 10vh;
-    animation: spin 2s linear infinite;
-  }
+.Feed {
+  margin: auto;
+}
 
-  @keyframes spin {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
+.Feed a {
+  display: inline-block;
+  margin: 0.5% 1%;
+  width: 23%;
+  line-height: 0;
+}
 
-  .Feed {
-    margin: 1% 1%;
-  }
+.Feed a img {
+  animation: fadein 3s;
+  width: 100%;
+  margin: 0;
+}
 
-  .Feed a img {
-    margin: 1% 1%;
-    width: 23%;
-    float: left;
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
   }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 </style>
-<div id="root" class="clearfix"></div>
+<div id="root"></div>
 <script type="text/javascript" src="//www.jamesmoriarty.xyz/react-instagram-authless-feed/static/js/main.e72c7403.js"></script>
 
 </div>

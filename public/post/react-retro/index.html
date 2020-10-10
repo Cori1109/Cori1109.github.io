@@ -15,7 +15,7 @@
 <meta itemprop="description" content="I worked on the following small projects to familiarizing myself with React.">
 <meta itemprop="datePublished" content="2020-08-12T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-08-12T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="230">
+<meta itemprop="wordCount" content="274">
 
 
 
@@ -203,6 +203,21 @@
     },
   };
 };
+</code></pre></div><h2 id="error-boundaries">Error Boundaries</h2>
+<p>I&rsquo;m impressed with the flexibility of application.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">ErrorBoundary</span>&gt;
+  &lt;<span style="color:#000080">Feed</span> /&gt;
+&lt;/<span style="color:#000080">ErrorBoundary</span>&gt;
+</code></pre></div><p>After some initial confusion - I applied it to async execution too.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">componentDidMount() {
+  <span style="color:#998;font-style:italic">// ...
+</span><span style="color:#998;font-style:italic"></span>  .<span style="color:#000;font-weight:bold">catch</span>((error) =&gt; <span style="color:#000;font-weight:bold">this</span>.setState({ error }));
+}
+
+render() {
+  <span style="color:#000;font-weight:bold">if</span> (<span style="color:#000;font-weight:bold">this</span>.state.error) <span style="color:#000;font-weight:bold">throw</span> <span style="color:#000;font-weight:bold">this</span>.state.error;
+  <span style="color:#998;font-style:italic">// ...
+</span><span style="color:#998;font-style:italic"></span>}
 </code></pre></div><h2 id="create-react-app">Create-React-App</h2>
 <p>This was the easiest way to be productive quickly without the common catch of being locked-in.</p>
 

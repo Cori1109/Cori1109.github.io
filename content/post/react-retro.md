@@ -75,6 +75,30 @@ const mapDispatchToProps = (dispatch: Dispatch) => {
 };
 ```
 
+## Error Boundaries
+
+I'm impressed with the flexibility of application.
+
+```html
+<ErrorBoundary>
+  <Feed />
+</ErrorBoundary>
+```
+
+After some initial confusion - I applied it to async execution too.
+
+```javascript
+componentDidMount() {
+  // ...
+  .catch((error) => this.setState({ error }));
+}
+
+render() {
+  if (this.state.error) throw this.state.error;
+  // ...
+}
+```
+
 ## Create-React-App
 
 This was the easiest way to be productive quickly without the common catch of being locked-in.
