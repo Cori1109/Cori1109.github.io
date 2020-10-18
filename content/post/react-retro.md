@@ -32,9 +32,13 @@ export type Action =
 export type Dispatch = (action: Action) => void;
 ```
 
+## Avoid State
+
+I found stateless components easier to understand and less error prone.
+
 ## Dependency Injection
 
-Enabled me to isolate tests and easily replicate different corner cases.
+I used higher order functions to isolate tests and easily replicate different corner cases.
 
 ```javascript
 const getFeedFn = (userName) => Promise.resolve([]),
@@ -77,7 +81,7 @@ const mapDispatchToProps = (dispatch: Dispatch) => {
 
 ## Error Boundaries
 
-I'm impressed with the flexibility of application.
+I'm impressed with their flexibility of application.
 
 ```html
 <ErrorBoundary>
@@ -85,7 +89,7 @@ I'm impressed with the flexibility of application.
 </ErrorBoundary>
 ```
 
-After some initial confusion - I applied it to async execution too.
+I had some initial difficulty applying them to async lifecycle.
 
 ```javascript
 componentDidMount() {
