@@ -38,7 +38,7 @@ I found stateless components easier to understand and less error prone.
 
 ## Dependency Injection
 
-I used higher order functions to isolate tests and easily replicate different corner cases.
+I used higher order functions to inject dependencies and isolate tests to easily replicate different corner cases.
 
 ```javascript
 const getFeedFn = (userName) => Promise.resolve([]),
