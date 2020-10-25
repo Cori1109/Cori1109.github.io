@@ -15,7 +15,7 @@
 <meta itemprop="description" content="I worked on the following small projects to familiarizing myself with React.">
 <meta itemprop="datePublished" content="2020-08-12T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-08-12T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="300">
+<meta itemprop="wordCount" content="301">
 
 
 
@@ -206,7 +206,7 @@
   };
 };
 </code></pre></div><h2 id="error-boundaries">Error Boundaries</h2>
-<p>I have a lot of appreciation for this pattern and would love to see it applied more widely. I had some initial difficulty applying them to async component lifecycle.</p>
+<p>I have a lot of appreciation for this pattern and would love to see it applied more widely. I did had some initial difficulty applying them to async component lifecycle.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">componentDidMount() {
   <span style="color:#998;font-style:italic">// ...
 </span><span style="color:#998;font-style:italic"></span>  .<span style="color:#000;font-weight:bold">catch</span>((error) =&gt; <span style="color:#000;font-weight:bold">this</span>.setState({ error }));

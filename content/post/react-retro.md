@@ -81,7 +81,7 @@ const mapDispatchToProps = (dispatch: Dispatch) => {
 
 ## Error Boundaries
 
-I have a lot of appreciation for this pattern and would love to see it applied more widely. I had some initial difficulty applying them to async component lifecycle.
+I have a lot of appreciation for this pattern and would love to see it applied more widely. I did had some initial difficulty applying them to async component lifecycle.
 
 ```javascript
 componentDidMount() {
