@@ -34,7 +34,7 @@ export type Dispatch = (action: Action) => void;
 
 ## Avoid State
 
-I found stateless components easier to understand and less error prone.
+Unsurprisingly, I found stateless components easier to understand and less error prone.
 
 ## Dependency Injection
 
@@ -81,15 +81,7 @@ const mapDispatchToProps = (dispatch: Dispatch) => {
 
 ## Error Boundaries
 
-I'm impressed with their flexibility of application.
-
-```html
-<ErrorBoundary>
-  <Feed />
-</ErrorBoundary>
-```
-
-I had some initial difficulty applying them to async lifecycle.
+I have a lot of appreciation for this pattern and would love to see it applied more widely. I had some initial difficulty applying them to async component lifecycle.
 
 ```javascript
 componentDidMount() {
