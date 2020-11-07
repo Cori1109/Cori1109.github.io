@@ -16,6 +16,13 @@ I worked on the following small projects to familiarizing myself with React:
 
 While there were many lessons - here are some points that stood out:
 
+- [Typescript](#typescript)
+- [Stateless Components](#stateless-components)
+- [Dependency Injection](#dependency-injection)
+- [Cloning](#cloning)
+- [Error Boundaries](#error-boundaries)
+- [Create React App](#create-react-app)
+
 ## Typescript
 
 I found components of more than a few hundred lines of code increasingly difficult to refactor or extend. I ported my ES6 code to Typescript and found this reduced the complexity curve and revealed a few subtle defects in the process.
@@ -32,7 +39,7 @@ export type Action =
 export type Dispatch = (action: Action) => void;
 ```
 
-## Avoid State
+## Stateless Components
 
 Unsurprisingly, I found stateless components easier to understand and less error prone.
 
@@ -79,6 +86,26 @@ const mapDispatchToProps = (dispatch: Dispatch) => {
 };
 ```
 
+## Cloning
+
+Cloning is useful in some more advanced scenarios. e.g. add/override a event listener without knowledge of the `props.children` component internals.
+
+```javascript
+<ColorPicker>
+  <Button variant="contained">
+    // ...
+  </Button>
+</ColorPicker>
+```
+
+```javascript
+return (
+    <div>
+      {React.cloneElement(children, { onClick: handleClick })}
+      // ...
+  );
+```
+
 ## Error Boundaries
 
 I have a lot of appreciation for this pattern and would love to see it applied more widely. I did had some initial difficulty applying them to async component lifecycle.
@@ -95,6 +122,6 @@ render() {
 }
 ```
 
-## Create-React-App
+## Create React App
 
 This was the easiest way to be productive quickly without the common catch of being locked-in.
