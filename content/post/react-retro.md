@@ -4,7 +4,8 @@ title = "React Retrospective"
 date = "2020-08-12"
 description = "I worked on the following small projects to familiarizing myself with React."
 tags = [
-  "react"
+  "react",
+  "fed"
 ]
 +++
 
@@ -99,7 +100,9 @@ Cloning is useful in some more advanced scenarios. e.g. add/override a event lis
 ```
 
 ```javascript
-return (
+function ColorPicker({ children, onChangeComplete, color }) {
+  // ...
+  return (
     <div>
       {React.cloneElement(children, { onClick: handleClick })}
       // ...
@@ -108,7 +111,7 @@ return (
 
 ## Error Boundaries
 
-I have a lot of appreciation for this pattern and would love to see it applied more widely. I did had some initial difficulty applying them to async component lifecycle.
+I have a lot of appreciation for this [pattern](https://reactjs.org/docs/error-boundaries.html) and would love to see it applied more widely. I did had some initial difficulty applying them to async component lifecycle.
 
 ```javascript
 componentDidMount() {

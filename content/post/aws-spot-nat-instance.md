@@ -4,7 +4,9 @@ title = "AWS Spot NAT Instance"
 date = "2020-06-21"
 description = ""
 tags = [
-  "aws"
+  "aws",
+  "infrastructure",
+  "iac"
 ]
 +++
 
