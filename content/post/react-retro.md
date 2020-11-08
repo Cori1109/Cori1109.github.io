@@ -9,7 +9,7 @@ tags = [
 ]
 +++
 
-I worked on the following small projects to familiarizing myself with React:
+I worked on the following small projects to familiarize myself with React:
 
 - [Instagram Feed](https://github.com/jamesmoriarty/react-instagram-authless-feed)
 - [Redux Paint Application](https://github.com/jamesmoriarty/redux-paint)
