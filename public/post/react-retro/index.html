@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="generator" content="Hugo 0.73.0-DEV" />
+  <meta name="generator" content="Hugo 0.55.6" />
 
   <title>React Retrospective &middot; James Moriarty</title>
 
@@ -11,15 +11,19 @@
 
   
 
+
 <meta itemprop="name" content="React Retrospective">
 <meta itemprop="description" content="I worked on the following small projects to familiarizing myself with React.">
+
+
 <meta itemprop="datePublished" content="2020-08-12T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-08-12T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="301">
+<meta itemprop="wordCount" content="362">
 
 
 
-<meta itemprop="keywords" content="react," />
+<meta itemprop="keywords" content="react,fed," />
+
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="React Retrospective"/>
@@ -30,8 +34,8 @@
 <meta property="og:description" content="I worked on the following small projects to familiarizing myself with React." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.jamesmoriarty.xyz/post/react-retro/" />
-<meta property="article:published_time" content="2020-08-12T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-08-12T00:00:00+00:00" />
+<meta property="article:published_time" content="2020-08-12T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2020-08-12T00:00:00&#43;00:00"/>
 
 
 
@@ -156,67 +160,123 @@
     <time datetime="2020-08-12T00:00:00Z">Aug 12, 2020</time> · 2 min read
   </div>
 
-  <p>I worked on the following small projects to familiarizing myself with React:</p>
+  
+
+<p>I worked on the following small projects to familiarize myself with React:</p>
+
 <ul>
 <li><a href="https://github.com/jamesmoriarty/react-instagram-authless-feed">Instagram Feed</a></li>
 <li><a href="https://github.com/jamesmoriarty/redux-paint">Redux Paint Application</a></li>
 <li><a href="https://github.com/jamesmoriarty/react-email-signature">Email Signature Generator</a></li>
 </ul>
-<p>While there were many lessons - here are some points that stood out:</p>
-<h2 id="typescript">Typescript</h2>
-<p>I found components of more than a few hundred lines of code increasingly difficult to refactor or extend. I ported my ES6 code to Typescript and found this reduced the complexity curve and revealed a few subtle defects in the process.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#000;font-weight:bold">export</span> type Action <span style="color:#000;font-weight:bold">=</span>
-  <span style="color:#000;font-weight:bold">|</span> UndoAction
-  <span style="color:#000;font-weight:bold">|</span> RedoAction
-  <span style="color:#000;font-weight:bold">|</span> OpSetTypeAction
-  <span style="color:#000;font-weight:bold">|</span> OpSetColorAction
-  <span style="color:#000;font-weight:bold">|</span> OpCreateAction
-  <span style="color:#000;font-weight:bold">|</span> OpUpdateAction;
 
-<span style="color:#000;font-weight:bold">export</span> type Dispatch <span style="color:#000;font-weight:bold">=</span> (action: <span style="color:#458;font-weight:bold">Action</span>) <span style="color:#000;font-weight:bold">=&gt;</span> <span style="color:#000;font-weight:bold">void</span>;
-</code></pre></div><h2 id="avoid-state">Avoid State</h2>
+<p>While there were many lessons - here are some points that stood out:</p>
+
+<ul>
+<li><a href="#typescript">Typescript</a></li>
+<li><a href="#stateless-components">Stateless Components</a></li>
+<li><a href="#dependency-injection">Dependency Injection</a></li>
+<li><a href="#cloning">Cloning</a></li>
+<li><a href="#error-boundaries">Error Boundaries</a></li>
+<li><a href="#create-react-app">Create React App</a></li>
+</ul>
+
+<h2 id="typescript">Typescript</h2>
+
+<p>I found components of more than a few hundred lines of code increasingly difficult to refactor or extend. I ported my ES6 code to Typescript and found this reduced the complexity curve and revealed a few subtle defects in the process.</p>
+
+<pre><code class="language-typescript">export type Action =
+  | UndoAction
+  | RedoAction
+  | OpSetTypeAction
+  | OpSetColorAction
+  | OpCreateAction
+  | OpUpdateAction;
+
+export type Dispatch = (action: Action) =&gt; void;
+</code></pre>
+
+<h2 id="stateless-components">Stateless Components</h2>
+
 <p>Unsurprisingly, I found stateless components easier to understand and less error prone.</p>
+
 <h2 id="dependency-injection">Dependency Injection</h2>
+
 <p>I used higher order functions to inject dependencies and isolate tests to easily replicate different corner cases.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#000;font-weight:bold">const</span> getFeedFn <span style="color:#000;font-weight:bold">=</span> (userName) =&gt; <span style="color:#0086b3">Promise</span>.resolve([]),
-  component <span style="color:#000;font-weight:bold">=</span> create(
-    <span style="color:#000;font-weight:bold">&lt;</span>Feed
-      className<span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Feed&#34;</span>
-      userName<span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;jamespaulmoriarty&#34;</span>
-      getFeedFn<span style="color:#000;font-weight:bold">=</span>{getFeedFn}
-    <span style="color:#000;font-weight:bold">/&gt;</span>
+
+<pre><code class="language-javascript">const getFeedFn = (userName) =&gt; Promise.resolve([]),
+  component = create(
+    &lt;Feed
+      className=&quot;Feed&quot;
+      userName=&quot;jamespaulmoriarty&quot;
+      getFeedFn={getFeedFn}
+    /&gt;
   );
-</code></pre></div><h2 id="redux">Redux</h2>
+</code></pre>
+
+<h2 id="redux">Redux</h2>
+
 <p>Redux and its tooling proved effective at detecting and avoiding mutations. I learnt a lot about common javascript functions and their behavior and performance trying to write immutable code.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#000;font-weight:bold">case</span> ACTION_TYPES.REDO:
-  <span style="color:#458;font-weight:bold">return</span> {
+
+<pre><code class="language-typescript">case ACTION_TYPES.REDO:
+  return {
     ...state,
-    future: <span style="color:#458;font-weight:bold">state.future.slice</span>(<span style="color:#099">0</span>, <span style="color:#000;font-weight:bold">-</span><span style="color:#099">1</span>),
-    history: <span style="color:#458;font-weight:bold">state.history.slice</span>().concat(state.future.slice(<span style="color:#000;font-weight:bold">-</span><span style="color:#099">1</span>)),
+    future: state.future.slice(0, -1),
+    history: state.history.slice().concat(state.future.slice(-1)),
   };
-</code></pre></div><p>It took me some time to appreciate <code>mapDispatchToProps</code> and how I could remove knowledge of <code>despatch</code> from my <code>jsx</code>.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#000;font-weight:bold">const</span> mapDispatchToProps <span style="color:#000;font-weight:bold">=</span> (dispatch: <span style="color:#458;font-weight:bold">Dispatch</span>) <span style="color:#000;font-weight:bold">=&gt;</span> {
-  <span style="color:#000;font-weight:bold">return</span> {
-    onChangeComplete<span style="color:#000;font-weight:bold">:</span> (color: <span style="color:#458;font-weight:bold">any</span>) <span style="color:#000;font-weight:bold">=&gt;</span> {
+</code></pre>
+
+<p>It took me some time to appreciate <code>mapDispatchToProps</code> and how I could remove knowledge of <code>despatch</code> from my <code>jsx</code>.</p>
+
+<pre><code class="language-typescript">const mapDispatchToProps = (dispatch: Dispatch) =&gt; {
+  return {
+    onChangeComplete: (color: any) =&gt; {
       dispatch({
-        type: <span style="color:#458;font-weight:bold">ACTION_TYPES.OP_SET_COLOR</span>,
-        payload<span style="color:#000;font-weight:bold">:</span> { color: <span style="color:#458;font-weight:bold">color.hex</span> },
+        type: ACTION_TYPES.OP_SET_COLOR,
+        payload: { color: color.hex },
       });
     },
   };
 };
-</code></pre></div><h2 id="error-boundaries">Error Boundaries</h2>
-<p>I have a lot of appreciation for this pattern and would love to see it applied more widely. I did had some initial difficulty applying them to async component lifecycle.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">componentDidMount() {
-  <span style="color:#998;font-style:italic">// ...
-</span><span style="color:#998;font-style:italic"></span>  .<span style="color:#000;font-weight:bold">catch</span>((error) =&gt; <span style="color:#000;font-weight:bold">this</span>.setState({ error }));
+</code></pre>
+
+<h2 id="cloning">Cloning</h2>
+
+<p>Cloning is useful in some more advanced scenarios. e.g. add/override a event listener without knowledge of the <code>props.children</code> component internals.</p>
+
+<pre><code class="language-javascript">&lt;ColorPicker&gt;
+  &lt;Button variant=&quot;contained&quot;&gt;
+    // ...
+  &lt;/Button&gt;
+&lt;/ColorPicker&gt;
+</code></pre>
+
+<pre><code class="language-javascript">function ColorPicker({ children, onChangeComplete, color }) {
+  // ...
+  return (
+    &lt;div&gt;
+      {React.cloneElement(children, { onClick: handleClick })}
+      // ...
+  );
+</code></pre>
+
+<h2 id="error-boundaries">Error Boundaries</h2>
+
+<p>I have a lot of appreciation for this <a href="https://reactjs.org/docs/error-boundaries.html">pattern</a> and would love to see it applied more widely. I did had some initial difficulty applying them to async component lifecycle.</p>
+
+<pre><code class="language-javascript">componentDidMount() {
+  // ...
+  .catch((error) =&gt; this.setState({ error }));
 }
 
 render() {
-  <span style="color:#000;font-weight:bold">if</span> (<span style="color:#000;font-weight:bold">this</span>.state.error) <span style="color:#000;font-weight:bold">throw</span> <span style="color:#000;font-weight:bold">this</span>.state.error;
-  <span style="color:#998;font-style:italic">// ...
-</span><span style="color:#998;font-style:italic"></span>}
-</code></pre></div><h2 id="create-react-app">Create-React-App</h2>
+  if (this.state.error) throw this.state.error;
+  // ...
+}
+</code></pre>
+
+<h2 id="create-react-app">Create React App</h2>
+
 <p>This was the easiest way to be productive quickly without the common catch of being locked-in.</p>
 
 </div>
@@ -226,7 +286,7 @@ render() {
 
   <footer>
   <div>
-    &copy; James Moriarty 2020
+    &copy; James Moriarty 2021
     ·
     
     <a href="https://creativecommons.org/licenses/by-sa/4.0"
