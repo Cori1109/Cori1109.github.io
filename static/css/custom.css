@@ -3,6 +3,19 @@ footer a, .content a, .related-posts li a:hover, .content a:hover {
   text-decoration: underline;
 }
 
+.post h1, .post h1.post-title {
+  margin-bottom: .5rem;
+}
+
+.post .read-more-link {
+  margin-top: .5rem;
+}
+
+.post p {
+  margin-top: 0;
+  margin-bottom: .5rem;
+}
+
 .content h1 a {
   text-decoration: none;
 }
@@ -14,5 +27,5 @@ footer a, .content a, .related-posts li a:hover, .content a:hover {
 }
 
 .social-icons a {
-  margin-right: 0.33em;
+  margin-right: .5rem;
 }
