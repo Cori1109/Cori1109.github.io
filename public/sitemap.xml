@@ -3,17 +3,32 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://www.jamesmoriarty.xyz/tags/fed/</loc>
-    <lastmod>2020-08-12T00:00:00+00:00</lastmod>
+    <loc>https://www.jamesmoriarty.xyz/tags/go/</loc>
+    <lastmod>2021-01-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.jamesmoriarty.xyz/post/go-retro/</loc>
+    <lastmod>2021-01-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://www.jamesmoriarty.xyz/</loc>
-    <lastmod>2020-08-12T00:00:00+00:00</lastmod>
+    <lastmod>2021-01-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://www.jamesmoriarty.xyz/post/</loc>
+    <lastmod>2021-01-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.jamesmoriarty.xyz/tags/</loc>
+    <lastmod>2021-01-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.jamesmoriarty.xyz/tags/fed/</loc>
     <lastmod>2020-08-12T00:00:00+00:00</lastmod>
   </url>
   
@@ -24,11 +39,6 @@
   
   <url>
     <loc>https://www.jamesmoriarty.xyz/post/react-retro/</loc>
-    <lastmod>2020-08-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.jamesmoriarty.xyz/tags/</loc>
     <lastmod>2020-08-12T00:00:00+00:00</lastmod>
   </url>
   
@@ -64,11 +74,6 @@
   
   <url>
     <loc>https://www.jamesmoriarty.xyz/tags/games/</loc>
-    <lastmod>2020-06-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.jamesmoriarty.xyz/tags/go/</loc>
     <lastmod>2020-06-10T00:00:00+00:00</lastmod>
   </url>
   
