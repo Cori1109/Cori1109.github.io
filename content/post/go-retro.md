@@ -21,6 +21,7 @@ Here are some points that stood out:
 
 - [Toolchain](#toolchain)
 - [Error Handling](#error-handling)
+- [Modules](#modules)
 - ["Here be dragons"](#here-be-dragons)
 - [Windows](#windows)
 
@@ -57,6 +58,22 @@ func GetOffsets() (*Offsets, error) {
 	}
 
 	return &offsets, nil
+}
+```
+
+## Modules
+
+I really like the way Go has achieved modular programming.
+
+```go
+package robots
+
+import "github.com/jamesmoriarty/gobot/directions"
+
+type Robot struct {
+	X         int64
+	Y         int64
+	Direction directions.Direction
 }
 ```
 
