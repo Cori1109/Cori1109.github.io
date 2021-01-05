@@ -20,7 +20,7 @@ customCss = [ "css/custom.css" ]
 
 ## Set one of:
 # gravatar = "jamespaulmoriarty@gmail.com"
-profilePicture = "images/james-moriarty.jpg"
+profilePicture = "images/james-moriarty-3.jpg"
 
 copyright = "James Moriarty"
 license = "CC BY-SA 4.0"

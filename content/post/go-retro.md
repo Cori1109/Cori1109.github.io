@@ -27,7 +27,7 @@ Here are some points that stood out:
 
 # Toolchain
 
-The Go toolchain is impressive. I've worked professionally across many programming languages and found this one of the most enjoyable to pickup and use.
+The Go toolchain is impressive. I've worked professionally across many programming languages and found this one of the most enjoyable to pickup and use. The Go ecosystem appears more consistent as a result.
 
 # Error Handling
 
