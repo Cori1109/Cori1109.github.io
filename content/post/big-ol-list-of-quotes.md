@@ -2,7 +2,7 @@
 author = "James Moriarty"
 title = "Big Ol' List Of Quotes"
 date = "2020-06-01"
-description = " "
+description = "A scratchpad for quotes that epitomize my personal philosophy."
 tags = [
   "misc"
 ]
@@ -16,4 +16,8 @@ _―Epictetus_
 
 > "I find that the harder I work, the more luck I seem to have."
 
-_-Thomas Jefferson_
+_―Thomas Jefferson_
+
+> "We are more often frightened than hurt; and we suffer more in imagination than in reality."
+
+_–Seneca_
