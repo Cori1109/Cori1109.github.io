@@ -31,7 +31,7 @@ The Go toolchain is impressive. I've worked professionally across many programmi
 
 # Error Handling
 
-I initially found Go's error handling painful but have come to appreciate it. It appears that improper exception handling contributes to a significate proportion of defects produced by the software industry.
+I initially found Go's error handling painful but have come to appreciate it. It appears that improper exception handling contributes to a significant proportion of defects.
 
 ```go
 func GetOffsets() (*Offsets, error) {
