@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.80.0" />
+
+  <title>AWS NAT Internet Egress &middot; James Moriarty</title>
+
+  <meta name="description" content="" />
+
+  
+
+<meta itemprop="name" content="AWS NAT Internet Egress">
+<meta itemprop="description" content="My work often involves restricted private networks often found in large enterprises.">
+<meta itemprop="datePublished" content="2020-06-21T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2020-06-21T00:00:00+00:00" />
+<meta itemprop="wordCount" content="320">
+
+
+
+<meta itemprop="keywords" content="aws,infrastructure,iac," />
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="AWS NAT Internet Egress"/>
+<meta name="twitter:description" content="My work often involves restricted private networks often found in large enterprises."/>
+
+
+<meta property="og:title" content="AWS NAT Internet Egress" />
+<meta property="og:description" content="My work often involves restricted private networks often found in large enterprises." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.jamesmoriarty.xyz/post/aws-nat-internet-egress/" />
+<meta property="article:published_time" content="2020-06-21T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-06-21T00:00:00+00:00" />
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NHMWRM0LY9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NHMWRM0LY9');
+</script>
+
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://www.jamesmoriarty.xyz/css/print.css"
+        media="print">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://www.jamesmoriarty.xyz/css/poole.css">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://www.jamesmoriarty.xyz/css/hyde.css">
+
+  
+<style type="text/css">
+  .sidebar {
+    background-color: #313131;
+  }
+
+  .read-more-link a {
+    border-color: #313131;
+  }
+
+  .pagination li a {
+    color: #313131;
+    border: 1px solid #313131;
+  }
+
+  .pagination li.active a {
+    background-color: #313131;
+  }
+
+  .pagination li a:hover {
+    background-color: #313131;
+    opacity: 0.75;
+  }
+
+  footer a,
+  .content a,
+  .related-posts li a:hover {
+    color: #313131;
+  }
+</style>
+
+
+
+  <link type="text/css" rel="stylesheet" href="https://www.jamesmoriarty.xyz/css/custom.css">
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+        crossorigin="anonymous" />
+
+  <link rel="apple-touch-icon-precomposed"
+        sizes="144x144"
+        href="/apple-touch-icon-144-precomposed.png">
+
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  </head>
+<body>
+  <aside class="sidebar">
+  <div class="container">
+    <div class="sidebar-about">
+      
+        
+        <div class="author-image">
+          <img src="https://www.jamesmoriarty.xyz/images/james-moriarty.jpg" class="img-circle img-headshot center" alt="Profile Picture">
+        </div>
+        
+      
+
+      <h1>James Moriarty</h1>
+
+      
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li>
+          <a href="https://www.jamesmoriarty.xyz/">Home</a>
+        </li>
+        <li>
+          <a href="/posts/"> Posts </a>
+        </li><li>
+          <a href="/about/"> About </a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="social-icons">
+      
+      <a href="https://www.linkedin.com/in/jamespaulmoriarty" rel="me" title="Linkedin">
+        <i class="fab fa-linkedin" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://github.com/jamesmoriarty" rel="me" title="GitHub">
+        <i class="fab fa-github" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://twitter.com/jamespmoriarty" rel="me" title="Twitter">
+        <i class="fab fa-twitter" aria-hidden="true"></i>
+      </a>
+      
+    </section>
+  </div>
+</aside>
+
+
+  <main class="content container">
+  <div class="post">
+  <h1>AWS NAT Internet Egress</h1>
+
+  <div class="post-date">
+    
+  </div>
+
+  <p>My work often involves restricted private networks often found in large enterprises. I run a personal <a href="https://github.com/jamesmoriarty/cfn-vpc">similarly provisioned AWS VPC</a> for experiments. This comes with the challenge of providing internet egress for <code>RFC1918</code> private subnet instances.</p>
+<p>AWS provides several solutions for internet egress. After spending some time considering these, I settled on NAT instance running on Spot. The primary driver of this solution is cost.</p>
+<h3 id="reliability">Reliability</h3>
+<table>
+<thead>
+<tr>
+<th>Risk</th>
+<th>ETTD</th>
+<th>ETTR</th>
+<th>EETF</th>
+<th>Impact</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Spot Restart</td>
+<td>5m</td>
+<td>5m</td>
+<td>30 days</td>
+<td>100%</td>
+<td>Every month**</td>
+</tr>
+<tr>
+<td>EC2 Fails</td>
+<td>5m</td>
+<td>5m</td>
+<td>90 days</td>
+<td>100%</td>
+<td>Every three months*</td>
+</tr>
+<tr>
+<td>AZ Fails</td>
+<td>5m</td>
+<td>2h</td>
+<td>180 days</td>
+<td>100%</td>
+<td>Every six months*</td>
+</tr>
+<tr>
+<td>Region Fails</td>
+<td>5m</td>
+<td>4h</td>
+<td>730 days</td>
+<td>100%</td>
+<td>Every two years*</td>
+</tr>
+</tbody>
+</table>
+<p>Looking specifically at <code>Spot Restart</code>:</p>
+<pre><code>43,200 = 60 min * 24 hours * 30 days (valid minutes)
+10     = 5 ettr + 5 ettd             (bad minutes)
+99.98% = (valid - bad) / valid * 100 (fraction of good minutes)
+</code></pre><p>That&rsquo;s nearly four nines of reliability with the introduction of Spot. I&rsquo;ve also used a generous minimum ETTD &amp; ETTR despite the autoscale group generally recovering within two minutes.</p>
+<p>* <a href="https://aws.amazon.com/compute/sla/">90% SLA</a> the SLO appears to be much higher.</p>
+<p>** Based on uptime.</p>
+<blockquote>
+<p>April 2, 2020 at 8:36:05 PM UTC+11 (1919 hours)</p>
+</blockquote>
+<h3 id="cost">Cost</h3>
+<p>The following costs are an estimate:</p>
+<table>
+<thead>
+<tr>
+<th>solution</th>
+<th>network</th>
+<th>cost/GB</th>
+<th>cost/hour</th>
+<th>cost/month</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NAT Gateway</td>
+<td>5-45 Gbps</td>
+<td>0.059</td>
+<td>0.059</td>
+<td>42.48</td>
+</tr>
+<tr>
+<td>NAT Instance</td>
+<td>0-5  Gbps</td>
+<td>0-0.114</td>
+<td>0.0059</td>
+<td>4.25</td>
+</tr>
+<tr>
+<td>NAT Instance (spot)</td>
+<td>0-5  Gbps</td>
+<td>0-0.114</td>
+<td>0.0018</td>
+<td>1.30</td>
+</tr>
+</tbody>
+</table>
+<p>Spot market costs are variable but current data suggests:</p>
+<blockquote>
+<p>t3a.nano (1) &hellip; total 69% savings</p>
+</blockquote>
+<h3 id="performance">Performance</h3>
+<p>The performance test can be reproduced with the following command:</p>
+<pre><code>yum install python python-pip -y \
+ &amp;&amp; pip install --upgrade pip \
+ &amp;&amp; pip install speedtest-cli \
+ &amp;&amp; speedtest-cli
+</code></pre><p>The <code>t3.nano</code> instances provide several Gbps up and down.</p>
+<blockquote>
+<p>Download: 3283.42 Mbit/s
+Upload: 2274.26 Mbit/s</p>
+</blockquote>
+<h3 id="conclusion">Conclusion</h3>
+<p>This solution has proven acceptable for small egress bandwidth requirements in the range of 1-5 Gbps. The Github project can be found <a href="https://github.com/jamesmoriarty/cfn-cheapest-nat">here</a>.</p>
+
+</div>
+
+
+  </main>
+
+  <footer>
+  <div>
+    &copy; James Moriarty 2021
+    ·
+    
+    <a href="https://creativecommons.org/licenses/by-sa/4.0"
+       target="_blank">CC BY-SA 4.0</a>
+    
+    
+  </div>
+</footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+          integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
+          crossorigin="anonymous"></script>
+
+  
+
+  
+</body>
+</html>
