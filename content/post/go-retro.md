@@ -31,7 +31,7 @@ The Go toolchain is impressive. I've worked professionally across many programmi
 
 # Error Handling
 
-I initially found Go's error handling painful until I came to understand that improper exception handling contributes to a significate proportion of defects produced by the software industry.
+I initially found Go's error handling painful but have come to appreciate it. It appears that improper exception handling contributes to a significate proportion of defects produced by the software industry.
 
 ```go
 func GetOffsets() (*Offsets, error) {
@@ -63,7 +63,7 @@ func GetOffsets() (*Offsets, error) {
 
 ## Modules
 
-I really like the way Go has achieved modular programming.
+I really like the way Go has implemented modular programming.
 
 ```go
 package robots
@@ -79,7 +79,7 @@ type Robot struct {
 
 ## Here Be Dragons
 
-I enjoyed lower level memory work with Go but it was achieved using the `unsafe` package and introduces many news possibilities for defects.
+I enjoyed lower level memory work with Go but `unsafe` and introduces new possibilities for software defects.
 
 ## Windows
 

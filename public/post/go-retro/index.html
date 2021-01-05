@@ -15,7 +15,7 @@
 <meta itemprop="description" content="I worked on the following small projects to familiarizing myself with Golang.">
 <meta itemprop="datePublished" content="2021-01-05T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2021-01-05T00:00:00+00:00" />
-<meta itemprop="wordCount" content="217">
+<meta itemprop="wordCount" content="214">
 
 
 
@@ -187,7 +187,7 @@
 <h1 id="toolchain">Toolchain</h1>
 <p>The Go toolchain is impressive. I&rsquo;ve worked professionally across many programming languages and found this one of the most enjoyable to pickup and use.</p>
 <h1 id="error-handling">Error Handling</h1>
-<p>I initially found Go&rsquo;s error handling painful until I came to understand that improper exception handling contributes to a significate proportion of defects produced by the software industry.</p>
+<p>I initially found Go&rsquo;s error handling painful but have come to appreciate it. It appears that improper exception handling contributes to a significate proportion of defects produced by the software industry.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000;font-weight:bold">func</span> <span style="color:#900;font-weight:bold">GetOffsets</span>() (<span style="color:#000;font-weight:bold">*</span>Offsets, <span style="color:#458;font-weight:bold">error</span>) {
 	<span style="color:#000;font-weight:bold">var</span> offsets Offsets
 
@@ -214,7 +214,7 @@
 	<span style="color:#000;font-weight:bold">return</span> <span style="color:#000;font-weight:bold">&amp;</span>offsets, <span style="color:#000;font-weight:bold">nil</span>
 }
 </code></pre></div><h2 id="modules">Modules</h2>
-<p>I really like the way Go has achieved modular programming.</p>
+<p>I really like the way Go has implemented modular programming.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000;font-weight:bold">package</span> robots
 
 <span style="color:#000;font-weight:bold">import</span> <span style="color:#d14">&#34;github.com/jamesmoriarty/gobot/directions&#34;</span>
@@ -225,7 +225,7 @@
 	Direction directions.Direction
 }
 </code></pre></div><h2 id="here-be-dragons">Here Be Dragons</h2>
-<p>I enjoyed lower level memory work with Go but it was achieved using the <code>unsafe</code> package and introduces many news possibilities for defects.</p>
+<p>I enjoyed lower level memory work with Go but <code>unsafe</code> and introduces new possibilities for software defects.</p>
 <h2 id="windows">Windows</h2>
 <p>The APIs also appear to target the Linux and have been retrofitted to Windows.</p>
 
