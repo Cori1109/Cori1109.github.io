@@ -15,7 +15,7 @@
 <meta itemprop="description" content="I worked on the following small projects to familiarizing myself with Golang.">
 <meta itemprop="datePublished" content="2021-01-05T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2021-01-05T00:00:00+00:00" />
-<meta itemprop="wordCount" content="245">
+<meta itemprop="wordCount" content="254">
 
 
 
@@ -228,9 +228,12 @@
 </code></pre></div><h2 id="concurrency">Concurrency</h2>
 <p>Go &ldquo;routines&rdquo; and &ldquo;channels&rdquo; appear easy to use and well thought out.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000;font-weight:bold">...</span>
-shutdown <span style="color:#000;font-weight:bold">:=</span> <span style="color:#0086b3">make</span>(<span style="color:#000;font-weight:bold">chan</span> os.Signal, <span style="color:#099">1</span>)
+shutdown <span style="color:#000;font-weight:bold">:=</span> <span style="color:#0086b3">make</span>(<span style="color:#000;font-weight:bold">chan</span> <span style="color:#458;font-weight:bold">bool</span>, <span style="color:#099">1</span>)
 <span style="color:#000;font-weight:bold">go</span> goforward.<span style="color:#900;font-weight:bold">Listen</span>(port, rate, shutdown)
-signal.<span style="color:#900;font-weight:bold">Notify</span>(shutdown, syscall.SIGINT, syscall.SIGTERM)
+wait <span style="color:#000;font-weight:bold">:=</span> <span style="color:#0086b3">make</span>(<span style="color:#000;font-weight:bold">chan</span> os.Signal, <span style="color:#099">1</span>)
+signal.<span style="color:#900;font-weight:bold">Notify</span>(wait, syscall.SIGINT, syscall.SIGTERM)
+<span style="color:#000;font-weight:bold">&lt;-</span>wait
+shutdown <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#000;font-weight:bold">true</span>
 </code></pre></div><h2 id="here-be-dragons">Here Be Dragons</h2>
 <p>I enjoyed lower level memory work with Go but <code>unsafe</code> and introduces new possibilities for software defects.</p>
 <h2 id="windows">Windows</h2>
