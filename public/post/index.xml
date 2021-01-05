@@ -17,11 +17,11 @@
     </item>
     
     <item>
-      <title>AWS Spot NAT Instance</title>
-      <link>https://www.jamesmoriarty.xyz/post/aws-spot-nat-instance/</link>
+      <title>AWS NAT Internet Egress</title>
+      <link>https://www.jamesmoriarty.xyz/post/aws-nat-internet-egress/</link>
       <pubDate>Sun, 21 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://www.jamesmoriarty.xyz/post/aws-spot-nat-instance/</guid>
+      <guid>https://www.jamesmoriarty.xyz/post/aws-nat-internet-egress/</guid>
       <description>My work often involves restricted private networks often found in large enterprises.</description>
     </item>
     
@@ -40,7 +40,8 @@
       <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>https://www.jamesmoriarty.xyz/post/big-ol-list-of-quotes/</guid>
-      <description>&amp;ldquo;I find that the harder I work, the more luck I seem to have.</description>
+      <description>A scratchpad for quotes that epitomize my personal philosophy.
+ &amp;ldquo;Wealth consists not in having great possessions, but in having few wants.</description>
     </item>
     
   </channel>
