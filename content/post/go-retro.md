@@ -22,6 +22,7 @@ Here are some points that stood out:
 - [Toolchain](#toolchain)
 - [Error Handling](#error-handling)
 - [Modules](#modules)
+- [Concurrency](#concurrency)
 - ["Here be dragons"](#here-be-dragons)
 - [Windows](#windows)
 
@@ -75,6 +76,19 @@ type Robot struct {
 	Y         int64
 	Direction directions.Direction
 }
+```
+
+## Concurrency
+
+I didn't get much of a chance to delve deep into Go's concurrency but did appear relatively easy to apply.
+
+```go
+shutdown := make(chan bool, 1)
+go goforward.Listen(port, rate, shutdown)
+wait := make(chan os.Signal, 1)
+signal.Notify(wait, syscall.SIGINT, syscall.SIGTERM)
+<-wait
+shutdown <- true
 ```
 
 ## Here Be Dragons
