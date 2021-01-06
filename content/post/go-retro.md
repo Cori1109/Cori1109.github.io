@@ -84,12 +84,10 @@ Go "routines" and "channels" appear easy to use and well thought out.
 
 ```go
 ...
-shutdown := make(chan bool, 1)
+shutdown := make(chan os.Signal, 1)
+signal.Notify(shutdown, syscall.SIGINT, syscall.SIGTERM)
 go goforward.Listen(port, rate, shutdown)
-wait := make(chan os.Signal, 1)
-signal.Notify(wait, syscall.SIGINT, syscall.SIGTERM)
-<-wait
-shutdown <- true
+<-shutdown
 ```
 
 ## Here Be Dragons
