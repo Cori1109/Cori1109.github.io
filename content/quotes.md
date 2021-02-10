@@ -14,7 +14,7 @@ _―Epictetus_
 <hr />
 
 > "We are more often frightened than hurt; and we suffer more in imagination than in reality."
-_–Seneca_
+_―Seneca_
 
 <hr />
 
