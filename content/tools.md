@@ -22,15 +22,15 @@ I use this to run low power Intel NUC gitops K3s Kubernetes cluster.
 
 I use a Surface Pro 6 to run ... Linux. I use this for general development.
 
-- Intel i5-8250U 4 Cores@1.6GHz
-- 8GB DDR3@1600MHz
+- Intel i5-8250U 4 Cores@1.6-3.4GHz
+- Samsung 8GB DDR3@1600MHz
 - Toshiba 128GB  NVMe
 
 ### Budget Build Desktop
 
 I use this desktop for development focused on Go, Security, and Windows.
 
-- AMD Ryzen 3 1300X 4 Core@3.5GHz
+- AMD Ryzen 3 1300X 4 Core@3.5-3.7GHz
 - Corsair Vengeance LPX 16GB (2x8GB) DDR4@2400MHz
 - Samsung 970 EVO Plus 250GB NVMe
 - Asus Strix RX570 4GB
