@@ -6,7 +6,11 @@
     <description>Recent content in Posts on James Moriarty</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 05 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jamesmoriarty.xyz/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 05 Jan 2021 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.jamesmoriarty.xyz/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>Go Retrospective</title>
       <link>https://www.jamesmoriarty.xyz/post/go-retro/</link>
@@ -41,16 +45,6 @@
       
       <guid>https://www.jamesmoriarty.xyz/post/game-exploits-retro/</guid>
       <description>I recently dedicated some time to explore the software security space and gain some hands-on experience through exercises like developing game exploits.</description>
-    </item>
-    
-    <item>
-      <title>Big Ol&#39; List Of Quotes</title>
-      <link>https://www.jamesmoriarty.xyz/post/big-ol-list-of-quotes/</link>
-      <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.jamesmoriarty.xyz/post/big-ol-list-of-quotes/</guid>
-      <description>A scratchpad for quotes that epitomize my personal philosophy.
- &amp;ldquo;Wealth consists not in having great possessions, but in having few wants.</description>
     </item>
     
   </channel>
