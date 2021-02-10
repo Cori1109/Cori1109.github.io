@@ -54,16 +54,22 @@ themeColor = "#313131"
   url = "/posts/"
 
   [[menu.main]]
+  name = "About"
+  identifier = "about"
+  weight = 200
+  url = "/about/"
+
+  [[menu.main]]
   name = "Talks"
   weight = 300
   identifier = "talks"
   url = "/talks/"
 
   [[menu.main]]
-  name = "About"
-  identifier = "about"
-  weight = 200
-  url = "/about/"
+  name = "Tools"
+  weight = 300
+  identifier = "tools"
+  url = "/tools/"
 
   [[menu.main]]
   name = "Quotes"
