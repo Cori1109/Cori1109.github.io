@@ -20,7 +20,7 @@ I use this to run low power Intel NUC gitops K3s Kubernetes cluster.
 
 ### Personal Laptop
 
-I use Surface Pro 6 to run ... Linux. I use this for general development.
+I use a Surface Pro 6 to run ... Linux. I use this for general development.
 
 - Intel i5-8250U 4 Cores@3.4GHz
 - 8GB DDR3@1600MHz
