@@ -12,7 +12,7 @@ I appreciate utility and as a result have an appreciation for the value of some 
 
 ### Personal Laptop
 
-After spending the majority of my professional career on MacBooks - I use a Surface Pro 6 to run ... Linux. I use this for general development.
+After spending the majority of my professional career on MacBooks - I use a Surface Pro 6 to run ... Linux. I use this for general open source development.
 
 - Intel i5-8250U 4 Cores@1.6-3.4GHz
 - Samsung 8GB DDR3@1600MHz
