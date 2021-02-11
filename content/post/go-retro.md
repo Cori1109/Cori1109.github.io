@@ -19,12 +19,17 @@ I worked on the following small projects to familiarize myself with Go:
 
 Here are some points that stood out:
 
+- [Standalone Binaries](#standalone-binaries)
 - [Toolchain](#toolchain)
 - [Error Handling](#error-handling)
 - [Modules](#modules)
 - [Concurrency](#concurrency)
 - ["Here be dragons"](#here-be-dragons)
 - [Windows](#windows)
+
+# Standalone Binaries
+
+I'm appreciative of this feature. In comparison - distributing a similar ruby application would be extremely difficult.
 
 # Toolchain
 
