@@ -15,7 +15,7 @@
 <meta itemprop="description" content="My work often involves restricted private networks often found in large enterprises.">
 <meta itemprop="datePublished" content="2020-06-21T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-06-21T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="320">
+<meta itemprop="wordCount" content="332">
 
 
 
@@ -173,7 +173,13 @@
   </div>
 
   <p>My work often involves restricted private networks often found in large enterprises. I run a personal <a href="https://github.com/jamesmoriarty/cfn-vpc">similarly provisioned AWS VPC</a> for experiments. This comes with the challenge of providing internet egress for <code>RFC1918</code> private subnet instances.</p>
-<p>AWS provides several solutions for internet egress. After spending some time considering these, I settled on NAT instance running on Spot. The primary driver of this solution is cost.</p>
+<p>AWS provides several solutions for internet egress. After spending some time considering these, I settled on NAT instance running on Spot. The primary driver of this solution is cost. This post will examine the following solution elements:</p>
+<ul>
+<li><a href="#reliability">Reliability</a></li>
+<li><a href="#cost">Cost</a></li>
+<li><a href="#performance">Performance</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul>
 <h3 id="reliability">Reliability</h3>
 <table>
 <thead>
