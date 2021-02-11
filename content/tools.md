@@ -8,7 +8,9 @@ author = "James Moriarty"
 
 ## Hardware
 
-I appreciate utility and as a result have an appreciation for the value of some consumer electronics. This is reflected in my tool choices:
+I value utility and as a result have an appreciation for some consumer electronics. This is reflected in my tool choices:
+
+![Photo of desktop](/images/tools.jpg)
 
 ### Personal Laptop
 
@@ -37,7 +39,7 @@ I use this to run low power Intel NUC gitops K3s Kubernetes cluster. I use this 
 
 ## Software
 
-- Polyglot
+- Polyglot Languages
 - Microsoft Code
 - Github
 - Kubernetes
