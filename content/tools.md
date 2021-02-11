@@ -18,7 +18,7 @@ After spending the majority of my professional career on MacBooks - I use a Surf
 
 - Intel i5-8250U 4 Cores@1.6-3.4GHz
 - Samsung 8GB DDR3@1600MHz
-- Toshiba 128GB  NVMe
+- Toshiba 128GB SSD NVMe
 
 ### Budget Build Desktop
 
@@ -26,8 +26,8 @@ I've been continually impressed by the value of AMD's recent offerings. I use th
 
 - AMD Ryzen 3 1300X 4 Core@3.5-3.7GHz
 - Corsair Vengeance LPX 16GB (2x8GB) DDR4@2400MHz
-- Samsung 970 EVO Plus 250GB NVMe
-- Asus Strix RX570 4GB
+- Samsung 970 EVO Plus 250GB SSD NVMe
+- Asus Strix RX570@1300MHz (2048SP) 4GB DDR5@7000MHz
 
 ### Home Kubernetes
 
