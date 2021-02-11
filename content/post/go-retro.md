@@ -27,15 +27,15 @@ Here are some points that stood out:
 - ["Here be dragons"](#here-be-dragons)
 - [Windows](#windows)
 
-# Standalone Binaries
+### Standalone Binaries
 
 I'm appreciative of this feature. In comparison - distributing a similar ruby application would be extremely difficult.
 
-# Toolchain
+### Toolchain
 
 The Go toolchain is impressive. I've worked professionally across many programming languages and found this one of the most enjoyable to pickup and use. The Go ecosystem appears more consistent as a result.
 
-# Error Handling
+### Error Handling
 
 I initially found Go's error handling painful but have come to appreciate it. It appears that improper exception handling contributes to a significant proportion of defects.
 
@@ -67,7 +67,7 @@ func GetOffsets() (*Offsets, error) {
 }
 ```
 
-## Modules
+### Modules
 
 I really like the way Go has implemented modular programming.
 
@@ -83,7 +83,7 @@ type Robot struct {
 }
 ```
 
-## Concurrency
+### Concurrency
 
 Go "routines" and "channels" appear easy to use and well thought out.
 
@@ -94,10 +94,10 @@ go goforward.Listen(port, rate, shutdown)
 <-shutdown
 ```
 
-## Here Be Dragons
+### Here Be Dragons
 
-I enjoyed lower level memory work with Go but `unsafe` introduces new possibilities for software defects.
+I enjoyed lower level memory work with Go but `unsafe` introduces bizarre new possibilities for software defects.
 
-## Windows
+### Windows
 
 The APIs also appear to target the Linux and have been retrofitted to Windows.

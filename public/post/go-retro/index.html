@@ -15,7 +15,7 @@
 <meta itemprop="description" content="I worked on the following small projects to familiarizing myself with Golang.">
 <meta itemprop="datePublished" content="2021-01-05T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2021-01-05T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="265">
+<meta itemprop="wordCount" content="266">
 
 
 
@@ -191,11 +191,11 @@
 <li><a href="#here-be-dragons">&ldquo;Here be dragons&rdquo;</a></li>
 <li><a href="#windows">Windows</a></li>
 </ul>
-<h1 id="standalone-binaries">Standalone Binaries</h1>
+<h3 id="standalone-binaries">Standalone Binaries</h3>
 <p>I&rsquo;m appreciative of this feature. In comparison - distributing a similar ruby application would be extremely difficult.</p>
-<h1 id="toolchain">Toolchain</h1>
+<h3 id="toolchain">Toolchain</h3>
 <p>The Go toolchain is impressive. I&rsquo;ve worked professionally across many programming languages and found this one of the most enjoyable to pickup and use. The Go ecosystem appears more consistent as a result.</p>
-<h1 id="error-handling">Error Handling</h1>
+<h3 id="error-handling">Error Handling</h3>
 <p>I initially found Go&rsquo;s error handling painful but have come to appreciate it. It appears that improper exception handling contributes to a significant proportion of defects.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000;font-weight:bold">func</span> <span style="color:#900;font-weight:bold">GetOffsets</span>() (<span style="color:#000;font-weight:bold">*</span>Offsets, <span style="color:#458;font-weight:bold">error</span>) {
 	<span style="color:#000;font-weight:bold">var</span> offsets Offsets
@@ -222,7 +222,7 @@
 
 	<span style="color:#000;font-weight:bold">return</span> <span style="color:#000;font-weight:bold">&amp;</span>offsets, <span style="color:#000;font-weight:bold">nil</span>
 }
-</code></pre></div><h2 id="modules">Modules</h2>
+</code></pre></div><h3 id="modules">Modules</h3>
 <p>I really like the way Go has implemented modular programming.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000;font-weight:bold">package</span> robots
 
@@ -233,15 +233,15 @@
 	Y         <span style="color:#458;font-weight:bold">int64</span>
 	Direction directions.Direction
 }
-</code></pre></div><h2 id="concurrency">Concurrency</h2>
+</code></pre></div><h3 id="concurrency">Concurrency</h3>
 <p>Go &ldquo;routines&rdquo; and &ldquo;channels&rdquo; appear easy to use and well thought out.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">shutdown <span style="color:#000;font-weight:bold">:=</span> <span style="color:#0086b3">make</span>(<span style="color:#000;font-weight:bold">chan</span> os.Signal, <span style="color:#099">1</span>)
 signal.<span style="color:#900;font-weight:bold">Notify</span>(shutdown, syscall.SIGINT, syscall.SIGTERM)
 <span style="color:#000;font-weight:bold">go</span> goforward.<span style="color:#900;font-weight:bold">Listen</span>(port, rate, shutdown)
 <span style="color:#000;font-weight:bold">&lt;-</span>shutdown
-</code></pre></div><h2 id="here-be-dragons">Here Be Dragons</h2>
-<p>I enjoyed lower level memory work with Go but <code>unsafe</code> introduces new possibilities for software defects.</p>
-<h2 id="windows">Windows</h2>
+</code></pre></div><h3 id="here-be-dragons">Here Be Dragons</h3>
+<p>I enjoyed lower level memory work with Go but <code>unsafe</code> introduces bizarre new possibilities for software defects.</p>
+<h3 id="windows">Windows</h3>
 <p>The APIs also appear to target the Linux and have been retrofitted to Windows.</p>
 
 </div>

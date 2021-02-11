@@ -187,7 +187,7 @@
 <li><a href="#error-boundaries">Error Boundaries</a></li>
 <li><a href="#create-react-app">Create React App</a></li>
 </ul>
-<h2 id="typescript">Typescript</h2>
+<h3 id="typescript">Typescript</h3>
 <p>I found components of more than a few hundred lines of code increasingly difficult to refactor or extend. I ported my ES6 code to Typescript and found this reduced the complexity curve and revealed a few subtle defects in the process.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#000;font-weight:bold">export</span> type Action <span style="color:#000;font-weight:bold">=</span>
   <span style="color:#000;font-weight:bold">|</span> UndoAction
@@ -198,9 +198,9 @@
   <span style="color:#000;font-weight:bold">|</span> OpUpdateAction;
 
 <span style="color:#000;font-weight:bold">export</span> type Dispatch <span style="color:#000;font-weight:bold">=</span> (action: <span style="color:#458;font-weight:bold">Action</span>) <span style="color:#000;font-weight:bold">=&gt;</span> <span style="color:#000;font-weight:bold">void</span>;
-</code></pre></div><h2 id="stateless-components">Stateless Components</h2>
+</code></pre></div><h3 id="stateless-components">Stateless Components</h3>
 <p>Unsurprisingly, I found stateless components easier to understand and less error prone.</p>
-<h2 id="dependency-injection">Dependency Injection</h2>
+<h3 id="dependency-injection">Dependency Injection</h3>
 <p>I used higher order functions to inject dependencies and isolate tests to easily replicate different corner cases.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#000;font-weight:bold">const</span> getFeedFn <span style="color:#000;font-weight:bold">=</span> (userName) =&gt; <span style="color:#0086b3">Promise</span>.resolve([]),
   component <span style="color:#000;font-weight:bold">=</span> create(
@@ -210,7 +210,7 @@
       getFeedFn<span style="color:#000;font-weight:bold">=</span>{getFeedFn}
     <span style="color:#000;font-weight:bold">/&gt;</span>
   );
-</code></pre></div><h2 id="redux">Redux</h2>
+</code></pre></div><h3 id="redux">Redux</h3>
 <p>Redux and its tooling proved effective at detecting and avoiding mutations. I learnt a lot about common javascript functions and their behavior and performance trying to write immutable code.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#000;font-weight:bold">case</span> ACTION_TYPES.REDO:
   <span style="color:#458;font-weight:bold">return</span> {
@@ -229,7 +229,7 @@
     },
   };
 };
-</code></pre></div><h2 id="cloning">Cloning</h2>
+</code></pre></div><h3 id="cloning">Cloning</h3>
 <p>Cloning is useful in some more advanced scenarios. e.g. add/override a event listener without knowledge of the <code>props.children</code> component internals.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#000;font-weight:bold">&lt;</span>ColorPicker<span style="color:#000;font-weight:bold">&gt;</span>
   <span style="color:#000;font-weight:bold">&lt;</span>Button variant<span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;contained&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
@@ -243,7 +243,7 @@
       {React.cloneElement(children, { onClick<span style="color:#000;font-weight:bold">:</span> handleClick })}
       <span style="color:#998;font-style:italic">// ...
 </span><span style="color:#998;font-style:italic"></span>  );
-</code></pre></div><h2 id="error-boundaries">Error Boundaries</h2>
+</code></pre></div><h3 id="error-boundaries">Error Boundaries</h3>
 <p>I have a lot of appreciation for this <a href="https://reactjs.org/docs/error-boundaries.html">pattern</a> and would love to see it applied more widely. I did had some initial difficulty applying them to async component lifecycle.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">componentDidMount() {
   <span style="color:#998;font-style:italic">// ...
@@ -254,7 +254,7 @@ render() {
   <span style="color:#000;font-weight:bold">if</span> (<span style="color:#000;font-weight:bold">this</span>.state.error) <span style="color:#000;font-weight:bold">throw</span> <span style="color:#000;font-weight:bold">this</span>.state.error;
   <span style="color:#998;font-style:italic">// ...
 </span><span style="color:#998;font-style:italic"></span>}
-</code></pre></div><h2 id="create-react-app">Create React App</h2>
+</code></pre></div><h3 id="create-react-app">Create React App</h3>
 <p>This was the easiest way to be productive quickly without the common catch of being locked-in.</p>
 
 </div>

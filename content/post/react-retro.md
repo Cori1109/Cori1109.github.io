@@ -24,7 +24,7 @@ While there were many lessons - here are some points that stood out:
 - [Error Boundaries](#error-boundaries)
 - [Create React App](#create-react-app)
 
-## Typescript
+### Typescript
 
 I found components of more than a few hundred lines of code increasingly difficult to refactor or extend. I ported my ES6 code to Typescript and found this reduced the complexity curve and revealed a few subtle defects in the process.
 
@@ -40,11 +40,11 @@ export type Action =
 export type Dispatch = (action: Action) => void;
 ```
 
-## Stateless Components
+### Stateless Components
 
 Unsurprisingly, I found stateless components easier to understand and less error prone.
 
-## Dependency Injection
+### Dependency Injection
 
 I used higher order functions to inject dependencies and isolate tests to easily replicate different corner cases.
 
@@ -59,7 +59,7 @@ const getFeedFn = (userName) => Promise.resolve([]),
   );
 ```
 
-## Redux
+### Redux
 
 Redux and its tooling proved effective at detecting and avoiding mutations. I learnt a lot about common javascript functions and their behavior and performance trying to write immutable code.
 
@@ -87,7 +87,7 @@ const mapDispatchToProps = (dispatch: Dispatch) => {
 };
 ```
 
-## Cloning
+### Cloning
 
 Cloning is useful in some more advanced scenarios. e.g. add/override a event listener without knowledge of the `props.children` component internals.
 
@@ -109,7 +109,7 @@ function ColorPicker({ children, onChangeComplete, color }) {
   );
 ```
 
-## Error Boundaries
+### Error Boundaries
 
 I have a lot of appreciation for this [pattern](https://reactjs.org/docs/error-boundaries.html) and would love to see it applied more widely. I did had some initial difficulty applying them to async component lifecycle.
 
@@ -125,6 +125,6 @@ render() {
 }
 ```
 
-## Create React App
+### Create React App
 
 This was the easiest way to be productive quickly without the common catch of being locked-in.
