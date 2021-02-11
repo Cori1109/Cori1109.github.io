@@ -91,7 +91,7 @@ go goforward.Listen(port, rate, shutdown)
 
 ## Here Be Dragons
 
-I enjoyed lower level memory work with Go but `unsafe` and introduces new possibilities for software defects.
+I enjoyed lower level memory work with Go but `unsafe` introduces new possibilities for software defects.
 
 ## Windows
 
