@@ -8,19 +8,11 @@ author = "James Moriarty"
 
 ## Hardware
 
-I appreciate the utility of things and as a result have a strong interest in consumer electronics.
-
-### Home Kubernetes
-
-I use this to run low power Intel NUC gitops K3s Kubernetes cluster.
-
-- Intel i3-4010U 2 Core@1.7GHz
-- Corsair 8GB (1x8GB) DDR3@1600MHz
-- Micron M600 128GB SSD mSATA
+I appreciate utility and as a result have an appreciation for the value of some consumer electronics. This is reflected in my tool choices:
 
 ### Personal Laptop
 
-I use a Surface Pro 6 to run ... Linux. I use this for general development.
+After spending the majority of my professional career on MacBooks - I use a Surface Pro 6 to run ... Linux. I use this for general development.
 
 - Intel i5-8250U 4 Cores@1.6-3.4GHz
 - Samsung 8GB DDR3@1600MHz
@@ -28,9 +20,25 @@ I use a Surface Pro 6 to run ... Linux. I use this for general development.
 
 ### Budget Build Desktop
 
-I use this desktop for development focused on Go, Security, and Windows.
+I've been continually impressed by the value of AMD's recent offerings. I use this desktop for development focused on Go, Windows, graphics, and security.
 
 - AMD Ryzen 3 1300X 4 Core@3.5-3.7GHz
 - Corsair Vengeance LPX 16GB (2x8GB) DDR4@2400MHz
 - Samsung 970 EVO Plus 250GB NVMe
 - Asus Strix RX570 4GB
+
+### Home Kubernetes
+
+I use this to run low power Intel NUC gitops K3s Kubernetes cluster. I use this primarily for media, storage, and monitoring.
+
+- Intel i3-4010U 2 Core@1.7GHz
+- Corsair 8GB (1x8GB) DDR3@1600MHz
+- Micron M600 128GB SSD mSATA
+
+## Software
+
+- Polyglot
+- Microsoft Code
+- Github
+- Kubernetes
+- Amazon Web Services & Google Cloud
