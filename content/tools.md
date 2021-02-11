@@ -22,7 +22,7 @@ After spending the majority of my professional career on MacBooks - I use a Surf
 
 ### Budget Build Desktop
 
-I've been continually impressed by the value of AMD's recent offerings. I use this desktop for development focused on Go, Windows, graphics, and security.
+I've been continually impressed by the value of AMD's recent offerings. I use this desktop for development of Go, Windows, graphics, and security.
 
 - AMD Ryzen 3 1300X 4 Core@3.5-3.7GHz
 - Corsair Vengeance LPX 16GB (2x8GB) DDR4@2400MHz
@@ -31,7 +31,7 @@ I've been continually impressed by the value of AMD's recent offerings. I use th
 
 ### Home Kubernetes
 
-I use this to run low power Intel NUC gitops K3s Kubernetes cluster. I use this primarily for media, storage, and monitoring.
+I use this to run low power Intel NUC gitops K3s Kubernetes single node "cluster". I use this primarily for media, storage, and monitoring.
 
 - Intel i3-4010U 2 Core@1.7GHz
 - Corsair 8GB (1x8GB) DDR3@1600MHz
