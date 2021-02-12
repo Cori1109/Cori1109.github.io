@@ -2,7 +2,7 @@
 author = "James Moriarty"
 title = "Forward Proxies By Example"
 date = "2021-02-12"
-description = ""
+description = "I worked on the following small projects to familiarize myself with Forward Proxies."
 tags = [
   "web",
   "forward-proxy"

@@ -2,7 +2,7 @@
 author = "James Moriarty"
 title = "Go Retrospective"
 date = "2021-01-05"
-description = "I worked on the following small projects to familiarizing myself with Golang."
+description = "I worked on the following small projects to familiarizing myself with Go."
 tags = [
   "go"
 ]
