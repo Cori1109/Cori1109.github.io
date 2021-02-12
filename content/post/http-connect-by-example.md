@@ -115,7 +115,7 @@ The document has moved
 ```
 
 ```ruby
-def transfer(dest_conn, src_conn)
+def transfer(src_conn, dest_conn)
   IO.copy_stream(src_conn, dest_conn)
 rescue => e
   puts e.message

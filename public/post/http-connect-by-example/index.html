@@ -250,7 +250,7 @@ client_conn<span style="color:#000;font-weight:bold">.</span>write <span style="
 The document has moved
 &lt;A HREF=&quot;https://www.google.com/&quot;&gt;here&lt;/A&gt;.
 &lt;/BODY&gt;&lt;/HTML&gt;
-</code></pre><div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#000;font-weight:bold">def</span> <span style="color:#900;font-weight:bold">transfer</span>(dest_conn, src_conn)
+</code></pre><div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#000;font-weight:bold">def</span> <span style="color:#900;font-weight:bold">transfer</span>(src_conn, dest_conn)
   <span style="color:#008080">IO</span><span style="color:#000;font-weight:bold">.</span>copy_stream(src_conn, dest_conn)
 <span style="color:#000;font-weight:bold">rescue</span> <span style="color:#000;font-weight:bold">=&gt;</span> e
   <span style="color:#0086b3">puts</span> e<span style="color:#000;font-weight:bold">.</span>message
