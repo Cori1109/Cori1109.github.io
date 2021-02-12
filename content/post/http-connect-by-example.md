@@ -9,7 +9,7 @@ tags = [
 ]
 +++
 
-[HTTP CONNECT](https://tools.ietf.org/html/rfc7231#section-4.3.6) is used to establish a [tunnel](https://en.wikipedia.org/wiki/HTTP_tunnel) between client and destination servers via forward proxy. Have you ever wondered how it works? The follow is a simple `curl` example with the output and corresponding "one-shot" proxy code:
+[HTTP CONNECT](https://tools.ietf.org/html/rfc7231#section-4.3.6) is used to establish a [tunnel](https://en.wikipedia.org/wiki/HTTP_tunnel) between client and destination servers via forward proxy. Have you ever wondered how it works? The follow is a simple `curl` example with the output and corresponding "one-shot" Ruby proxy code:
 
 ```
 $ https_proxy=http://127.0.0.1:9292 curl -v https://google.com
@@ -17,6 +17,7 @@ $ https_proxy=http://127.0.0.1:9292 curl -v https://google.com
 
 ```ruby
 require 'socket'
+
 listen_socket = TCPServer.new('127.0.0.1', 9292)
 ```
 
@@ -26,6 +27,7 @@ listen_socket = TCPServer.new('127.0.0.1', 9292)
 
 ```ruby
 client_conn = listen_socket.accept
+
 request_line = client_conn.gets
 ```
 
@@ -38,6 +40,7 @@ request_line = client_conn.gets
 
 ```ruby
 request_headers = {}
+
 while(line = client_conn.gets) do
   break unless line.include?(':')
 
