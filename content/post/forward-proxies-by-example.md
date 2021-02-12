@@ -9,23 +9,11 @@ tags = [
 ]
 +++
 
-<style>
-pre {
-  margin-left: 0%;
-}
-
-.highlight pre {
-  margin-left: 5%;
-}
-</style>
-
 I worked on the following small projects to familiarize myself with Forward Proxies:
 
 - [Forward Proxy](https://github.com/jamesmoriarty/forward-proxy) - A 150 LOC proxy written in Ruby for learning and development.
 - [Goforward](https://github.com/jamesmoriarty/goforward) - A rate limiting proxy written in Go based on Michał Łowicki's original code.
 - [Alpaca](https://github.com/samuong/alpaca) - A proxy supporting PAC scripts and NTLM authentication.
-
-
 
 ### HTTP CONNECT
 
@@ -147,3 +135,13 @@ end
   Thread.new { transfer(dest_conn, client_conn) }
 ].each(&:join)
 ```
+
+<style>
+pre {
+  margin-left: 0%;
+}
+
+.highlight pre {
+  margin-left: 5%;
+}
+</style>
