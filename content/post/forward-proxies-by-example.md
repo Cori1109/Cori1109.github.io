@@ -17,7 +17,7 @@ I worked on the following small projects to familiarize myself with Forward Prox
 
 ### HTTP CONNECT
 
-[CONNECT](https://tools.ietf.org/html/rfc7231#section-4.3.6) is used to establish a [tunnel](https://en.wikipedia.org/wiki/HTTP_tunnel) to the destination server. The follow is a simple `curl` example with the output and corresponding "one-shot" proxy code:
+[HTTP CONNECT](https://tools.ietf.org/html/rfc7231#section-4.3.6) is used to establish a [tunnel](https://en.wikipedia.org/wiki/HTTP_tunnel) to the destination server. The follow is a simple `curl` example with the output and corresponding "one-shot" proxy code:
 
 ```
 $ https_proxy=http://127.0.0.1:9292 curl -v https://google.com
