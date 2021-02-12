@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>http on James Moriarty</title>
+    <link>https://www.jamesmoriarty.xyz/tags/http/</link>
+    <description>Recent content in http on James Moriarty</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 12 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jamesmoriarty.xyz/tags/http/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HTTP CONNECT By Example</title>
+      <link>https://www.jamesmoriarty.xyz/post/http-connect-by-example/</link>
+      <pubDate>Fri, 12 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jamesmoriarty.xyz/post/http-connect-by-example/</guid>
+      <description>HTTP CONNECT is used to establish a tunnel between client and destination servers via forward proxy.</description>
+    </item>
+    
+  </channel>
+</rss>
