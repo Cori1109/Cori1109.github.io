@@ -8,12 +8,12 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 12 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jamesmoriarty.xyz/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Forward Proxies By Example</title>
-      <link>https://www.jamesmoriarty.xyz/post/forward-proxies-by-example/</link>
+      <title>HTTP CONNECT By Example</title>
+      <link>https://www.jamesmoriarty.xyz/post/http-connect-by-example/</link>
       <pubDate>Fri, 12 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://www.jamesmoriarty.xyz/post/forward-proxies-by-example/</guid>
-      <description>I worked on the following small projects to familiarize myself with Forward Proxies:</description>
+      <guid>https://www.jamesmoriarty.xyz/post/http-connect-by-example/</guid>
+      <description>HTTP CONNECT is used to establish a tunnel between client and destination servers via forward proxy.</description>
     </item>
     
     <item>
