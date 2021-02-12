@@ -25,7 +25,6 @@ $ https_proxy=http://127.0.0.1:9292 curl -v https://google.com
 
 ```ruby
 require 'socket'
-
 listen_socket = TCPServer.new('127.0.0.1', 9292)
 ```
 
