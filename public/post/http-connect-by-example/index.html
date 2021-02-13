@@ -15,7 +15,7 @@
 <meta itemprop="description" content="HTTP CONNECT is used to establish a tunnel between client and destination servers via forward proxy.">
 <meta itemprop="datePublished" content="2021-02-12T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2021-02-12T00:00:00+00:00" />
-<meta itemprop="wordCount" content="488">
+<meta itemprop="wordCount" content="490">
 
 
 
@@ -173,7 +173,7 @@
     
   </div>
 
-  <p><a href="https://tools.ietf.org/html/rfc7231#section-4.3.6">HTTP CONNECT</a> is used to establish a <a href="https://en.wikipedia.org/wiki/HTTP_tunnel">tunnel</a> between client and destination servers via forward proxy. Have you ever wondered how it works? The follow is a simple <code>curl</code> example with the output and corresponding &ldquo;one-shot&rdquo; <a href="https://gist.github.com/jamesmoriarty/a6100395d2efb17dcd06173300f988bb">Ruby proxy code</a>:</p>
+  <p><a href="https://tools.ietf.org/html/rfc7231#section-4.3.6">HTTP CONNECT</a> is used to establish a <a href="https://en.wikipedia.org/wiki/HTTP_tunnel">tunnel</a> between client and destination servers via forward proxy. Have you ever wondered how it works? The follow example consists of the curl output and corresponding &ldquo;one-shot&rdquo; 20 LOC Ruby HTTP CONNECT Proxy <a href="https://gist.github.com/jamesmoriarty/a6100395d2efb17dcd06173300f988bb">code</a>:</p>
 <pre><code>$ https_proxy=http://127.0.0.1:9292 curl -v https://google.com
 </code></pre><div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#0086b3">require</span> <span style="color:#d14">&#39;socket&#39;</span>
 
