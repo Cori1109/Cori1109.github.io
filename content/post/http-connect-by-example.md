@@ -39,7 +39,6 @@ request_line = client_conn.gets
 
 ```ruby
 request_headers = {}
-
 while(line = client_conn.gets) do
   break unless line.include?(':')
 
