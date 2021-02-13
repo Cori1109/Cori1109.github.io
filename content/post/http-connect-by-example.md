@@ -43,7 +43,7 @@ request_headers = {}
 while(line = client_conn.gets) do
   break unless line.include?(':')
 
-  header, value = *line.split(':')
+  header, value = *line.split(':').map(&:strip)
   request_headers[header] = value
 end
 ```

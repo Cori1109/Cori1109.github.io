@@ -190,7 +190,7 @@ request_line <span style="color:#000;font-weight:bold">=</span> client_conn<span
 <span style="color:#000;font-weight:bold">while</span>(line <span style="color:#000;font-weight:bold">=</span> client_conn<span style="color:#000;font-weight:bold">.</span>gets) <span style="color:#000;font-weight:bold">do</span>
   <span style="color:#000;font-weight:bold">break</span> <span style="color:#000;font-weight:bold">unless</span> line<span style="color:#000;font-weight:bold">.</span>include?(<span style="color:#d14">&#39;:&#39;</span>)
 
-  header, value <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">*</span>line<span style="color:#000;font-weight:bold">.</span>split(<span style="color:#d14">&#39;:&#39;</span>)
+  header, value <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">*</span>line<span style="color:#000;font-weight:bold">.</span>split(<span style="color:#d14">&#39;:&#39;</span>)<span style="color:#000;font-weight:bold">.</span>map(<span style="color:#000;font-weight:bold">&amp;</span><span style="color:#990073">:strip</span>)
   request_headers<span style="color:#000;font-weight:bold">[</span>header<span style="color:#000;font-weight:bold">]</span> <span style="color:#000;font-weight:bold">=</span> value
 <span style="color:#000;font-weight:bold">end</span>
 </code></pre></div><pre><code>&lt; HTTP/1.1 200 OK
