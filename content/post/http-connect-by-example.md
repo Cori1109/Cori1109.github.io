@@ -141,5 +141,5 @@ pre {
 I worked on the following small projects to familiarize myself with forward proxies and write this post:
 
 - [ForwardProxy](https://github.com/jamesmoriarty/forward-proxy) - A 150 LOC proxy written in Ruby for learning and development.
-- [Goforward](https://github.com/jamesmoriarty/goforward) - A rate limiting proxy written in Go based on Michał Łowicki's original code.
+- [GoForward](https://github.com/jamesmoriarty/goforward) - A rate limiting proxy written in Go based on Michał Łowicki's original code.
 - [Alpaca](https://github.com/samuong/alpaca) - A proxy supporting PAC scripts and NTLM authentication.
