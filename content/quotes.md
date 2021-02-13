@@ -13,6 +13,11 @@ _―Epictetus_
 
 <hr />
 
+> "Climb mountains not so the world can see you, but so you can see the world."
+_―David McCullough Jr._
+
+<hr />
+
 > "We are more often frightened than hurt; and we suffer more in imagination than in reality."
 _―Seneca_
 
