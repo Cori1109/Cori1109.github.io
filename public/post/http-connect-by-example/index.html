@@ -192,12 +192,14 @@
 listen_socket <span style="color:#000;font-weight:bold">=</span> <span style="color:#008080">TCPServer</span><span style="color:#000;font-weight:bold">.</span>new(<span style="color:#d14">&#39;127.0.0.1&#39;</span>, <span style="color:#099">9292</span>)
 </code></pre></div><pre><code>&gt; CONNECT google.com:443 HTTP/1.1
 </code></pre><div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">client_conn <span style="color:#000;font-weight:bold">=</span> listen_socket<span style="color:#000;font-weight:bold">.</span>accept
+
 request_line <span style="color:#000;font-weight:bold">=</span> client_conn<span style="color:#000;font-weight:bold">.</span>gets
 </code></pre></div><pre><code>&gt; Host: google.com:443
 &gt; User-Agent: curl/7.54.0
 &gt; Proxy-Connection: Keep-Alive
 &gt; 
 </code></pre><div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">request_headers <span style="color:#000;font-weight:bold">=</span> {}
+
 <span style="color:#000;font-weight:bold">while</span>(line <span style="color:#000;font-weight:bold">=</span> client_conn<span style="color:#000;font-weight:bold">.</span>gets) <span style="color:#000;font-weight:bold">do</span>
   <span style="color:#000;font-weight:bold">break</span> <span style="color:#000;font-weight:bold">unless</span> line<span style="color:#000;font-weight:bold">.</span>include?(<span style="color:#d14">&#39;:&#39;</span>)
 
