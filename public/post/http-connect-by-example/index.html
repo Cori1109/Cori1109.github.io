@@ -15,7 +15,7 @@
 <meta itemprop="description" content="HTTP CONNECT is used to establish a tunnel between client and destination servers via forward proxy.">
 <meta itemprop="datePublished" content="2021-02-12T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2021-02-12T00:00:00+00:00" />
-<meta itemprop="wordCount" content="356">
+<meta itemprop="wordCount" content="281">
 
 
 
@@ -173,10 +173,15 @@
     
   </div>
 
-  <p><a href="https://tools.ietf.org/html/rfc7231#section-4.3.6">HTTP CONNECT</a> is used to establish a <a href="https://en.wikipedia.org/wiki/HTTP_tunnel">tunnel</a> between client and destination servers via forward proxy. Tunnels
-are commonly used to create an end-to-end virtual connection, through
-one or more proxies, which can then be secured using TLS (Transport
-Layer Security). The following example consists of the curl output and corresponding &ldquo;one-shot&rdquo; 30 LOC Ruby HTTP CONNECT Proxy <a href="https://gist.github.com/jamesmoriarty/a6100395d2efb17dcd06173300f988bb">code</a>:</p>
+  <p><a href="https://tools.ietf.org/html/rfc7231#section-4.3.6">HTTP CONNECT</a> is used to establish a <a href="https://en.wikipedia.org/wiki/HTTP_tunnel">tunnel</a> between client and destination servers via forward proxy. Tunnels are commonly used to create an end-to-end virtual connection, through one or more proxies, which can then be secured using TLS (Transport Layer Security). I&rsquo;ve broken this post into the following sections:</p>
+<ul>
+<li><a href="#example">Example</a></li>
+<li><a href="#layer-diagram">Layer Diagram</a></li>
+<li><a href="#entity-interaction-diagram">Entity Interaction Diagram</a></li>
+<li><a href="#links">Links</a></li>
+</ul>
+<h3 id="example">Example</h3>
+<p>The following example consists of the curl output and corresponding &ldquo;one-shot&rdquo; 30 LOC Ruby HTTP CONNECT Proxy <a href="https://gist.github.com/jamesmoriarty/a6100395d2efb17dcd06173300f988bb">code</a>:</p>
 <pre><code>$ https_proxy=http://127.0.0.1:9292 curl -v https://google.com
 </code></pre><div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#0086b3">require</span> <span style="color:#d14">&#39;socket&#39;</span>
 
@@ -201,30 +206,16 @@ request_line <span style="color:#000;font-weight:bold">=</span> client_conn<span
 dest_conn <span style="color:#000;font-weight:bold">=</span> <span style="color:#008080">TCPSocket</span><span style="color:#000;font-weight:bold">.</span>new(host, port)
 client_conn<span style="color:#000;font-weight:bold">.</span>write <span style="color:#d14">&#34;HTTP/1.1 200 OK</span><span style="color:#d14">\n\n</span><span style="color:#d14">&#34;</span>
 </code></pre></div><pre><code>* Proxy replied OK to CONNECT request
-* ALPN, offering h2
-* ALPN, offering http/1.1
 ...
-* Using HTTP2, server supports multi-use
-* Connection state changed (HTTP/2 confirmed)
-* Copying HTTP/2 data in stream buffer to connection buffer after upgrade: len=0
-* Using Stream ID: 1 (easy handle 0x7faf25006600)
 &gt; GET / HTTP/2
 &gt; Host: google.com
 &gt; User-Agent: curl/7.54.0
 &gt; Accept: */*
 &gt; 
-* Connection state changed (MAX_CONCURRENT_STREAMS updated)!
+...
 &lt; HTTP/2 301 
 &lt; location: https://www.google.com/
-&lt; content-type: text/html; charset=UTF-8
-&lt; date: Fri, 12 Feb 2021 04:16:03 GMT
-&lt; expires: Sun, 14 Mar 2021 04:16:03 GMT
-&lt; cache-control: public, max-age=2592000
-&lt; server: gws
-&lt; content-length: 220
-&lt; x-xss-protection: 0
-&lt; x-frame-options: SAMEORIGIN
-&lt; alt-svc: h3-29=&quot;:443&quot;; ma=2592000,h3-T051=&quot;:443&quot;; ma=2592000,h3-Q050=&quot;:443&quot;; ma=2592000,h3-Q046=&quot;:443&quot;; ma=2592000,h3-Q043=&quot;:443&quot;; ma=2592000,quic=&quot;:443&quot;; ma=2592000; v=&quot;46,43&quot;
+...
 &lt; 
 &lt;HTML&gt;&lt;HEAD&gt;&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html;charset=utf-8&quot;&gt;
 &lt;TITLE&gt;301 Moved&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;
@@ -242,8 +233,10 @@ The document has moved
   <span style="color:#008080">Thread</span><span style="color:#000;font-weight:bold">.</span>new { transfer(client_conn, dest_conn) },
   <span style="color:#008080">Thread</span><span style="color:#000;font-weight:bold">.</span>new { transfer(dest_conn, client_conn) }
 <span style="color:#000;font-weight:bold">].</span>each(<span style="color:#000;font-weight:bold">&amp;</span><span style="color:#990073">:join</span>)
-</code></pre></div><h3 id="tcp--ip-model-interaction">TCP / IP Model Interaction</h3>
+</code></pre></div><h3 id="layer-diagram">Layer Diagram</h3>
 <p><img src="/images/http-connect.drawio.svg" alt="TCP / IP model interaction diagram"></p>
+<h3 id="entity-interaction-diagram">Entity Interaction Diagram</h3>
+<p><img src="/images/http-connect2.drawio.svg" alt="Entity interaction diagram"></p>
 <h3 id="links">Links</h3>
 <p>I worked on the following small projects to familiarize myself with forward proxies and write this post:</p>
 <ul>
