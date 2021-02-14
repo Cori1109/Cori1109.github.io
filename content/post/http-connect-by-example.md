@@ -9,7 +9,10 @@ tags = [
 ]
 +++
 
-[HTTP CONNECT](https://tools.ietf.org/html/rfc7231#section-4.3.6) is used to establish a [tunnel](https://en.wikipedia.org/wiki/HTTP_tunnel) between client and destination servers via forward proxy. Have you ever wondered how it works? The following example consists of the curl output and corresponding "one-shot" 30 LOC Ruby HTTP CONNECT Proxy [code](https://gist.github.com/jamesmoriarty/a6100395d2efb17dcd06173300f988bb):
+[HTTP CONNECT](https://tools.ietf.org/html/rfc7231#section-4.3.6) is used to establish a [tunnel](https://en.wikipedia.org/wiki/HTTP_tunnel) between client and destination servers via forward proxy. Tunnels
+   are commonly used to create an end-to-end virtual connection, through
+   one or more proxies, which can then be secured using TLS (Transport
+   Layer Security). Have you ever wondered how it works? The following example consists of the curl output and corresponding "one-shot" 30 LOC Ruby HTTP CONNECT Proxy [code](https://gist.github.com/jamesmoriarty/a6100395d2efb17dcd06173300f988bb):
 
 ```
 $ https_proxy=http://127.0.0.1:9292 curl -v https://google.com
@@ -62,29 +65,7 @@ client_conn.write "HTTP/1.1 200 OK\n\n"
 * Proxy replied OK to CONNECT request
 * ALPN, offering h2
 * ALPN, offering http/1.1
-* Cipher selection: ALL:!EXPORT:!EXPORT40:!EXPORT56:!aNULL:!LOW:!RC4:@STRENGTH
-* successfully set certificate verify locations:
-*   CAfile: /etc/ssl/cert.pem
-  CApath: none
-* TLSv1.2 (OUT), TLS handshake, Client hello (1):
-* TLSv1.2 (IN), TLS handshake, Server hello (2):
-* TLSv1.2 (IN), TLS handshake, Certificate (11):
-* TLSv1.2 (IN), TLS handshake, Server key exchange (12):
-* TLSv1.2 (IN), TLS handshake, Server finished (14):
-* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):
-* TLSv1.2 (OUT), TLS change cipher, Client hello (1):
-* TLSv1.2 (OUT), TLS handshake, Finished (20):
-* TLSv1.2 (IN), TLS change cipher, Client hello (1):
-* TLSv1.2 (IN), TLS handshake, Finished (20):
-* SSL connection using TLSv1.2 / ECDHE-ECDSA-CHACHA20-POLY1305
-* ALPN, server accepted to use h2
-* Server certificate:
-*  subject: C=US; ST=California; L=Mountain View; O=Google LLC; CN=*.google.com
-*  start date: Jan 26 09:01:00 2021 GMT
-*  expire date: Apr 20 09:00:59 2021 GMT
-*  subjectAltName: host "google.com" matched cert's "google.com"
-*  issuer: C=US; O=Google Trust Services; CN=GTS CA 1O1
-*  SSL certificate verify ok.
+...
 * Using HTTP2, server supports multi-use
 * Connection state changed (HTTP/2 confirmed)
 * Copying HTTP/2 data in stream buffer to connection buffer after upgrade: len=0
@@ -128,6 +109,18 @@ end
 ].each(&:join)
 ```
 
+### TCP / IP Model Interaction
+
+![TCP / IP model interaction diagram](/images/http-connect.drawio.svg)
+
+### Links
+
+I worked on the following small projects to familiarize myself with forward proxies and write this post:
+
+- [ForwardProxy](https://github.com/jamesmoriarty/forward-proxy) - A 150 LOC proxy written in Ruby for learning and development.
+- [GoForward](https://github.com/jamesmoriarty/goforward) - A rate limiting proxy written in Go based on Michał Łowicki's original code.
+- [Alpaca](https://github.com/samuong/alpaca) - A proxy supporting PAC scripts and NTLM authentication.
+
 <style>
 pre {
   margin-left: 0%;
@@ -137,9 +130,3 @@ pre {
   margin-left: 5%;
 }
 </style>
-
-I worked on the following small projects to familiarize myself with forward proxies and write this post:
-
-- [ForwardProxy](https://github.com/jamesmoriarty/forward-proxy) - A 150 LOC proxy written in Ruby for learning and development.
-- [GoForward](https://github.com/jamesmoriarty/goforward) - A rate limiting proxy written in Go based on Michał Łowicki's original code.
-- [Alpaca](https://github.com/samuong/alpaca) - A proxy supporting PAC scripts and NTLM authentication.
