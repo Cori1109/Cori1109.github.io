@@ -13,7 +13,7 @@
       <pubDate>Fri, 12 Feb 2021 00:00:00 +0000</pubDate>
       
       <guid>https://www.jamesmoriarty.xyz/post/http-connect-by-example/</guid>
-      <description>HTTP CONNECT is used to establish a tunnel between client and destination servers via forward proxy.</description>
+      <description>HTTP CONNECT is used to establish a tunnel. Tunnels are commonly used to create an end-to-end virtual connection, through one or more proxies, which can then be secured using TLS (Transport Layer Security).</description>
     </item>
     
   </channel>

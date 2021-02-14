@@ -9,12 +9,20 @@ tags = [
 ]
 +++
 
-[HTTP CONNECT](https://tools.ietf.org/html/rfc7231#section-4.3.6) is used to establish a [tunnel](https://en.wikipedia.org/wiki/HTTP_tunnel) between client and destination servers via forward proxy. Tunnels are commonly used to create an end-to-end virtual connection, through one or more proxies, which can then be secured using TLS (Transport Layer Security). I've broken this post into the following sections:
+[HTTP CONNECT](https://tools.ietf.org/html/rfc7231#section-4.3.6) is used to establish a [tunnel](https://en.wikipedia.org/wiki/HTTP_tunnel). Tunnels are commonly used to create an end-to-end virtual connection, through one or more proxies, which can then be secured using TLS (Transport Layer Security). I've broken this post into the following sections:
 
-- [Example](#example)
-- [Layer Diagram](#layer-diagram)
 - [Entity Interaction Diagram](#entity-interaction-diagram)
+- [Layer Diagram](#layer-diagram)
+- [Example](#example)
 - [Links](#links)
+
+### Entity Interaction Diagram
+
+![Entity interaction diagram](/images/http-connect2.drawio.svg)
+
+### Layer Diagram
+
+![TCP / IP model interaction diagram](/images/http-connect.drawio.svg)
 
 ### Example
 
@@ -100,14 +108,6 @@ end
   Thread.new { transfer(dest_conn, client_conn) }
 ].each(&:join)
 ```
-
-### Layer Diagram
-
-![TCP / IP model interaction diagram](/images/http-connect.drawio.svg)
-
-### Entity Interaction Diagram
-
-![Entity interaction diagram](/images/http-connect2.drawio.svg)
 
 ### Links
 
