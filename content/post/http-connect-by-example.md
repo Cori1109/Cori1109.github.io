@@ -31,7 +31,8 @@ I've broken this post into the following sections:
 The following example consists of the curl output and corresponding "one-shot" 30 LOC Ruby HTTP CONNECT Proxy [code](https://gist.github.com/jamesmoriarty/a6100395d2efb17dcd06173300f988bb):
 
 ```
-$ https_proxy=http://127.0.0.1:9292 curl -v https://google.com
+$ https_proxy=http://127.0.0.1:9292 \
+    curl -v https://google.com
 ```
 
 ```ruby
