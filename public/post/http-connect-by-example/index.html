@@ -15,7 +15,7 @@
 <meta itemprop="description" content="HTTP CONNECT is used to establish a tunnel. Tunnels are commonly used to create an end-to-end virtual connection, through one or more proxies, which can then be secured using TLS (Transport Layer Security).">
 <meta itemprop="datePublished" content="2021-02-12T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2021-02-12T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="265">
+<meta itemprop="wordCount" content="264">
 <meta itemprop="image" content="https://www.jamesmoriarty.xyz/images/http-connect2.png">
 
 
@@ -177,16 +177,10 @@
   </div>
 
   <p><a href="https://tools.ietf.org/html/rfc7231#section-4.3.6">HTTP CONNECT</a> is used to establish a <a href="https://en.wikipedia.org/wiki/HTTP_tunnel">tunnel</a>. Tunnels are commonly used to create an end-to-end virtual connection, through one or more proxies, which can then be secured using TLS (Transport Layer Security).</p>
-<p>I&rsquo;ve broken this post into the following sections:</p>
-<ul>
-<li><a href="#diagrams">Diagrams</a></li>
-<li><a href="#example">Example</a></li>
-<li><a href="#links">Links</a></li>
-</ul>
 <h3 id="diagrams">Diagrams</h3>
-<p>This diagram illustrates how an application layer interaction invokes a transport layer end-to-end virtual connection.</p>
+<p>The following application layer interaction establishes a transport layer.</p>
 <p><img src="/images/http-connect2.drawio.svg" alt="Interaction diagram"></p>
-<p><br /></p>
+<p>Any application protocol supported by the transport layer could be established between the client and destination.</p>
 <p><img src="/images/http-connect.drawio.svg" alt="TCP / IP model interaction diagram"></p>
 <h3 id="example">Example</h3>
 <p>The following example consists of the curl output and corresponding <a href="https://gist.github.com/jamesmoriarty/a6100395d2efb17dcd06173300f988bb">proxy code</a>:</p>

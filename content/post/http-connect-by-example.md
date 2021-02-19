@@ -12,19 +12,13 @@ tags = [
 
 [HTTP CONNECT](https://tools.ietf.org/html/rfc7231#section-4.3.6) is used to establish a [tunnel](https://en.wikipedia.org/wiki/HTTP_tunnel). Tunnels are commonly used to create an end-to-end virtual connection, through one or more proxies, which can then be secured using TLS (Transport Layer Security).
 
-I've broken this post into the following sections:
-
-- [Diagrams](#diagrams)
-- [Example](#example)
-- [Links](#links)
-
 ### Diagrams
 
-This diagram illustrates how an application layer interaction invokes a transport layer end-to-end virtual connection.
+The following application layer interaction establishes a transport layer.
 
 ![Interaction diagram](/images/http-connect2.drawio.svg)
 
-<br />
+Any application protocol supported by the transport layer could be established between the client and destination.
 
 ![TCP / IP model interaction diagram](/images/http-connect.drawio.svg)
 
