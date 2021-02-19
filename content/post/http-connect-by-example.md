@@ -3,6 +3,7 @@ author = "James Moriarty"
 title = "HTTP CONNECT By Example"
 date = "2021-02-12"
 description = ""
+images = ["/images/http-connect2.drawio.svg"]
 tags = [
   "http",
   "proxy"
@@ -62,7 +63,7 @@ end
 > Host: google.com:443
 > User-Agent: curl/7.54.0
 > Proxy-Connection: Keep-Alive
-> 
+>
 ```
 
 ```ruby
@@ -73,7 +74,7 @@ client_conn.write "HTTP/1.1 200 OK\n\n"
 
 ```
 < HTTP/1.1 200 OK
-< 
+<
 ```
 
 ```ruby
@@ -96,12 +97,12 @@ end
 > Host: google.com
 > User-Agent: curl/7.54.0
 > Accept: */*
-> 
+>
 ...
-< HTTP/2 301 
+< HTTP/2 301
 < location: https://www.google.com/
 ...
-< 
+<
 <HTML><HEAD><meta http-equiv="content-type" content="text/html;charset=utf-8">
 <TITLE>301 Moved</TITLE></HEAD><BODY>
 <H1>301 Moved</H1>

@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="generator" content="Hugo 0.80.0" />
+  <meta name="generator" content="Hugo 0.73.0-DEV" />
 
   <title>HTTP CONNECT By Example &middot; James Moriarty</title>
 
@@ -13,16 +13,18 @@
 
 <meta itemprop="name" content="HTTP CONNECT By Example">
 <meta itemprop="description" content="HTTP CONNECT is used to establish a tunnel. Tunnels are commonly used to create an end-to-end virtual connection, through one or more proxies, which can then be secured using TLS (Transport Layer Security).">
-<meta itemprop="datePublished" content="2021-02-12T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2021-02-12T00:00:00+00:00" />
+<meta itemprop="datePublished" content="2021-02-12T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2021-02-12T00:00:00&#43;00:00" />
 <meta itemprop="wordCount" content="271">
+<meta itemprop="image" content="https://www.jamesmoriarty.xyz/images/http-connect2.drawio.svg">
 
 
 
 <meta itemprop="keywords" content="http,proxy," />
 
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.jamesmoriarty.xyz/images/http-connect2.drawio.svg"/>
 
-<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="HTTP CONNECT By Example"/>
 <meta name="twitter:description" content="HTTP CONNECT is used to establish a tunnel. Tunnels are commonly used to create an end-to-end virtual connection, through one or more proxies, which can then be secured using TLS (Transport Layer Security)."/>
 
@@ -31,6 +33,7 @@
 <meta property="og:description" content="HTTP CONNECT is used to establish a tunnel. Tunnels are commonly used to create an end-to-end virtual connection, through one or more proxies, which can then be secured using TLS (Transport Layer Security)." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.jamesmoriarty.xyz/post/http-connect-by-example/" />
+<meta property="og:image" content="https://www.jamesmoriarty.xyz/images/http-connect2.drawio.svg" />
 <meta property="article:published_time" content="2021-02-12T00:00:00+00:00" />
 <meta property="article:modified_time" content="2021-02-12T00:00:00+00:00" />
 
@@ -202,12 +205,12 @@ request_line <span style="color:#000;font-weight:bold">=</span> client_conn<span
 </code></pre></div><pre><code>&gt; Host: google.com:443
 &gt; User-Agent: curl/7.54.0
 &gt; Proxy-Connection: Keep-Alive
-&gt; 
+&gt;
 </code></pre><div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">host, port <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">*</span>request_line<span style="color:#000;font-weight:bold">.</span>split<span style="color:#000;font-weight:bold">[</span><span style="color:#099">1</span><span style="color:#000;font-weight:bold">].</span>split(<span style="color:#d14">&#39;:&#39;</span>)
 dest_conn <span style="color:#000;font-weight:bold">=</span> <span style="color:#008080">TCPSocket</span><span style="color:#000;font-weight:bold">.</span>new(host, port)
 client_conn<span style="color:#000;font-weight:bold">.</span>write <span style="color:#d14">&#34;HTTP/1.1 200 OK</span><span style="color:#d14">\n\n</span><span style="color:#d14">&#34;</span>
 </code></pre></div><pre><code>&lt; HTTP/1.1 200 OK
-&lt; 
+&lt;
 </code></pre><div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#000;font-weight:bold">def</span> <span style="color:#900;font-weight:bold">transfer</span>(src_conn, dest_conn)
   <span style="color:#008080">IO</span><span style="color:#000;font-weight:bold">.</span>copy_stream(src_conn, dest_conn)
 <span style="color:#000;font-weight:bold">rescue</span> <span style="color:#000;font-weight:bold">=&gt;</span> e
@@ -224,12 +227,12 @@ client_conn<span style="color:#000;font-weight:bold">.</span>write <span style="
 &gt; Host: google.com
 &gt; User-Agent: curl/7.54.0
 &gt; Accept: */*
-&gt; 
+&gt;
 ...
-&lt; HTTP/2 301 
+&lt; HTTP/2 301
 &lt; location: https://www.google.com/
 ...
-&lt; 
+&lt;
 &lt;HTML&gt;&lt;HEAD&gt;&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html;charset=utf-8&quot;&gt;
 &lt;TITLE&gt;301 Moved&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;
 &lt;H1&gt;301 Moved&lt;/H1&gt;

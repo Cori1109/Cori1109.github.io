@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="generator" content="Hugo 0.80.0" />
+  <meta name="generator" content="Hugo 0.73.0-DEV" />
 
   <title>React Retrospective &middot; James Moriarty</title>
 
@@ -13,14 +13,13 @@
 
 <meta itemprop="name" content="React Retrospective">
 <meta itemprop="description" content="I worked on the following small projects to familiarizing myself with React.">
-<meta itemprop="datePublished" content="2020-08-12T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2020-08-12T00:00:00+00:00" />
+<meta itemprop="datePublished" content="2020-08-12T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-08-12T00:00:00&#43;00:00" />
 <meta itemprop="wordCount" content="362">
 
 
 
 <meta itemprop="keywords" content="react,fed," />
-
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="React Retrospective"/>
@@ -190,7 +189,7 @@
 </ul>
 <h3 id="typescript">Typescript</h3>
 <p>I found components of more than a few hundred lines of code increasingly difficult to refactor or extend. I ported my ES6 code to Typescript and found this reduced the complexity curve and revealed a few subtle defects in the process.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#000;font-weight:bold">export</span> <span style="color:#000;font-weight:bold">type</span> Action <span style="color:#000;font-weight:bold">=</span>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#000;font-weight:bold">export</span> type Action <span style="color:#000;font-weight:bold">=</span>
   <span style="color:#000;font-weight:bold">|</span> UndoAction
   <span style="color:#000;font-weight:bold">|</span> RedoAction
   <span style="color:#000;font-weight:bold">|</span> OpSetTypeAction
@@ -198,7 +197,7 @@
   <span style="color:#000;font-weight:bold">|</span> OpCreateAction
   <span style="color:#000;font-weight:bold">|</span> OpUpdateAction;
 
-<span style="color:#000;font-weight:bold">export</span> <span style="color:#000;font-weight:bold">type</span> Dispatch <span style="color:#000;font-weight:bold">=</span> (action: <span style="color:#458;font-weight:bold">Action</span>) <span style="color:#000;font-weight:bold">=&gt;</span> <span style="color:#000;font-weight:bold">void</span>;
+<span style="color:#000;font-weight:bold">export</span> type Dispatch <span style="color:#000;font-weight:bold">=</span> (action: <span style="color:#458;font-weight:bold">Action</span>) <span style="color:#000;font-weight:bold">=&gt;</span> <span style="color:#000;font-weight:bold">void</span>;
 </code></pre></div><h3 id="stateless-components">Stateless Components</h3>
 <p>Unsurprisingly, I found stateless components easier to understand and less error prone.</p>
 <h3 id="dependency-injection">Dependency Injection</h3>
@@ -224,7 +223,7 @@
   <span style="color:#000;font-weight:bold">return</span> {
     onChangeComplete<span style="color:#000;font-weight:bold">:</span> (color: <span style="color:#458;font-weight:bold">any</span>) <span style="color:#000;font-weight:bold">=&gt;</span> {
       dispatch({
-        <span style="color:#000;font-weight:bold">type</span><span style="color:#000;font-weight:bold">:</span> ACTION_TYPES.OP_SET_COLOR,
+        type: <span style="color:#458;font-weight:bold">ACTION_TYPES.OP_SET_COLOR</span>,
         payload<span style="color:#000;font-weight:bold">:</span> { color: <span style="color:#458;font-weight:bold">color.hex</span> },
       });
     },
