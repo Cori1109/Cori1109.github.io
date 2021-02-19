@@ -13,27 +13,23 @@ tags = [
 
 I've broken this post into the following sections:
 
-- [Interaction Diagram](#interaction-diagram)
-- [Layer Diagram](#layer-diagram)
+- [Diagrams](#diagrams)
 - [Example](#example)
 - [Links](#links)
 
-### Interaction Diagram
+### Diagrams
+
+This diagram illustrates how an application layer interaction invokes a transport layer end-to-end virtual connection.
 
 ![Interaction diagram](/images/http-connect2.drawio.svg)
 
-### Layer Diagram
+<br />
 
 ![TCP / IP model interaction diagram](/images/http-connect.drawio.svg)
 
 ### Example
 
 The following example consists of the curl output and corresponding "one-shot" 30 LOC Ruby HTTP CONNECT Proxy [code](https://gist.github.com/jamesmoriarty/a6100395d2efb17dcd06173300f988bb):
-
-```
-$ https_proxy=http://127.0.0.1:9292 \
-    curl -v https://google.com
-```
 
 ```ruby
 require 'socket'
@@ -42,13 +38,24 @@ listen_socket = TCPServer.new('127.0.0.1', 9292)
 ```
 
 ```
-> CONNECT google.com:443 HTTP/1.1
+$ https_proxy=http://127.0.0.1:9292 \
+    curl -v https://google.com
 ```
 
 ```ruby
 client_conn = listen_socket.accept
 
 request_line = client_conn.gets
+```
+
+```
+> CONNECT google.com:443 HTTP/1.1
+```
+
+```ruby
+while(line = client_conn.gets) do
+  break unless line.include?(':')
+end
 ```
 
 ```
@@ -59,14 +66,9 @@ request_line = client_conn.gets
 ```
 
 ```ruby
-request_headers = {}
-
-while(line = client_conn.gets) do
-  break unless line.include?(':')
-
-  header, value = *line.split(':').map(&:strip)
-  request_headers[header] = value
-end
+host, port = *request_line.split[1].split(':')
+dest_conn = TCPSocket.new(host, port)
+client_conn.write "HTTP/1.1 200 OK\n\n"
 ```
 
 ```
@@ -75,9 +77,16 @@ end
 ```
 
 ```ruby
-host, port = *request_line.split[1].split(':')
-dest_conn = TCPSocket.new(host, port)
-client_conn.write "HTTP/1.1 200 OK\n\n"
+def transfer(src_conn, dest_conn)
+  IO.copy_stream(src_conn, dest_conn)
+rescue => e
+  puts e.message
+end
+
+[
+  Thread.new { transfer(client_conn, dest_conn) },
+  Thread.new { transfer(dest_conn, client_conn) }
+].each(&:join)
 ```
 
 ```
@@ -99,19 +108,6 @@ client_conn.write "HTTP/1.1 200 OK\n\n"
 The document has moved
 <A HREF="https://www.google.com/">here</A>.
 </BODY></HTML>
-```
-
-```ruby
-def transfer(src_conn, dest_conn)
-  IO.copy_stream(src_conn, dest_conn)
-rescue => e
-  puts e.message
-end
-
-[
-  Thread.new { transfer(client_conn, dest_conn) },
-  Thread.new { transfer(dest_conn, client_conn) }
-].each(&:join)
 ```
 
 ### Links

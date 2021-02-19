@@ -15,7 +15,7 @@
 <meta itemprop="description" content="HTTP CONNECT is used to establish a tunnel. Tunnels are commonly used to create an end-to-end virtual connection, through one or more proxies, which can then be secured using TLS (Transport Layer Security).">
 <meta itemprop="datePublished" content="2021-02-12T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2021-02-12T00:00:00+00:00" />
-<meta itemprop="wordCount" content="272">
+<meta itemprop="wordCount" content="271">
 
 
 
@@ -176,43 +176,48 @@
   <p><a href="https://tools.ietf.org/html/rfc7231#section-4.3.6">HTTP CONNECT</a> is used to establish a <a href="https://en.wikipedia.org/wiki/HTTP_tunnel">tunnel</a>. Tunnels are commonly used to create an end-to-end virtual connection, through one or more proxies, which can then be secured using TLS (Transport Layer Security).</p>
 <p>I&rsquo;ve broken this post into the following sections:</p>
 <ul>
-<li><a href="#interaction-diagram">Interaction Diagram</a></li>
-<li><a href="#layer-diagram">Layer Diagram</a></li>
+<li><a href="#diagrams">Diagrams</a></li>
 <li><a href="#example">Example</a></li>
 <li><a href="#links">Links</a></li>
 </ul>
-<h3 id="interaction-diagram">Interaction Diagram</h3>
+<h3 id="diagrams">Diagrams</h3>
+<p>This diagram illustrates how an application layer interaction invokes a transport layer end-to-end virtual connection.</p>
 <p><img src="/images/http-connect2.drawio.svg" alt="Interaction diagram"></p>
-<h3 id="layer-diagram">Layer Diagram</h3>
+<p><br /></p>
 <p><img src="/images/http-connect.drawio.svg" alt="TCP / IP model interaction diagram"></p>
 <h3 id="example">Example</h3>
 <p>The following example consists of the curl output and corresponding &ldquo;one-shot&rdquo; 30 LOC Ruby HTTP CONNECT Proxy <a href="https://gist.github.com/jamesmoriarty/a6100395d2efb17dcd06173300f988bb">code</a>:</p>
-<pre><code>$ https_proxy=http://127.0.0.1:9292 \
-    curl -v https://google.com
-</code></pre><div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#0086b3">require</span> <span style="color:#d14">&#39;socket&#39;</span>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#0086b3">require</span> <span style="color:#d14">&#39;socket&#39;</span>
 
 listen_socket <span style="color:#000;font-weight:bold">=</span> <span style="color:#008080">TCPServer</span><span style="color:#000;font-weight:bold">.</span>new(<span style="color:#d14">&#39;127.0.0.1&#39;</span>, <span style="color:#099">9292</span>)
-</code></pre></div><pre><code>&gt; CONNECT google.com:443 HTTP/1.1
+</code></pre></div><pre><code>$ https_proxy=http://127.0.0.1:9292 \
+    curl -v https://google.com
 </code></pre><div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">client_conn <span style="color:#000;font-weight:bold">=</span> listen_socket<span style="color:#000;font-weight:bold">.</span>accept
 
 request_line <span style="color:#000;font-weight:bold">=</span> client_conn<span style="color:#000;font-weight:bold">.</span>gets
+</code></pre></div><pre><code>&gt; CONNECT google.com:443 HTTP/1.1
+</code></pre><div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#000;font-weight:bold">while</span>(line <span style="color:#000;font-weight:bold">=</span> client_conn<span style="color:#000;font-weight:bold">.</span>gets) <span style="color:#000;font-weight:bold">do</span>
+  <span style="color:#000;font-weight:bold">break</span> <span style="color:#000;font-weight:bold">unless</span> line<span style="color:#000;font-weight:bold">.</span>include?(<span style="color:#d14">&#39;:&#39;</span>)
+<span style="color:#000;font-weight:bold">end</span>
 </code></pre></div><pre><code>&gt; Host: google.com:443
 &gt; User-Agent: curl/7.54.0
 &gt; Proxy-Connection: Keep-Alive
 &gt; 
-</code></pre><div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">request_headers <span style="color:#000;font-weight:bold">=</span> {}
-
-<span style="color:#000;font-weight:bold">while</span>(line <span style="color:#000;font-weight:bold">=</span> client_conn<span style="color:#000;font-weight:bold">.</span>gets) <span style="color:#000;font-weight:bold">do</span>
-  <span style="color:#000;font-weight:bold">break</span> <span style="color:#000;font-weight:bold">unless</span> line<span style="color:#000;font-weight:bold">.</span>include?(<span style="color:#d14">&#39;:&#39;</span>)
-
-  header, value <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">*</span>line<span style="color:#000;font-weight:bold">.</span>split(<span style="color:#d14">&#39;:&#39;</span>)<span style="color:#000;font-weight:bold">.</span>map(<span style="color:#000;font-weight:bold">&amp;</span><span style="color:#990073">:strip</span>)
-  request_headers<span style="color:#000;font-weight:bold">[</span>header<span style="color:#000;font-weight:bold">]</span> <span style="color:#000;font-weight:bold">=</span> value
-<span style="color:#000;font-weight:bold">end</span>
-</code></pre></div><pre><code>&lt; HTTP/1.1 200 OK
-&lt; 
 </code></pre><div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">host, port <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">*</span>request_line<span style="color:#000;font-weight:bold">.</span>split<span style="color:#000;font-weight:bold">[</span><span style="color:#099">1</span><span style="color:#000;font-weight:bold">].</span>split(<span style="color:#d14">&#39;:&#39;</span>)
 dest_conn <span style="color:#000;font-weight:bold">=</span> <span style="color:#008080">TCPSocket</span><span style="color:#000;font-weight:bold">.</span>new(host, port)
 client_conn<span style="color:#000;font-weight:bold">.</span>write <span style="color:#d14">&#34;HTTP/1.1 200 OK</span><span style="color:#d14">\n\n</span><span style="color:#d14">&#34;</span>
+</code></pre></div><pre><code>&lt; HTTP/1.1 200 OK
+&lt; 
+</code></pre><div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#000;font-weight:bold">def</span> <span style="color:#900;font-weight:bold">transfer</span>(src_conn, dest_conn)
+  <span style="color:#008080">IO</span><span style="color:#000;font-weight:bold">.</span>copy_stream(src_conn, dest_conn)
+<span style="color:#000;font-weight:bold">rescue</span> <span style="color:#000;font-weight:bold">=&gt;</span> e
+  <span style="color:#0086b3">puts</span> e<span style="color:#000;font-weight:bold">.</span>message
+<span style="color:#000;font-weight:bold">end</span>
+
+<span style="color:#000;font-weight:bold">[</span>
+  <span style="color:#008080">Thread</span><span style="color:#000;font-weight:bold">.</span>new { transfer(client_conn, dest_conn) },
+  <span style="color:#008080">Thread</span><span style="color:#000;font-weight:bold">.</span>new { transfer(dest_conn, client_conn) }
+<span style="color:#000;font-weight:bold">].</span>each(<span style="color:#000;font-weight:bold">&amp;</span><span style="color:#990073">:join</span>)
 </code></pre></div><pre><code>* Proxy replied OK to CONNECT request
 ...
 &gt; GET / HTTP/2
@@ -231,17 +236,7 @@ client_conn<span style="color:#000;font-weight:bold">.</span>write <span style="
 The document has moved
 &lt;A HREF=&quot;https://www.google.com/&quot;&gt;here&lt;/A&gt;.
 &lt;/BODY&gt;&lt;/HTML&gt;
-</code></pre><div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#000;font-weight:bold">def</span> <span style="color:#900;font-weight:bold">transfer</span>(src_conn, dest_conn)
-  <span style="color:#008080">IO</span><span style="color:#000;font-weight:bold">.</span>copy_stream(src_conn, dest_conn)
-<span style="color:#000;font-weight:bold">rescue</span> <span style="color:#000;font-weight:bold">=&gt;</span> e
-  <span style="color:#0086b3">puts</span> e<span style="color:#000;font-weight:bold">.</span>message
-<span style="color:#000;font-weight:bold">end</span>
-
-<span style="color:#000;font-weight:bold">[</span>
-  <span style="color:#008080">Thread</span><span style="color:#000;font-weight:bold">.</span>new { transfer(client_conn, dest_conn) },
-  <span style="color:#008080">Thread</span><span style="color:#000;font-weight:bold">.</span>new { transfer(dest_conn, client_conn) }
-<span style="color:#000;font-weight:bold">].</span>each(<span style="color:#000;font-weight:bold">&amp;</span><span style="color:#990073">:join</span>)
-</code></pre></div><h3 id="links">Links</h3>
+</code></pre><h3 id="links">Links</h3>
 <p>I worked on the following small projects to familiarize myself with forward proxies and write this post:</p>
 <ul>
 <li><a href="https://github.com/jamesmoriarty/forward-proxy">ForwardProxy</a> - A 150 LOC proxy written in Ruby for learning and development.</li>
