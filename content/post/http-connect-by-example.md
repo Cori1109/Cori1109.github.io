@@ -30,7 +30,7 @@ This diagram illustrates how an application layer interaction invokes a transpor
 
 ### Example
 
-The following example consists of the curl output and corresponding "one-shot" 30 LOC Ruby HTTP CONNECT Proxy [code](https://gist.github.com/jamesmoriarty/a6100395d2efb17dcd06173300f988bb):
+The following example consists of the curl output and corresponding [proxy code](https://gist.github.com/jamesmoriarty/a6100395d2efb17dcd06173300f988bb):
 
 ```ruby
 require 'socket'

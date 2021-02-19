@@ -15,7 +15,7 @@
 <meta itemprop="description" content="HTTP CONNECT is used to establish a tunnel. Tunnels are commonly used to create an end-to-end virtual connection, through one or more proxies, which can then be secured using TLS (Transport Layer Security).">
 <meta itemprop="datePublished" content="2021-02-12T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2021-02-12T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="271">
+<meta itemprop="wordCount" content="265">
 <meta itemprop="image" content="https://www.jamesmoriarty.xyz/images/http-connect2.png">
 
 
@@ -189,7 +189,7 @@
 <p><br /></p>
 <p><img src="/images/http-connect.drawio.svg" alt="TCP / IP model interaction diagram"></p>
 <h3 id="example">Example</h3>
-<p>The following example consists of the curl output and corresponding &ldquo;one-shot&rdquo; 30 LOC Ruby HTTP CONNECT Proxy <a href="https://gist.github.com/jamesmoriarty/a6100395d2efb17dcd06173300f988bb">code</a>:</p>
+<p>The following example consists of the curl output and corresponding <a href="https://gist.github.com/jamesmoriarty/a6100395d2efb17dcd06173300f988bb">proxy code</a>:</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#0086b3">require</span> <span style="color:#d14">&#39;socket&#39;</span>
 
 listen_socket <span style="color:#000;font-weight:bold">=</span> <span style="color:#008080">TCPServer</span><span style="color:#000;font-weight:bold">.</span>new(<span style="color:#d14">&#39;127.0.0.1&#39;</span>, <span style="color:#099">9292</span>)
