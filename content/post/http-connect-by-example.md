@@ -3,7 +3,7 @@ author = "James Moriarty"
 title = "HTTP CONNECT By Example"
 date = "2021-02-12"
 description = ""
-images = ["/images/http-connect2.drawio.svg"]
+images = ["/images/http-connect2.png"]
 tags = [
   "http",
   "proxy"
