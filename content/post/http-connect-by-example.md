@@ -18,7 +18,7 @@ The following application layer interaction establishes a transport layer.
 
 ![Interaction diagram](/images/http-connect2.drawio.svg)
 
-Now the client and destination can utilize various application layer interactions supported by the transport layer.
+This allows the client and destination to utilize various application layer interactions supported over the transport layer.
 
 ![TCP / IP model interaction diagram](/images/http-connect.drawio.svg)
 
