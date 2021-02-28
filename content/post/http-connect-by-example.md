@@ -12,16 +12,6 @@ tags = [
 
 [HTTP CONNECT](https://tools.ietf.org/html/rfc7231#section-4.3.6) is used to establish a [tunnel](https://en.wikipedia.org/wiki/HTTP_tunnel). Tunnels are commonly used to create an end-to-end virtual connection, through one or more proxies, which can then be secured using TLS (Transport Layer Security).
 
-### Diagrams
-
-The following application layer interaction establishes a transport layer.
-
-![Interaction diagram](/images/http-connect2.drawio.svg)
-
-This allows the client and destination to utilize various application layer interactions supported over the transport layer.
-
-![TCP / IP model interaction diagram](/images/http-connect.drawio.svg)
-
 ### Example
 
 The following example consists of the curl output and corresponding [proxy code](https://gist.github.com/jamesmoriarty/a6100395d2efb17dcd06173300f988bb):
@@ -105,9 +95,20 @@ The document has moved
 </BODY></HTML>
 ```
 
+### Diagrams
+
+The following application layer interaction establishes a transport layer.
+
+![Interaction diagram](/images/http-connect2.drawio.svg)
+
+This allows the client and destination to utilize various application layer interactions supported over the transport layer.
+
+![TCP / IP model interaction diagram](/images/http-connect.drawio.svg)
+
+
 ### Links
 
-I worked on the following small projects to familiarize myself with forward proxies and write this post:
+I worked on the following small projects to familiarize myself with forward proxies:
 
 - [ForwardProxy](https://github.com/jamesmoriarty/forward-proxy) - A 150 LOC proxy written in Ruby for learning and development.
 - [GoForward](https://github.com/jamesmoriarty/goforward) - A rate limiting proxy written in Go based on Michał Łowicki's original code.
