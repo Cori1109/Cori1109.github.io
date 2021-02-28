@@ -10,8 +10,6 @@ author = "James Moriarty"
 
 I value utility and as a result have an appreciation for some consumer electronics. This is reflected in my tool choices:
 
-![Photo of desktop](/images/tools.jpg)
-
 ### Personal Laptop
 
 After spending the majority of my professional career on MacBooks - I use a Surface Pro 6 to run ... Linux. I use this for general open source development.
@@ -42,5 +40,4 @@ I use this to run low power Intel NUC gitops K3s Kubernetes single node "cluster
 - Polyglot Languages
 - Microsoft Code
 - Github
-- Kubernetes
-- Amazon Web Services & Google Cloud
+- Amazon Web Services & Google Cloud & Kubernetes
