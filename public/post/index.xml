@@ -6,18 +6,14 @@
     <description>Recent content in Posts on James Moriarty</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 28 Feb 2021 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://www.jamesmoriarty.xyz/post/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 28 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jamesmoriarty.xyz/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Go Public Service Announcement</title>
       <link>https://www.jamesmoriarty.xyz/post/go-public-service-announcement/</link>
       <pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate>
       
       <guid>https://www.jamesmoriarty.xyz/post/go-public-service-announcement/</guid>
-      <description>For the love of proxies - please read this.</description>
+      <description>Take the following example code which overrides a HTTP client’s DefaultTransport in order to optionally verifies the server’s certificate chain and hostname.</description>
     </item>
     
     <item>
