@@ -1,6 +1,6 @@
 +++
 author = "James Moriarty"
-title = "Go Public Service Announcement - Custom Transport"
+title = "Go Public Service Announcement"
 date = "2021-02-28"
 description = "For the love of proxies - please read this."
 tags = [
@@ -8,7 +8,15 @@ tags = [
 ]
 +++
 
-For the love of proxies - please read this. The following example code overrides the HTTP client’s [DefaultTransport](https://golang.org/src/net/http/transport.go) in order to optionally verifies the server’s certificate chain and hostname.
+<hr />
+
+<center>
+  <img src="https://i.imgflip.com/4zsikp.jpg" alt="Meme">
+</center>
+
+<hr />
+
+For the love of proxies - please read this. Take the following example code which overrides the HTTP client’s [DefaultTransport](https://golang.org/src/net/http/transport.go) in order to optionally verifies the server’s certificate chain and hostname.
 
 ```go
 return &http.Client{
@@ -34,10 +42,10 @@ And [Transport](https://golang.org/src/net/http/transport.go).
   Proxy func(*Request) (*url.URL, error)
 ```
 
-In the act of using a custom [Transport](https://golang.org/src/net/http/transport.go) - we've lost the functionality of [ProxyFromEnvironment](https://golang.org/src/net/http/transport.go?s=16634:16691#L427). Take the following example of a go program afflicted by this:
+In the act of using a custom [Transport](https://golang.org/src/net/http/transport.go) as opposed to [DefaultTransport](https://golang.org/src/net/http/transport.go) - we've lost the functionality of [ProxyFromEnvironment](https://golang.org/src/net/http/transport.go?s=16634:16691#L427). Take the following example of a go program afflicted by this via a dependency:
 
 ```python
-$ https_proxy=https://proxy.corp.example.com \
+$ https_proxy=https://proxy.corp.example.com:3128 \
     terraform \
       plan
 ```
