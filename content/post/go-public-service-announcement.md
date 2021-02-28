@@ -42,7 +42,7 @@ And [Transport](https://golang.org/src/net/http/transport.go).
   Proxy func(*Request) (*url.URL, error)
 ```
 
-In the act of using a custom [Transport](https://golang.org/src/net/http/transport.go) as opposed to [DefaultTransport](https://golang.org/src/net/http/transport.go) - we've lost the functionality of [ProxyFromEnvironment](https://golang.org/src/net/http/transport.go?s=16634:16691#L427). Take the following example of a go program afflicted by this via a dependency:
+In the act of using a custom [Transport](https://golang.org/src/net/http/transport.go) as opposed to [DefaultTransport](https://golang.org/src/net/http/transport.go) - we've lost the functionality of [ProxyFromEnvironment](https://golang.org/src/net/http/transport.go?s=16634:16691#L427). Take the following example command with a binary afflicted by this via a dependency:
 
 ```python
 $ https_proxy=https://proxy.corp.example.com:3128 \
