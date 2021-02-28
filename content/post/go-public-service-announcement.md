@@ -16,7 +16,7 @@ tags = [
 
 <hr />
 
-For the love of proxies - please read this. Take the following example code which overrides the HTTP client’s [DefaultTransport](https://golang.org/src/net/http/transport.go) in order to optionally verifies the server’s certificate chain and hostname.
+For the love of proxies - please read this. Take the following example code which overrides a HTTP client’s [DefaultTransport](https://golang.org/src/net/http/transport.go) in order to optionally verifies the server’s certificate chain and hostname.
 
 ```go
 return &http.Client{
