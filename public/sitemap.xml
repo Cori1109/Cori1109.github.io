@@ -3,6 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.jamesmoriarty.xyz/tags/go/</loc>
+    <lastmod>2021-02-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.jamesmoriarty.xyz/post/go-public-service-announcement/</loc>
+    <lastmod>2021-02-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.jamesmoriarty.xyz/</loc>
+    <lastmod>2021-02-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.jamesmoriarty.xyz/post/</loc>
+    <lastmod>2021-02-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.jamesmoriarty.xyz/tags/</loc>
+    <lastmod>2021-02-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.jamesmoriarty.xyz/tags/http/</loc>
     <lastmod>2021-02-12T00:00:00+00:00</lastmod>
   </url>
@@ -13,22 +38,7 @@
   </url>
   
   <url>
-    <loc>https://www.jamesmoriarty.xyz/</loc>
-    <lastmod>2021-02-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.jamesmoriarty.xyz/post/</loc>
-    <lastmod>2021-02-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://www.jamesmoriarty.xyz/tags/proxy/</loc>
-    <lastmod>2021-02-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.jamesmoriarty.xyz/tags/</loc>
     <lastmod>2021-02-12T00:00:00+00:00</lastmod>
   </url>
   
@@ -45,11 +55,6 @@
   <url>
     <loc>https://www.jamesmoriarty.xyz/tools/</loc>
     <lastmod>2021-02-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.jamesmoriarty.xyz/tags/go/</loc>
-    <lastmod>2021-01-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
