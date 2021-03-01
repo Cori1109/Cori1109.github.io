@@ -32,11 +32,11 @@ var DefaultTransport RoundTripper = &Transport{
   Proxy: ProxyFromEnvironment,
 ```
 
-And [Transport](https://golang.org/src/net/http/transport.go) given `Transport{}`:
+And [Transport](https://golang.org/src/net/http/transport.go) given no `Proxy` value:
 
 ```go
   // If Proxy is nil or returns a nil *URL, no proxy is used.
   Proxy func(*Request) (*url.URL, error)
 ```
 
-Using a custom [Transport](https://golang.org/src/net/http/transport.go) without restoring the `Proxy` value - we've lost the functionality of [ProxyFromEnvironment](https://golang.org/src/net/http/transport.go?s=16634:16691#L427). I’ve observed this defect in popular vendor’s code, e.g. [Splunk](https://github.com/splunk/terraform-provider-splunk/commit/db4b03158b1bdfff09d911ab3a8ae09bd3bfad98) and [Dynatrace](https://github.com/Dynatrace/dynatrace-oneagent-operator/commit/a7b8d1a93920aaeb4239bc166cd25a184ffb0385#diff-4646a4f3b1c8bd9f12c17882703cd1bebbcc8fe28819157d8be73ee01d33cccdR141) and suspect it's more widespread. Stay vigilant.
+By using a custom [Transport](https://golang.org/src/net/http/transport.go) without restoring the `Proxy` value - we've lost the functionality of [ProxyFromEnvironment](https://golang.org/src/net/http/transport.go?s=16634:16691#L427). I’ve observed this defect in popular vendor’s code, e.g. [Splunk](https://github.com/splunk/terraform-provider-splunk/commit/db4b03158b1bdfff09d911ab3a8ae09bd3bfad98) and [Dynatrace](https://github.com/Dynatrace/dynatrace-oneagent-operator/commit/a7b8d1a93920aaeb4239bc166cd25a184ffb0385#diff-4646a4f3b1c8bd9f12c17882703cd1bebbcc8fe28819157d8be73ee01d33cccdR141) and suspect it's more widespread. Stay vigilant.
