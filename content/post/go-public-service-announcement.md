@@ -25,14 +25,14 @@ return &http.Client{
 }
 ```
 
-The full implications of the code change aren't obvious so let's look at the code that defines [DefaultTransport](https://golang.org/src/net/http/transport.go) for `Proxy`:
+The full implications of the code change aren't obvious so let's look at the code that defines [DefaultTransport](https://golang.org/src/net/http/transport.go) specifically `Proxy`:
 
 ```go
 var DefaultTransport RoundTripper = &Transport{
   Proxy: ProxyFromEnvironment,
 ```
 
-And [Transport](https://golang.org/src/net/http/transport.go) for `Transport{}`:
+And [Transport](https://golang.org/src/net/http/transport.go) given `Transport{}`:
 
 ```go
   // If Proxy is nil or returns a nil *URL, no proxy is used.
