@@ -3,7 +3,6 @@ author = "James Moriarty"
 title = "Go Public Service Announcement"
 date = "2021-02-28"
 description = "For the love of proxies - please read this."
-images = ["https://i.imgflip.com/4zsikp.jpg"]
 tags = [
   "go"
 ]
