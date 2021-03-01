@@ -29,7 +29,6 @@ $ https_proxy=http://127.0.0.1:9292 \
 
 ```ruby
 client_conn = listen_socket.accept
-
 request_line = client_conn.gets
 ```
 
