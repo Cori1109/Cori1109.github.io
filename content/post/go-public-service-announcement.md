@@ -8,14 +8,14 @@ tags = [
 ]
 +++
 
-Unfortunately for some Go applications, proxy support is being unintentionally dropped with a simple change. If you've ever been behind a proxy, you might recall doing something like:
+Proxy support for some Go applications is being unintentionally dropped with a simple change. For example if you've ever been behind a proxy, you might recall doing something like:
 
 ```
 $ https_proxy=https://proxy.corp.example.com:3128 \
     curl https://google.com/
 ```
 
-Take the following example Go code which overrides an HTTP client’s [DefaultTransport](https://golang.org/src/net/http/transport.go) with a custom [Transport](https://golang.org/src/net/http/transport.go) in order to optionally verifies the server’s certificate chain and hostname.
+Take the following example Go code which overrides an HTTP client’s [DefaultTransport](https://golang.org/src/net/http/transport.go) with a custom [Transport](https://golang.org/src/net/http/transport.go) in order to optionally verifies the server’s certificate chain and hostname:
 
 ```go
 return &http.Client{
@@ -25,14 +25,14 @@ return &http.Client{
 }
 ```
 
-The full implications of the code change aren't obvious so let's look at the code that defines [DefaultTransport](https://golang.org/src/net/http/transport.go) for `Proxy`.
+The full implications of the code change aren't obvious so let's look at the code that defines [DefaultTransport](https://golang.org/src/net/http/transport.go) for `Proxy`:
 
 ```go
 var DefaultTransport RoundTripper = &Transport{
   Proxy: ProxyFromEnvironment,
 ```
 
-And [Transport](https://golang.org/src/net/http/transport.go) for `Transport{}`.
+And [Transport](https://golang.org/src/net/http/transport.go) for `Transport{}`:
 
 ```go
   // If Proxy is nil or returns a nil *URL, no proxy is used.
