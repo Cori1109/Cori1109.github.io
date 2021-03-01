@@ -8,7 +8,7 @@ tags = [
 ]
 +++
 
-Unfortunately for some Go applications - proxy support is being unintentionally dropped with a simple change. If you've ever been behind a proxy you might recall doing something like:
+Unfortunately for some Go applications, proxy support is being unintentionally dropped with a simple change. If you've ever been behind a proxy, you might recall doing something like:
 
 ```
 $ https_proxy=https://proxy.corp.example.com:3128 \
