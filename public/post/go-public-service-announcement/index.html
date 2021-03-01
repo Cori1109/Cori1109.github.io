@@ -176,12 +176,7 @@
     
   </div>
 
-  <hr />
-<center>
-  <img src="https://i.imgflip.com/4zsikp.jpg" alt="Meme">
-</center>
-<hr />
-<p>If you&rsquo;ve ever been behind a proxy you might recall doing something like:</p>
+  <p>If you&rsquo;ve ever been behind a proxy you might recall doing something like:</p>
 <pre><code>$ https_proxy=https://proxy.corp.example.com:3128 \
     curl https://google.com/
 </code></pre><p>Unfortunately for some Go applications - proxy support is being unintentionally dropped with a simple change. Take the following example code which overrides an HTTP client’s <a href="https://golang.org/src/net/http/transport.go">DefaultTransport</a> with a custom <a href="https://golang.org/src/net/http/transport.go">Transport</a> in order to optionally verifies the server’s certificate chain and hostname.</p>

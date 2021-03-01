@@ -9,14 +9,6 @@ tags = [
 ]
 +++
 
-<hr />
-
-<center>
-  <img src="https://i.imgflip.com/4zsikp.jpg" alt="Meme">
-</center>
-
-<hr />
-
 If you've ever been behind a proxy you might recall doing something like:
 
 ```
