@@ -17,7 +17,7 @@
       <pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate>
       
       <guid>https://www.jamesmoriarty.xyz/post/go-public-service-announcement/</guid>
-      <description>If you&amp;rsquo;ve ever been behind a proxy you might recall doing something like:</description>
+      <description>Unfortunately for some Go applications - proxy support is being unintentionally dropped with a simple change.</description>
     </item>
     
     <item>

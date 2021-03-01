@@ -15,7 +15,7 @@
 <meta itemprop="description" content="For the love of proxies - please read this.">
 <meta itemprop="datePublished" content="2021-02-28T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2021-02-28T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="162">
+<meta itemprop="wordCount" content="163">
 
 
 
@@ -172,10 +172,10 @@
     
   </div>
 
-  <p>If you&rsquo;ve ever been behind a proxy you might recall doing something like:</p>
+  <p>Unfortunately for some Go applications - proxy support is being unintentionally dropped with a simple change. If you&rsquo;ve ever been behind a proxy you might recall doing something like:</p>
 <pre><code>$ https_proxy=https://proxy.corp.example.com:3128 \
     curl https://google.com/
-</code></pre><p>Unfortunately for some Go applications - proxy support is being unintentionally dropped with a simple change. Take the following example code which overrides an HTTP client’s <a href="https://golang.org/src/net/http/transport.go">DefaultTransport</a> with a custom <a href="https://golang.org/src/net/http/transport.go">Transport</a> in order to optionally verifies the server’s certificate chain and hostname.</p>
+</code></pre><p>Take the following example Go code which overrides an HTTP client’s <a href="https://golang.org/src/net/http/transport.go">DefaultTransport</a> with a custom <a href="https://golang.org/src/net/http/transport.go">Transport</a> in order to optionally verifies the server’s certificate chain and hostname.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000;font-weight:bold">return</span> <span style="color:#000;font-weight:bold">&amp;</span>http.Client{
   Transport: <span style="color:#000;font-weight:bold">&amp;</span>http.Transport{
     TLSClientConfig: <span style="color:#000;font-weight:bold">&amp;</span>tls.Config{InsecureSkipVerify: skipValidateTLS},

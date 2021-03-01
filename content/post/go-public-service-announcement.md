@@ -8,14 +8,14 @@ tags = [
 ]
 +++
 
-If you've ever been behind a proxy you might recall doing something like:
+Unfortunately for some Go applications - proxy support is being unintentionally dropped with a simple change. If you've ever been behind a proxy you might recall doing something like:
 
 ```
 $ https_proxy=https://proxy.corp.example.com:3128 \
     curl https://google.com/
 ```
 
-Unfortunately for some Go applications - proxy support is being unintentionally dropped with a simple change. Take the following example code which overrides an HTTP client’s [DefaultTransport](https://golang.org/src/net/http/transport.go) with a custom [Transport](https://golang.org/src/net/http/transport.go) in order to optionally verifies the server’s certificate chain and hostname.
+Take the following example Go code which overrides an HTTP client’s [DefaultTransport](https://golang.org/src/net/http/transport.go) with a custom [Transport](https://golang.org/src/net/http/transport.go) in order to optionally verifies the server’s certificate chain and hostname.
 
 ```go
 return &http.Client{
