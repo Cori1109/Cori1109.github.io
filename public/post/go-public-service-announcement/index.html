@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="generator" content="Hugo 0.80.0" />
+  <meta name="generator" content="Hugo 0.73.0-DEV" />
 
   <title>Go Public Service Announcement &middot; James Moriarty</title>
 
@@ -13,15 +13,14 @@
 
 <meta itemprop="name" content="Go Public Service Announcement">
 <meta itemprop="description" content="For the love of proxies - please read this.">
-<meta itemprop="datePublished" content="2021-02-28T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2021-02-28T00:00:00+00:00" />
-<meta itemprop="wordCount" content="155">
+<meta itemprop="datePublished" content="2021-02-28T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2021-02-28T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="168">
 <meta itemprop="image" content="https://i.imgflip.com/4zsikp.jpg">
 
 
 
 <meta itemprop="keywords" content="go," />
-
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://i.imgflip.com/4zsikp.jpg"/>
@@ -182,25 +181,22 @@
   <img src="https://i.imgflip.com/4zsikp.jpg" alt="Meme">
 </center>
 <hr />
-<p>Take the following example code which overrides a HTTP client’s <a href="https://golang.org/src/net/http/transport.go">DefaultTransport</a> in order to optionally verifies the server’s certificate chain and hostname.</p>
+<p>If you&rsquo;ve ever been behind a proxy you might recall doing something like:</p>
+<pre><code>$ https_proxy=https://proxy.corp.example.com:3128 \
+    curl https://google.com/
+</code></pre><p>Unfortunately for some Go applications - proxy support is unwittingly dropped with a simple change. Take the following example code which overrides a HTTP client’s <a href="https://golang.org/src/net/http/transport.go">DefaultTransport</a> with a custom <a href="https://golang.org/src/net/http/transport.go">Transport</a> in order to optionally verifies the server’s certificate chain and hostname.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000;font-weight:bold">return</span> <span style="color:#000;font-weight:bold">&amp;</span>http.Client{
   Transport: <span style="color:#000;font-weight:bold">&amp;</span>http.Transport{
     TLSClientConfig: <span style="color:#000;font-weight:bold">&amp;</span>tls.Config{InsecureSkipVerify: skipValidateTLS},
   },
 }
-</code></pre></div><p>The full implications of the code change aren&rsquo;t obvious so let&rsquo;s look at the code that defines <a href="https://golang.org/src/net/http/transport.go">DefaultTransport</a>.</p>
+</code></pre></div><p>The full implications of the code change aren&rsquo;t obvious so let&rsquo;s look at the code that defines <a href="https://golang.org/src/net/http/transport.go">DefaultTransport</a> for <code>Proxy</code>.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000;font-weight:bold">var</span> DefaultTransport RoundTripper = <span style="color:#000;font-weight:bold">&amp;</span>Transport{
   Proxy: ProxyFromEnvironment,
-  <span style="color:#000;font-weight:bold">...</span>
-}
-</code></pre></div><p>And <a href="https://golang.org/src/net/http/transport.go">Transport</a>.</p>
+</code></pre></div><p>And <a href="https://golang.org/src/net/http/transport.go">Transport</a> for <code>Transport{}</code>.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">  <span style="color:#998;font-style:italic">// If Proxy is nil or returns a nil *URL, no proxy is used.
 </span><span style="color:#998;font-style:italic"></span>  Proxy <span style="color:#000;font-weight:bold">func</span>(<span style="color:#000;font-weight:bold">*</span>Request) (<span style="color:#000;font-weight:bold">*</span>url.URL, <span style="color:#458;font-weight:bold">error</span>)
-</code></pre></div><p>Take the following example command with a binary afflicted by this via a <a href="https://github.com/splunk/terraform-provider-splunk/commit/db4b03158b1bdfff09d911ab3a8ae09bd3bfad98">dependency</a>.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#a61717;background-color:#e3d2d2">$</span> https_proxy<span style="color:#000;font-weight:bold">=</span>https:<span style="color:#000;font-weight:bold">//</span>proxy<span style="color:#000;font-weight:bold">.</span>corp<span style="color:#000;font-weight:bold">.</span>example<span style="color:#000;font-weight:bold">.</span>com:<span style="color:#099">3128</span> \
-    terraform \
-      plan
-</code></pre></div><p>In the act of using a custom <a href="https://golang.org/src/net/http/transport.go">Transport</a> as opposed to <a href="https://golang.org/src/net/http/transport.go">DefaultTransport</a> - we&rsquo;ve lost the functionality of <a href="https://golang.org/src/net/http/transport.go?s=16634:16691#L427">ProxyFromEnvironment</a>. This becomes an issue for the countless souls trapped behind corporate proxies and who depend on this functionality. I&rsquo;ve observed this defect in code from large enterprises like <a href="https://github.com/splunk/terraform-provider-splunk/commit/db4b03158b1bdfff09d911ab3a8ae09bd3bfad98">Splunk</a> and <a href="https://github.com/Dynatrace/dynatrace-oneagent-operator/commit/a7b8d1a93920aaeb4239bc166cd25a184ffb0385#diff-4646a4f3b1c8bd9f12c17882703cd1bebbcc8fe28819157d8be73ee01d33cccdR141">Dynatrace</a> and suspect it&rsquo;s more widespread. Stay vigilant.</p>
+</code></pre></div><p>In the act of using a custom <a href="https://golang.org/src/net/http/transport.go">Transport</a> - we&rsquo;ve lost the functionality of <a href="https://golang.org/src/net/http/transport.go?s=16634:16691#L427">ProxyFromEnvironment</a>. This becomes an issue for the countless souls trapped behind proxies and who depend on this functionality. I&rsquo;ve observed this defect in popular vendors code e.g. <a href="https://github.com/splunk/terraform-provider-splunk/commit/db4b03158b1bdfff09d911ab3a8ae09bd3bfad98">Splunk</a> and <a href="https://github.com/Dynatrace/dynatrace-oneagent-operator/commit/a7b8d1a93920aaeb4239bc166cd25a184ffb0385#diff-4646a4f3b1c8bd9f12c17882703cd1bebbcc8fe28819157d8be73ee01d33cccdR141">Dynatrace</a> and suspect it&rsquo;s more widespread. Stay vigilant.</p>
 
 </div>
 

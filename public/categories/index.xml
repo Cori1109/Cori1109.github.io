@@ -5,6 +5,10 @@
     <link>https://www.jamesmoriarty.xyz/categories/</link>
     <description>Recent content in Categories on James Moriarty</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://www.jamesmoriarty.xyz/categories/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    
+	<atom:link href="https://www.jamesmoriarty.xyz/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
   </channel>
 </rss>
