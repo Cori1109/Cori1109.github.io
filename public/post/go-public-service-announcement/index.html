@@ -15,7 +15,7 @@
 <meta itemprop="description" content="For the love of proxies - please read this.">
 <meta itemprop="datePublished" content="2021-02-28T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2021-02-28T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="164">
+<meta itemprop="wordCount" content="162">
 <meta itemprop="image" content="https://i.imgflip.com/4zsikp.jpg">
 
 
@@ -196,7 +196,7 @@
 </code></pre></div><p>And <a href="https://golang.org/src/net/http/transport.go">Transport</a> for <code>Transport{}</code>.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">  <span style="color:#998;font-style:italic">// If Proxy is nil or returns a nil *URL, no proxy is used.
 </span><span style="color:#998;font-style:italic"></span>  Proxy <span style="color:#000;font-weight:bold">func</span>(<span style="color:#000;font-weight:bold">*</span>Request) (<span style="color:#000;font-weight:bold">*</span>url.URL, <span style="color:#458;font-weight:bold">error</span>)
-</code></pre></div><p>Using a custom <a href="https://golang.org/src/net/http/transport.go">Transport</a> - we&rsquo;ve lost the functionality of <a href="https://golang.org/src/net/http/transport.go?s=16634:16691#L427">ProxyFromEnvironment</a>. This becomes an issue for the countless trapped behind proxies and who depend on this functionality. I’ve observed this defect in popular vendor’s code, e.g. <a href="https://github.com/splunk/terraform-provider-splunk/commit/db4b03158b1bdfff09d911ab3a8ae09bd3bfad98">Splunk</a> and <a href="https://github.com/Dynatrace/dynatrace-oneagent-operator/commit/a7b8d1a93920aaeb4239bc166cd25a184ffb0385#diff-4646a4f3b1c8bd9f12c17882703cd1bebbcc8fe28819157d8be73ee01d33cccdR141">Dynatrace</a> and suspect it&rsquo;s more widespread. Stay vigilant.</p>
+</code></pre></div><p>Using a custom <a href="https://golang.org/src/net/http/transport.go">Transport</a> - we&rsquo;ve lost the functionality of <a href="https://golang.org/src/net/http/transport.go?s=16634:16691#L427">ProxyFromEnvironment</a>. This becomes an issue for those behind proxies and who depend on this functionality. I’ve observed this defect in popular vendor’s code, e.g. <a href="https://github.com/splunk/terraform-provider-splunk/commit/db4b03158b1bdfff09d911ab3a8ae09bd3bfad98">Splunk</a> and <a href="https://github.com/Dynatrace/dynatrace-oneagent-operator/commit/a7b8d1a93920aaeb4239bc166cd25a184ffb0385#diff-4646a4f3b1c8bd9f12c17882703cd1bebbcc8fe28819157d8be73ee01d33cccdR141">Dynatrace</a> and suspect it&rsquo;s more widespread. Stay vigilant.</p>
 
 </div>
 
