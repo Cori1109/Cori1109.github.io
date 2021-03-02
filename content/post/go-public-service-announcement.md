@@ -8,7 +8,7 @@ tags = [
 ]
 +++
 
-Proxy support for some Go applications is being unintentionally dropped with a simple change. For example if you've ever been behind a forward proxy, you might recall doing something like:
+Proxy support for some Go applications is being unintentionally dropped with a simple change. If you've ever had to initiate a HTTP request from behind a forward proxy, you might recall doing something like:
 
 ```
 $ https_proxy=https://proxy.corp.example.com:3128 \

@@ -15,7 +15,7 @@
 <meta itemprop="description" content="For the love of proxies - please read this.">
 <meta itemprop="datePublished" content="2021-02-28T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2021-02-28T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="158">
+<meta itemprop="wordCount" content="162">
 
 
 
@@ -172,7 +172,7 @@
     
   </div>
 
-  <p>Proxy support for some Go applications is being unintentionally dropped with a simple change. For example if you&rsquo;ve ever been behind a forward proxy, you might recall doing something like:</p>
+  <p>Proxy support for some Go applications is being unintentionally dropped with a simple change. If you&rsquo;ve ever had to initiate a HTTP request from behind a forward proxy, you might recall doing something like:</p>
 <pre><code>$ https_proxy=https://proxy.corp.example.com:3128 \
     curl https://google.com/
 </code></pre><p>Take the following example Go code which overrides an HTTP client’s <a href="https://golang.org/src/net/http/transport.go">DefaultTransport</a> with a custom <a href="https://golang.org/src/net/http/transport.go">Transport</a> in order to optionally verifies the server’s certificate chain and hostname:</p>
