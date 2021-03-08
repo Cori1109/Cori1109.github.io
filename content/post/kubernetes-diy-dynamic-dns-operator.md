@@ -16,6 +16,10 @@ I've rolled my own [Dynamic DNS](https://en.wikipedia.org/wiki/Dynamic_DNS) Oper
 
 [External DNS](https://github.com/kubernetes-sigs/external-dns) will reconcile Ingress changes and make the appropriate updates.
 
+## Diagrams
+
+![Interaction diagram](/images/kubernetes-diy-dynamic-dns-operator.drawio.svg)
+
 ## Code
 
 ```yaml
