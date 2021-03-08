@@ -1,6 +1,6 @@
 +++
 author = "James Moriarty"
-title = "Kubernetes DIY Operator"
+title = "Kubernetes DIY Dynamic DNS Operator"
 date = "2021-03-08"
 description = ""
 tags = [
