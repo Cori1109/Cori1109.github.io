@@ -26,7 +26,7 @@ I've rolled my own [Dynamic DNS](https://en.wikipedia.org/wiki/Dynamic_DNS) Oper
 apiVersion: batch/v1beta1
 kind: CronJob
 metadata:
-  name: ip-operator
+  name: dynamic-dns-operator
 spec:
   schedule: "*/5 * * * *"
   jobTemplate:
@@ -34,7 +34,7 @@ spec:
       template:
         spec:
           containers:
-          - name: ip-operator
+          - name: dynamic-dns-operator
             image: bitnami/kubectl
             command:
             - /bin/sh
@@ -44,7 +44,7 @@ spec:
               apiVersion: networking.k8s.io/v1
               kind: Ingress
               metadata:
-                name: ip-operator
+                name: dynamic-dns-operator
                 annotations:
                   kubernetes.io/ingress.class: nginx
                   external-dns.alpha.kubernetes.io/hostname: '$HOSTNAME'
@@ -57,6 +57,6 @@ spec:
             - name: HOSTNAME
               valueFrom:
                 configMapKeyRef:
-                  name: ip-operator
+                  name: dynamic-dns-operator
                   key: hostname
 ```
