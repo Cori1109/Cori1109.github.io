@@ -11,7 +11,7 @@ tags = [
 I've rolled my own [Dynamic DNS](https://en.wikipedia.org/wiki/Dynamic_DNS) Operator with [External DNS](https://github.com/kubernetes-sigs/external-dns), [Kubernetes CronJob](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/), and [kubectl](https://kubernetes.io/docs/tasks/tools/). The execution looks something like:
 
 1. Discover external IP with `curl --silent ifconfig.me`.
-2. Generate Ingress with External DNS annotations.
+2. Generate Ingress with [External DNS](https://github.com/kubernetes-sigs/external-dns) annotations.
 3. Create/Update the Ingress with `kubectl`.
 
 External DNS will reconcile Ingress changes and make the appropriate DNS updates.
