@@ -14,7 +14,7 @@ I've rolled my own [Dynamic DNS](https://en.wikipedia.org/wiki/Dynamic_DNS) Oper
 2. Generate Ingress with External DNS annotations.
 3. Create/Update the Ingress with `kubectl`.
 
-External DNS will reconcile Ingress changes and make the appropriate DNS record changes.
+External DNS will reconcile Ingress changes and make the appropriate DNS updates.
 
 ## Code
 
