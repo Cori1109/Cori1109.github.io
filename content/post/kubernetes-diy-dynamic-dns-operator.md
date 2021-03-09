@@ -8,19 +8,13 @@ tags = [
 ]
 +++
 
-I've rolled my own [Dynamic DNS](https://en.wikipedia.org/wiki/Dynamic_DNS) Operator with Kubernetes [CronJob](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/), [kubectl](https://kubernetes.io/docs/tasks/tools/), and [External DNS](https://github.com/kubernetes-sigs/external-dns). The execution looks something like:
+I've rolled my own [Dynamic DNS](https://en.wikipedia.org/wiki/Dynamic_DNS) Operator with Kubernetes [CronJob](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/), [kubectl](https://kubernetes.io/docs/tasks/tools/), and [External DNS](https://github.com/kubernetes-sigs/external-dns).
 
-1. Discover external IP with `curl --silent ifconfig.me`.
-2. Generate Ingress with [External DNS](https://github.com/kubernetes-sigs/external-dns) annotations.
-3. Create/Update the Ingress with `kubectl`.
-
-[External DNS](https://github.com/kubernetes-sigs/external-dns) will reconcile Ingress changes and make the appropriate updates.
-
-## Diagrams
+## Interaction
 
 ![Interaction diagram](/images/kubernetes-diy-dynamic-dns-operator.drawio.svg)
 
-## Code
+## Yaml
 
 ```yaml
 apiVersion: batch/v1beta1
