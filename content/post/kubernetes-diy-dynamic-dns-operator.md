@@ -8,13 +8,59 @@ tags = [
 ]
 +++
 
-I've rolled my own [Dynamic DNS](https://en.wikipedia.org/wiki/Dynamic_DNS) Operator with Kubernetes [CronJob](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/), [kubectl](https://kubernetes.io/docs/tasks/tools/), and [External DNS](https://github.com/kubernetes-sigs/external-dns).
+I've rolled my own [Dynamic DNS](https://en.wikipedia.org/wiki/Dynamic_DNS) Operator with Kubernetes [CronJob](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/), [kubectl](https://kubernetes.io/docs/tasks/tools/), and [External DNS](https://github.com/kubernetes-sigs/external-dns). I'm going to try capture the solution in a [Google Design Document](https://www.industrialempathy.com/posts/design-docs-at-google/).
 
-## Interaction
+# Context
 
-![Interaction diagram](/images/kubernetes-diy-dynamic-dns-operator.drawio.svg)
+A solution to dynamically maintain a DNS record containing my routers public IP.
 
-## Yaml
+## Goals
+
+- Record should not be out of date for more than five minutes.
+- Run as a Kubernetes workload.
+
+## Non-Goal
+
+- Support multiple public IPs.
+- Ingress.
+
+# Design
+
+## Discover Public IP
+
+We can use a free internet based service to return our client IP such as:
+
+```bash
+curl --silent ifconfig.me
+```
+
+## DNS Changes
+
+We can leverage [External DNS](https://github.com/kubernetes-sigs/external-dns) Ingress annotations to configure a DNS record:
+
+```
+external-dns.alpha.kubernetes.io/hostname
+```
+
+Specifies the Host e.g. `ip.home.jamesmoriarty.xyz`.
+
+```
+external-dns.alpha.kubernetes.io/target
+```
+
+Specifies the IP e.g. `110.144.168.172`
+
+## Dynamic Configuration
+
+[CronJob](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/) to periodically generate and apply the configuration. The configuration variables are interpolated via `heredoc` template:
+
+```bash
+cat << EOF > /tmp/ingress.yml && kubectl apply -f /tmp/ingress.yml
+  ...
+EOF
+```
+
+An example of what the full Kubernetes manifest might look like:
 
 ```yaml
 apiVersion: batch/v1beta1
@@ -34,6 +80,7 @@ spec:
             - /bin/sh
             - -c
             - |
+              export IP=$(curl --silent ifconfig.me
               cat << EOF > /tmp/ingress.yml && kubectl apply -f /tmp/ingress.yml
               apiVersion: networking.k8s.io/v1
               kind: Ingress
@@ -42,7 +89,7 @@ spec:
                 annotations:
                   kubernetes.io/ingress.class: nginx
                   external-dns.alpha.kubernetes.io/hostname: '$HOSTNAME'
-                  external-dns.alpha.kubernetes.io/target: '$(curl --silent ifconfig.me)'
+                  external-dns.alpha.kubernetes.io/target: '$IP'
               spec:
                 rules:
                 - host: '$HOSTNAME'
@@ -54,3 +101,11 @@ spec:
                   name: dynamic-dns-operator
                   key: hostname
 ```
+
+## Interaction
+
+![Interaction diagram](/images/kubernetes-diy-dynamic-dns-operator.drawio.svg)
+
+# Conclusion
+
+I've you're already using [External DNS](https://github.com/kubernetes-sigs/external-dns) - adding another 30-40 lines Kubernetes manifests to support [Dynamic DNS](https://en.wikipedia.org/wiki/Dynamic_DNS) may be desireable.
