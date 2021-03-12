@@ -80,7 +80,8 @@ spec:
             - /bin/sh
             - -c
             - |
-              export IP=$(curl --silent ifconfig.me
+              export IP=$(curl --silent ifconfig.me)
+
               cat << EOF > /tmp/ingress.yml && kubectl apply -f /tmp/ingress.yml
               apiVersion: networking.k8s.io/v1
               kind: Ingress
