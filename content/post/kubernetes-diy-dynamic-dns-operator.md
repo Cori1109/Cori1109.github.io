@@ -36,7 +36,7 @@ The design is broken down into the following sections:
 
 ## Discover Public IP
 
-We can use a free internet based service to return our client IP such as:
+We can use a free internet based service to return our public IP such as:
 
 ```bash
 curl --silent ifconfig.me
