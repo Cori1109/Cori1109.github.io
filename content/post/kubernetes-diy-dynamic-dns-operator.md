@@ -31,8 +31,8 @@ The design is broken down into the following sections:
 - [Discover Public IP](#discover-public-ip)
 - [DNS Changes](#dns-changes)
 - [Dynamic Configuration](#dynamic-configuration)
-- [Example Manifest](#example-manifest)
 - [Interaction](#interaction)
+- [Example Manifest](#example-manifest)
 
 ## Discover Public IP
 
