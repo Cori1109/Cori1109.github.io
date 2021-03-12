@@ -26,6 +26,14 @@ A solution to dynamically maintain a DNS record containing my routers public IP.
 
 # Design
 
+The design is broken down into the following sections:
+
+- [Discover Public IP](#discover-public-ip)
+- [DNS Changes](#dns-changes)
+- [Dynamic Configuration](#dynamic-configuration)
+- [Example Manifest](#example-manifest)
+- [Interaction](#interaction)
+
 ## Discover Public IP
 
 We can use a free internet based service to return our client IP such as:
@@ -59,6 +67,12 @@ cat << EOF > /tmp/ingress.yml && kubectl apply -f /tmp/ingress.yml
   ...
 EOF
 ```
+
+## Interaction
+
+![Interaction diagram](/images/kubernetes-diy-dynamic-dns-operator.drawio.svg)
+
+## Example Manifest
 
 An example of what the full Kubernetes manifest might look like:
 
@@ -102,10 +116,6 @@ spec:
                   name: dynamic-dns-operator
                   key: hostname
 ```
-
-## Interaction
-
-![Interaction diagram](/images/kubernetes-diy-dynamic-dns-operator.drawio.svg)
 
 # Conclusion
 
