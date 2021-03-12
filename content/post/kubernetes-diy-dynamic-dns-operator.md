@@ -16,7 +16,7 @@ A solution to dynamically maintain a DNS record containing my routers public IP.
 
 ## Goals
 
-- Record should not be out of date for more than five minutes.
+- Record should not be out of date by more than five minutes.
 - Run as a Kubernetes workload.
 
 ## Non-Goal
