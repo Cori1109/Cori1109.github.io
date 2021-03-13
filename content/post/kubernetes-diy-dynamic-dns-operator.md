@@ -33,18 +33,19 @@ The design is broken down into the following sections:
 - [Dynamic Configuration](#dynamic-configuration)
 - [Interaction](#interaction)
 - [Example Manifest](#example-manifest)
+- [Network](#network)
 
 ## Discover Public IP
 
-We can use a free internet based service to return our public IP such as:
+There are several free public internet services that will return the requesters IP:
 
 ```bash
-curl --silent ifconfig.me
+$ curl --silent ifconfig.me
 ```
 
 ## DNS Changes
 
-We can leverage [External DNS](https://github.com/kubernetes-sigs/external-dns) Ingress annotations to configure a DNS record:
+[External DNS](https://github.com/kubernetes-sigs/external-dns) Ingress annotations can configure a DNS record:
 
 ```
 external-dns.alpha.kubernetes.io/hostname
@@ -71,6 +72,10 @@ EOF
 ## Interaction
 
 ![Interaction diagram](/images/kubernetes-diy-dynamic-dns-operator.drawio.svg)
+
+## Network
+
+![Network diagram](/images/kubernetes-diy-dynamic-dns-operator2.drawio.svg)
 
 ## Example Manifest
 
