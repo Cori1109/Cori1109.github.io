@@ -125,4 +125,4 @@ spec:
 
 ## Conclusion
 
-If you're already using [External DNS](https://github.com/kubernetes-sigs/external-dns) - adding another 30-40 lines Kubernetes manifests to support [Dynamic DNS](https://en.wikipedia.org/wiki/Dynamic_DNS) may be desirable.
+If you're already using [External DNS](https://github.com/kubernetes-sigs/external-dns) - another 30-40 lines CronJob can support [Dynamic DNS](https://en.wikipedia.org/wiki/Dynamic_DNS).
