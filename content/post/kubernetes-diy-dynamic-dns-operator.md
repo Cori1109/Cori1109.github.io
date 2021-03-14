@@ -10,21 +10,21 @@ tags = [
 
 I've rolled my own [Dynamic DNS](https://en.wikipedia.org/wiki/Dynamic_DNS) Operator with Kubernetes [CronJob](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/), [kubectl](https://kubernetes.io/docs/tasks/tools/), and [External DNS](https://github.com/kubernetes-sigs/external-dns). I'm going to try capture the solution in a [Google Design Document](https://www.industrialempathy.com/posts/design-docs-at-google/).
 
-# Context
+### Context
 
 A solution to dynamically maintain a DNS record containing my routers public IP.
 
-## Goals
+### Goals
 
 - Record should not be out of date by more than five minutes.
 - Run as a Kubernetes workload.
 
-## Non-Goal
+### Non-Goal
 
 - Support multiple public IPs.
 - Ingress.
 
-# Design
+## Design
 
 The design is broken down into the following sections:
 
@@ -35,7 +35,7 @@ The design is broken down into the following sections:
 - [Example Manifest](#example-manifest)
 - [Network](#network)
 
-## Discover Public IP
+### Discover Public IP
 
 We use a free public internet service that will return the requesters IP:
 
@@ -44,7 +44,7 @@ $ curl --silent ifconfig.me
 120.148.147.73
 ```
 
-## DNS Changes
+### DNS Changes
 
 [External DNS](https://github.com/kubernetes-sigs/external-dns) Ingress annotations can configure a DNS record:
 
@@ -60,7 +60,7 @@ external-dns.alpha.kubernetes.io/target
 
 Specifies the IP e.g. `110.144.168.172`
 
-## Dynamic Configuration
+### Dynamic Configuration
 
 [CronJob](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/) to periodically generate and apply the configuration. The configuration variables are interpolated via `heredoc` template:
 
@@ -70,15 +70,15 @@ cat << EOF > /tmp/ingress.yml && kubectl apply -f /tmp/ingress.yml
 EOF
 ```
 
-## Interaction
+### Interaction
 
 ![Interaction diagram](/images/kubernetes-diy-dynamic-dns-operator.drawio.svg)
 
-## Network
+### Network
 
 ![Network diagram](/images/kubernetes-diy-dynamic-dns-operator2.drawio.svg)
 
-## Example Manifest
+### Example Manifest
 
 An example of what the full Kubernetes manifest might look like:
 
@@ -123,6 +123,6 @@ spec:
                   key: hostname
 ```
 
-# Conclusion
+## Conclusion
 
 I've you're already using [External DNS](https://github.com/kubernetes-sigs/external-dns) - adding another 30-40 lines Kubernetes manifests to support [Dynamic DNS](https://en.wikipedia.org/wiki/Dynamic_DNS) may be desireable.
