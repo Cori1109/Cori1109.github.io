@@ -28,23 +28,23 @@ A solution to dynamically maintain a DNS record containing my routers public IP.
 
 The design is broken down into the following sections:
 
-- [Discover Public IP](#discover-public-ip)
-- [DNS Changes](#dns-changes)
-- [Dynamic Configuration](#dynamic-configuration)
-- [Interaction](#interaction)
+- [Discover Router IP](#discovering-router-ip)
+- [Changing DNS Records](#changing-dns-records)
+- [Generating Dynamic Configuration](#generating-dynamic-configuration)
+- [Interaction Diagram](#interaction-diagram)
+- [Network Diagram](#network-diagram)
 - [Example Manifest](#example-manifest)
-- [Network](#network)
 
-### Discover Public IP
+### Discovering Router IP
 
-We use a free public internet service that will return the requesters IP:
+With simple internet egress via router NAT - we can use several internet based services to return the IP:
 
 ```bash
 $ curl --silent ifconfig.me
 120.148.147.73
 ```
 
-### DNS Changes
+### Changing DNS Records
 
 [External DNS](https://github.com/kubernetes-sigs/external-dns) Ingress annotations can configure a DNS record:
 
@@ -60,7 +60,7 @@ external-dns.alpha.kubernetes.io/target
 
 Specifies the IP e.g. `110.144.168.172`
 
-### Dynamic Configuration
+### Generating Dynamic Configuration
 
 [CronJob](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/) to periodically generate and apply the configuration. The configuration variables are interpolated via `heredoc` template:
 
@@ -70,11 +70,11 @@ cat << EOF > /tmp/ingress.yml && kubectl apply -f /tmp/ingress.yml
 EOF
 ```
 
-### Interaction
+### Interaction Diagram
 
 ![Interaction diagram](/images/kubernetes-diy-dynamic-dns-operator.drawio.svg)
 
-### Network
+### Network Diagram
 
 ![Network diagram](/images/kubernetes-diy-dynamic-dns-operator2.drawio.svg)
 
@@ -125,4 +125,4 @@ spec:
 
 ## Conclusion
 
-I've you're already using [External DNS](https://github.com/kubernetes-sigs/external-dns) - adding another 30-40 lines Kubernetes manifests to support [Dynamic DNS](https://en.wikipedia.org/wiki/Dynamic_DNS) may be desireable.
+I've you're already using [External DNS](https://github.com/kubernetes-sigs/external-dns) - adding another 30-40 lines Kubernetes manifests to support [Dynamic DNS](https://en.wikipedia.org/wiki/Dynamic_DNS) may be desirable.
