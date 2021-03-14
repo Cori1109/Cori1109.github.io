@@ -37,10 +37,11 @@ The design is broken down into the following sections:
 
 ## Discover Public IP
 
-There are several free public internet services that will return the requesters IP:
+We use a free public internet service that will return the requesters IP:
 
 ```bash
 $ curl --silent ifconfig.me
+120.148.147.73
 ```
 
 ## DNS Changes
