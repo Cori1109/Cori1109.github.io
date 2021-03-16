@@ -52,7 +52,7 @@ $ curl --silent ifconfig.me
 external-dns.alpha.kubernetes.io/hostname
 ```
 
-Specifies the Host e.g. `ip.home.jamesmoriarty.xyz`.
+Specifies the Host e.g. `ip.home.jamesmoriarty.xyz`
 
 ```
 external-dns.alpha.kubernetes.io/target
