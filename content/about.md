@@ -54,8 +54,3 @@ I’m a husband, father of two boys, master burger cook, amateur commuter cyclis
   }
 }
 </style>
-
-<hr />
-
-<div id="root"></div>
-<script type="text/javascript" src="//www.jamesmoriarty.xyz/react-instagram-authless-feed/static/js/main.069f22c6.js"></script>
