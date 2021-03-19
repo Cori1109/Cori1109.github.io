@@ -12,8 +12,6 @@ tags = [
 
 My work often involves restricted private networks often found in large enterprises. I run a personal [similarly provisioned AWS VPC](https://github.com/jamesmoriarty/cfn-vpc) for experiments. This comes with the challenge of providing internet egress for `RFC1918` private subnet instances.
 
-AWS provides several solutions for internet egress. After spending some time considering these, I settled on NAT instance running on Spot. The primary driver of this solution is cost.
-
 <hr />
 
 <center>
@@ -21,6 +19,21 @@ AWS provides several solutions for internet egress. After spending some time con
 </center>
 
 <hr />
+
+AWS provides several solutions for internet egress. After spending some time considering these, I settled on NAT instance running on Spot. The primary driver of this solution is cost.
+
+The [current solutions](https://github.com/jamesmoriarty/cfn-cheapest-nat) *is*:
+
+- Auto Healing 
+  - automatically replaces the unhealthy instance.
+  - re-attaches a persistent network interface to recover transport level details such as routes.
+
+Is *not*:
+
+- Highly Available
+  - instance unavailability will cause NAT disruption.
+- Fault Tolerant
+  - the persistent network interface results in dependency on a single zone.
 
 ### Contents
 
