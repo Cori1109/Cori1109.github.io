@@ -8,7 +8,7 @@ author = "James Moriarty"
 
 ## Hardware
 
-I value utility and as a result have an appreciation for some consumer electronics. This is reflected in my tool choices:
+I value utility and as a result have an appreciation for some consumer electronics. This is reflected by my tool choices:
 
 ### Personal Laptop
 
