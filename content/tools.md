@@ -37,7 +37,7 @@ I use this to run low power Intel NUC gitops K3s Kubernetes single node "cluster
 
 ## Software
 
-- Polyglot Languages
-- Microsoft Code
+- Polyglot Programmer
 - Github
 - Amazon Web Services & Google Cloud & Kubernetes
+- Microsoft Code
