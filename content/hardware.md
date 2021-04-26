@@ -33,6 +33,14 @@ I've been continually impressed by the value of AMD's recent offerings. I use th
 - Samsung 970 EVO Plus 250GB SSD NVMe
 - Asus Strix RX570@1300MHz (2048SP) 4GB DDR5@7000MHz
 
+```
+$ hdparm -Tt /dev/sda
+
+/dev/sda:
+ Timing cached reads:   18744 MB in  2.00 seconds = 9381.70 MB/sec
+ Timing buffered disk reads: 5822 MB in  3.00 seconds = 1940.50 MB/sec
+```
+
 ### Home Kubernetes
 
 I use this to run low power Intel NUC gitops K3s Kubernetes single node "cluster". I use this primarily for media, storage, and monitoring.
@@ -40,3 +48,11 @@ I use this to run low power Intel NUC gitops K3s Kubernetes single node "cluster
 - Intel i3-4010U 2 Core@1.7GHz
 - Corsair 8GB (1x8GB) DDR3@1600MHz
 - Micron M600 128GB SSD mSATA
+
+```
+$ hdparm -Tt /dev/sda
+
+/dev/sda:
+ Timing cached reads:   7664 MB in  1.99 seconds = 3854.47 MB/sec
+ Timing buffered disk reads: 1348 MB in  3.00 seconds = 448.90 MB/sec
+```
