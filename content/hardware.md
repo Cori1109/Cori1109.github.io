@@ -41,11 +41,6 @@ $ hdparm -Tt /dev/sda
  Timing buffered disk reads: 5822 MB in  3.00 seconds = 1940.50 MB/sec
 ```
 
-```
-sysbench --test=cpu run
-
-
-
 ### Home Kubernetes
 
 I use this to run low power Intel NUC gitops K3s Kubernetes single node "cluster". I use this primarily for media, storage, and monitoring.
