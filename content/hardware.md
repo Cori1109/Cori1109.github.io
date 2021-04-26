@@ -36,7 +36,7 @@ I've been continually impressed by the value of AMD's recent offerings. I use th
 
 - AMD Ryzen 3 1300X 4 Core@3.5-3.7GHz
 - Corsair Vengeance LPX 16GB (2x8GB) DDR4@2400MHz
-- Samsung 970 EVO Plus 250GB SSD NVMe
+- Samsung 960 EVO 250GB SSD NVMe
 - Asus Strix RX570@1300MHz (2048SP) 4GB DDR5@7000MHz
 
 ```
