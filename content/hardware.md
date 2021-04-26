@@ -16,6 +16,14 @@ After spending the majority of my professional career on MacBooks - I use a Surf
 - Samsung 8GB DDR3@1600MHz
 - Toshiba 128GB SSD NVMe
 
+```
+$ hdparm -Tt /dev/sda
+
+/dev/sda:
+ Timing cached reads:   17742 MB in  1.99 seconds = 8922.07 MB/sec
+ Timing buffered disk reads: 1358 MB in  3.00 seconds = 452.51 MB/sec
+```
+
 ### Budget Build Desktop
 
 I've been continually impressed by the value of AMD's recent offerings. I use this desktop for development of Go, Windows, graphics, and security.
