@@ -6,7 +6,7 @@ aliases = ["scuba"]
 author = "James Moriarty"
 +++
 
-This page is dedicated interest in diving. I've enjoyed free & scuba diving in New Zealand, Australia, and Pacific Islands.
+This page is dedicated to my interest in diving. I've enjoyed free & scuba diving in New Zealand, Australia, and Pacific Islands.
 
 ## Gear
 

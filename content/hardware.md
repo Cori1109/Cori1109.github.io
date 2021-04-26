@@ -6,7 +6,7 @@ aliases = ["tools"]
 author = "James Moriarty"
 +++
 
-This page is dedicated interest in consumer hardware. I'm currently running the following:
+This page is dedicated to my interest in consumer hardware. I'm currently running the following:
 
 ### Personal Laptop
 
