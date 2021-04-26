@@ -57,4 +57,4 @@ $ hdparm -Tt /dev/sda
  Timing buffered disk reads: 1348 MB in  3.00 seconds = 448.90 MB/sec
 ```
 
-[![Grafana cluster dashboard](/images/hardware-gafana.png)](/images/hardware-gafana.png)
+[![Grafana cluster dashboard](/images/hardware-grafana.png)](/images/hardware-grafana.png)
