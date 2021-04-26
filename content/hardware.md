@@ -6,7 +6,7 @@ aliases = ["tools"]
 author = "James Moriarty"
 +++
 
-I value utility and as a result have an appreciation for some consumer electronics. This is reflected by my tool choices:
+This page is dedicated interest in consumer hardware.
 
 ### Personal Laptop
 

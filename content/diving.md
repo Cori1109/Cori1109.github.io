@@ -6,7 +6,7 @@ aliases = ["scuba"]
 author = "James Moriarty"
 +++
 
-I've enjoyed free & scuba diving in New Zealand, Australia, and Pacific Islands.
+This page is dedicated interest in diving. I've enjoyed free & scuba diving in New Zealand, Australia, and Pacific Islands.
 
 ## Gear
 
@@ -14,7 +14,7 @@ I'm currently running the following gear:
 
 ### Free Diving
 
-- Cressi Technica 5mm two piece wetsuit
+- Cressi Technica 5mm Wetsuit
 - Cressi Pro Light Fins
 - Mares Tana Snorkelling Set
 
@@ -27,5 +27,11 @@ I'm currently running the following gear:
 
 ### Weight
 
-- 2.5kg x2 leadshot w/ BCD
-- 5.5kg solid lead w/ Belt
+- 2.5kg x2 Leadshot Bag w/ BCD
+- 5.5kg Lead Weight w/ Belt
+
+## Photos
+
+![Gohack](/images/diving.jpg)
+
+> Te Motu-o-Kura, Hawkes Bay, New Zealand, December, 2016.
