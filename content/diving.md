@@ -8,6 +8,12 @@ author = "James Moriarty"
 
 This page is dedicated to my interest in diving. I've enjoyed free & scuba diving in New Zealand, Australia, and Pacific Islands.
 
+## Photos
+
+[![Te Motu-o-Kura, Hawkes Bay, New Zealand, December, 2016](/images/diving.jpg)](/images/diving.jpg)
+
+> Te Motu-o-Kura, Hawkes Bay, New Zealand, December, 2016.
+
 ## Gear
 
 I'm currently running the following gear:
@@ -29,9 +35,3 @@ I'm currently running the following gear:
 
 - 2.5kg x2 Leadshot Bag w/ BCD
 - 5.5kg Lead Weight w/ Belt
-
-## Photos
-
-[![Te Motu-o-Kura, Hawkes Bay, New Zealand, December, 2016](/images/diving.jpg)](/images/diving.jpg)
-
-> Te Motu-o-Kura, Hawkes Bay, New Zealand, December, 2016.

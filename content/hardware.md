@@ -6,7 +6,13 @@ aliases = ["tools"]
 author = "James Moriarty"
 +++
 
-This page is dedicated to my interest in consumer hardware. I'm currently running the following:
+This page is dedicated to my interest in consumer hardware.
+
+## Photos
+
+[![Grafana cluster dashboard](/images/hardware-grafana.png)](/images/hardware-grafana.png)
+
+## Systems
 
 ### Personal Laptop
 
@@ -56,5 +62,3 @@ $ hdparm -Tt /dev/sda
  Timing cached reads:   7664 MB in  1.99 seconds = 3854.47 MB/sec
  Timing buffered disk reads: 1348 MB in  3.00 seconds = 448.90 MB/sec
 ```
-
-[![Grafana cluster dashboard](/images/hardware-grafana.png)](/images/hardware-grafana.png)
