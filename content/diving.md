@@ -32,6 +32,6 @@ I'm currently running the following gear:
 
 ## Photos
 
-![Gohack](/images/diving.jpg)
+![Te Motu-o-Kura, Hawkes Bay, New Zealand, December, 2016](/images/diving.jpg)
 
 > Te Motu-o-Kura, Hawkes Bay, New Zealand, December, 2016.

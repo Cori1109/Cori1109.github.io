@@ -41,6 +41,11 @@ $ hdparm -Tt /dev/sda
  Timing buffered disk reads: 5822 MB in  3.00 seconds = 1940.50 MB/sec
 ```
 
+```
+sysbench --test=cpu run
+
+
+
 ### Home Kubernetes
 
 I use this to run low power Intel NUC gitops K3s Kubernetes single node "cluster". I use this primarily for media, storage, and monitoring.
@@ -56,3 +61,5 @@ $ hdparm -Tt /dev/sda
  Timing cached reads:   7664 MB in  1.99 seconds = 3854.47 MB/sec
  Timing buffered disk reads: 1348 MB in  3.00 seconds = 448.90 MB/sec
 ```
+
+![Grafana cluster dashboard](/images/hardware-gafana.jpg)
