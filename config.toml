@@ -78,7 +78,7 @@ themeColor = "#313131"
   url = "/hardware/"
 
   [[menu.main]]
-  name = "Scuba"
+  name = "Diving"
   weight = 500
-  identifier = "scuba"
-  url = "/scuba/"
+  identifier = "diving"
+  url = "/diving/"
