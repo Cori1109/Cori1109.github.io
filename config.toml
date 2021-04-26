@@ -66,13 +66,19 @@ themeColor = "#313131"
   url = "/talks/"
 
   [[menu.main]]
-  name = "Tools"
-  weight = 300
-  identifier = "tools"
-  url = "/tools/"
-
-  [[menu.main]]
   name = "Quotes"
   identifier = "quotes"
   weight = 400
   url = "/quotes/"
+
+  [[menu.main]]
+  name = "Hardware"
+  weight = 600
+  identifier = "hardware"
+  url = "/hardware/"
+
+  [[menu.main]]
+  name = "Scuba"
+  weight = 500
+  identifier = "scuba"
+  url = "/scuba/"

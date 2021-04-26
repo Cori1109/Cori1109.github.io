@@ -1,12 +1,10 @@
 +++
-title = "Tools"
-description = "Tools used by James Moriarty."
+title = "Hardware"
+description = "Hardware used by James Moriarty."
 date = "2021-02-10"
-aliases = []
+aliases = ["tools"]
 author = "James Moriarty"
 +++
-
-## Hardware
 
 I value utility and as a result have an appreciation for some consumer electronics. This is reflected by my tool choices:
 
@@ -34,10 +32,3 @@ I use this to run low power Intel NUC gitops K3s Kubernetes single node "cluster
 - Intel i3-4010U 2 Core@1.7GHz
 - Corsair 8GB (1x8GB) DDR3@1600MHz
 - Micron M600 128GB SSD mSATA
-
-## Software
-
-- Polyglot Programmer
-- Github
-- Amazon Web Services & Google Cloud & Kubernetes
-- Microsoft Code
