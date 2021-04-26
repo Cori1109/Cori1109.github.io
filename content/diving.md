@@ -33,5 +33,5 @@ I'm currently running the following gear:
 
 ### Weight
 
-- 2.5kg x2 Leadshot Bag w/ BCD
+- 2.5kg Leadshot Bag x2 w/ BCD
 - 5.5kg Lead Weight w/ Belt
