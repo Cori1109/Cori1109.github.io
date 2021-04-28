@@ -72,6 +72,12 @@ themeColor = "#313131"
   url = "/diving/"
 
   [[menu.main]]
+  name = "Software"
+  weight = 800
+  identifier = "software"
+  url = "/software/"
+
+  [[menu.main]]
   name = "Hardware"
   weight = 900
   identifier = "hardware"
