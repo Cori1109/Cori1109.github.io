@@ -65,7 +65,9 @@ Total: $1731.59AUD
 
 ### Buy vs Hire
 
-The following chart illustrates the point of return when buying your own diving gear. I've included on going costs with buying to include air-fills and maintenance.
+The following chart illustrates the point of return when buying your own diving gear. 
+
+N.B. I've included on going costs with buying to include air-fills and maintenance.
 
 <iframe width="100%" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSnhz6mxUS0vyQfiMWeCGq10wBeaV8inw2mz4MDm16wmuVYyt7BxAC6MQGS74jL7aAggendUg8Ud4N7/pubchart?oid=567863874&amp;format=interactive"><!-- https://docs.google.com/spreadsheets/d/1E23-dx8wTP8lgVMjgnoQr25T7yJ6pzLWsETzZ5nkSck/edit#gid=0 --></iframe>
 
