@@ -33,7 +33,7 @@ Total: $440.00AUD
 | Item                                         | Year | Cost       |
 | -------------------------------------------- | ----:| ----------:|
 | Cressi Ellipse Black MC5 Regulator           | 2011 | $199.95USD |
-| Cressi Ellipse Octopus                       | 2011 | $81.95USD  |
+| Cressi Ellipse Octopus                       | 2011 |  $81.95USD |
 | Cressi Start BCD Medium                      | 2011 | $189.95USD |
 | Mares Puck Air Computer Console With Compass | 2011 | $349.95USD |
 
@@ -43,7 +43,16 @@ N.B. It would cost at least double the price I paid to buy the dive computer dom
 
 ### Weight
 
-| Item                         | Year | Cost    |
-| -----------------------------| ----:| -------:|
-| 2.5kg Leadshot Bag x2 w/ BCD | 2021 | $120AUD |
-| 5.5kg Lead Weight w/ Belt    | 2021 | $60AUD  |
+| Item                         | Year | Cost       |
+| -----------------------------| ----:| ----------:|
+| 2.5kg Leadshot Bag x2 w/ BCD | 2021 | $120.00AUD |
+| 5.5kg Lead Weight w/ Belt    | 2021 |  $60.00AUD |
+| Belt                         | 2021 |  $49.95AUD |
+
+Total: $229.95
+
+### Complete
+
+Total: $1731.59AUD
+
+<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSnhz6mxUS0vyQfiMWeCGq10wBeaV8inw2mz4MDm16wmuVYyt7BxAC6MQGS74jL7aAggendUg8Ud4N7/pubchart?oid=567863874&amp;format=interactive"></iframe>
