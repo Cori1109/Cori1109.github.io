@@ -24,17 +24,11 @@ This page is dedicated to my interest in diving. I've enjoyed free & scuba divin
 
 ## Gear
 
-I'm currently running the following gear:
-
 ### Free Diving
 
 | Item                         | Year | Cost       |
 | ---------------------------- | ----:| ----------:|
 | Cressi Technica 5mm Wetsuit  | 2010 | $375.50NZD |
-| Cressi Pro Light Fins        | 2011 | $39.95USD  |
-| Mares Tana Snorkelling Set   | 2020 | $49.95AUD  |
-
-Total: $440.00AUD
 
 ### Scuba Diving
 
@@ -47,8 +41,6 @@ Total: $440.00AUD
 
 Total: $1,061.64AUD
 
-N.B. It would cost more than double the price I paid to buy the computer domestically with geographically pricing in 2011.
-
 ### Weight
 
 | Item                         | Year | Cost       |
@@ -59,7 +51,9 @@ N.B. It would cost more than double the price I paid to buy the computer domesti
 
 Total: $229.95
 
-### Complete
+### Total
+
+I feel this setup was relatively good value. It would cost more than double the price I paid to buy the computer domestically with geographically pricing in 2011.
 
 Total: $1731.59AUD
 
