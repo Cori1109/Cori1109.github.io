@@ -14,7 +14,6 @@ This page is dedicated to my interest in diving. I've enjoyed free & scuba divin
 - [Gear](#gear)
   - [Free Diving](#free-diving)
   - [Scuba Diving](#scuba-diving)
-  - [Weight](#weight)
   - [Buy vs Hire](#buy-vs-hire)
 
 ## Photos
@@ -68,5 +67,5 @@ Total: $1731.59AUD
 
 The following chart illustrates the point of return when buying your own diving gear. I've included on going costs with buying to include air-fills and maintenance.
 
-<iframe width="100%" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSnhz6mxUS0vyQfiMWeCGq10wBeaV8inw2mz4MDm16wmuVYyt7BxAC6MQGS74jL7aAggendUg8Ud4N7/pubchart?oid=567863874&amp;format=interactive"></iframe>
+<iframe width="100%" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSnhz6mxUS0vyQfiMWeCGq10wBeaV8inw2mz4MDm16wmuVYyt7BxAC6MQGS74jL7aAggendUg8Ud4N7/pubchart?oid=567863874&amp;format=interactive"><!-- https://docs.google.com/spreadsheets/d/1E23-dx8wTP8lgVMjgnoQr25T7yJ6pzLWsETzZ5nkSck/edit#gid=0 --></iframe>
 
