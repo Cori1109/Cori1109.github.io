@@ -58,7 +58,7 @@ Total: $229.95AUD
 
 ### Total
 
-I feel this setup was relatively good value. It would cost more than double the price to buy the computer domestically with geographically pricing.
+I feel this setup was relatively good value. It would cost more than double the price to buy the computer domestically with geographic pricing.
 
 Total: $1731.59AUD
 
