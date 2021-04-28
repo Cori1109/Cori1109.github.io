@@ -24,4 +24,12 @@ Minimal forward proxy using 150LOC and only standard libraries. Useful for devel
 
 [Github](https://github.com/jamesmoriarty/forward-proxy)
 
+## Lisp
+
+![Lisp REPL](/images/software-lisp.png)
+
+Minimal Lisp interpreter using 70LOC and only standard libraries excluding the REPL.
+
+[Github](https://github.com/jamesmoriarty/lisp)
+
 
