@@ -18,9 +18,9 @@ This page is dedicated to my interest in diving. I've enjoyed free & scuba divin
 
 ## Photos
 
-[![Te Motu-o-Kura, Hawkes Bay, New Zealand, December, 2016](/images/diving.jpg)](/images/diving.jpg)
+[![ 3km offshore, 3-30m, Te Motu-o-Kura, Hawkes Bay, New Zealand, December, 2016](/images/diving.jpg)](/images/diving.jpg)
 
-> 3km Offshore, 3-30m, Te Motu-o-Kura, Hawkes Bay, New Zealand, December, 2016.
+> 3km offshore, 3-30m, Te Motu-o-Kura, Hawkes Bay, New Zealand, December, 2016.
 
 ## Gear
 
