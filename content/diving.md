@@ -47,7 +47,7 @@ Total: $440.00AUD
 
 Total: $1,061.64AUD
 
-N.B. It would cost at least double the price I paid to buy the dive computer domestically in New Zealand in 2011. 
+N.B. It would cost more than double the price I paid to buy the computer domestically with geographically pricing in 2011.
 
 ### Weight
 
