@@ -21,7 +21,7 @@ I'm currently running the following gear:
 ### Free Diving
 
 | Item                         | Year | Cost       |
-| ---------------------------- |:----:| ----------:|
+| ---------------------------- | ----:| ----------:|
 | Cressi Technica 5mm Wetsuit  | 2010 | $375.50NZD |
 | Cressi Pro Light Fins        | 2011 | $39.95USD  |
 | Mares Tana Snorkelling Set   | 2020 | $49.95AUD  |
@@ -31,7 +31,7 @@ Total: $440.00AUD
 ### Scuba Diving
 
 | Item                                         | Year | Cost       |
-| -------------------------------------------- |:----:| ----------:|
+| -------------------------------------------- | ----:| ----------:|
 | Cressi Ellipse Black MC5 Regulator           | 2011 | $199.95USD |
 | Cressi Ellipse Octopus                       | 2011 | $81.95USD  |
 | Cressi Start BCD Medium                      | 2011 | $189.95USD |
@@ -44,6 +44,6 @@ N.B. It would cost at least double the price I paid to buy the dive computer dom
 ### Weight
 
 | Item                         | Year | Cost    |
-| -----------------------------|:----:| -------:|
+| -----------------------------| ----:| -------:|
 | 2.5kg Leadshot Bag x2 w/ BCD | 2021 | $120AUD |
 | 5.5kg Lead Weight w/ Belt    | 2021 | $60AUD  |
