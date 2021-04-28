@@ -54,7 +54,7 @@ Total: $1,061.64AUD
 | 5.5kg Lead Weight w/ Belt    | 2021 |  $60.00AUD |
 | Belt                         | 2021 |  $49.95AUD |
 
-Total: $229.95
+Total: $229.95AUD
 
 ### Total
 
