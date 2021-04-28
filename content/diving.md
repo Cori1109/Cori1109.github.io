@@ -27,13 +27,18 @@ This page is dedicated to my interest in diving. I've enjoyed free & scuba divin
 ### Free Diving
 
 | Item                         | Year | Cost       |
-| ---------------------------- | ----:| ----------:|
+| ---------------------------- | ---- | ----------:|
 | Cressi Technica 5mm Wetsuit  | 2010 | $375.50NZD |
+| Cressi 5mm Diving Boots      | 2011 |  $00.00USD |
+| Cressi Pro Light Fins        | 2011 |  $39.95USD |
+| Mares Tana Snorkelling Set   | 2020 |  $49.95AUD |
+
+Total: $440.00AUD
 
 ### Scuba Diving
 
 | Item                                         | Year | Cost       |
-| -------------------------------------------- | ----:| ----------:|
+| -------------------------------------------- | ---- | ----------:|
 | Cressi Ellipse Black MC5 Regulator           | 2011 | $199.95USD |
 | Cressi Ellipse Octopus                       | 2011 |  $81.95USD |
 | Cressi Start BCD Medium                      | 2011 | $189.95USD |
@@ -44,7 +49,7 @@ Total: $1,061.64AUD
 ### Weight
 
 | Item                         | Year | Cost       |
-| -----------------------------| ----:| ----------:|
+| -----------------------------| ---- | ----------:|
 | 2.5kg Leadshot Bag x2 w/ BCD | 2021 | $120.00AUD |
 | 5.5kg Lead Weight w/ Belt    | 2021 |  $60.00AUD |
 | Belt                         | 2021 |  $49.95AUD |
