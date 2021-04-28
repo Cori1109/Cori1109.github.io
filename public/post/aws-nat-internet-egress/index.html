@@ -15,7 +15,7 @@
 <meta itemprop="description" content="My work often involves restricted private networks often found in large enterprises.">
 <meta itemprop="datePublished" content="2020-06-21T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2020-06-21T00:00:00+00:00" />
-<meta itemprop="wordCount" content="332">
+<meta itemprop="wordCount" content="372">
 
 
 
@@ -117,7 +117,7 @@
       
         
         <div class="author-image">
-          <img src="https://www.jamesmoriarty.xyz/images/james-moriarty-3.jpg" class="img-circle img-headshot center" alt="Profile Picture">
+          <img src="https://www.jamesmoriarty.xyz/images/james-moriarty.jpg" class="img-circle img-headshot center" alt="Profile Picture">
         </div>
         
       
@@ -139,7 +139,9 @@
         </li><li>
           <a href="/talks/"> Talks </a>
         </li><li>
-          <a href="/tools/"> Tools </a>
+          <a href="/diving/"> Diving </a>
+        </li><li>
+          <a href="/hardware/"> Hardware </a>
         </li><li>
           <a href="/quotes/"> Quotes </a>
         </li>
@@ -174,7 +176,35 @@
   </div>
 
   <p>My work often involves restricted private networks often found in large enterprises. I run a personal <a href="https://github.com/jamesmoriarty/cfn-vpc">similarly provisioned AWS VPC</a> for experiments. This comes with the challenge of providing internet egress for <code>RFC1918</code> private subnet instances.</p>
-<p>AWS provides several solutions for internet egress. After spending some time considering these, I settled on NAT instance running on Spot. The primary driver of this solution is cost. This post will examine the following solution elements:</p>
+<hr />
+<center>
+  <a href="https://twitter.com/jamespmoriarty/status/1369445902251855873"><img src="/images/aws-nat.png" width="75%"></a>
+</center>
+<hr />
+<p>AWS provides several solutions for internet egress. After spending some time considering these, I settled on NAT instance running on Spot. The primary driver of this solution is cost.</p>
+<p>The <a href="https://github.com/jamesmoriarty/cfn-cheapest-nat">current solutions</a> <em>is</em>:</p>
+<ul>
+<li>Auto Healing
+<ul>
+<li>automatically replaces the unhealthy instance.</li>
+<li>re-attaches a persistent network interface to recover transport level details such as routes.</li>
+</ul>
+</li>
+</ul>
+<p>Is <em>not</em>:</p>
+<ul>
+<li>Highly Available
+<ul>
+<li>instance unavailability will cause NAT disruption.</li>
+</ul>
+</li>
+<li>Fault Tolerant
+<ul>
+<li>the persistent network interface results in dependency on a single zone.</li>
+</ul>
+</li>
+</ul>
+<h3 id="contents">Contents</h3>
 <ul>
 <li><a href="#reliability">Reliability</a></li>
 <li><a href="#cost">Cost</a></li>

@@ -6,7 +6,16 @@
     <description>Recent content on James Moriarty</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 28 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jamesmoriarty.xyz/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 08 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jamesmoriarty.xyz/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kubernetes DIY Dynamic DNS Operator</title>
+      <link>https://www.jamesmoriarty.xyz/post/kubernetes-diy-dynamic-dns-operator/</link>
+      <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jamesmoriarty.xyz/post/kubernetes-diy-dynamic-dns-operator/</guid>
+      <description>I&amp;rsquo;ve rolled my own Dynamic DNS Operator with Kubernetes CronJob, kubectl, and External DNS.</description>
+    </item>
+    
     <item>
       <title>Go Public Service Announcement</title>
       <link>https://www.jamesmoriarty.xyz/post/go-public-service-announcement/</link>
@@ -26,6 +35,24 @@
     </item>
     
     <item>
+      <title>Diving</title>
+      <link>https://www.jamesmoriarty.xyz/diving/</link>
+      <pubDate>Wed, 10 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jamesmoriarty.xyz/diving/</guid>
+      <description>This page is dedicated to my interest in diving. I&amp;rsquo;ve enjoyed free &amp;amp; scuba diving in New Zealand, Australia, and Pacific Islands.</description>
+    </item>
+    
+    <item>
+      <title>Hardware</title>
+      <link>https://www.jamesmoriarty.xyz/hardware/</link>
+      <pubDate>Wed, 10 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jamesmoriarty.xyz/hardware/</guid>
+      <description>This page is dedicated to my interest in consumer hardware.</description>
+    </item>
+    
+    <item>
       <title>Quotes</title>
       <link>https://www.jamesmoriarty.xyz/quotes/</link>
       <pubDate>Wed, 10 Feb 2021 00:00:00 +0000</pubDate>
@@ -41,16 +68,7 @@
       <pubDate>Wed, 10 Feb 2021 00:00:00 +0000</pubDate>
       
       <guid>https://www.jamesmoriarty.xyz/talks/</guid>
-      <description>That I want to share.</description>
-    </item>
-    
-    <item>
-      <title>Tools</title>
-      <link>https://www.jamesmoriarty.xyz/tools/</link>
-      <pubDate>Wed, 10 Feb 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.jamesmoriarty.xyz/tools/</guid>
-      <description>Hardware I value utility and as a result have an appreciation for some consumer electronics.</description>
+      <description>Lightning Talk - Call Graphs Source</description>
     </item>
     
     <item>

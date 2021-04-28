@@ -4,7 +4,7 @@ footer a, .content a, .related-posts li a:hover, .content a:hover {
 }
 
 .post h1, .post h1.post-title {
-  margin-bottom: .5rem;
+  margin-bottom: 1rem;
 }
 
 .post .read-more-link {
@@ -13,7 +13,7 @@ footer a, .content a, .related-posts li a:hover, .content a:hover {
 
 .post p {
   margin-top: 0;
-  margin-bottom: .5rem;
+  margin-bottom: 1rem;
 }
 
 .content h1 a {
@@ -27,5 +27,5 @@ footer a, .content a, .related-posts li a:hover, .content a:hover {
 }
 
 .social-icons a {
-  margin-right: .5rem;
+  margin-right: 1rem;
 }

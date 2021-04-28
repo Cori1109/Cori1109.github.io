@@ -11,6 +11,7 @@ This page is dedicated to my interest in consumer hardware.
 ## Photos
 
 [![Grafana cluster dashboard](/images/hardware-grafana.png)](/images/hardware-grafana.png)
+> Grafana dashboards from kube-prometheus-stack monitoring for my home single node "cluster".
 
 ## Systems
 

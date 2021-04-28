@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.80.0" />
+
+  <title>Kubernetes DIY Dynamic DNS Operator &middot; James Moriarty</title>
+
+  <meta name="description" content="" />
+
+  
+
+<meta itemprop="name" content="Kubernetes DIY Dynamic DNS Operator">
+<meta itemprop="description" content="I&rsquo;ve rolled my own Dynamic DNS Operator with Kubernetes CronJob, kubectl, and External DNS.">
+<meta itemprop="datePublished" content="2021-03-08T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-03-08T00:00:00+00:00" />
+<meta itemprop="wordCount" content="246">
+
+
+
+<meta itemprop="keywords" content="kubernetes," />
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Kubernetes DIY Dynamic DNS Operator"/>
+<meta name="twitter:description" content="I&rsquo;ve rolled my own Dynamic DNS Operator with Kubernetes CronJob, kubectl, and External DNS."/>
+
+
+<meta property="og:title" content="Kubernetes DIY Dynamic DNS Operator" />
+<meta property="og:description" content="I&rsquo;ve rolled my own Dynamic DNS Operator with Kubernetes CronJob, kubectl, and External DNS." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.jamesmoriarty.xyz/post/kubernetes-diy-dynamic-dns-operator/" />
+<meta property="article:published_time" content="2021-03-08T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-03-08T00:00:00+00:00" />
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NHMWRM0LY9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NHMWRM0LY9');
+</script>
+
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://www.jamesmoriarty.xyz/css/print.css"
+        media="print">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://www.jamesmoriarty.xyz/css/poole.css">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://www.jamesmoriarty.xyz/css/hyde.css">
+
+  
+<style type="text/css">
+  .sidebar {
+    background-color: #313131;
+  }
+
+  .read-more-link a {
+    border-color: #313131;
+  }
+
+  .pagination li a {
+    color: #313131;
+    border: 1px solid #313131;
+  }
+
+  .pagination li.active a {
+    background-color: #313131;
+  }
+
+  .pagination li a:hover {
+    background-color: #313131;
+    opacity: 0.75;
+  }
+
+  footer a,
+  .content a,
+  .related-posts li a:hover {
+    color: #313131;
+  }
+</style>
+
+
+
+  <link type="text/css" rel="stylesheet" href="https://www.jamesmoriarty.xyz/css/custom.css">
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+        crossorigin="anonymous" />
+
+  <link rel="apple-touch-icon-precomposed"
+        sizes="144x144"
+        href="/apple-touch-icon-144-precomposed.png">
+
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  </head>
+<body>
+  <aside class="sidebar">
+  <div class="container">
+    <div class="sidebar-about">
+      
+        
+        <div class="author-image">
+          <img src="https://www.jamesmoriarty.xyz/images/james-moriarty.jpg" class="img-circle img-headshot center" alt="Profile Picture">
+        </div>
+        
+      
+
+      <h1>James Moriarty</h1>
+
+      
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li>
+          <a href="https://www.jamesmoriarty.xyz/">Home</a>
+        </li>
+        <li>
+          <a href="/posts/"> Posts </a>
+        </li><li>
+          <a href="/about/"> About </a>
+        </li><li>
+          <a href="/talks/"> Talks </a>
+        </li><li>
+          <a href="/diving/"> Diving </a>
+        </li><li>
+          <a href="/hardware/"> Hardware </a>
+        </li><li>
+          <a href="/quotes/"> Quotes </a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="social-icons">
+      
+      <a href="https://www.linkedin.com/in/jamespaulmoriarty" rel="me" title="Linkedin">
+        <i class="fab fa-linkedin" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://github.com/jamesmoriarty" rel="me" title="GitHub">
+        <i class="fab fa-github" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://twitter.com/jamespmoriarty" rel="me" title="Twitter">
+        <i class="fab fa-twitter" aria-hidden="true"></i>
+      </a>
+      
+    </section>
+  </div>
+</aside>
+
+
+  <main class="content container">
+  <div class="post">
+  <h1>Kubernetes DIY Dynamic DNS Operator</h1>
+
+  <div class="post-date">
+    
+  </div>
+
+  <p>I&rsquo;ve rolled my own <a href="https://en.wikipedia.org/wiki/Dynamic_DNS">Dynamic DNS</a> Operator with Kubernetes <a href="https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/">CronJob</a>, <a href="https://kubernetes.io/docs/tasks/tools/">kubectl</a>, and <a href="https://github.com/kubernetes-sigs/external-dns">External DNS</a>. I&rsquo;m going to try capture the solution in a <a href="https://www.industrialempathy.com/posts/design-docs-at-google/">Google Design Document</a>.</p>
+<h3 id="context">Context</h3>
+<p>A solution to dynamically maintain a DNS record containing my routers public IP.</p>
+<h3 id="goals">Goals</h3>
+<ul>
+<li>Record should not be out of date by more than five minutes.</li>
+<li>Run as a Kubernetes workload.</li>
+</ul>
+<h3 id="non-goal">Non-Goal</h3>
+<ul>
+<li>Support multiple public IPs.</li>
+<li>Ingress.</li>
+</ul>
+<h2 id="design">Design</h2>
+<p>The design is broken down into the following sections:</p>
+<ul>
+<li><a href="#discovering-router-ip">Discover Router IP</a></li>
+<li><a href="#changing-dns-records">Changing DNS Records</a></li>
+<li><a href="#generating-dynamic-configuration">Generating Dynamic Configuration</a></li>
+<li><a href="#interaction-diagram">Interaction Diagram</a></li>
+<li><a href="#network-diagram">Network Diagram</a></li>
+<li><a href="#example-manifest">Example Manifest</a></li>
+</ul>
+<h3 id="discovering-router-ip">Discovering Router IP</h3>
+<p>With simple internet egress via router NAT - we can use several internet based services to return the IP:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ curl --silent ifconfig.me
+120.148.147.73
+</code></pre></div><h3 id="changing-dns-records">Changing DNS Records</h3>
+<p><a href="https://github.com/kubernetes-sigs/external-dns">External DNS</a> Ingress annotations can configure a DNS record:</p>
+<pre><code>external-dns.alpha.kubernetes.io/hostname
+</code></pre><p>Specifies the Host e.g. <code>ip.home.jamesmoriarty.xyz</code></p>
+<pre><code>external-dns.alpha.kubernetes.io/target
+</code></pre><p>Specifies the IP e.g. <code>110.144.168.172</code></p>
+<h3 id="generating-dynamic-configuration">Generating Dynamic Configuration</h3>
+<p><a href="https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/">CronJob</a> to periodically generate and apply the configuration. The configuration variables are interpolated via <code>heredoc</code> template:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cat <span style="color:#d14">&lt;&lt; EOF &gt; /tmp/ingress.yml &amp;&amp; kubectl apply -f /tmp/ingress.yml
+</span><span style="color:#d14">  ...
+</span><span style="color:#d14">EOF</span>
+</code></pre></div><h3 id="interaction-diagram">Interaction Diagram</h3>
+<p><img src="/images/kubernetes-diy-dynamic-dns-operator.drawio.svg" alt="Interaction diagram"></p>
+<h3 id="network-diagram">Network Diagram</h3>
+<p><img src="/images/kubernetes-diy-dynamic-dns-operator2.drawio.svg" alt="Network diagram"></p>
+<h3 id="example-manifest">Example Manifest</h3>
+<p>An example of what the full Kubernetes manifest might look like:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#000080">apiVersion</span>:<span style="color:#bbb"> </span>batch/v1beta1<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#000080">kind</span>:<span style="color:#bbb"> </span>CronJob<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#000080">metadata</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">  </span><span style="color:#000080">name</span>:<span style="color:#bbb"> </span>dynamic-dns-operator<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#000080">spec</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">  </span><span style="color:#000080">schedule</span>:<span style="color:#bbb"> </span><span style="color:#d14">&#34;*/5 * * * *&#34;</span><span style="color:#bbb">
+</span><span style="color:#bbb">  </span><span style="color:#000080">jobTemplate</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#000080">spec</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">      </span><span style="color:#000080">template</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">        </span><span style="color:#000080">spec</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">          </span><span style="color:#000080">containers</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">          </span>- <span style="color:#000080">name</span>:<span style="color:#bbb"> </span>dynamic-dns-operator<span style="color:#bbb">
+</span><span style="color:#bbb">            </span><span style="color:#000080">image</span>:<span style="color:#bbb"> </span>bitnami/kubectl<span style="color:#bbb">
+</span><span style="color:#bbb">            </span><span style="color:#000080">command</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">            </span>- /bin/sh<span style="color:#bbb">
+</span><span style="color:#bbb">            </span>- -c<span style="color:#bbb">
+</span><span style="color:#bbb">            </span>- |<span style="color:#d14">
+</span><span style="color:#d14">              export IP=$(curl --silent ifconfig.me)
+</span><span style="color:#d14">
+</span><span style="color:#d14">              cat &lt;&lt; EOF &gt; /tmp/ingress.yml &amp;&amp; kubectl apply -f /tmp/ingress.yml
+</span><span style="color:#d14">              apiVersion: networking.k8s.io/v1
+</span><span style="color:#d14">              kind: Ingress
+</span><span style="color:#d14">              metadata:
+</span><span style="color:#d14">                name: dynamic-dns-operator
+</span><span style="color:#d14">                annotations:
+</span><span style="color:#d14">                  kubernetes.io/ingress.class: nginx
+</span><span style="color:#d14">                  external-dns.alpha.kubernetes.io/hostname: &#39;$HOSTNAME&#39;
+</span><span style="color:#d14">                  external-dns.alpha.kubernetes.io/target: &#39;$IP&#39;
+</span><span style="color:#d14">              spec:
+</span><span style="color:#d14">                rules:
+</span><span style="color:#d14">                - host: &#39;$HOSTNAME&#39;
+</span><span style="color:#d14">              EOF</span><span style="color:#bbb">              
+</span><span style="color:#bbb">            </span><span style="color:#000080">env</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">            </span>- <span style="color:#000080">name</span>:<span style="color:#bbb"> </span>HOSTNAME<span style="color:#bbb">
+</span><span style="color:#bbb">              </span><span style="color:#000080">valueFrom</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">                </span><span style="color:#000080">configMapKeyRef</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">                  </span><span style="color:#000080">name</span>:<span style="color:#bbb"> </span>dynamic-dns-operator<span style="color:#bbb">
+</span><span style="color:#bbb">                  </span><span style="color:#000080">key</span>:<span style="color:#bbb"> </span>hostname<span style="color:#bbb">
+</span></code></pre></div><h2 id="conclusion">Conclusion</h2>
+<p>If you&rsquo;re already using <a href="https://github.com/kubernetes-sigs/external-dns">External DNS</a> - another 30-40 lines CronJob can support <a href="https://en.wikipedia.org/wiki/Dynamic_DNS">Dynamic DNS</a>.</p>
+
+</div>
+
+
+  </main>
+
+  <footer>
+  <div>
+    &copy; James Moriarty 2021
+    ·
+    
+    <a href="https://creativecommons.org/licenses/by-sa/4.0"
+       target="_blank">CC BY-SA 4.0</a>
+    
+    
+  </div>
+</footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+          integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
+          crossorigin="anonymous"></script>
+
+  
+
+  
+</body>
+</html>
