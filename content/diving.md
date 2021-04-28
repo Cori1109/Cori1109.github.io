@@ -8,6 +8,15 @@ author = "James Moriarty"
 
 This page is dedicated to my interest in diving. I've enjoyed free & scuba diving in New Zealand, Australia, and Pacific Islands.
 
+## Contents
+
+- [Photos](#photos)
+- [Gear](#gear)
+  - [Free Diving](#free-diving)
+  - [Scuba Diving](#scuba-diving)
+  - [Weight](#weight)
+  - [Buy vs Hire](#buy-vs-hire)
+
 ## Photos
 
 [![Te Motu-o-Kura, Hawkes Bay, New Zealand, December, 2016](/images/diving.jpg)](/images/diving.jpg)
