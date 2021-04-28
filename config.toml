@@ -54,16 +54,16 @@ themeColor = "#313131"
   url = "/posts/"
 
   [[menu.main]]
-  name = "About"
-  identifier = "about"
-  weight = 200
-  url = "/about/"
-
-  [[menu.main]]
   name = "Talks"
   weight = 300
   identifier = "talks"
   url = "/talks/"
+
+  [[menu.main]]
+  name = "About"
+  identifier = "about"
+  weight = 400
+  url = "/about/"
 
   [[menu.main]]
   name = "Diving"
@@ -76,9 +76,3 @@ themeColor = "#313131"
   weight = 900
   identifier = "hardware"
   url = "/hardware/"
-
-  [[menu.main]]
-  name = "Quotes"
-  identifier = "quotes"
-  weight = 700
-  url = "/quotes/"
