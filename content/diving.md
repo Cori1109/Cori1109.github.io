@@ -25,7 +25,8 @@ I'm currently running the following gear:
 | Cressi Technica 5mm Wetsuit  | 2010 | $375.50NZD |
 | Cressi Pro Light Fins        | 2011 | $39.95USD  |
 | Mares Tana Snorkelling Set   | 2020 | $49.95AUD  |
-|                              
+
+Total: $440.00AUD
 
 ### Scuba Diving
 
@@ -35,6 +36,10 @@ I'm currently running the following gear:
 | Cressi Ellipse Octopus                       | 2011 | $81.95USD  |
 | Cressi Start BCD Medium                      | 2011 | $189.95USD |
 | Mares Puck Air Computer Console With Compass | 2011 | $349.95USD |
+
+Total: $1,061.64AUD
+
+N.B. It would cost at least double the price I paid to buy the dive computer domestically in New Zealand in 2011. 
 
 ### Weight
 
