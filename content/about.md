@@ -10,11 +10,8 @@ I’m a husband, father of two boys, master burger cook, amateur commuter cyclis
 
 ## Photos
 
-![I'm currently living in St Kilda, Melbourne, Australia.](/images/about-st-kilda.jpg)
-> I currently live in St Kilda, Melbourne, Australia.
-
 ![I'm originally from Hawkes Bay, New Zealand.](/images/about-new-zealand.jpg)
-> I'm originally from Hawkes Bay, New Zealand.
+> Pakipaki, Hawkes Bay, New Zealand 2018. The region I grew up in.
 
 ## Personal Philosophy
 
