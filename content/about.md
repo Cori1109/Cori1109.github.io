@@ -6,7 +6,12 @@ aliases = []
 author = "James Moriarty"
 +++
 
-I’m a husband, father of two boys, master burger cook, amateur commuter cyclist, photographer, scuba diver, weightlifter, runner, and skater. I’m originally from Havelock North, New Zealand but currently based in Melbourne, Australia. I’ve been working in the software industry for around a decade. Here are some quotes that epitomize my personal philosophy.
+I’m a husband, father of two boys, master burger cook, amateur commuter cyclist, photographer, scuba diver, weightlifter, runner, and skater. I’m originally from Havelock North, New Zealand but currently based in Melbourne, Australia. I’ve been working in the software industry for around a decade. 
+
+[Lucas and Theo at St Kilda Beach, Melbourne, Australia. 2020](/images/about-lucas-and-theo.png)
+> Lucas and Theo at St Kilda Beach, Melbourne, Australia. 2020.
+
+Here are some quotes that epitomize my personal philosophy.
 
 > "Wealth consists not in having great possessions, but in having few wants."
 _―Epictetus_
