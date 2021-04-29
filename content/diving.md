@@ -25,6 +25,15 @@ This page is dedicated to my interest in diving. I've enjoyed free & scuba divin
 ![Squirrelfish, Rarotonga, Cook Islands, 2011](/images/diving-raro-one.jpg)
 > Lagoon Squirrelfish, Rarotonga, Cook Islands, 2011.
 
+## Log
+
+| #     | Date      | Location   | Log |
+| ----- | --------- | ---------- | --- |
+| 1-10  | 2009-2009 | Rarotonga  | Pool & Boat dives supplied by Cook Island Divers for PADI Open Water certification. |
+| 10-14 | 2011-2011 | Rarotonga  | Cook Island Divers supplied several boat dives. |
+| 15-21 | 2011-2013 | Wellington | Shore dives in the harbour with new gear and various dive crews. |
+| 22-41 | 2011-2019 | Hawkes Bay | Boat dives off Te Motu-o-Kura over Summer Holidays almost every year. |
+
 ## Gear
 
 ### Buy vs Hire
