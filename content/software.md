@@ -6,7 +6,7 @@ aliases = []
 author = "James Moriarty"
 +++
 
-This page to showcase some of my personal software projects.
+A showcase some of my personal software projects.
 
 ## Alpaca Desktop
 
