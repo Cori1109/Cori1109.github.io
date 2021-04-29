@@ -20,10 +20,10 @@ This page is dedicated to my interest in diving. I've enjoyed free & scuba divin
 > "The Boil" 3-25m 3km offshore, Te Motu-o-Kura, Hawkes Bay, New Zealand, December, 2016.
 
 ![Octopus, Rarotonga, Cook Islands, 2011](/images/diving-raro-two.jpg)
-> Lagoon Octopus, Rarotonga, Cook Islands, 2011.
+> Octopus, Rarotonga, Cook Islands, 2011.
 
 ![Squirrelfish, Rarotonga, Cook Islands, 2011](/images/diving-raro-one.jpg)
-> Lagoon Squirrelfish, Rarotonga, Cook Islands, 2011.
+> Squirrelfish, Rarotonga, Cook Islands, 2011.
 
 ## Log
 
