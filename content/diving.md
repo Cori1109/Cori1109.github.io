@@ -38,9 +38,10 @@ This page is dedicated to my interest in diving. I've enjoyed free & scuba divin
 
 ### Buy vs Hire
 
-The following chart illustrates a point of return at around 40-60 dives. I've included ongoing costs with buying to account for air-fills and maintenance. Entry and ongoing costs will vary.
+The following chart illustrates a point of financial return at around 40-60 dives. I've included ongoing costs with buying to account for air-fills and maintenance. Entry and ongoing costs will vary.
 
-<iframe width="100%" height="400" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSnhz6mxUS0vyQfiMWeCGq10wBeaV8inw2mz4MDm16wmuVYyt7BxAC6MQGS74jL7aAggendUg8Ud4N7/pubchart?oid=567863874&amp;format=interactive"><!-- https://docs.google.com/spreadsheets/d/1E23-dx8wTP8lgVMjgnoQr25T7yJ6pzLWsETzZ5nkSck/edit#gid=0 --></iframe>
+![chart of buy vs rent diving gear](/images/diving-buy-vs-rent.png)
+<!-- https://docs.google.com/spreadsheets/d/1E23-dx8wTP8lgVMjgnoQr25T7yJ6pzLWsETzZ5nkSck/edit#gid=0 -->
 
 ### Free Diving
 
@@ -74,10 +75,10 @@ Total: $1,061.64AUD
 
 Total: $229.95AUD
 
-The following chart shows how body weight can affect buoyancy. Net position of a column indicates positive/negative buoyancy. Tank buoyancy will change as air is consumed over the dive. A wetsuit will lose buoyancy at depth as it is compressed.
+The following chart shows how body weight can affect buoyancy. Net position of a column indicates positive/negative buoyancy. Tank buoyancy will change over the course of the dive as air is consumed. A wetsuit will lose buoyancy at depth as it is compressed.
 
-<iframe width="100%" height="388" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRstGqGzebKTCqR6IqLhEOJnBfQXeu7xAKNOUJKUIjxbdMxvb3FWr3bXJAoRWeaimNbxctMNMPC2NYO/pubchart?oid=1079857299&amp;format=interactive"><!-- https://docs.google.com/spreadsheets/d/1k9NM6c_AzC6efnHSMl7HY7z7ZNSWDn9JPzI4RIWY7SM/edit#gid=0 --></iframe>
-
+![chart of how body weight can affect buoyancy](/images/diving-weight-chart.png)
+<!-- https://docs.google.com/spreadsheets/d/1k9NM6c_AzC6efnHSMl7HY7z7ZNSWDn9JPzI4RIWY7SM/edit#gid=0 -->
 
 ### Total
 
