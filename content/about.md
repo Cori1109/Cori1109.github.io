@@ -10,8 +10,11 @@ I’m a husband, father of two boys, master burger cook, amateur commuter cyclis
 
 ## Photos
 
-![My sons Lucas and Theo at St Kilda Beach, Melbourne, Australia. 2020](/images/about-lucas-and-theo.jpg)
-> My sons Lucas and Theo at St Kilda Beach, Melbourne, Australia. 2020.
+![I'm currently living in St Kilda, Melbourne, Australia.](/images/about-st-kilda.jpg)
+> I currently live in St Kilda, Melbourne, Australia.
+
+![I'm originally from Hawkes Bay, New Zealand.](/images/about-new-zealand.jpg)
+> I'm originally from Hawkes Bay, New Zealand.
 
 ## Personal Philosophy
 
