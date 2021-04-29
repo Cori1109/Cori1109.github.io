@@ -65,7 +65,7 @@ Total: $1,061.64AUD
 
 Total: $229.95AUD
 
-The following chart shows how body weight can affect buoyancy. Net position of a column indicates positive/negative buoyancy. Tank buoyancy will change as air is consumed over the dive.
+The following chart shows how body weight can affect buoyancy. Net position of a column indicates positive/negative buoyancy. Tank buoyancy will change as air is consumed over the dive. A wetsuit will lose buoyancy at depth as it is compressed.
 
 <iframe width="100%" height="388" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRstGqGzebKTCqR6IqLhEOJnBfQXeu7xAKNOUJKUIjxbdMxvb3FWr3bXJAoRWeaimNbxctMNMPC2NYO/pubchart?oid=1079857299&amp;format=interactive"><!-- https://docs.google.com/spreadsheets/d/1k9NM6c_AzC6efnHSMl7HY7z7ZNSWDn9JPzI4RIWY7SM/edit#gid=0 --></iframe>
 
