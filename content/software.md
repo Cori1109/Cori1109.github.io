@@ -28,7 +28,7 @@ Minimal forward proxy in 150LOC, utilizing a thread pool, and using only standar
 
 ![Lisp REPL](/images/software-lisp.png)
 
-Minimal Lisp interpreter in 75LOC and using only standard libraries excluding the REPL. Inspired by Google Research Peter Norvig's [Lis.py](http://norvig.com/lispy.html). I feel this is a more concise implementation using the Ruby programming language.
+Minimal Lisp interpreter in 75LOC and using only standard libraries excluding the REPL. Inspired by Google Research Peter Norvig's [Lis.py](http://norvig.com/lispy.html). A very concise implementation using the Ruby programming language.
 
 [Github](https://github.com/jamesmoriarty/lisp)
 
