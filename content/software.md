@@ -12,7 +12,7 @@ A showcase some of my personal software projects.
 
 [![Alpaca Desktop Screenshot](/images/software-alpaca-desktop2.png)](/images/software-alpaca-desktop2.png)
 
-Experimental OSX menu bar widget for Alpaca (a local proxy supporting NTLM authentication for command line tools). Distributed as a BitBar application with Alpaca binary and Launchd daemon. This was built to reduce the toil involved with installing and running Alpaca being undertaken by several hundred engineers.
+Experimental OSX menu bar widget for Alpaca (a local proxy supporting NTLM authentication for command line tools). Distributed as a BitBar application with Alpaca binary and Launchd daemon. This was built to reduce the toil involved in installing and configuration Alpaca being undertaken by several hundred engineers.
 
 [Github](https://github.com/jamesmoriarty/alpaca-desktop)
 
