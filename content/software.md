@@ -24,9 +24,15 @@ Minimal forward proxy in 150LOC, utilizing a thread pool, and using only standar
 
 [Github](https://github.com/jamesmoriarty/forward-proxy)
 
+## Gomem
+
+![Gomem library usage example](/images/software-gomem.png)
+
+A Go language library to manipulate Windows processes. Useful for developing process memory based security exploits.
+
 ## Lisp
 
-![Lisp REPL](/images/software-lisp.png)
+![Lisp REPL example](/images/software-lisp.png)
 
 Minimal Lisp interpreter in 75LOC and using only standard libraries excluding the REPL. Inspired by Google Research Peter Norvig's [Lis.py](http://norvig.com/lispy.html). A very concise implementation using the Ruby programming language.
 
