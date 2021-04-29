@@ -20,7 +20,7 @@ Experimental OSX menu bar widget for Alpaca. Distributed as a BitBar application
 
 ![ForwardProxy README.md screenshot](/images/software-forward-proxy.png)
 
-Minimal forward proxy in 150LOC and using only standard libraries. Useful for development, testing, and learning utilizing a thread pool.
+Minimal forward proxy in 150LOC, utilizing a thread pool, and using only standard libraries. Useful for development, testing, and learning.
 
 [Github](https://github.com/jamesmoriarty/forward-proxy)
 
