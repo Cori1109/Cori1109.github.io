@@ -12,13 +12,17 @@ This page to showcase my personal software projects.
 
 ![Alpaca Desktop Screenshot](/images/software-alpaca-desktop2.png)
 
-Experimental OSX menu bar widget for Alpaca. Distributed as a BitBar application with Alpaca binary and Launchd daemon. This was built to automate the process of reliable running Alpaca for several hundred engineers.
+Experimental OSX menu bar widget for Alpaca a local proxy supporting NTLM authentication for command line tool. Distributed as a BitBar application with Alpaca binary and Launchd daemon. This was built to automate the process of reliable running Alpaca for several hundred engineers.
 
 [Github](https://github.com/jamesmoriarty/alpaca-desktop)
 
 ## Forward Proxy
 
-![ForwardProxy README.md screenshot](/images/software-forward-proxy.png)
+```shell
+$ forward-proxy --binding 0.0.0.0 --port 3182 --threads 2
+[2021-01-14 19:37:47 +1100] INFO Listening 0.0.0.0:3182
+[2021-01-14 19:38:24 +1100] INFO CONNECT raw.githubusercontent.com:443 HTTP/1.1
+```
 
 Minimal forward proxy in 150LOC, utilizing a thread pool, and using only standard libraries. Useful for development, testing, and learning.
 
@@ -26,13 +30,31 @@ Minimal forward proxy in 150LOC, utilizing a thread pool, and using only standar
 
 ## Gomem
 
-![Gomem library usage example](/images/software-gomem.png)
+```go
+import "github.com/jamesmoriarty/gomem"
+...
+process, err := gomem.GetFromProcessName(name)
+process.Open()
+process.Read(offsetPtr, bufferPtr, unsafe.Sizeof(value))
+process.Write(offsetPtr, bufferPtr, unsafe.Sizeof(value))
+```
 
 A Go language library to manipulate Windows processes. Useful for developing process memory based security exploits.
 
 ## Lisp
 
-![Lisp REPL example](/images/software-lisp.png)
+```lisp
+$ lisp-repl
+ctrl-c to exit
+> (begin                                                                        
+(>   (define incf                                                               
+((>     (lambda (x)                                                             
+(((>       (set! x (+ x 1))))                                                   
+(>   (define one 1)                                                             
+(>   (incf one))                                                                
+2
+>
+```
 
 Minimal Lisp interpreter in 75LOC and using only standard libraries excluding the REPL. Inspired by Google Research Peter Norvig's [Lis.py](http://norvig.com/lispy.html). A very concise implementation using the Ruby programming language.
 
