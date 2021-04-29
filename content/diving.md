@@ -12,9 +12,10 @@ This page is dedicated to my interest in diving. I've enjoyed free & scuba divin
 
 - [Photos](#photos)
 - [Gear](#gear)
+  - [Buy vs Hire](#buy-vs-hire)
   - [Free Diving](#free-diving)
   - [Scuba Diving](#scuba-diving)
-  - [Buy vs Hire](#buy-vs-hire)
+
 
 ## Photos
 
@@ -23,6 +24,12 @@ This page is dedicated to my interest in diving. I've enjoyed free & scuba divin
 > 3km offshore, 3-30m, Te Motu-o-Kura, Hawkes Bay, New Zealand, December, 2016.
 
 ## Gear
+
+### Buy vs Hire
+
+The following chart illustrates a point of return at around 40-60 dives. I've included ongoing costs with buying to account for air-fills and maintenance. Entry and ongoing costs will vary.
+
+<iframe width="100%" height="500" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSnhz6mxUS0vyQfiMWeCGq10wBeaV8inw2mz4MDm16wmuVYyt7BxAC6MQGS74jL7aAggendUg8Ud4N7/pubchart?oid=567863874&amp;format=interactive"><!-- https://docs.google.com/spreadsheets/d/1E23-dx8wTP8lgVMjgnoQr25T7yJ6pzLWsETzZ5nkSck/edit#gid=0 --></iframe>
 
 ### Free Diving
 
@@ -62,8 +69,3 @@ I feel this setup was relatively good value. It would cost more than double to b
 
 Total: $1731.59AUD
 
-### Buy vs Hire
-
-The following chart illustrates a point of return at around 40-60 dives. I've included ongoing costs with buying to account for air-fills and maintenance. Entry and ongoing costs may vary.
-
-<iframe width="100%" height="500" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSnhz6mxUS0vyQfiMWeCGq10wBeaV8inw2mz4MDm16wmuVYyt7BxAC6MQGS74jL7aAggendUg8Ud4N7/pubchart?oid=567863874&amp;format=interactive"><!-- https://docs.google.com/spreadsheets/d/1E23-dx8wTP8lgVMjgnoQr25T7yJ6pzLWsETzZ5nkSck/edit#gid=0 --></iframe>

@@ -11,7 +11,7 @@ I’m a husband, father of two boys, master burger cook, amateur commuter cyclis
 ## Photos
 
 ![I'm originally from Hawkes Bay, New Zealand.](/images/about-new-zealand.jpg)
-> Pakipaki, Hawkes Bay, New Zealand 2018. The region I grew up in.
+> Pakipaki, Hawkes Bay, New Zealand, 2018. The region I grew up in.
 
 ## Personal Philosophy
 
