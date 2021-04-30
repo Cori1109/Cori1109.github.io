@@ -20,6 +20,15 @@ footer a, .content a, .related-posts li a:hover, .content a:hover {
   text-decoration: none;
 }
 
+.content pre {
+  overflow-x: scroll;
+  white-space: pre;
+}
+
+.content .post img {
+  width: 100%;
+}
+
 .read-more-link a {
   display: block;
   border: none;

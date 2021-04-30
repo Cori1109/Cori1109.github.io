@@ -14,9 +14,7 @@ My work often involves restricted private networks often found in large enterpri
 
 <hr />
 
-<center>
-  <a href="https://twitter.com/jamespmoriarty/status/1369445902251855873"><img src="/images/aws-nat.png" width="50%"></a>
-</center>
+[![tweet](/images/aws-nat.png)](https://twitter.com/jamespmoriarty/status/1369445902251855873)
 
 <hr />
 
