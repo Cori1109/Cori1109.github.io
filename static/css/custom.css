@@ -29,6 +29,10 @@ footer a, .content a, .related-posts li a:hover, .content a:hover {
   width: 100%;
 }
 
+.content .post video {
+  border-radius: 5px;
+}
+
 .read-more-link a {
   display: block;
   border: none;
