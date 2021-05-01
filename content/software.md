@@ -39,7 +39,7 @@ process.Read(offsetPtr, bufferPtr, unsafe.Sizeof(value))
 process.Write(offsetPtr, bufferPtr, unsafe.Sizeof(value))
 ```
 
-A Go library to manipulate Windows processes. Useful for developing process memory based security exploits. Automated tests manipulate and verify its own process memory via Windows APIs.
+A Go library to manipulate Windows processes. Useful for developing process memory based security exploits. Automated tests manipulate its own process memory via Windows APIs.
 
 [Github](https://github.com/jamesmoriarty/gomem)
 
@@ -61,6 +61,17 @@ ctrl-c to exit
 Minimal Lisp interpreter in 75LOC and using only standard libraries excluding the REPL. Inspired by Google Research Peter Norvig's [Lis.py](http://norvig.com/lispy.html). A concise implementation using the Ruby programming language.
 
 [Github](https://github.com/jamesmoriarty/lisp)
+
+## Nebula
+
+<video width="100%" autoplay loop>
+  <source src="/images/software-nebula.mp4" type="video/mp4" />
+</video>
+
+A prototype 2D Javascript space shooter. Simple physics, unit behaviors, parallax effects, and particles.
+
+[Github](https://github.com/jamesmoriarty/nebula)
+
 
 ## Scorched Earth
 
