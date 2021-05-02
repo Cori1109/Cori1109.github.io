@@ -6,8 +6,6 @@ aliases = ["tools"]
 author = "James Moriarty"
 +++
 
-This page is dedicated to my interest in consumer hardware.
-
 ## Photos
 
 [![Grafana cluster dashboard](/images/hardware-grafana.png)](/images/hardware-grafana.png)

@@ -1,6 +1,6 @@
 +++
 title = "Software"
-description = "Software used by James Moriarty."
+description = "Software created by James Moriarty."
 date = "2021-02-10"
 aliases = []
 author = "James Moriarty"
