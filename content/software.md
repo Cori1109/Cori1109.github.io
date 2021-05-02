@@ -43,6 +43,30 @@ A Go library to manipulate Windows processes. Useful for developing process memo
 
 [Github](https://github.com/jamesmoriarty/gomem)
 
+## Cloudformation Cheapest NAT
+
+[![AWS NAT](/images/software-nat.png)](/images/software-nat.png)
+
+Cloudformation for a NAT instance running on Spot. Can potentially save thousands in NAT costs every month.
+
+[Github](https://github.com/jamesmoriarty/cfn-cheapest-nat)
+
+## Gohack
+
+[![Gohack terminal output](/images/software-gohack.png)](/images/software-gohack.png)
+
+Experimental Go language CSGO computer game exploit proof-of-concept. Automated tests utilizing stubbed external processes. 
+
+[Github](https://github.com/jamesmoriarty/gohack)
+
+## Call Graph
+
+[![Call Graph presentation slide](/images/software-callgraph.png)](/images/software-callgraph.png)
+
+A Ruby library to capture execution and create call graphs. Useful for illustrating [Law of Demeter](https://en.wikipedia.org/wiki/Law_of_Demeter) violations.
+
+[Github](https://github.com/jamesmoriarty/call-graph)
+
 ## Lisp
 
 ```lisp
@@ -71,7 +95,6 @@ Minimal Lisp interpreter in 75LOC and using only standard libraries excluding th
 A prototype 2D Javascript space shooter. Simple physics, unit behaviors, parallax effects, and particles.
 
 [Github](https://github.com/jamesmoriarty/nebula)
-
 
 ## Scorched Earth
 
