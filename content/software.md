@@ -28,6 +28,14 @@ Minimal forward proxy in 150LOC and using only standard libraries. Useful for de
 
 [Github](https://github.com/jamesmoriarty/forward-proxy)
 
+## React Instagram Feed
+
+[![React Instagram Screenshot](/images/software-react-instagram.png)](/images/software-react-instagram)
+
+React component for rendering a user [Instagram](http://instagram.com) feed. Used unofficial integration method to avoid having to use a access token.
+
+[Github](https://github.com/jamesmoriarty/react-instagram-authless-feed)
+
 ## Gomem
 
 ```go
@@ -88,9 +96,11 @@ Minimal Lisp interpreter in 75LOC and using only standard libraries excluding th
 
 ## Nebula
 
-<video width="100%" autoplay loop>
-  <source src="/images/software-nebula.mp4" type="video/mp4" />
-</video>
+<a href="/images/software-nebula.mp4">
+  <video width="100%" autoplay loop>
+    <source src="/images/software-nebula.mp4" type="video/mp4" />
+  </video>
+</a>
 
 A prototype 2D Javascript space shooter. Simple physics, unit behaviors, parallax effects, and particles.
 
@@ -98,9 +108,11 @@ A prototype 2D Javascript space shooter. Simple physics, unit behaviors, paralla
 
 ## Scorched Earth
 
-<video width="100%" autoplay loop>
-  <source src="/images/software-scorched.mp4" type="video/mp4" />
-</video>
+<a href="/images/software-scorched.mp4">
+  <video width="100%" autoplay loop>
+    <source src="/images/software-scorched.mp4" type="video/mp4" />
+  </video>
+</a>
 
 A pure JRuby Scorched Earth clone and using only standard libraries. Dynamically generates color pallettes with Triad Mixing and CIE94 color distances.
 
