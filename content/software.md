@@ -32,7 +32,7 @@ Minimal forward proxy in 150LOC and using only standard libraries. Useful for de
 
 [![React Instagram Screenshot](/images/software-react-instagram.png)](/images/software-react-instagram)
 
-React component for rendering a user [Instagram](http://instagram.com) feed. Used unofficial integration method to avoid having to use a access token.
+Simple React component to render a [Instagram](http://instagram.com) feed. Used an unofficial integration method to avoid having to use a access token.
 
 [Github](https://github.com/jamesmoriarty/react-instagram-authless-feed)
 
