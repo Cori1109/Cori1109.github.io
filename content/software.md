@@ -30,7 +30,7 @@ Minimal forward proxy in 150LOC and using only standard libraries. Useful for de
 
 ## React Instagram Feed
 
-[![React Instagram Screenshot](/images/software-react-instagram.png)](/images/software-react-instagram)
+[![React Instagram Screenshot](/images/software-react-instagram.png)](/images/software-react-instagram.png)
 
 Simple React component to render a [Instagram](http://instagram.com) feed. Used an unofficial integration method to avoid having to use a access token.
 
