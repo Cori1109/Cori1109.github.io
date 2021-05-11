@@ -63,7 +63,7 @@ Cloudformation for a NAT instance running on Spot. Can potentially save thousand
 
 [![Gohack terminal output](/images/software-gohack.png)](/images/software-gohack.png)
 
-Experimental Go language CSGO computer game exploit proof-of-concept. Automated tests utilizing stubbed external processes. 
+Experimental Go language CSGO computer game exploit proof-of-concept. Automated tests use stubbed external processes to avoid needing binary compatability.
 
 [Github](https://github.com/jamesmoriarty/gohack)
 
