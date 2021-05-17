@@ -12,7 +12,7 @@ A showcase some of my personal software projects.
 
 [![Alpaca Desktop Screenshot](/images/software-alpaca-desktop2.png)](/images/software-alpaca-desktop2.png)
 
-Experimental OSX menu bar widget for Alpaca (a local proxy supporting NTLM authentication for command line tools). Distributed as a BitBar application with Alpaca binary and Launchd daemon. This was built to reduce the toil involved in installation and configuration by several hundred engineers.
+Experimental OSX menu bar widget for Alpaca (a local proxy supporting NTLM authentication for command line tools). This was built to reduce the toil involved in installation and configuration by several hundred engineers.
 
 [Github](https://github.com/jamesmoriarty/alpaca-desktop)
 
@@ -55,7 +55,7 @@ A Go library to manipulate Windows processes. Useful for developing process memo
 
 [![AWS NAT](/images/software-nat.png)](/images/software-nat.png)
 
-Cloudformation for a NAT instance running on Spot. Can potentially save thousands in NAT costs every month.
+Cloudformation for a NAT instance running on Spot. Save thousands on NAT costs every month.
 
 [Github](https://github.com/jamesmoriarty/cfn-cheapest-nat)
 
