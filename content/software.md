@@ -24,7 +24,7 @@ $ forward-proxy --binding 0.0.0.0 --port 3182 --threads 2
 [2021-01-14 19:38:24 +1100] INFO CONNECT raw.githubusercontent.com:443 HTTP/1.1
 ```
 
-Minimal forward proxy in 150LOC and using only standard libraries. Useful for development, testing, and learning. Implements a 35LOC thread pool. An interesting example of application interaction establishing a transport layer tunnel.
+Minimal forward proxy in 150LOC and using only standard libraries. Useful for development, testing, and learning. An interesting example of application interaction establishing a transport layer tunnel.
 
 [Github](https://github.com/jamesmoriarty/forward-proxy)
 
@@ -47,7 +47,7 @@ process.Read(offsetPtr, bufferPtr, unsafe.Sizeof(value))
 process.Write(offsetPtr, bufferPtr, unsafe.Sizeof(value))
 ```
 
-A Go library to manipulate Windows processes. Useful for developing process memory based security exploits. Automated tests manipulate its own process memory via Windows APIs.
+A Go library to manipulate Windows processes. Useful for developing process memory based security exploits. Automated tests manipulate and verify its own process memory via Windows APIs.
 
 [Github](https://github.com/jamesmoriarty/gomem)
 
@@ -114,6 +114,6 @@ A prototype 2D Javascript space shooter. Simple physics, unit behaviors, paralla
   </video>
 </a>
 
-A pure JRuby Scorched Earth clone and using only standard libraries. Dynamically generates color pallettes with Triad Mixing and CIE94 color distances.
+A pure JRuby Scorched Earth clone and using only standard libraries. Dynamically generates color pallettes with Triad Mixing and CIE94 color distances. Headless automated tests with null pattern graphics context.
 
 [Github](https://github.com/jamesmoriarty/scorched_earth)
