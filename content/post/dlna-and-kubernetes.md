@@ -61,7 +61,7 @@ PORT     STATE SERVICE
 MAC Address: D4:35:1D:14:F3:FE (Technicolor)
 ```
 
-The client utilize this endpoint to programatically interact this server. This coinsides with another post exposed in our manifest.
+The client uses this endpoint to programatically interact this server. This coinsides with another post exposed in our manifest.
 
 ```
 ports:
@@ -70,7 +70,7 @@ ports:
   protocol: TCP
 ```
 
-To enable the SSDP interaction on Kubernetes I had to run the container with hostNetwork. Pod traffic of this nature is generally not able to leave the pod network. This often enfored with node ip tables.
+To enable the SSDP interaction on Kubernetes I had to run the container with `hostNetwork`. Pod traffic of this nature is generally not able to leave the pod network. This often enfored via node ip tables.
 
 ```
 hostNetwork: true
