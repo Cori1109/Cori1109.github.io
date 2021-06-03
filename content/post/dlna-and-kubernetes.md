@@ -24,7 +24,7 @@ ports:
   protocol: UDP
 ```
 
-Lets have a look at a working interactions from the service with `tshark`:
+Lets have a look at a working interactions from the service with `tshark`.
 
 ```
 sudo tshark -i eno1  -f "udp port 1900"
@@ -34,13 +34,11 @@ Capturing on 'eno1'
    13 10.643129842 192.168.0.211 → 192.168.0.85 SSDP 404 HTTP/1.1 200 OK
 ```
 
-For context:
-
 - 192.168.0.85 DLNA client.
-- 192.168.0.211 DLNA server.
 - 239.255.255.250 SSDP multicast address.
+- 192.168.0.211 DLNA server.
 
-If we run `tshark` with `-T pdml` to examine the contents of the interaction the server - we will see an advertised http endpoint. 
+If we run `tshark` with `-T pdml` to examine the contents of the interaction the server - we will see an advertised http endpoint.
 
 ```
 http://192.168.0.211:8200/rootDesc.xml
@@ -63,7 +61,7 @@ PORT     STATE SERVICE
 MAC Address: D4:35:1D:14:F3:FE (Technicolor)
 ```
 
-The client utilize this endpoint to programatically interact this server. 
+The client utilize this endpoint to programatically interact this server.
 
 ```
 ports:
