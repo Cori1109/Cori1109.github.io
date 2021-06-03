@@ -15,15 +15,6 @@ tags = [
 [2]: https://en.wikipedia.org/wiki/Universal_Plug_and_Play
 [3]: https://en.wikipedia.org/wiki/Simple_Service_Discovery_Protocol
 
-We can see the SSDP port in our DLNA Deployment Kubernetes manifest.
-
-```
-ports:
-- containerPort: 1900
-  hostPort: 1900
-  protocol: UDP
-```
-
 Lets have a look at a working interactions from the service with `tshark`.
 
 ```
@@ -37,6 +28,15 @@ Capturing on 'eno1'
 - 192.168.0.85 DLNA client.
 - 239.255.255.250 SSDP multicast address.
 - 192.168.0.211 DLNA server.
+
+We can see the SSDP port in our DLNA Deployment Kubernetes manifest.
+
+```
+ports:
+- containerPort: 1900
+  hostPort: 1900
+  protocol: UDP
+```
 
 If we run `tshark` with `-T pdml` to examine the contents of the interaction the server - we will see an advertised http endpoint.
 
@@ -61,7 +61,7 @@ PORT     STATE SERVICE
 MAC Address: D4:35:1D:14:F3:FE (Technicolor)
 ```
 
-The client utilize this endpoint to programatically interact this server.
+The client utilize this endpoint to programatically interact this server. This coinsides with another post exposed in our manifest.
 
 ```
 ports:
@@ -70,7 +70,7 @@ ports:
   protocol: TCP
 ```
 
-This coinsides with another post exposed in our manifest. To enable the SSDP interaction on Kubernetes I had to run the container with hostNetwork. Pod traffic of this nature is generally not able to leave the pod network. This often enfored with node ip tables.
+To enable the SSDP interaction on Kubernetes I had to run the container with hostNetwork. Pod traffic of this nature is generally not able to leave the pod network. This often enfored with node ip tables.
 
 ```
 hostNetwork: true
