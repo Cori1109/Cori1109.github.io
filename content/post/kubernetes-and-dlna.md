@@ -47,7 +47,7 @@ If we run `tshark` with `-T pdml` to examine the contents of the interaction
 http://192.168.0.211:8200/rootDesc.xml
 ```
 
-You also discover the expected endpoints with `nmap`.
+You also discover the advertised endpoints with `nmap`.
 
 ```
 nmap sU -p 1900 --script=upnp-info 192.168.0.0/24
@@ -64,7 +64,7 @@ PORT     STATE SERVICE
 MAC Address: D4:35:1D:14:F3:FE (Technicolor)
 ```
 
-The endpoint enables programmatic interaction between client and server. This coincides with another post exposed in our manifest.
+The endpoint enables programmatic interaction between client and server. This coincides with another port exposed in our manifest.
 
 ```
 ports:
