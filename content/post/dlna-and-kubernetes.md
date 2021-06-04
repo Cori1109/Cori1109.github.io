@@ -72,7 +72,7 @@ ports:
   protocol: TCP
 ```
 
-To enable the SSDP interaction on Kubernetes - I ran the container with `hostNetwork`.
+To allow the SSDP interaction required the container to run with `hostNetwork` on Kubernetes.
 
 ```
 hostNetwork: true
@@ -84,7 +84,7 @@ Otherwise, you can expect the following issues.
 - Host network SSDP discovery traffic may not reach the pod network. This may be Container Network Interface (CNI) dependent.
 - The advertise internal pod IP endpoint address may not reachable from the host network.
 
-To avoid node post conflicts the pod spec needs to use a recreate strategy.
+To avoid node port conflicts the deployment spec will needs to use a `Recreate` strategy.
 
 ```
 replicas: 1
