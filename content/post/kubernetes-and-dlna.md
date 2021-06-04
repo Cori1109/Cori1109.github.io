@@ -1,8 +1,9 @@
 +++
 author = "James Moriarty"
-title = "DLNA Server and Kubernetes"
+title = "Kubernetes and DLNA"
 date = "2021-06-03"
 description = ""
+aliases = ["dlna and kubernetes"]
 tags = [
   "kubernetes",
   "dlna"
