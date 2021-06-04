@@ -1,6 +1,6 @@
 +++
 author = "James Moriarty"
-title = "DLNA and Kubernetes"
+title = "DLNA Server and Kubernetes"
 date = "2021-06-03"
 description = ""
 tags = [
@@ -72,7 +72,11 @@ ports:
   protocol: TCP
 ```
 
-To enable the SSDP interaction on Kubernetes I had to run the container with `hostNetwork`. Pod traffic of this nature can intentionally not leave the pod network. This often enforced via node IP tables.
+To enable the SSDP interaction on Kubernetes I ran the container with `hostNetwork`. Otherwise:
+
+- Pod network SSDP advertisement traffic may not reach the host network. This often enforced via node IP tables.
+- Host network SSDP discovery traffic may not reach the pod network. This may be Container Network Interface (CNI) dependent.
+- The advertise internal pod IP endpoint address may not reachable from the host network.
 
 ```
 hostNetwork: true
