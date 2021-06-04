@@ -73,7 +73,7 @@ ports:
   protocol: TCP
 ```
 
-To allow the SSDP interaction required the container to run with `hostNetwork` on Kubernetes.
+Enabling the SSDP interaction on Kubernetes required the DLNA server pod to be run with `hostNetwork`.
 
 ```
 hostNetwork: true
