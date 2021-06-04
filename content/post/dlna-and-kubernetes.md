@@ -9,13 +9,13 @@ tags = [
 ]
 +++
 
-[Digital Living Network Alliance][1] (DLNA) is derived from [Universal Plug and Play][2] (UPnP) specifically for the purpose of media interoperability. DLNA is advertised and discovered via [Simple Service Discovery Protocol ][3] (SSDP).
+[Digital Living Network Alliance][1] (DLNA) is derived from [Universal Plug and Play][2] (UPnP) specifically for media interoperability. DLNA is advertised and discovered via [Simple Service Discovery Protocol ][3] (SSDP).
 
 [1]: https://en.wikipedia.org/wiki/Digital_Living_Network_Alliance
 [2]: https://en.wikipedia.org/wiki/Universal_Plug_and_Play
 [3]: https://en.wikipedia.org/wiki/Simple_Service_Discovery_Protocol
 
-Lets have a look at a working interactions from the service with `tshark`.
+Let’s have a look at a working interaction from the service with `tshark`.
 
 ```
 sudo tshark -i eno1  -f "udp port 1900"
@@ -25,9 +25,11 @@ Capturing on 'eno1'
    13 10.643129842 192.168.0.211 → 192.168.0.85 SSDP 404 HTTP/1.1 200 OK
 ```
 
-- 192.168.0.85 DLNA client.
-- 239.255.255.250 SSDP multicast address.
-- 192.168.0.211 DLNA server.
+| Address         | Entity         |
+| --------------- | -------------- |
+| 192.168.0.85    | DLNA Client    |
+| 239.255.255.250 | SSDP Multicast |
+| 192.168.0.211   | DLNA Server    |
 
 We can see the SSDP port in our DLNA Deployment Kubernetes manifest.
 
@@ -38,7 +40,7 @@ ports:
   protocol: UDP
 ```
 
-If we run `tshark` with `-T pdml` to examine the contents of the interaction the server - we will see an advertised http endpoint.
+If we run `tshark` with `-T pdml` to examine the contents of the interaction the server - we will see an advertised http endpoint.
 
 ```
 http://192.168.0.211:8200/rootDesc.xml
@@ -61,7 +63,7 @@ PORT     STATE SERVICE
 MAC Address: D4:35:1D:14:F3:FE (Technicolor)
 ```
 
-The client uses this endpoint to programatically interact this server. This coinsides with another post exposed in our manifest.
+The endpoint enables programmatic interaction between client and server. This coincides with another post exposed in our manifest.
 
 ```
 ports:
@@ -70,7 +72,7 @@ ports:
   protocol: TCP
 ```
 
-To enable the SSDP interaction on Kubernetes I had to run the container with `hostNetwork`. Pod traffic of this nature is generally not able to leave the pod network. This often enfored via node ip tables.
+To enable the SSDP interaction on Kubernetes I had to run the container with `hostNetwork`. Pod traffic of this nature can intentionally not leave the pod network. This often enforced via node IP tables.
 
 ```
 hostNetwork: true
