@@ -10,7 +10,7 @@ tags = [
 ]
 +++
 
-[Digital Living Network Alliance][1] (DLNA) is derived from [Universal Plug and Play][2] (UPnP) specifically for media interoperability. DLNA is advertised and discovered via [Simple Service Discovery Protocol ][3] (SSDP).
+[Digital Living Network Alliance][1] (DLNA) is derived from [Universal Plug and Play][2] (UPnP) specifically for media interoperability. DLNA is advertised and discovered via [Simple Service Discovery Protocol ][3] (SSDP). Take the follow example:
 
 [1]: https://en.wikipedia.org/wiki/Digital_Living_Network_Alliance
 [2]: https://en.wikipedia.org/wiki/Universal_Plug_and_Play
@@ -18,7 +18,7 @@ tags = [
 
 ![DLNA M-SEARCH Interaction diagram](/images/kubernetes-and-dlna.drawio.svg)
 
-Let’s have a look at a working interaction from the service with `tshark`.
+Let’s have a look at a captured interaction with `tshark`.
 
 ```
 sudo tshark -i eno1  -f "udp port 1900"
@@ -27,12 +27,6 @@ Capturing on 'eno1'
    12 10.641536725 192.168.0.85 → 239.255.255.250 SSDP 169 M-SEARCH * HTTP/1.1
    13 10.643129842 192.168.0.211 → 192.168.0.85 SSDP 404 HTTP/1.1 200 OK
 ```
-
-| Address         | Entity         |
-| --------------- | -------------- |
-| 192.168.0.85    | DLNA Client    |
-| 239.255.255.250 | SSDP Multicast |
-| 192.168.0.211   | DLNA Server    |
 
 We can see the SSDP port in our DLNA Deployment Kubernetes manifest.
 
