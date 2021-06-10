@@ -16,6 +16,8 @@ tags = [
 [2]: https://en.wikipedia.org/wiki/Universal_Plug_and_Play
 [3]: https://en.wikipedia.org/wiki/Simple_Service_Discovery_Protocol
 
+![DLNA M-SEARCH Interaction diagram](/images/kubernetes-and-dlna.drawio.svg)
+
 Let’s have a look at a working interaction from the service with `tshark`.
 
 ```
