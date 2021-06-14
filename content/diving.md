@@ -73,7 +73,7 @@ The following chart shows how buoyancy can we influenced by multiple factors ove
 
 ![chart of how body weight can affect buoyancy](/images/diving-weight-chart.png)
 <!-- https://docs.google.com/spreadsheets/d/1C2rqTgVQtI3MDU07MTn6Gdh2Mem0eHJZrKK6c7WySC8/edit#gid=0 -->
-> Tank buoyancy increases as consumered while wetsuits lose buoyancy as compressed at depth.
+> Tank buoyancy increases as consumed while wetsuits lose buoyancy as compressed at depth.
 
 ![chart of how body weight can affect buoyancy](/images/diving-weight-chart2.png)
 <!-- https://docs.google.com/spreadsheets/d/1C2rqTgVQtI3MDU07MTn6Gdh2Mem0eHJZrKK6c7WySC8/edit#gid=0 -->
