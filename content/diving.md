@@ -69,8 +69,6 @@ Total: $1,061.64AUD
 
 Total: $229.95AUD
 
-The following chart shows how buoyancy can we influenced by multiple factors over the course of a dive.
-
 ![chart of how body weight can affect buoyancy](/images/diving-weight-chart.png)
 <!-- https://docs.google.com/spreadsheets/d/1C2rqTgVQtI3MDU07MTn6Gdh2Mem0eHJZrKK6c7WySC8/edit#gid=0 -->
 > This table show how depth and air can influence the buoyancy of dive equipment.
