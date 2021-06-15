@@ -69,15 +69,15 @@ Total: $1,061.64AUD
 
 Total: $229.95AUD
 
-The following chart shows how buoyancy can we influenced by multiple factors over the course of a dive. 
+The following chart shows how buoyancy can we influenced by multiple factors over the course of a dive.
 
 ![chart of how body weight can affect buoyancy](/images/diving-weight-chart.png)
 <!-- https://docs.google.com/spreadsheets/d/1C2rqTgVQtI3MDU07MTn6Gdh2Mem0eHJZrKK6c7WySC8/edit#gid=0 -->
-> Tank buoyancy increases as consumed while wetsuits lose buoyancy as compressed at depth.
+> This table show how depth and air can influence the buoyancy of dive equipment.
 
 ![chart of how body weight can affect buoyancy](/images/diving-weight-chart2.png)
 <!-- https://docs.google.com/spreadsheets/d/1C2rqTgVQtI3MDU07MTn6Gdh2Mem0eHJZrKK6c7WySC8/edit#gid=0 -->
-> Calculating your buoyancy over the course of a dive can be non-trival.
+> This charts helps you understand how buoyancy of dive equipment tends over the course of a dive.
 
 ### Total
 
