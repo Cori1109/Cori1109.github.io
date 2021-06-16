@@ -6,7 +6,16 @@
     <description>Recent content on James Moriarty</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 08 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jamesmoriarty.xyz/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 03 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jamesmoriarty.xyz/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kubernetes and DLNA</title>
+      <link>https://www.jamesmoriarty.xyz/post/kubernetes-and-dlna/</link>
+      <pubDate>Thu, 03 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jamesmoriarty.xyz/post/kubernetes-and-dlna/</guid>
+      <description>Digital Living Network Alliance (DLNA) is derived from Universal Plug and Play (UPnP) specifically for media interoperability.</description>
+    </item>
+    
     <item>
       <title>Kubernetes DIY Dynamic DNS Operator</title>
       <link>https://www.jamesmoriarty.xyz/post/kubernetes-diy-dynamic-dns-operator/</link>
@@ -49,17 +58,18 @@
       <pubDate>Wed, 10 Feb 2021 00:00:00 +0000</pubDate>
       
       <guid>https://www.jamesmoriarty.xyz/hardware/</guid>
-      <description>This page is dedicated to my interest in consumer hardware.</description>
+      <description>Photos 
+ Grafana dashboards from kube-prometheus-stack monitoring for my home single node &amp;ldquo;cluster&amp;rdquo;.</description>
     </item>
     
     <item>
-      <title>Quotes</title>
-      <link>https://www.jamesmoriarty.xyz/quotes/</link>
+      <title>Software</title>
+      <link>https://www.jamesmoriarty.xyz/software/</link>
       <pubDate>Wed, 10 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://www.jamesmoriarty.xyz/quotes/</guid>
-      <description>That epitomize my personal philosophy.
- &amp;ldquo;Wealth consists not in having great possessions, but in having few wants.</description>
+      <guid>https://www.jamesmoriarty.xyz/software/</guid>
+      <description>A showcase of my personal software projects.
+Alpaca Desktop</description>
     </item>
     
     <item>
@@ -68,7 +78,8 @@
       <pubDate>Wed, 10 Feb 2021 00:00:00 +0000</pubDate>
       
       <guid>https://www.jamesmoriarty.xyz/talks/</guid>
-      <description>Lightning Talk - Call Graphs Source</description>
+      <description>Talk - Writing My First Exploit Source
+Lightning Talk - Call Graphs Source</description>
     </item>
     
     <item>

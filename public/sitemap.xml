@@ -1,143 +1,93 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
+    <loc>https://www.jamesmoriarty.xyz/tags/dlna/</loc>
+    <lastmod>2021-06-03T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://www.jamesmoriarty.xyz/</loc>
-    <lastmod>2021-03-08T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-06-03T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://www.jamesmoriarty.xyz/tags/kubernetes/</loc>
-    <lastmod>2021-03-08T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-06-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.jamesmoriarty.xyz/post/kubernetes-and-dlna/</loc>
+    <lastmod>2021-06-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.jamesmoriarty.xyz/post/</loc>
+    <lastmod>2021-06-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.jamesmoriarty.xyz/tags/</loc>
+    <lastmod>2021-06-03T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://www.jamesmoriarty.xyz/post/kubernetes-diy-dynamic-dns-operator/</loc>
     <lastmod>2021-03-08T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.jamesmoriarty.xyz/post/</loc>
-    <lastmod>2021-03-08T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.jamesmoriarty.xyz/tags/</loc>
-    <lastmod>2021-03-08T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.jamesmoriarty.xyz/tags/go/</loc>
     <lastmod>2021-02-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.jamesmoriarty.xyz/post/go-public-service-announcement/</loc>
     <lastmod>2021-02-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.jamesmoriarty.xyz/tags/http/</loc>
     <lastmod>2021-02-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.jamesmoriarty.xyz/post/http-connect-by-example/</loc>
     <lastmod>2021-02-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.jamesmoriarty.xyz/tags/proxy/</loc>
     <lastmod>2021-02-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.jamesmoriarty.xyz/diving/</loc>
     <lastmod>2021-02-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.jamesmoriarty.xyz/hardware/</loc>
     <lastmod>2021-02-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.jamesmoriarty.xyz/quotes/</loc>
+  </url><url>
+    <loc>https://www.jamesmoriarty.xyz/software/</loc>
     <lastmod>2021-02-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.jamesmoriarty.xyz/talks/</loc>
     <lastmod>2021-02-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.jamesmoriarty.xyz/post/go-retro/</loc>
     <lastmod>2021-01-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.jamesmoriarty.xyz/tags/fed/</loc>
     <lastmod>2020-08-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.jamesmoriarty.xyz/tags/react/</loc>
     <lastmod>2020-08-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.jamesmoriarty.xyz/post/react-retro/</loc>
     <lastmod>2020-08-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.jamesmoriarty.xyz/tags/aws/</loc>
     <lastmod>2020-06-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.jamesmoriarty.xyz/post/aws-nat-internet-egress/</loc>
     <lastmod>2020-06-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.jamesmoriarty.xyz/tags/iac/</loc>
     <lastmod>2020-06-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.jamesmoriarty.xyz/tags/infrastructure/</loc>
     <lastmod>2020-06-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.jamesmoriarty.xyz/about/</loc>
     <lastmod>2020-06-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.jamesmoriarty.xyz/post/game-exploits-retro/</loc>
     <lastmod>2020-06-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.jamesmoriarty.xyz/tags/games/</loc>
     <lastmod>2020-06-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.jamesmoriarty.xyz/tags/security/</loc>
     <lastmod>2020-06-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.jamesmoriarty.xyz/categories/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.jamesmoriarty.xyz/tags/index/</loc>
   </url>
-  
 </urlset>

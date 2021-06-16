@@ -6,11 +6,20 @@
     <description>Recent content in Tags on James Moriarty</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 08 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jamesmoriarty.xyz/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 03 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jamesmoriarty.xyz/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>dlna</title>
+      <link>https://www.jamesmoriarty.xyz/tags/dlna/</link>
+      <pubDate>Thu, 03 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jamesmoriarty.xyz/tags/dlna/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>kubernetes</title>
       <link>https://www.jamesmoriarty.xyz/tags/kubernetes/</link>
-      <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 03 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>https://www.jamesmoriarty.xyz/tags/kubernetes/</guid>
       <description></description>
