@@ -8,6 +8,11 @@ author = "James Moriarty"
 
 This page is dedicated to my interest in diving. I've enjoyed free & scuba diving in New Zealand, Australia, and Pacific Islands.
 
+- [Photos](#photos)
+- [Charts](#charts)
+- [Gear](#gear)
+- [Log](#log)
+
 ## Photos
 
 [!["The Boil" 3-25m 3km offshore, Te Motu-o-Kura, Hawkes Bay, New Zealand, December, 2016](/images/diving-hawkes-bay.jpg)](/images/diving-hawkes-bay.jpg)
@@ -19,14 +24,15 @@ This page is dedicated to my interest in diving. I've enjoyed free & scuba divin
 ![Squirrelfish, Rarotonga, Cook Islands, 2011](/images/diving-raro-one.jpg)
 > Squirrelfish, Rarotonga, Cook Islands, 2011.
 
-## Log
+# Charts
 
-| #     | Date      | Location   | Log |
-| ----- | --------- | ---------- | --- |
-| 1-10  | 2009-2009 | Rarotonga  | Pool & Boat dives supplied by Cook Island Divers for PADI Open Water certification. |
-| 10-14 | 2011-2011 | Rarotonga  | Cook Island Divers supplied several boat dives. |
-| 15-21 | 2011-2013 | Wellington | Shore dives in the harbour with new gear and various dive crews. |
-| 22-41 | 2011-2019 | Hawkes Bay | Boat dives off Te Motu-o-Kura over Summer Holidays almost every year. |
+![chart of how body weight can affect buoyancy](/images/diving-weight-chart.png)
+<!-- https://docs.google.com/spreadsheets/d/1C2rqTgVQtI3MDU07MTn6Gdh2Mem0eHJZrKK6c7WySC8/edit#gid=0 -->
+> This table show how depth and air can influence the buoyancy of dive equipment.
+
+![chart of how body weight can affect buoyancy](/images/diving-weight-chart2.png)
+<!-- https://docs.google.com/spreadsheets/d/1C2rqTgVQtI3MDU07MTn6Gdh2Mem0eHJZrKK6c7WySC8/edit#gid=0 -->
+> This charts helps you understand how buoyancy of dive equipment tends over the course of a dive.
 
 ## Gear
 
@@ -69,17 +75,17 @@ Total: $1,061.64AUD
 
 Total: $229.95AUD
 
-![chart of how body weight can affect buoyancy](/images/diving-weight-chart.png)
-<!-- https://docs.google.com/spreadsheets/d/1C2rqTgVQtI3MDU07MTn6Gdh2Mem0eHJZrKK6c7WySC8/edit#gid=0 -->
-> This table show how depth and air can influence the buoyancy of dive equipment.
-
-![chart of how body weight can affect buoyancy](/images/diving-weight-chart2.png)
-<!-- https://docs.google.com/spreadsheets/d/1C2rqTgVQtI3MDU07MTn6Gdh2Mem0eHJZrKK6c7WySC8/edit#gid=0 -->
-> This charts helps you understand how buoyancy of dive equipment tends over the course of a dive.
-
 ### Total
 
 I feel this setup was relatively good value. It would cost more than double to buy the computer domestically with geographic pricing.
 
 Total: $1731.59AUD
 
+## Log
+
+| #     | Date      | Location   | Log |
+| ----- | --------- | ---------- | --- |
+| 1-10  | 2009-2009 | Rarotonga  | Pool & Boat dives supplied by Cook Island Divers for PADI Open Water certification. |
+| 10-14 | 2011-2011 | Rarotonga  | Cook Island Divers supplied several boat dives. |
+| 15-21 | 2011-2013 | Wellington | Shore dives in the harbour with new gear and various dive crews. |
+| 22-41 | 2011-2019 | Hawkes Bay | Boat dives off Te Motu-o-Kura over Summer Holidays almost every year. |
