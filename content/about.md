@@ -6,7 +6,7 @@ aliases = []
 author = "James Moriarty"
 +++
 
-I’m a husband, father of two boys, master burger cook, amateur commuter cyclist, photographer, scuba diver, weightlifter, runner, and skater. I’m originally from Havelock North, New Zealand but currently based in Melbourne, Australia. I’ve been working in the software industry for around a decade. 
+I’m a husband, father of two boys, master burger cook, amateur commuter cyclist, photographer, scuba diver, weightlifter, runner, and skater. I’m originally from Havelock North, New Zealand but currently based in Melbourne, Australia. I’ve been working in the software industry for around a decade.
 
 ## Photos
 
@@ -34,3 +34,8 @@ _―Seneca_
 
 > "I find that the harder I work, the more luck I seem to have."
 _―Thomas Jefferson_
+
+<hr />
+
+> I do not fear death. I had been dead for billions and billions of years before I was born, and had not suffered the slightest inconvenience from it.
+_―Mark Twain_
