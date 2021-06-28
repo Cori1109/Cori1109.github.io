@@ -37,5 +37,5 @@ _―Thomas Jefferson_
 
 <hr />
 
-> I do not fear death. I had been dead for billions and billions of years before I was born, and had not suffered the slightest inconvenience from it.
+> "I had been dead for billions and billions of years before I was born, and had not suffered the slightest inconvenience from it."
 _―Mark Twain_
