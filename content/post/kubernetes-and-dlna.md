@@ -18,7 +18,7 @@ tags = [
 
 ## Example
 
-Take the follow DLNA example [minidlna](https://wiki.debian.org/minidlna) running on my home kubernetes cluster:
+Take the follow example of [miniDLNA](https://wiki.debian.org/minidlna) running on my home kubernetes cluster:
 
 ![DLNA M-SEARCH Interaction diagram](/images/kubernetes-and-dlna.drawio.svg)
 
