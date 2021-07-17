@@ -14,6 +14,6 @@ author = "James Moriarty"
 
 ## Lightning Talk - Call Graphs
 
-[Source](https://speakerdeck.com/jamesmoriarty/lightning-talk-call-graphs3)
+[Source](https://speakerdeck.com/jamesmoriarty/lightning-talk-call-graphs)
 
 <script async class="speakerdeck-embed" data-id="b35b377c4f364acfb4a240ecb8b9e803" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>

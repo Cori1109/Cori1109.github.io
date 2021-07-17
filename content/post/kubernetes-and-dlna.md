@@ -10,11 +10,15 @@ tags = [
 ]
 +++
 
-[Digital Living Network Alliance][1] (DLNA) is derived from [Universal Plug and Play][2] (UPnP) specifically for media interoperability. DLNA is advertised and discovered via [Simple Service Discovery Protocol ][3] (SSDP). Take the follow example:
+[Digital Living Network Alliance][1] (DLNA) is derived from [Universal Plug and Play][2] (UPnP) specifically for media interoperability. DLNA is advertised and discovered via [Simple Service Discovery Protocol ][3] (SSDP).
 
 [1]: https://en.wikipedia.org/wiki/Digital_Living_Network_Alliance
 [2]: https://en.wikipedia.org/wiki/Universal_Plug_and_Play
 [3]: https://en.wikipedia.org/wiki/Simple_Service_Discovery_Protocol
+
+## Example
+
+Take the follow DLNA example [minidlna](https://wiki.debian.org/minidlna) running on my home kubernetes cluster:
 
 ![DLNA M-SEARCH Interaction diagram](/images/kubernetes-and-dlna.drawio.svg)
 
