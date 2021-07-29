@@ -62,7 +62,7 @@ Cloudformation for a NAT instance running on Spot. Save thousands on NAT costs e
 
 [![Gohack terminal output](/images/software-gohack.png)](/images/software-gohack.png)
 
-Experimental Go language CSGO computer game exploit proof-of-concept. Automated tests use stubbed external processes to avoid needing binary compatability.
+Experimental Go language CSGO computer game exploit proof-of-concept. Automated tests use stubbed external processes to avoid needing binary compatibility.
 
 [Github](https://github.com/jamesmoriarty/gohack)
 
@@ -113,6 +113,6 @@ A prototype 2D Javascript space shooter. Simple physics, unit behaviors, paralla
   </video>
 </a>
 
-A pure JRuby Scorched Earth clone and using only standard libraries. Dynamically generates color pallettes with Triad Mixing and CIE94 color distances. Headless automated tests with null pattern graphics context.
+A pure JRuby Scorched Earth clone and using only standard libraries. Implemented with an event-driven architecture and dynamically generates color pallettes utilizing Triad Mixing and CIE94 color distances. Headless automated tests achieve with null pattern graphics context injection.
 
 [Github](https://github.com/jamesmoriarty/scorched_earth)
