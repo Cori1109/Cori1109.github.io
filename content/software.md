@@ -113,6 +113,6 @@ A prototype 2D Javascript space shooter. Simple physics, unit behaviors, paralla
   </video>
 </a>
 
-A pure JRuby Scorched Earth clone and using only standard libraries. Implemented with an event-driven architecture and dynamically generates color pallettes utilizing Triad Mixing and CIE94 color distances. Headless automated tests achieve with null pattern graphics context injection.
+A pure JRuby Scorched Earth clone and using only standard libraries. Implemented with an event-driven architecture and dynamically generates color pallettes utilizing Triad Mixing and CIE94 color distances. Headless automated tests enabled through null pattern graphics context injection.
 
 [Github](https://github.com/jamesmoriarty/scorched_earth)
