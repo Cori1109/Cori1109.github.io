@@ -90,7 +90,9 @@ Go "routines" and "channels" appear easy to use and well thought out.
 ```go
 shutdown := make(chan os.Signal, 1)
 signal.Notify(shutdown, syscall.SIGINT, syscall.SIGTERM)
+
 go goforward.Listen(port, rate, shutdown)
+
 <-shutdown
 ```
 
