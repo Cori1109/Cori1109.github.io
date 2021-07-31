@@ -10,9 +10,9 @@ tags = [
 ]
 +++
 
-These are some notes taken while deploying a [Digital Living Network Alliance][1] (DLNA) server to my home Kubernetes cluster.
+These are some notes taken while deploying a [Digital Living Network Alliance][1] (DLNA) to Kubernetes. DLNA is derived from [Universal Plug and Play][2] (UPnP) specifically for media interoperability. DLNA services are advertised and discovered via [Simple Service Discovery Protocol ][3] (SSDP). 
 
-DLNA is derived from [Universal Plug and Play][2] (UPnP) specifically for media interoperability. DLNA services are advertised and discovered via [Simple Service Discovery Protocol ][3] (SSDP). Take the follow example of [miniDLNA](https://wiki.debian.org/minidlna) running on my home Kubernetes cluster:
+Take the follow DLNA interaction:
 
 ![DLNA M-SEARCH Interaction diagram](/images/kubernetes-and-dlna.drawio.svg)
 
