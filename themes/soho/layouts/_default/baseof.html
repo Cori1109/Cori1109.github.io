@@ -71,5 +71,11 @@
   {{- end}}
 
   {{ template "_internal/google_analytics_async.html" . }}
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/turbolinks/5.0.0/turbolinks.js"></script>
+  <!-- <meta name="turbolinks-cache-control" content="no-cache"> -->
+  <script>
+  Turbolinks.start()
+  </script>
 </body>
 </html>
