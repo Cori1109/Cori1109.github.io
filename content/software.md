@@ -79,12 +79,12 @@ A Ruby library to capture execution and create call graphs. Useful for illustrat
 ```lisp
 $ lisp-repl
 ctrl-c to exit
-> (begin                                                                        
-(>   (define incf                                                               
-((>     (lambda (x)                                                             
-(((>       (set! x (+ x 1))))                                                   
-(>   (define one 1)                                                             
-(>   (incf one))                                                                
+> (begin
+(>   (define incf
+((>     (lambda (x)
+(((>       (set! x (+ x 1))))
+(>   (define one 1)
+(>   (incf one))
 2
 >
 ```
@@ -113,6 +113,6 @@ A prototype 2D Javascript space shooter. Simple physics, unit behaviors, paralla
   </video>
 </a>
 
-A pure JRuby Scorched Earth clone and using only standard libraries. Implemented with an event-driven architecture and dynamically generates color pallettes utilizing Triad Mixing and CIE94 color distances. Headless automated tests enabled through null pattern graphics context injection.
+A pure JRuby Scorched Earth clone and using only standard libraries. Implemented with an event-driven architecture. Dynamically generates color pallettes utilizing Triad Mixing and CIE94 color distances. Headless automated tests enabled through null pattern graphics context injection.
 
 [Github](https://github.com/jamesmoriarty/scorched_earth)
