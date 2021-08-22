@@ -49,16 +49,14 @@ $ curl --silent ifconfig.me
 [External DNS](https://github.com/kubernetes-sigs/external-dns) Ingress annotations can configure a DNS record:
 
 ```
-external-dns.alpha.kubernetes.io/hostname
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    external-dns.alpha.kubernetes.io/hostname: ip.home.jamesmoriarty.xyz
+    external-dns.alpha.kubernetes.io/target: 110.144.168.172
+...
 ```
-
-Specifies the Host e.g. `ip.home.jamesmoriarty.xyz`
-
-```
-external-dns.alpha.kubernetes.io/target
-```
-
-Specifies the IP e.g. `110.144.168.172`
 
 ### Generating Dynamic Configuration
 
