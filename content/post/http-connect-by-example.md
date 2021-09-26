@@ -16,6 +16,11 @@ tags = [
 
 The following example consists of the curl output and corresponding [proxy code](https://gist.github.com/jamesmoriarty/a6100395d2efb17dcd06173300f988bb):
 
+```
+$ https_proxy=http://127.0.0.1:9292 \
+    curl -v https://google.com
+```
+
 ```ruby
 require 'socket'
 
@@ -23,23 +28,12 @@ listen_socket = TCPServer.new('127.0.0.1', 9292)
 ```
 
 ```
-$ https_proxy=http://127.0.0.1:9292 \
-    curl -v https://google.com
+> CONNECT google.com:443 HTTP/1.1
 ```
 
 ```ruby
 client_conn = listen_socket.accept
 request_line = client_conn.gets
-```
-
-```
-> CONNECT google.com:443 HTTP/1.1
-```
-
-```ruby
-while(line = client_conn.gets) do
-  break unless line.include?(':')
-end
 ```
 
 ```
@@ -50,9 +44,9 @@ end
 ```
 
 ```ruby
-host, port = *request_line.split[1].split(':')
-dest_conn = TCPSocket.new(host, port)
-client_conn.write "HTTP/1.1 200 OK\n\n"
+while(line = client_conn.gets) do
+  break unless line.include?(':')
+end
 ```
 
 ```
@@ -61,16 +55,9 @@ client_conn.write "HTTP/1.1 200 OK\n\n"
 ```
 
 ```ruby
-def transfer(src_conn, dest_conn)
-  IO.copy_stream(src_conn, dest_conn)
-rescue => e
-  puts e.message
-end
-
-[
-  Thread.new { transfer(client_conn, dest_conn) },
-  Thread.new { transfer(dest_conn, client_conn) }
-].each(&:join)
+host, port = *request_line.split[1].split(':')
+dest_conn = TCPSocket.new(host, port)
+client_conn.write "HTTP/1.1 200 OK\r\n"
 ```
 
 ```
@@ -92,6 +79,19 @@ end
 The document has moved
 <A HREF="https://www.google.com/">here</A>.
 </BODY></HTML>
+```
+
+```ruby
+def transfer(src_conn, dest_conn)
+  IO.copy_stream(src_conn, dest_conn)
+rescue => e
+  puts e.message
+end
+
+[
+  Thread.new { transfer(client_conn, dest_conn) },
+  Thread.new { transfer(dest_conn, client_conn) }
+].each(&:join)
 ```
 
 ### Diagrams
