@@ -10,7 +10,12 @@ tags = [
 ]
 +++
 
-I recently broke my [apex domain](https://jamesmoriarty.xyz) HTTPS redirect to [subdomain](https://www.jamesmoriarty.xyz). It wasn't trivial to fix - so I've decided to write about some of factors which make it difficult.
+I recently broke the [apex domain](https://jamesmoriarty.xyz) HTTPS redirect to my [sub-domain](https://www.jamesmoriarty.xyz). Investigating the issue revealed the complexities of the behavior and, as a result, I’m written about some of those contributing factors.
+
+## Interaction
+
+![Apex HTTPS redirect for jamesmoriarty.xyz to www.jamesmoriarty.xyz](/images/apex-domin-https-redirect.drawio.svg)
+
 
 ## Apex Domain
 
@@ -18,7 +23,7 @@ I recently broke my [apex domain](https://jamesmoriarty.xyz) HTTPS redirect to [
 
 [Github](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages#using-an-apex-domain-for-your-github-pages-site)
 
-We need our apex domain to resolve to something that can preform the redirect. This could be achieved with a traditional `A` record or `ALIAS` record (`CNAME` records are not supported with apex domains). The following example is a Amazon Web Services (AWS) Route53 `ALIAS` record resolving to CloudFront:
+We need our apex domain to resolve to something that can preform theredirect. `CNAME` records will not work, but we can use traditional `A` or a DNS specific `ALIAS` records. The following example is an Amazon Web Services (AWS) Route53 `ALIAS` record resolving to CloudFront:
 
 ```
 $ dig +short jamesmoriarty.xyz
@@ -30,7 +35,7 @@ $ dig +short jamesmoriarty.xyz
 
 ## TLS
 
-We need to provide the client TLS connectivity. This requires obtaining the certificate and something to facilitate TLS. Automated certificates have become accessible with providers such as [Let's Encrypt](https://letsencrypt.org/) and [AWS Certificate Manager](https://aws.amazon.com/certificate-manager/). The following example is validating TLS connectivity with OpenSSL:
+We need to provide the client with TLS connectivity. This requires a certificate and something to facilitate TLS. Automated issuing and renewal of certificates facilitated with [Let’s Encrypt](https://letsencrypt.org/) or [AWS Certificate Manager](https://aws.amazon.com/certificate-manager/). The following example is validating TLS connectivity with OpenSSL being facilitated by CloudFront:
 
 ```
 $ openssl s_client -connect jamesmoriarty.xyz:443
@@ -46,7 +51,7 @@ verify return:1
 
 ## HTTP Redirect
 
-We will need to redirect the client to the subdomain. To support the widest possible number of clients this will often be done at the HTTP protocol level. Providing this functionality will require compute and connectivity. The following example is verbose curl output to validate the HTTP protocol interaction:
+We will need to redirect the client to the sub-domain. To support the widest possible number of clients, we will often do this at the HTTP protocol level. The following example is verbose curl output to validate the HTTP protocol interaction being facilitated by S3 static website hosting redirect function:
 
 ```
 $ curl -v https://jamesmoriarty.xyz/ -o /dev/null
@@ -61,9 +66,3 @@ $ curl -v https://jamesmoriarty.xyz/ -o /dev/null
 < location: http://www.jamesmoriarty.xyz/index.html
 ...
 ```
-
-## Example
-
-The following diagram illustrates my personal setup:
-
-![Apex HTTPS redirect for jamesmoriarty.xyz to www.jamesmoriarty.xyz](/images/apex-domin-https-redirect.drawio.svg)
