@@ -10,7 +10,7 @@ tags = [
 ]
 +++
 
-I recently broke the [apex domain](https://jamesmoriarty.xyz) HTTPS redirect to my [sub-domain](https://www.jamesmoriarty.xyz). Investigating the issue revealed the complexities of the behavior and, as a result, I’m written about some of those contributing factors.
+I recently broke the [apex domain](https://jamesmoriarty.xyz) HTTPS redirect to my [sub-domain](https://www.jamesmoriarty.xyz). Investigating the issue revealed the complexities of this behavior and, as a result, I’m written about some of those contributing factors.
 
 ## Diagram
 
