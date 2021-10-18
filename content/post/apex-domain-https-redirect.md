@@ -14,6 +14,8 @@ I recently broke the [apex domain](https://jamesmoriarty.xyz) HTTPS redirec
 
 ## Diagram
 
+The following diagram illustrates my personal websites setup.
+
 ![Apex HTTPS redirect for jamesmoriarty.xyz to www.jamesmoriarty.xyz](/images/apex-domin-https-redirect.drawio.svg)
 
 
