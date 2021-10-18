@@ -23,7 +23,7 @@ I recently broke the [apex domain](https://jamesmoriarty.xyz) HTTPS redirec
 
 [Github](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages#using-an-apex-domain-for-your-github-pages-site)
 
-We need our apex domain to resolve to something that can preform theredirect. `CNAME` records will not work, but we can use traditional `A` or a DNS specific `ALIAS` records. The following example is an Amazon Web Services (AWS) Route53 `ALIAS` record resolving to CloudFront:
+We need our apex domain to resolve to something that can preform the redirect. `CNAME` records will not work, but we can use traditional `A` or a DNS specific `ALIAS` records. The following example is an Amazon Web Services (AWS) Route53 `ALIAS` record resolving to CloudFront:
 
 ```
 $ dig +short jamesmoriarty.xyz
