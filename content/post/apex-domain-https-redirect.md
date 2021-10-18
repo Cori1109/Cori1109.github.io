@@ -12,7 +12,7 @@ tags = [
 
 I recently broke the [apex domain](https://jamesmoriarty.xyz) HTTPS redirect to my [sub-domain](https://www.jamesmoriarty.xyz). Investigating the issue revealed the complexities of the behavior and, as a result, I’m written about some of those contributing factors.
 
-## Interaction
+## Diagram
 
 ![Apex HTTPS redirect for jamesmoriarty.xyz to www.jamesmoriarty.xyz](/images/apex-domin-https-redirect.drawio.svg)
 
