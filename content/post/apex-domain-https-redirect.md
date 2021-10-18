@@ -35,7 +35,7 @@ $ dig +short jamesmoriarty.xyz
 
 ## TLS
 
-We need to provide the client with TLS connectivity. This requires a certificate and something to facilitate TLS. Automated issuing and renewal of certificates facilitated with [Let’s Encrypt](https://letsencrypt.org/) or [AWS Certificate Manager](https://aws.amazon.com/certificate-manager/). The following example is validating TLS connectivity with OpenSSL being facilitated by CloudFront:
+We need to provide the client with TLS connectivity. This requires a certificate and something to facilitate TLS. Automated issuing and renewal of certificates can be facilitated with [Let’s Encrypt](https://letsencrypt.org/) or [AWS Certificate Manager](https://aws.amazon.com/certificate-manager/). The following example is validating TLS connectivity with OpenSSL being facilitated by CloudFront:
 
 ```
 $ openssl s_client -connect jamesmoriarty.xyz:443
