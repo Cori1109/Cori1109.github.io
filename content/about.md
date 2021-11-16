@@ -27,15 +27,5 @@ _―David McCullough Jr._
 
 <hr />
 
-> "We are more often frightened than hurt; and we suffer more in imagination than in reality."
-_―Seneca_
-
-<hr />
-
-> "I find that the harder I work, the more luck I seem to have."
-_―Thomas Jefferson_
-
-<hr />
-
 > "I had been dead for billions and billions of years before I was born, and had not suffered the slightest inconvenience from it."
 _―Mark Twain_
