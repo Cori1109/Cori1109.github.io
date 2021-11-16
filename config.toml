@@ -82,3 +82,9 @@ themeColor = "#313131"
   weight = 900
   identifier = "hardware"
   url = "/hardware/"
+
+  [[menu.main]]
+  name = "Reading"
+  weight = 600
+  identifier = "reading"
+  url = "/reading/"
