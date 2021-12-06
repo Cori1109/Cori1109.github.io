@@ -9,7 +9,11 @@ tags = [
 ]
 +++
 
-I believe “consulting” Site Reliability Engineering (SRE) engagements are - _in general_ - an anti-pattern. These are some notes on how I would shape and order such an engagement.
+This post is dedicated to how I would shape a “consulting” Site Reliability Engineering (SRE) engagement. While I believe this style to be an anti-pattern - it makes sense in some circumstances.
+
+>  SRE is seen as a high modernist project, intent on scientifically managing their systems, all techne and no metis; all SLOs and Kubernetes and no systems knowledge and craft. That view is not entirely wrong.
+
+[Seeing Like an SRE: Site Reliability Engineering as High Modernism](https://www.usenix.org/publications/loginonline/seeing-sre-site-reliability-engineering-high-modernism)
 
 ### 1. Engagement Charter
 
