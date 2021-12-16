@@ -27,6 +27,9 @@ Discover and document user journeys prioritized by criticality to facilitate the
 #### 1. Check out
 
 > GET /checkout/new => 200
+
+and
+
 > POST /checkout => 301 => GET /orders/<id> => 200
 
 #### 2. Add to cart
@@ -36,6 +39,9 @@ Discover and document user journeys prioritized by criticality to facilitate the
 #### 3. View Product
 
 > GET /products => 200
+
+and
+
 > GET /products/<id> => 2000
 
 ### 3. Risk Analysis
