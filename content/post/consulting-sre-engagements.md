@@ -23,7 +23,23 @@ Start by formalizing the scope and activities as a charter.
 ### 2. Critical User Journey Mapping
 
 Discover and document user journeys prioritized by criticality to facilitate the remaining activities.
-> e.g. business impact, architecture, interactions, outputs, ...
+
+
+1. Check out
+
+> GET /checkout/new => 200
+
+> POST /checkout => 301 => GET /orders/<id> => 200
+
+2. Add to cart
+
+> PUT /cart/<product_id> => 200
+
+3. View Product
+
+> GET /products
+
+> GET /products/<id>
 
 ### 3. Risk Analysis
 
