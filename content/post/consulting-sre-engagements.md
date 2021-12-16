@@ -27,7 +27,7 @@ Discover and document user journeys prioritized by criticality to facilitate the
 
 ### 3. Risk Analysis
 
-Develop an ongoing risk catalogue for each Critical User Journey (CUJ). Remember to capture system problems such as noisy alerting
+Capture concrete and systemic risks against Critical User Journeys (CUJ). An example of systemic risk might be production access or lack of monitoring. An example of a concrete risk might be deployments requiring downtime.
 
 | Risk | ETTD | ETTR | % Impact | ETTF | Incidents/Year | Bad Minutes/Year               |
 |------|------|------|----------|------|----------------|--------------------------------|
