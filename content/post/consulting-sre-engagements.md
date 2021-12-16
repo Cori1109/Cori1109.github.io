@@ -42,7 +42,7 @@ and
 
 and
 
-> GET /products/<id> => 2000
+> GET /products/<id> => 200
 
 ### 3. Risk Analysis
 
