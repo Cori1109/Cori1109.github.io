@@ -24,7 +24,6 @@ Start by formalizing the scope and activities as a charter.
 
 Discover and document user journeys prioritized by criticality to facilitate the remaining activities.
 
-
 #### 1. Check out
 
 > GET /checkout/new => 200
