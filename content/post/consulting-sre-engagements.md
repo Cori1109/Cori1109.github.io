@@ -44,8 +44,9 @@ Capture concrete and systemic risks against Critical User Journeys (CUJ). An exa
 
 | Risk | ETTD | ETTR | % Impact | ETTF | Incidents/Year | Bad Minutes/Year               |
 |------|------|------|----------|------|----------------|--------------------------------|
-|      | mins | mins | %        | days | 365/ETTF       | (ETTD + ETTR) * Incidents/Year |
-| deployment downtime | 0 mins | 3mins | 100% | 7days | 52 | 156min                      |
+|      | mins | mins | %        | days | 365/ETTF       | (ETTD + ETTR) * Impact * Incidents/Year |
+| deployment downtime |  0 mins |  3 mins | 100% |  7 days | 52 | 156 mins |
+| minor defect        | 60 mins | 60 mins |   2% | 21 days | 17 |  41 mins |
 |...|...|...|...|...|...|...|
 
 ### 4. Service Level Objective Development
