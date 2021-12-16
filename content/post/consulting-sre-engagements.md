@@ -46,7 +46,7 @@ and
 
 ### 3. Risk Analysis
 
-Capture concrete and systemic risks against Critical User Journeys (CUJ). An example of systemic risk might be production access or lack of monitoring. An example of a concrete risk might be deployments requiring downtime or a common defect.
+Capture concrete and systemic risks against Critical User Journeys (CUJ). An example of systemic risk might be "production access" or "lack of monitoring". An example of a concrete risk might be "deployments cause downtime" or a "minor defect".
 
 | Risk | ETTD | ETTR | % Impact | ETTF | Incidents/Year | Bad Minutes/Year               |
 |------|------|------|----------|------|----------------|--------------------------------|
