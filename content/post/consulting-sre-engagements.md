@@ -27,12 +27,13 @@ Discover and document user journeys prioritized by criticality to facilitate the
 
 ### 3. Risk Analysis
 
-Capture concrete and systemic risks against Critical User Journeys (CUJ). An example of systemic risk might be production access or lack of monitoring. An example of a concrete risk might be deployments requiring downtime.
+Capture concrete and systemic risks against Critical User Journeys (CUJ). An example of systemic risk might be production access or lack of monitoring. An example of a concrete risk might be deployments requiring downtime or a common defect.
 
 | Risk | ETTD | ETTR | % Impact | ETTF | Incidents/Year | Bad Minutes/Year               |
 |------|------|------|----------|------|----------------|--------------------------------|
 |      | mins | mins | %        | days | 365/ETTF       | (ETTD + ETTR) * Incidents/Year |
 | deployment downtime | 0 mins | 3mins | 100% | 7days | 52 | 156min                      |
+|...|...|...|...|...|...|...|
 
 ### 4. Service Level Objective Development
 
