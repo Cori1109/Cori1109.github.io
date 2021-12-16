@@ -57,6 +57,8 @@ Capture concrete and systemic risks against Critical User Journeys (CUJ). An exa
 
 ### 4. Service Level Objective Development
 
+Figure out which metrics to use as SLIs that will most accurately track the user experience. 80% of the time - this is availability.
+
 _See [Art of SLOs](https://sre.google/resources/practices-and-processes/art-of-slos/)_
 
 ### 5. Production Readiness Review
