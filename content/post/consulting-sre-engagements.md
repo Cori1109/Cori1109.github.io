@@ -25,21 +25,19 @@ Start by formalizing the scope and activities as a charter.
 Discover and document user journeys prioritized by criticality to facilitate the remaining activities.
 
 
-1. Check out
+#### 1. Check out
 
 > GET /checkout/new => 200
-
 > POST /checkout => 301 => GET /orders/<id> => 200
 
-2. Add to cart
+#### 2. Add to cart
 
 > PUT /cart/<product_id> => 200
 
-3. View Product
+#### 3. View Product
 
-> GET /products
-
-> GET /products/<id>
+> GET /products => 200
+> GET /products/<id> => 2000
 
 ### 3. Risk Analysis
 
