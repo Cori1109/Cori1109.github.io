@@ -63,6 +63,8 @@ _See [Art of SLOs](https://sre.google/resources/practices-and-processes/art-of-s
 
 ### 5. Production Readiness Review
 
+Verify that the service meets accepted standards of production setup and operational readiness.
+
 _See [Evolving SRE Engagement Model](https://sre.google/sre-book/evolving-sre-engagement-model/)_
 
 ### Useful activities
