@@ -24,31 +24,21 @@ Start by formalizing the scope and activities as a charter.
 
 Discover and document user journeys prioritized by criticality to facilitate the remaining activities.
 
-#### 1. Check out
 
-> GET /checkout/new => 200
-
-and
-
-> POST /checkout => 301 => GET /orders/<id> => 200
-
-#### 2. Add to cart
-
-> PUT /cart/<product_id> => 200
-
-#### 3. View Product
-
-> GET /products => 200
-
-and
-
-> GET /products/<id> => 200
+| Critical User Journey | Interaction | Valid Event | Impact |
+| --------------------- | ----------- | ----------- | ------ |
+| Checkout              | POST /checkout | HTTP 301 | 100% |
+| Checkout              | GET /checkout/new | HTTP 200 | 100% |
+| Checkout              | GET /orders/[id] | HTTP 200,404 | 0% |
+| Add to cart           | PUT /cart/[product_id] | HTTP 200 | 1-100% |
+| View Product          | GET /products/[id] | HTTP 200,404 | 1-100% |
+| ... | ... | ... | ... |
 
 ### 3. Risk Analysis
 
 Capture concrete and systemic risks against Critical User Journeys (CUJ). An example of systemic risk might be "production access" or "lack of monitoring". An example of a concrete risk might be "deployments cause downtime" or a "minor defect".
 
-| Risk | ETTD | ETTR | % Impact | ETTF | Incidents/Year | Bad Minutes/Year               |
+| Risk | ETTD | ETTR | Impact | ETTF | Incidents/Year | Bad Minutes/Year               |
 |------|------|------|----------|------|----------------|--------------------------------|
 |      | mins | mins | %        | days | 365/ETTF       | (ETTD + ETTR) * Impact * Incidents/Year |
 | deployment downtime |  0 mins |  3 mins | 100% |  7 days | 52 | 156 mins |
