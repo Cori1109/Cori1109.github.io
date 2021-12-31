@@ -57,6 +57,23 @@ Verify that the service meets accepted standards of production setup and operati
 
 _See [Evolving SRE Engagement Model](https://sre.google/sre-book/evolving-sre-engagement-model/)_
 
+### 6. Review Periodically
+
+Requirements will change and new information will become available. Here is some guidance from the [SRE Workbook - Implementing SLOs](https://sre.google/workbook/implementing-slos/) on how to respond to your SLO measures.
+
+| SLO |	Toil |	Customer satisfaction |	Action |
+| --- | ---- | ---------------------- | ------ |
+| Met | Low | High | Choose to (a) relax release and deployment processes and increase velocity, or (b) step back from the engagement and focus engineering time on services that need more reliability. |
+| Met | Low |Low |Tighten SLO. |
+| Met | High | High | If alerting is generating false positives, reduce sensitivity. Otherwise, temporarily loosen the SLOs (or offload toil) and fix product and/or improve automated fault mitigation. |
+| Met | High | Low | Tighten SLO. |
+| Missed | Low | High | Loosen SLO. |
+| Missed | Low | Low | Increase alerting sensitivity. |
+| Missed | High | High | Loosen SLO. |
+| Missed | High | Low | Offload toil and fix product and/or improve automated fault mitigation. |
+
+_See [SRE Workbook - Implementing SLOs](https://sre.google/workbook/implementing-slos/)_
+
 ### Useful activities
 
 > weekly production in review, runbooks, "Wheel of Misfortune", pre-mortem, casual maps, human factors, team building activities, ...
