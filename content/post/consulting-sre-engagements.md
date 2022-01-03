@@ -27,11 +27,11 @@ Discover and document user journeys prioritized by criticality to facilitate the
 
 | Critical User Journey | Interaction | Valid Event | Impact |
 | --------------------- | ----------- | ----------- | ------ |
-| Checkout              | POST /checkout | HTTP 301 | 100% |
 | Checkout              | GET /checkout/new | HTTP 200 | 100% |
+| Checkout              | POST /checkout | HTTP 301 | 100% |
 | Checkout              | GET /orders/[id] | HTTP 200,404 | 0% |
-| Add to cart           | PUT /cart/[product_id] | HTTP 200 | 1-100% |
-| View Product          | GET /products/[id] | HTTP 200,404 | 1-100% |
+| Add to cart           | PUT /cart/[product_id] | HTTP 200 | 10-100% |
+| View Product          | GET /products/[id] | HTTP 200,404 | 5-100% |
 | ... | ... | ... | ... |
 
 ### 3. Risk Analysis
