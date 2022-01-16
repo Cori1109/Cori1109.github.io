@@ -6,6 +6,10 @@ aliases = ["reading"]
 author = "James Moriarty"
 +++
 
+> The Happiest Man on Earth _By Eddie Jaku_
+
+## 2021
+
 > Thinking Fast and Slow _By Daniel Kahneman_
 
 > The Black Swan _By Nassim Nicholas Taleb_
