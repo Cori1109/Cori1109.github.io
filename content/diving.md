@@ -87,10 +87,11 @@ Total: $1731.59AUD
 
 | Item                         | Year | Cost       |
 | -----------------------------|:----:| ----------:|
-| Battery CR3032               | 2018 | $10.00NZD  |
-| Cressi Computer lid replace  | 2021 |  $5.00NZD  |
-| Battery CR3032               | 2021 | $10.00AUD  |
-| Cressi Fin Strap x2          | 2022 | $49.00AUD  |
+| Battery CR3032               | 2018 |  $10.00NZD |
+| Gear Postage                 | 2021 | $105.00NZD |
+| Cressi Computer Lid Replace  | 2021 |   $5.00NZD |
+| Battery CR3032               | 2021 |  $10.00AUD |
+| Cressi Fin Strap x2          | 2022 |  $49.00AUD |
 | Neoprene Repair Glue         | 2022 |            |
 
 ## Log
