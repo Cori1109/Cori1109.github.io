@@ -102,3 +102,4 @@ Total: $1731.59AUD
 | 10-14 | 2011-2011 | Rarotonga  | Cook Island Divers supplied several boat dives. |
 | 15-21 | 2011-2013 | Wellington | Shore dives in the harbour with new gear and various dive crews. |
 | 22-41 | 2011-2019 | Hawkes Bay | Boat dives off Te Motu-o-Kura over Summer Holidays almost every year. |
+| 42    | 2022-1-22 | Flinders   | Pier Dive. 53min. 4.8m Max depth. Observed first [Sea Dragon](https://en.wikipedia.org/wiki/Common_seadragon). |
