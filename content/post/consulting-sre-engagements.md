@@ -9,7 +9,7 @@ tags = [
 ]
 +++
 
-This post is dedicated to how I would shape a “consulting” style Site Reliability Engineering (SRE) engagement (while not the intended format).
+This post is dedicated to how I would shape a “consulting” style Site Reliability Engineering (SRE) engagement.
 
 >  SRE is seen as a high modernist project, intent on scientifically managing their systems, all techne and no metis; all SLOs and Kubernetes and no systems knowledge and craft.
 
