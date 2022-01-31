@@ -24,7 +24,7 @@ $ forward-proxy --binding 0.0.0.0 --port 3182 --threads 2
 [2021-01-14 19:38:24 +1100] INFO CONNECT raw.githubusercontent.com:443 HTTP/1.1
 ```
 
-Minimal forward proxy in 150LOC and using only standard libraries. Useful for development, testing, and learning. Tests dynamically generate trusted self signed X509 certificates.
+Minimal forward proxy in 150LOC and using only standard libraries. Useful for development, testing, and learning. Automated tests simulate a range of scenarios including slow network and even dynamically generate runtime trusted self signed X509 certificates.
 
 [Github](https://github.com/jamesmoriarty/forward-proxy)
 
