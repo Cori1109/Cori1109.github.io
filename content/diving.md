@@ -90,7 +90,7 @@ Total: $1731.59AUD
 | Battery CR3032               | 2018 |  $10.00NZD |
 | Gear Postage                 | 2021 | $230.00NZD |
 | Cressi Computer Lid Replace  | 2021 |   $5.00NZD |
-| Cressi Computer O-Ring       | 2021 |  $10.00AUD |
+| Cressi Computer O-Ring       | 2021 |  $15.00AUD |
 | Battery CR3032               | 2021 |  $10.00AUD |
 | Cressi Fin Strap x2          | 2022 |  $49.00AUD |
 | Neoprene Repair Glue         | 2022 |  $25.00AUD |
