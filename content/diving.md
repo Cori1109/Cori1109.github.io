@@ -100,9 +100,9 @@ Total: $1731.59AUD
 
 | #     | Date      | Location   | Log |
 | ----- | --------- | ---------- | --- |
-| 1-10  | 2009-2009 | Rarotonga  | Pool & Boat dives supplied by Cook Island Divers for PADI Open Water certification. |
-| 10-14 | 2011-2011 | Rarotonga  | Cook Island Divers supplied several boat dives. |
-| 15-21 | 2011-2013 | Wellington | Shore dives in the harbour with new gear and various dive crews. |
-| 22-41 | 2011-2019 | Hawkes Bay | Boat dives off Te Motu-o-Kura over Summer Holidays almost every year. |
-| 42    | 2022-1-22 | Flinders   | Pier dive. 53min. 4.8m max depth. 19'C. Observed first [Sea Dragon](https://en.wikipedia.org/wiki/Common_seadragon). |
-| 43    | 2022-2-12 | Rye        | Pier dive. 50min. 4.9m max depth. 16-20'C. Observed Flathead, Puffer Fish, Longfin Pike, Goat Fish, Leatherjacket, Wrasse, Magpie Perch. |
+| 1-10  | 2009-2009  | Rarotonga  | Pool & Boat dives supplied by Cook Island Divers for PADI Open Water certification. |
+| 10-14 | 2011-2011  | Rarotonga  | Cook Island Divers supplied several boat dives. |
+| 15-21 | 2011-2013  | Wellington | Shore dives in the harbour with new gear and various dive crews. Solo scallop diving. |
+| 22-41 | 2011-2019  | Hawkes Bay | Boat dives off Te Motu-o-Kura over Summer Holidays almost every year. Crew. |
+| 42    | 2022-01-22 | Flinders   | Pier dive. 53min. 4.8m max depth. 19'C. Observed first [Sea Dragon](https://en.wikipedia.org/wiki/Common_seadragon). Dads dive crew. |
+| 43    | 2022-02-12 | Rye        | Pier dive. 50min. 4.9m max depth. 16-20'C. Observed Flathead, Puffer Fish, Longfin Pike, Goat Fish, Leatherjacket, Wrasse, Magpie Perch. Solo. |
