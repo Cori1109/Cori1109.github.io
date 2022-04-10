@@ -1,7 +1,7 @@
 +++
 author = "James Moriarty"
 title = "TCP Anycast Shift"
-date = "2022-04-11"
+date = "2022-04-10"
 description = ""
 tags = [
   "tcp",
