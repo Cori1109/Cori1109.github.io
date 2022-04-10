@@ -23,7 +23,7 @@ This characteristic is useful for Digital Living Network Alliance (DLNA) / Simpl
 
 ## Example
 
-This workload is a port of my Kubrenetes to `docker-compose.yml` utilizing the macvlan network driver that previously used `host` driver.
+This workload is a port of my Kubrenetes to `docker-compose.yml` utilizing the [macvlan](https://dockerlabs.collabnix.com/intermediate/macvlan.html) network driver that previously used `host` driver.
 
 ```
 version: "3.3"
