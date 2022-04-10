@@ -14,7 +14,7 @@ What happens when the routing changes for a stateful network protocol and arrive
 The first symptoms were apparent after adding Anycast an existing destination. `tcpdump` illustrated the different behaviours. The original destination worked as expected, returning the flags`[S][.][P.]...[F.]` while Anycast returned `[S][.][P]...[R]`. Connection reset only resulted with:
 
 * Larger payload or persistent connections.
-* Connections from a specific origin.
+* Specific origin connections.
 
 What was happening? Time to introduce Anycast Shift.
 
