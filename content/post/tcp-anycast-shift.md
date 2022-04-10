@@ -1,7 +1,7 @@
 +++
 author = "James Moriarty"
 title = "TCP Anycast Shift"
-date = "2022-04-10"
+date = "2022-04-11"
 description = ""
 tags = [
   "tcp",
@@ -13,8 +13,8 @@ What happens when the routing changes for a stateful network protocol and arrive
 
 The first symptoms were apparent after adding Anycast an existing destination. `tcpdump` illustrated the different behaviours. The original destination worked as expected, returning the flags`[S][.][P.]...[F.]` while Anycast returned `[S][.][P]...[R]`. Connection reset only resulted with:
 
-* larger payload or persistent connections.
-* connections from a specific origin.
+* Larger payload or persistent connections.
+* Connections from a specific origin.
 
 What was happening? Time to introduce Anycast Shift.
 
