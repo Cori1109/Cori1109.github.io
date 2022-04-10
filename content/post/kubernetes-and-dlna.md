@@ -75,11 +75,10 @@ hostNetwork: true
 
 Otherwise, you can expect the following issues.
 
-- Pod network SSDP advertisement traffic may not reach the host network. This often enforced via node IP tables.
-- Host network SSDP discovery traffic may not reach the pod network. This may be Container Network Interface (CNI) dependent.
-- The advertise internal pod IP endpoint address may not reachable from the host network.
-
-To avoid node port conflicts the deployment spec will needs to use a `Recreate` strategy.
+- Blocked pod egress SSDP advertisement.
+- Blocked pod ingress SSDP discovery.
+- Incorrect advertised enpdoint IP.
+- Node port conflicts the deployment spec will needs to use a `Recreate` strategy.
 
 ```
 replicas: 1
