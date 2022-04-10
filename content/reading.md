@@ -6,6 +6,8 @@ aliases = ["reading"]
 author = "James Moriarty"
 +++
 
+> Grit _by Angela Duckworth_
+
 > The Happiest Man on Earth _By Eddie Jaku_
 
 ## 2021
