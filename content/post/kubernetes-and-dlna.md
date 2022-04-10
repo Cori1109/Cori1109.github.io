@@ -76,11 +76,9 @@ hostNetwork: true
 
 Otherwise, you can expect the following issues.
 
-- Blocked pod egress SSDP advertisement.
-- Blocked pod ingress SSDP discovery.
-- Incorrect advertised enpdoint IP.
-- Node port conflicts the deployment spec will needs to use a `Recreate` strategy.
-
+- Blocked Pod egress SSDP advertisement (CNI/IP Tables).
+- Blocked Pod ingress SSDP discovery (CNI).
+- Incorrect advertised enpdoint IP (Pod vs Host).
 ```
 replicas: 1
 strategy:
