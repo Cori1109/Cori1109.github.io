@@ -24,7 +24,7 @@ $ forward-proxy --binding 0.0.0.0 --port 3182 --threads 2
 [2021-01-14 19:38:24 +1100] INFO CONNECT raw.githubusercontent.com:443 HTTP/1.1
 ```
 
-Minimal forward proxy in 150LOC and using only standard libraries. Useful for development, testing, and learning. Automated tests simulate a range of scenarios including slow network and even dynamically generate runtime trusted self signed X509 certificates.
+Minimal forward proxy in 150LOC and using only standard libraries. Useful for development, testing, and teaching. Automated tests simulate a range of destination scenarios including slow network, stream responses, and X509 certificates.
 
 [Github](https://github.com/jamesmoriarty/forward-proxy)
 
@@ -32,7 +32,7 @@ Minimal forward proxy in 150LOC and using only standard libraries. Useful for de
 
 [![React Instagram Screenshot](/images/software-react-instagram.png)](/images/software-react-instagram.png)
 
-Simple React component to render a [Instagram](http://instagram.com) feed. Used an unofficial client-side integration method to avoid having to use a server-side access token.
+Simple React component to render a [Instagram](http://instagram.com) feed. Used an unofficial client-side integration method to avoid having to use a server-side access token. Archived as a result of [Instagram](http://instagram.com) fixing their Cross-Origin-Request policies.
 
 [Github](https://github.com/jamesmoriarty/react-instagram-authless-feed)
 
@@ -40,9 +40,12 @@ Simple React component to render a [Instagram](http://instagram.com) feed. Used 
 
 ```go
 import "github.com/jamesmoriarty/gomem"
-...
-process, err := gomem.GetOpenProcessFromName(name)
+
+// Open process with handle.
+process, err  := gomem.GetOpenProcessFromName("example.exe")
+// Read from process memory.
 valuePtr, err := process.ReadUInt32(offsetPtr)
+// Write to process memory.
 process.WriteByte(valuePtr, value)
 ```
 
@@ -54,7 +57,7 @@ A Go library to manipulate Windows processes. Useful for developing process memo
 
 [![AWS NAT](/images/software-nat.png)](/images/software-nat.png)
 
-Cloudformation for a NAT instance running on Spot. Save thousands on NAT costs every month.
+Cloudformation for a NAT auto-healing instance running on Spot. Featured in [Last Week In AWS](https://www.lastweekinaws.com/).
 
 [Github](https://github.com/jamesmoriarty/cfn-cheapest-nat)
 
@@ -62,7 +65,7 @@ Cloudformation for a NAT instance running on Spot. Save thousands on NAT costs e
 
 [![Gohack terminal output](/images/software-gohack.png)](/images/software-gohack.png)
 
-Experimental Go language CSGO computer game exploit proof-of-concept. Automated tests use stubbed external processes to avoid needing binary compatibility.
+Experimental Go language CSGO computer game exploit. Automated tests use stubbed external processes to avoid needing binary compatibility.
 
 [Github](https://github.com/jamesmoriarty/gohack)
 
