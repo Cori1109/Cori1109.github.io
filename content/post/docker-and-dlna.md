@@ -11,7 +11,7 @@ tags = [
 ]
 +++
 
-I've recently discovered the Docker network [macvlan driver](https://dockerlabs.collabnix.com/intermediate/macvlan.html).
+I've recently discovered the Docker network [macvlan](https://dockerlabs.collabnix.com/intermediate/macvlan.html) driver.
 
 > It’s a very lightweight driver, because rather than using any Linux bridging or port mapping, it connects container interfaces directly to host interfaces. Containers are addressed with routable IP addresses that are on the subnet of the external network.
 
@@ -23,7 +23,7 @@ This characteristic is useful for Digital Living Network Alliance (DLNA) / Simpl
 
 ## Example
 
-This is a port of my Kubrenetes workload ported to a simple `docker-compose.yml` workload utilizing the macvlan network driver that previously used `host` driver.
+This workload is a port of my Kubrenetes to `docker-compose.yml` utilizing the macvlan network driver that previously used `host` driver.
 
 ```
 version: "3.3"
