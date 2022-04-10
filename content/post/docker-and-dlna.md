@@ -19,11 +19,11 @@ This is a more constrained alternative to the Docker network `host` driver.
 
 > As a result of routable IP addresses, containers communicate directly with resources that exist outside a Swarm cluster without the use of NAT and port mapping. This can aid in network visibility and troubleshooting. 
 
-This characteristic is useful for Simple Service Discovery Protocol (SSDP) workloads.
+This characteristic is useful for Digital Living Network Alliance (DLNA) / Simple Service Discovery Protocol (SSDP). These workloads utilize service advertisement and discover via UDP multicast and UHTTP.
 
 ## Example
 
-This is a port of my Kubrenetes DLNA workload ported to a simple `docker-compose.yml` workload utilizing the macvlan network driver that previously used `host` driver.
+This is a port of my Kubrenetes workload ported to a simple `docker-compose.yml` workload utilizing the macvlan network driver that previously used `host` driver.
 
 ```
 version: "3.3"
