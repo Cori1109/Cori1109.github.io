@@ -6,7 +6,8 @@ description = ""
 aliases = ["dlna and kubernetes"]
 tags = [
   "kubernetes",
-  "dlna"
+  "dlna",
+  "ssdp"
 ]
 +++
 
