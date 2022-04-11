@@ -14,7 +14,7 @@
 <meta itemprop="name" content="TCP Anycast Shift">
 <meta itemprop="description" content="What happens when the routing changes for a stateful network protocol and arrives at another device?"><meta itemprop="datePublished" content="2022-04-10T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2022-04-10T00:00:00+00:00" />
-<meta itemprop="wordCount" content="84">
+<meta itemprop="wordCount" content="193">
 <meta itemprop="keywords" content="tcp,anycast," />
 
 <meta name="twitter:card" content="summary"/>
@@ -180,14 +180,50 @@
 <li>Anycast is a network addressing and routing method in which devices share a single destination IP address.</li>
 </ul>
 <h2 id="symptoms">Symptoms</h2>
-<p><code>tcpdump</code> from the source illustrates the different behaviours when accessing the destination via regular and anycast IP address. The regular returned the expected flags <code>[S][.][P.]...[F.]</code> while anycast returned <code>[S][.][P.]...[R]</code>. Connection reset was reproducible with:</p>
+<p><code>tcpdump</code> from the source illustrates the different behaviours when accessing the destination via regular and anycast IP address. The regular returned the expected flags <code>[S][.][P.]...[F.]</code> while anycast returned <code>[S][.][P.]...[R]</code>. Where <code> [S] (Start Connection)</code>, <code>[P] (Push Data)</code>, <code>[R] (Reset Connection)</code>, and <code>[F] (Finish Connection)</code>. Connection reset was reproducible with:</p>
 <ul>
 <li>Specific origins.</li>
-<li>Larger payload.</li>
+<li>Larger payloads.</li>
 <li>Persistent connections.</li>
 </ul>
 <h2 id="explanation">Explanation</h2>
-<p>To come.</p>
+<p>I’ve included lots of details in the following interaction diagram to help illustrate the stateful nature of the interaction.</p>
+<div class="mermaid">sequenceDiagram
+    participant Source
+    participant DestDeviceOne
+    participant DestDeviceTwo
+
+    Source->>DestDeviceOne: SYN i
+    DestDeviceOne-->>Source: SYN j, ACK = i + 1
+    Source->>DestDeviceOne: ACK j + 1
+    Note over Source,DestDeviceOne: 3-way handshake
+
+    loop
+      Source->>DestDeviceOne: SEQ=a, ACK=b, DATA=c
+      DestDeviceOne-->>Source: ACK, SEQ=b, ACK=a+c
+      Note over Source,DestDeviceOne: data transfer
+    end
+
+    alt
+      Source->>DestDeviceTwo: SEQ=a, ACK=b, DATA=c
+      DestDeviceTwo-->>Source: RST
+      Note over Source,DestDeviceTwo: anycast shift
+    else
+      Source->>DestDeviceOne: FIN, ACK, SEQ=m, ACK=n
+      DestDeviceOne-->>Source: ACK, ACK=m+1
+      Source->>DestDeviceOne: FIN, ACK, SEQ=n, ACK=m+1
+      DestDeviceOne-->>Source: ACK, ACK=n+1
+      Note over Source,DestDeviceTwo: 4-way termination
+    end
+</div>
+
+
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({ startOnLoad: true });
+  </script>
 
 </div>
 

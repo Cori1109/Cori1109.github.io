@@ -25,6 +25,8 @@ What happens when the routing changes for a stateful network protocol and arrive
 
 ## Explanation
 
+I’ve included lots of details in the following interaction diagram to help illustrate the stateful nature of the interaction. 
+
 ```mermaid
 sequenceDiagram
     participant Source
