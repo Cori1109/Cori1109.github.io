@@ -18,7 +18,7 @@ What happens when the routing changes for a stateful network protocol and arrive
 
 ## Symptoms
 
-`tcpdump` from the source illustrates the different behaviours when accessing the destination via regular and anycast IP address. The regular returned the expected flags `[S][.][P.]...[F.]` while anycast returned `[S][.][P]...[R]`. Connection reset was reproducible with:
+`tcpdump` from the source illustrates the different behaviours when accessing the destination via regular and anycast IP address. The regular returned the expected flags `[S][.][P.]...[F.]` while anycast returned `[S][.][P.]...[R]`. Connection reset was reproducible with:
 
 * Specific origins.
 * Larger payload.
