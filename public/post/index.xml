@@ -6,14 +6,51 @@
     <description>Recent content in Posts on James Moriarty</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 03 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jamesmoriarty.xyz/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 10 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jamesmoriarty.xyz/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TCP Anycast Shift</title>
+      <link>https://www.jamesmoriarty.xyz/post/tcp-anycast-shift/</link>
+      <pubDate>Sun, 10 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jamesmoriarty.xyz/post/tcp-anycast-shift/</guid>
+      <description>What happens when the routing changes for a stateful network protocol and arrives at another device?</description>
+    </item>
+    
+    <item>
+      <title>Docker and DLNA</title>
+      <link>https://www.jamesmoriarty.xyz/post/docker-and-dlna/</link>
+      <pubDate>Sat, 09 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jamesmoriarty.xyz/post/docker-and-dlna/</guid>
+      <description>I&amp;rsquo;ve recently discovered the Docker network macvlan driver.
+ It’s a very lightweight driver, because rather than using any Linux bridging or port mapping, it connects container interfaces directly to host interfaces.</description>
+    </item>
+    
+    <item>
+      <title>Consulting SRE Engagements</title>
+      <link>https://www.jamesmoriarty.xyz/post/consulting-sre-engagements/</link>
+      <pubDate>Sun, 05 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jamesmoriarty.xyz/post/consulting-sre-engagements/</guid>
+      <description>This post is dedicated to how I would shape a “consulting” style Site Reliability Engineering (SRE) engagement.</description>
+    </item>
+    
+    <item>
+      <title>Apex Domain HTTPS Redirect</title>
+      <link>https://www.jamesmoriarty.xyz/post/apex-domain-https-redirect/</link>
+      <pubDate>Sat, 16 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jamesmoriarty.xyz/post/apex-domain-https-redirect/</guid>
+      <description>I recently broke the apex domain HTTPS redirect to my sub-domain.</description>
+    </item>
+    
     <item>
       <title>Kubernetes and DLNA</title>
       <link>https://www.jamesmoriarty.xyz/post/kubernetes-and-dlna/</link>
       <pubDate>Thu, 03 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>https://www.jamesmoriarty.xyz/post/kubernetes-and-dlna/</guid>
-      <description>Digital Living Network Alliance (DLNA) is derived from Universal Plug and Play (UPnP) specifically for media interoperability.</description>
+      <description>These are some notes taken while deploying a Digital Living Network Alliance (DLNA) to Kubernetes.</description>
     </item>
     
     <item>

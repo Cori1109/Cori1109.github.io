@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.96.0" />
+
+  <title>Apex Domain HTTPS Redirect &middot; James Moriarty</title>
+
+  <meta name="description" content="I recently broke my apex domain HTTPS redirect to my subdomain. " />
+
+  
+
+<meta itemprop="name" content="Apex Domain HTTPS Redirect">
+<meta itemprop="description" content="I recently broke my apex domain HTTPS redirect to my subdomain. "><meta itemprop="datePublished" content="2021-10-16T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-10-16T00:00:00+00:00" />
+<meta itemprop="wordCount" content="327">
+<meta itemprop="keywords" content="dns,http,tls," />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Apex Domain HTTPS Redirect"/>
+<meta name="twitter:description" content="I recently broke my apex domain HTTPS redirect to my subdomain. "/>
+
+
+<meta property="og:title" content="Apex Domain HTTPS Redirect" />
+<meta property="og:description" content="I recently broke my apex domain HTTPS redirect to my subdomain. " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.jamesmoriarty.xyz/post/apex-domain-https-redirect/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-10-16T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-10-16T00:00:00+00:00" />
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NHMWRM0LY9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NHMWRM0LY9');
+</script>
+
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://www.jamesmoriarty.xyz/css/print.css"
+        media="print">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://www.jamesmoriarty.xyz/css/poole.css">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://www.jamesmoriarty.xyz/css/hyde.css">
+
+  
+<style type="text/css">
+  .sidebar {
+    background-color: #313131;
+  }
+
+  .read-more-link a {
+    border-color: #313131;
+  }
+
+  .pagination li a {
+    color: #313131;
+    border: 1px solid #313131;
+  }
+
+  .pagination li.active a {
+    background-color: #313131;
+  }
+
+  .pagination li a:hover {
+    background-color: #313131;
+    opacity: 0.75;
+  }
+
+  footer a,
+  .content a,
+  .related-posts li a:hover {
+    color: #313131;
+  }
+</style>
+
+
+
+  <link type="text/css" rel="stylesheet" href="https://www.jamesmoriarty.xyz/css/custom.css">
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+        crossorigin="anonymous" />
+
+  <link rel="apple-touch-icon-precomposed"
+        sizes="144x144"
+        href="/apple-touch-icon-144-precomposed.png">
+
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  </head>
+<body>
+  <aside class="sidebar">
+  <div class="container">
+    <div class="sidebar-about">
+      
+        
+        <div class="author-image">
+          <img src="https://www.jamesmoriarty.xyz/images/james-moriarty.jpg" class="img-circle img-headshot center" alt="Profile Picture">
+        </div>
+        
+      
+
+      <h1>James Moriarty</h1>
+
+      
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li>
+          <a href="https://www.jamesmoriarty.xyz/">Home</a>
+        </li>
+        <li>
+          <a href="/posts/"> Posts </a>
+        </li><li>
+          <a href="/talks/"> Talks </a>
+        </li><li>
+          <a href="/about/"> About </a>
+        </li><li>
+          <a href="/diving/"> Diving </a>
+        </li><li>
+          <a href="/reading/"> Reading </a>
+        </li><li>
+          <a href="/software/"> Software </a>
+        </li><li>
+          <a href="/hardware/"> Hardware </a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="social-icons">
+      
+      <a href="https://www.linkedin.com/in/jamespaulmoriarty" rel="me" title="Linkedin">
+        <i class="fab fa-linkedin" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://github.com/jamesmoriarty" rel="me" title="GitHub">
+        <i class="fab fa-github" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://twitter.com/jamespmoriarty" rel="me" title="Twitter">
+        <i class="fab fa-twitter" aria-hidden="true"></i>
+      </a>
+      
+    </section>
+  </div>
+</aside>
+
+
+  <main class="content container">
+  <div class="post">
+  <h1>Apex Domain HTTPS Redirect</h1>
+
+  <div class="post-date">
+    
+  </div>
+
+  <p>I recently broke the <a href="https://jamesmoriarty.xyz">apex domain</a> HTTPS redirect to my <a href="https://www.jamesmoriarty.xyz">sub-domain</a>. Investigating the issue revealed the complexities of this behavior and, as a result, I’m writing about some of those contributing factors.</p>
+<h2 id="apex-domain">Apex Domain</h2>
+<blockquote>
+<p>An apex domain is a custom domain that does not contain a subdomain, such as example.com . Apex domains are also known as base, bare, naked, root apex, or zone apex domains. An apex domain is configured with an A , ALIAS , or ANAME record through your DNS provider.</p>
+</blockquote>
+<p><a href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages#using-an-apex-domain-for-your-github-pages-site">Github</a></p>
+<p>We need our apex domain to resolve to something that can preform the redirect. <code>CNAME</code> records are incompatible with apex domains, but we can use traditional <code>A</code> or a DNS specific <code>ALIAS</code> records.</p>
+<pre tabindex="0"><code>$ dig +short jamesmoriarty.xyz
+65.8.35.62
+65.8.35.55
+65.8.35.39
+65.8.35.18
+</code></pre><blockquote>
+<p>The above example is an Amazon Web Services (AWS) Route53 ALIAS record resolving to CloudFront.</p>
+</blockquote>
+<h2 id="tls">TLS</h2>
+<p>We need to provide the client with TLS connectivity. This requires a certificate and something to facilitate TLS. Automated issuing and renewal of certificates can be facilitated with <a href="https://letsencrypt.org/">Let’s Encrypt</a> or <a href="https://aws.amazon.com/certificate-manager/">AWS Certificate Manager</a>.</p>
+<pre tabindex="0"><code>$ openssl s_client -connect jamesmoriarty.xyz:443
+CONNECTED(00000190)
+depth=2 C = US, O = Amazon, CN = Amazon Root CA 1
+verify return:1
+depth=1 C = US, O = Amazon, OU = Server CA 1B, CN = Amazon
+verify return:1
+depth=0 CN = jamesmoriarty.xyz
+verify return:1
+---
+</code></pre><blockquote>
+<p>The above example is validating TLS connectivity with OpenSSL being facilitated by CloudFront.</p>
+</blockquote>
+<h2 id="http-redirect">HTTP Redirect</h2>
+<p>We will need to redirect the client to the sub-domain. To support the widest possible number of clients, we will often do this at the HTTP protocol level.</p>
+<pre tabindex="0"><code>$ curl -v https://jamesmoriarty.xyz/ -o /dev/null
+...
+&gt; GET / HTTP/2
+&gt; Host: jamesmoriarty.xyz
+&gt; user-agent: curl/7.68.0
+...
+&gt;
+&lt; HTTP/2 301
+&lt; content-length: 0
+&lt; location: http://www.jamesmoriarty.xyz/index.html
+...
+</code></pre><blockquote>
+<p>The above example is verbose curl output to validate the HTTP protocol interaction being facilitated by S3 static website hosting redirect function:</p>
+</blockquote>
+<h2 id="interaction">Interaction</h2>
+<p>The following diagram illustrates the HTTPS redirect for my personal website.</p>
+<p><img src="/images/apex-domin-https-redirect.drawio.svg" alt="Apex HTTPS redirect for jamesmoriarty.xyz to www.jamesmoriarty.xyz"></p>
+
+</div>
+
+
+  </main>
+
+  <footer>
+  <div>
+    &copy; James Moriarty 2022
+    ·
+    
+    <a href="https://creativecommons.org/licenses/by-sa/4.0"
+       target="_blank">CC BY-SA 4.0</a>
+    
+    
+  </div>
+</footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+          integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
+          crossorigin="anonymous"></script>
+
+  
+
+  
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/turbolinks/5.0.0/turbolinks.js"></script>
+  
+  <script>
+  Turbolinks.start()
+  </script>
+</body>
+</html>

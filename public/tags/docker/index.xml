@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>docker on James Moriarty</title>
+    <link>https://www.jamesmoriarty.xyz/tags/docker/</link>
+    <description>Recent content in docker on James Moriarty</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 09 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jamesmoriarty.xyz/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Docker and DLNA</title>
+      <link>https://www.jamesmoriarty.xyz/post/docker-and-dlna/</link>
+      <pubDate>Sat, 09 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jamesmoriarty.xyz/post/docker-and-dlna/</guid>
+      <description>I&amp;rsquo;ve recently discovered the Docker network macvlan driver.
+ It’s a very lightweight driver, because rather than using any Linux bridging or port mapping, it connects container interfaces directly to host interfaces.</description>
+    </item>
+    
+  </channel>
+</rss>

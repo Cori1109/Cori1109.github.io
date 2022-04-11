@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.96.0" />
+
+  <title>Docker and DLNA &middot; James Moriarty</title>
+
+  <meta name="description" content="" />
+
+  
+
+<meta itemprop="name" content="Docker and DLNA">
+<meta itemprop="description" content="I&rsquo;ve recently discovered the Docker network macvlan driver.
+ It’s a very lightweight driver, because rather than using any Linux bridging or port mapping, it connects container interfaces directly to host interfaces."><meta itemprop="datePublished" content="2022-04-09T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2022-04-09T00:00:00+00:00" />
+<meta itemprop="wordCount" content="183">
+<meta itemprop="keywords" content="docker,dlna,ssdp,macvlan," />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Docker and DLNA"/>
+<meta name="twitter:description" content="I&rsquo;ve recently discovered the Docker network macvlan driver.
+ It’s a very lightweight driver, because rather than using any Linux bridging or port mapping, it connects container interfaces directly to host interfaces."/>
+
+
+<meta property="og:title" content="Docker and DLNA" />
+<meta property="og:description" content="I&rsquo;ve recently discovered the Docker network macvlan driver.
+ It’s a very lightweight driver, because rather than using any Linux bridging or port mapping, it connects container interfaces directly to host interfaces." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.jamesmoriarty.xyz/post/docker-and-dlna/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-04-09T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-04-09T00:00:00+00:00" />
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NHMWRM0LY9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NHMWRM0LY9');
+</script>
+
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://www.jamesmoriarty.xyz/css/print.css"
+        media="print">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://www.jamesmoriarty.xyz/css/poole.css">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://www.jamesmoriarty.xyz/css/hyde.css">
+
+  
+<style type="text/css">
+  .sidebar {
+    background-color: #313131;
+  }
+
+  .read-more-link a {
+    border-color: #313131;
+  }
+
+  .pagination li a {
+    color: #313131;
+    border: 1px solid #313131;
+  }
+
+  .pagination li.active a {
+    background-color: #313131;
+  }
+
+  .pagination li a:hover {
+    background-color: #313131;
+    opacity: 0.75;
+  }
+
+  footer a,
+  .content a,
+  .related-posts li a:hover {
+    color: #313131;
+  }
+</style>
+
+
+
+  <link type="text/css" rel="stylesheet" href="https://www.jamesmoriarty.xyz/css/custom.css">
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+        crossorigin="anonymous" />
+
+  <link rel="apple-touch-icon-precomposed"
+        sizes="144x144"
+        href="/apple-touch-icon-144-precomposed.png">
+
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  </head>
+<body>
+  <aside class="sidebar">
+  <div class="container">
+    <div class="sidebar-about">
+      
+        
+        <div class="author-image">
+          <img src="https://www.jamesmoriarty.xyz/images/james-moriarty.jpg" class="img-circle img-headshot center" alt="Profile Picture">
+        </div>
+        
+      
+
+      <h1>James Moriarty</h1>
+
+      
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li>
+          <a href="https://www.jamesmoriarty.xyz/">Home</a>
+        </li>
+        <li>
+          <a href="/posts/"> Posts </a>
+        </li><li>
+          <a href="/talks/"> Talks </a>
+        </li><li>
+          <a href="/about/"> About </a>
+        </li><li>
+          <a href="/diving/"> Diving </a>
+        </li><li>
+          <a href="/reading/"> Reading </a>
+        </li><li>
+          <a href="/software/"> Software </a>
+        </li><li>
+          <a href="/hardware/"> Hardware </a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="social-icons">
+      
+      <a href="https://www.linkedin.com/in/jamespaulmoriarty" rel="me" title="Linkedin">
+        <i class="fab fa-linkedin" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://github.com/jamesmoriarty" rel="me" title="GitHub">
+        <i class="fab fa-github" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://twitter.com/jamespmoriarty" rel="me" title="Twitter">
+        <i class="fab fa-twitter" aria-hidden="true"></i>
+      </a>
+      
+    </section>
+  </div>
+</aside>
+
+
+  <main class="content container">
+  <div class="post">
+  <h1>Docker and DLNA</h1>
+
+  <div class="post-date">
+    
+  </div>
+
+  <p>I&rsquo;ve recently discovered the Docker network <a href="https://dockerlabs.collabnix.com/intermediate/macvlan.html">macvlan</a> driver.</p>
+<blockquote>
+<p>It’s a very lightweight driver, because rather than using any Linux bridging or port mapping, it connects container interfaces directly to host interfaces. Containers are addressed with routable IP addresses that are on the subnet of the external network.</p>
+</blockquote>
+<p>This is a more constrained alternative to the Docker network <code>host</code> driver.</p>
+<blockquote>
+<p>As a result of routable IP addresses, containers communicate directly with resources that exist outside a Swarm cluster without the use of NAT and port mapping. This can aid in network visibility and troubleshooting.</p>
+</blockquote>
+<p>This characteristic is useful for Digital Living Network Alliance (DLNA) / Simple Service Discovery Protocol (SSDP). These workloads utilize service advertisement and discover via UDP multicast and UHTTP.</p>
+<h2 id="example">Example</h2>
+<p>This workload is a port of my Kubrenetes to <code>docker-compose.yml</code> utilizing the <a href="https://dockerlabs.collabnix.com/intermediate/macvlan.html">macvlan</a> network driver that previously used <code>host</code> driver.</p>
+<pre tabindex="0"><code>version: &#34;3.3&#34;
+
+services:
+  minidlna:
+    networks:
+      lan:
+        ipv4_address: &#34;${NETWORK_DLNA_IP}&#34;
+    restart: always
+    image: &#34;vladgh/minidlna:1.2.0&#34;
+    environment:
+      - &#34;PUID=1000&#34;
+      - &#34;PGID=1000&#34;
+      - &#34;MINIDLNA_MEDIA_DIR=/media&#34;
+    volumes:
+      - &#34;./data:/media:ro&#34;
+
+networks:
+  lan:
+    driver: macvlan
+    driver_opts:
+      parent: &#34;${NETWORK_ADAPTER}&#34;
+    ipam:
+      config:
+        - subnet: &#34;${NETWORK_SUBNET}&#34;
+</code></pre><p>The corresponding <code>.env</code> file.</p>
+<pre tabindex="0"><code>NETWORK_SUBNET=192.168.0.1/24
+NETWORK_ADAPTER=eno1
+NETWORK_DLNA_IP=192.168.0.212
+</code></pre>
+</div>
+
+
+  </main>
+
+  <footer>
+  <div>
+    &copy; James Moriarty 2022
+    ·
+    
+    <a href="https://creativecommons.org/licenses/by-sa/4.0"
+       target="_blank">CC BY-SA 4.0</a>
+    
+    
+  </div>
+</footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+          integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
+          crossorigin="anonymous"></script>
+
+  
+
+  
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/turbolinks/5.0.0/turbolinks.js"></script>
+  
+  <script>
+  Turbolinks.start()
+  </script>
+</body>
+</html>

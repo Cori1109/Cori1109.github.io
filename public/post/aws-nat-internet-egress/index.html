@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="generator" content="Hugo 0.84.0-DEV" />
+  <meta name="generator" content="Hugo 0.96.0" />
 
   <title>AWS NAT Internet Egress &middot; James Moriarty</title>
 
@@ -12,8 +12,8 @@
   
 
 <meta itemprop="name" content="AWS NAT Internet Egress">
-<meta itemprop="description" content="My work often involves restricted private networks often found in large enterprises."><meta itemprop="datePublished" content="2020-06-21T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2020-06-21T00:00:00&#43;00:00" />
+<meta itemprop="description" content="My work often involves restricted private networks often found in large enterprises."><meta itemprop="datePublished" content="2020-06-21T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2020-06-21T00:00:00+00:00" />
 <meta itemprop="wordCount" content="372">
 <meta itemprop="keywords" content="aws,infrastructure,iac," />
 
@@ -26,8 +26,8 @@
 <meta property="og:description" content="My work often involves restricted private networks often found in large enterprises." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.jamesmoriarty.xyz/post/aws-nat-internet-egress/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2020-06-21T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2020-06-21T00:00:00&#43;00:00" />
+<meta property="article:published_time" content="2020-06-21T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-06-21T00:00:00+00:00" />
 
 
 
@@ -136,6 +136,8 @@
           <a href="/about/"> About </a>
         </li><li>
           <a href="/diving/"> Diving </a>
+        </li><li>
+          <a href="/reading/"> Reading </a>
         </li><li>
           <a href="/software/"> Software </a>
         </li><li>
@@ -253,7 +255,7 @@
 </tbody>
 </table>
 <p>Looking specifically at <code>Spot Restart</code>:</p>
-<pre><code>43,200 = 60 min * 24 hours * 30 days (valid minutes)
+<pre tabindex="0"><code>43,200 = 60 min * 24 hours * 30 days (valid minutes)
 10     = 5 ettr + 5 ettd             (bad minutes)
 99.98% = (valid - bad) / valid * 100 (fraction of good minutes)
 </code></pre><p>That&rsquo;s nearly four nines of reliability with the introduction of Spot. I&rsquo;ve also used a generous minimum ETTD &amp; ETTR despite the autoscale group generally recovering within two minutes.</p>
@@ -304,7 +306,7 @@
 </blockquote>
 <h3 id="performance">Performance</h3>
 <p>The performance test can be reproduced with the following command:</p>
-<pre><code>yum install python python-pip -y \
+<pre tabindex="0"><code>yum install python python-pip -y \
  &amp;&amp; pip install --upgrade pip \
  &amp;&amp; pip install speedtest-cli \
  &amp;&amp; speedtest-cli
@@ -323,7 +325,7 @@ Upload: 2274.26 Mbit/s</p>
 
   <footer>
   <div>
-    &copy; James Moriarty 2021
+    &copy; James Moriarty 2022
     ·
     
     <a href="https://creativecommons.org/licenses/by-sa/4.0"
@@ -341,5 +343,11 @@ Upload: 2274.26 Mbit/s</p>
   
 
   
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/turbolinks/5.0.0/turbolinks.js"></script>
+  
+  <script>
+  Turbolinks.start()
+  </script>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="generator" content="Hugo 0.84.0-DEV" />
+  <meta name="generator" content="Hugo 0.96.0" />
 
   <title>React Retrospective &middot; James Moriarty</title>
 
@@ -12,8 +12,8 @@
   
 
 <meta itemprop="name" content="React Retrospective">
-<meta itemprop="description" content="I worked on the following small projects to familiarizing myself with React."><meta itemprop="datePublished" content="2020-08-12T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2020-08-12T00:00:00&#43;00:00" />
+<meta itemprop="description" content="I worked on the following small projects to familiarizing myself with React."><meta itemprop="datePublished" content="2020-08-12T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2020-08-12T00:00:00+00:00" />
 <meta itemprop="wordCount" content="362">
 <meta itemprop="keywords" content="react,fed," />
 
@@ -26,8 +26,8 @@
 <meta property="og:description" content="I worked on the following small projects to familiarizing myself with React." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.jamesmoriarty.xyz/post/react-retro/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2020-08-12T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2020-08-12T00:00:00&#43;00:00" />
+<meta property="article:published_time" content="2020-08-12T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-08-12T00:00:00+00:00" />
 
 
 
@@ -137,6 +137,8 @@
         </li><li>
           <a href="/diving/"> Diving </a>
         </li><li>
+          <a href="/reading/"> Reading </a>
+        </li><li>
           <a href="/software/"> Software </a>
         </li><li>
           <a href="/hardware/"> Hardware </a>
@@ -188,72 +190,72 @@
 </ul>
 <h3 id="typescript">Typescript</h3>
 <p>I found components of more than a few hundred lines of code increasingly difficult to refactor or extend. I ported my ES6 code to Typescript and found this reduced the complexity curve and revealed a few subtle defects in the process.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#000;font-weight:bold">export</span> <span style="color:#000;font-weight:bold">type</span> Action <span style="color:#000;font-weight:bold">=</span>
-  <span style="color:#000;font-weight:bold">|</span> UndoAction
-  <span style="color:#000;font-weight:bold">|</span> RedoAction
-  <span style="color:#000;font-weight:bold">|</span> OpSetTypeAction
-  <span style="color:#000;font-weight:bold">|</span> OpSetColorAction
-  <span style="color:#000;font-weight:bold">|</span> OpCreateAction
-  <span style="color:#000;font-weight:bold">|</span> OpUpdateAction;
-
-<span style="color:#000;font-weight:bold">export</span> <span style="color:#000;font-weight:bold">type</span> Dispatch <span style="color:#000;font-weight:bold">=</span> (action: <span style="color:#458;font-weight:bold">Action</span>) <span style="color:#000;font-weight:bold">=&gt;</span> <span style="color:#000;font-weight:bold">void</span>;
-</code></pre></div><h3 id="stateless-components">Stateless Components</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">export</span> <span style="color:#000;font-weight:bold">type</span> Action <span style="color:#000;font-weight:bold">=</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">|</span> UndoAction
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">|</span> RedoAction
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">|</span> OpSetTypeAction
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">|</span> OpSetColorAction
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">|</span> OpCreateAction
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">|</span> OpUpdateAction;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">export</span> <span style="color:#000;font-weight:bold">type</span> Dispatch <span style="color:#000;font-weight:bold">=</span> (action: <span style="color:#458;font-weight:bold">Action</span>) <span style="color:#000;font-weight:bold">=&gt;</span> <span style="color:#000;font-weight:bold">void</span>;
+</span></span></code></pre></div><h3 id="stateless-components">Stateless Components</h3>
 <p>Unsurprisingly, I found stateless components easier to understand and less error prone.</p>
 <h3 id="dependency-injection">Dependency Injection</h3>
 <p>I used higher order functions to inject dependencies and isolate tests to easily replicate different corner cases.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#000;font-weight:bold">const</span> getFeedFn <span style="color:#000;font-weight:bold">=</span> (userName) =&gt; <span style="color:#0086b3">Promise</span>.resolve([]),
-  component <span style="color:#000;font-weight:bold">=</span> create(
-    <span style="color:#000;font-weight:bold">&lt;</span>Feed
-      className<span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Feed&#34;</span>
-      userName<span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;jamespaulmoriarty&#34;</span>
-      getFeedFn<span style="color:#000;font-weight:bold">=</span>{getFeedFn}
-    <span style="color:#000;font-weight:bold">/&gt;</span>
-  );
-</code></pre></div><h3 id="redux">Redux</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">const</span> getFeedFn <span style="color:#000;font-weight:bold">=</span> (userName) =&gt; <span style="color:#0086b3">Promise</span>.resolve([]),
+</span></span><span style="display:flex;"><span>  component <span style="color:#000;font-weight:bold">=</span> create(
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">&lt;</span>Feed
+</span></span><span style="display:flex;"><span>      className<span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;Feed&#34;</span>
+</span></span><span style="display:flex;"><span>      userName<span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;jamespaulmoriarty&#34;</span>
+</span></span><span style="display:flex;"><span>      getFeedFn<span style="color:#000;font-weight:bold">=</span>{getFeedFn}
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">/&gt;</span>
+</span></span><span style="display:flex;"><span>  );
+</span></span></code></pre></div><h3 id="redux">Redux</h3>
 <p>Redux and its tooling proved effective at detecting and avoiding mutations. I learnt a lot about common javascript functions and their behavior and performance trying to write immutable code.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#000;font-weight:bold">case</span> ACTION_TYPES.REDO:
-  <span style="color:#458;font-weight:bold">return</span> {
-    ...state,
-    future: <span style="color:#458;font-weight:bold">state.future.slice</span>(<span style="color:#099">0</span>, <span style="color:#000;font-weight:bold">-</span><span style="color:#099">1</span>),
-    history: <span style="color:#458;font-weight:bold">state.history.slice</span>().concat(state.future.slice(<span style="color:#000;font-weight:bold">-</span><span style="color:#099">1</span>)),
-  };
-</code></pre></div><p>It took me some time to appreciate <code>mapDispatchToProps</code> and how I could remove knowledge of <code>despatch</code> from my <code>jsx</code>.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#000;font-weight:bold">const</span> mapDispatchToProps <span style="color:#000;font-weight:bold">=</span> (dispatch: <span style="color:#458;font-weight:bold">Dispatch</span>) <span style="color:#000;font-weight:bold">=&gt;</span> {
-  <span style="color:#000;font-weight:bold">return</span> {
-    onChangeComplete<span style="color:#000;font-weight:bold">:</span> (color: <span style="color:#458;font-weight:bold">any</span>) <span style="color:#000;font-weight:bold">=&gt;</span> {
-      dispatch({
-        <span style="color:#000;font-weight:bold">type</span><span style="color:#000;font-weight:bold">:</span> ACTION_TYPES.OP_SET_COLOR,
-        payload<span style="color:#000;font-weight:bold">:</span> { color: <span style="color:#458;font-weight:bold">color.hex</span> },
-      });
-    },
-  };
-};
-</code></pre></div><h3 id="cloning">Cloning</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">case</span> ACTION_TYPES.REDO:
+</span></span><span style="display:flex;"><span>  <span style="color:#458;font-weight:bold">return</span> {
+</span></span><span style="display:flex;"><span>    ...state,
+</span></span><span style="display:flex;"><span>    future: <span style="color:#458;font-weight:bold">state.future.slice</span>(<span style="color:#099">0</span>, <span style="color:#000;font-weight:bold">-</span><span style="color:#099">1</span>),
+</span></span><span style="display:flex;"><span>    history: <span style="color:#458;font-weight:bold">state.history.slice</span>().concat(state.future.slice(<span style="color:#000;font-weight:bold">-</span><span style="color:#099">1</span>)),
+</span></span><span style="display:flex;"><span>  };
+</span></span></code></pre></div><p>It took me some time to appreciate <code>mapDispatchToProps</code> and how I could remove knowledge of <code>despatch</code> from my <code>jsx</code>.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">const</span> mapDispatchToProps <span style="color:#000;font-weight:bold">=</span> (dispatch: <span style="color:#458;font-weight:bold">Dispatch</span>) <span style="color:#000;font-weight:bold">=&gt;</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">return</span> {
+</span></span><span style="display:flex;"><span>    onChangeComplete<span style="color:#000;font-weight:bold">:</span> (color: <span style="color:#458;font-weight:bold">any</span>) <span style="color:#000;font-weight:bold">=&gt;</span> {
+</span></span><span style="display:flex;"><span>      dispatch({
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">type</span><span style="color:#000;font-weight:bold">:</span> ACTION_TYPES.OP_SET_COLOR,
+</span></span><span style="display:flex;"><span>        payload<span style="color:#000;font-weight:bold">:</span> { color: <span style="color:#458;font-weight:bold">color.hex</span> },
+</span></span><span style="display:flex;"><span>      });
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>  };
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><h3 id="cloning">Cloning</h3>
 <p>Cloning is useful in some more advanced scenarios. e.g. add/override a event listener without knowledge of the <code>props.children</code> component internals.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#000;font-weight:bold">&lt;</span>ColorPicker<span style="color:#000;font-weight:bold">&gt;</span>
-  <span style="color:#000;font-weight:bold">&lt;</span>Button variant<span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;contained&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
-    <span style="color:#998;font-style:italic">// ...
-</span><span style="color:#998;font-style:italic"></span>  <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#a61717;background-color:#e3d2d2">/Button&gt;</span>
-<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#a61717;background-color:#e3d2d2">/ColorPicker&gt;</span>
-</code></pre></div><div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#000;font-weight:bold">function</span> ColorPicker({ children, onChangeComplete, color }) {
-  <span style="color:#998;font-style:italic">// ...
-</span><span style="color:#998;font-style:italic"></span>  <span style="color:#000;font-weight:bold">return</span> (
-    <span style="color:#000;font-weight:bold">&lt;</span>div<span style="color:#000;font-weight:bold">&gt;</span>
-      {React.cloneElement(children, { onClick<span style="color:#000;font-weight:bold">:</span> handleClick })}
-      <span style="color:#998;font-style:italic">// ...
-</span><span style="color:#998;font-style:italic"></span>  );
-</code></pre></div><h3 id="error-boundaries">Error Boundaries</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span>ColorPicker<span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">&lt;</span>Button variant<span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;contained&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#998;font-style:italic">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>  <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#a61717;background-color:#e3d2d2">/Button&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#a61717;background-color:#e3d2d2">/ColorPicker&gt;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">function</span> ColorPicker({ children, onChangeComplete, color }) {
+</span></span><span style="display:flex;"><span>  <span style="color:#998;font-style:italic">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>  <span style="color:#000;font-weight:bold">return</span> (
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">&lt;</span>div<span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>      {React.cloneElement(children, { onClick<span style="color:#000;font-weight:bold">:</span> handleClick })}
+</span></span><span style="display:flex;"><span>      <span style="color:#998;font-style:italic">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>  );
+</span></span></code></pre></div><h3 id="error-boundaries">Error Boundaries</h3>
 <p>I have a lot of appreciation for this <a href="https://reactjs.org/docs/error-boundaries.html">pattern</a> and would love to see it applied more widely. I did had some initial difficulty applying them to async component lifecycle.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">componentDidMount() {
-  <span style="color:#998;font-style:italic">// ...
-</span><span style="color:#998;font-style:italic"></span>  .<span style="color:#000;font-weight:bold">catch</span>((error) =&gt; <span style="color:#000;font-weight:bold">this</span>.setState({ error }));
-}
-
-render() {
-  <span style="color:#000;font-weight:bold">if</span> (<span style="color:#000;font-weight:bold">this</span>.state.error) <span style="color:#000;font-weight:bold">throw</span> <span style="color:#000;font-weight:bold">this</span>.state.error;
-  <span style="color:#998;font-style:italic">// ...
-</span><span style="color:#998;font-style:italic"></span>}
-</code></pre></div><h3 id="create-react-app">Create React App</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>componentDidMount() {
+</span></span><span style="display:flex;"><span>  <span style="color:#998;font-style:italic">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>  .<span style="color:#000;font-weight:bold">catch</span>((error) =&gt; <span style="color:#000;font-weight:bold">this</span>.setState({ error }));
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>render() {
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">if</span> (<span style="color:#000;font-weight:bold">this</span>.state.error) <span style="color:#000;font-weight:bold">throw</span> <span style="color:#000;font-weight:bold">this</span>.state.error;
+</span></span><span style="display:flex;"><span>  <span style="color:#998;font-style:italic">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>}
+</span></span></code></pre></div><h3 id="create-react-app">Create React App</h3>
 <p>This was the easiest way to be productive quickly without the common catch of being locked-in.</p>
 
 </div>
@@ -263,7 +265,7 @@ render() {
 
   <footer>
   <div>
-    &copy; James Moriarty 2021
+    &copy; James Moriarty 2022
     ·
     
     <a href="https://creativecommons.org/licenses/by-sa/4.0"
@@ -281,5 +283,11 @@ render() {
   
 
   
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/turbolinks/5.0.0/turbolinks.js"></script>
+  
+  <script>
+  Turbolinks.start()
+  </script>
 </body>
 </html>

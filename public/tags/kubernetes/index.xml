@@ -13,7 +13,7 @@
       <pubDate>Thu, 03 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>https://www.jamesmoriarty.xyz/post/kubernetes-and-dlna/</guid>
-      <description>Digital Living Network Alliance (DLNA) is derived from Universal Plug and Play (UPnP) specifically for media interoperability.</description>
+      <description>These are some notes taken while deploying a Digital Living Network Alliance (DLNA) to Kubernetes.</description>
     </item>
     
     <item>

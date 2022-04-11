@@ -2,22 +2,67 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.jamesmoriarty.xyz/tags/dlna/</loc>
-    <lastmod>2021-06-03T00:00:00+00:00</lastmod>
+    <loc>https://www.jamesmoriarty.xyz/tags/anycast/</loc>
+    <lastmod>2022-04-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.jamesmoriarty.xyz/</loc>
-    <lastmod>2021-06-03T00:00:00+00:00</lastmod>
+    <lastmod>2022-04-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.jamesmoriarty.xyz/post/</loc>
+    <lastmod>2022-04-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.jamesmoriarty.xyz/tags/</loc>
+    <lastmod>2022-04-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.jamesmoriarty.xyz/tags/tcp/</loc>
+    <lastmod>2022-04-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.jamesmoriarty.xyz/post/tcp-anycast-shift/</loc>
+    <lastmod>2022-04-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.jamesmoriarty.xyz/tags/dlna/</loc>
+    <lastmod>2022-04-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.jamesmoriarty.xyz/tags/docker/</loc>
+    <lastmod>2022-04-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.jamesmoriarty.xyz/post/docker-and-dlna/</loc>
+    <lastmod>2022-04-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.jamesmoriarty.xyz/tags/macvlan/</loc>
+    <lastmod>2022-04-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.jamesmoriarty.xyz/tags/ssdp/</loc>
+    <lastmod>2022-04-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.jamesmoriarty.xyz/tags/consulting/</loc>
+    <lastmod>2021-12-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.jamesmoriarty.xyz/post/consulting-sre-engagements/</loc>
+    <lastmod>2021-12-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.jamesmoriarty.xyz/tags/sre/</loc>
+    <lastmod>2021-12-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.jamesmoriarty.xyz/reading/</loc>
+    <lastmod>2021-11-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.jamesmoriarty.xyz/post/apex-domain-https-redirect/</loc>
+    <lastmod>2021-10-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.jamesmoriarty.xyz/tags/dns/</loc>
+    <lastmod>2021-10-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.jamesmoriarty.xyz/tags/http/</loc>
+    <lastmod>2021-10-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.jamesmoriarty.xyz/tags/tls/</loc>
+    <lastmod>2021-10-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.jamesmoriarty.xyz/tags/kubernetes/</loc>
     <lastmod>2021-06-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.jamesmoriarty.xyz/post/kubernetes-and-dlna/</loc>
-    <lastmod>2021-06-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.jamesmoriarty.xyz/post/</loc>
-    <lastmod>2021-06-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.jamesmoriarty.xyz/tags/</loc>
     <lastmod>2021-06-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.jamesmoriarty.xyz/post/kubernetes-diy-dynamic-dns-operator/</loc>
@@ -28,9 +73,6 @@
   </url><url>
     <loc>https://www.jamesmoriarty.xyz/post/go-public-service-announcement/</loc>
     <lastmod>2021-02-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.jamesmoriarty.xyz/tags/http/</loc>
-    <lastmod>2021-02-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.jamesmoriarty.xyz/post/http-connect-by-example/</loc>
     <lastmod>2021-02-12T00:00:00+00:00</lastmod>

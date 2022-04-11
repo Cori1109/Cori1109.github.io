@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dns on James Moriarty</title>
+    <link>https://www.jamesmoriarty.xyz/tags/dns/</link>
+    <description>Recent content in dns on James Moriarty</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 16 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jamesmoriarty.xyz/tags/dns/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Apex Domain HTTPS Redirect</title>
+      <link>https://www.jamesmoriarty.xyz/post/apex-domain-https-redirect/</link>
+      <pubDate>Sat, 16 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jamesmoriarty.xyz/post/apex-domain-https-redirect/</guid>
+      <description>I recently broke the apex domain HTTPS redirect to my sub-domain.</description>
+    </item>
+    
+  </channel>
+</rss>

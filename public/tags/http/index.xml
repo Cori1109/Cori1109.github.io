@@ -6,7 +6,16 @@
     <description>Recent content in http on James Moriarty</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 12 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jamesmoriarty.xyz/tags/http/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 16 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jamesmoriarty.xyz/tags/http/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Apex Domain HTTPS Redirect</title>
+      <link>https://www.jamesmoriarty.xyz/post/apex-domain-https-redirect/</link>
+      <pubDate>Sat, 16 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jamesmoriarty.xyz/post/apex-domain-https-redirect/</guid>
+      <description>I recently broke the apex domain HTTPS redirect to my sub-domain.</description>
+    </item>
+    
     <item>
       <title>HTTP Connect By Example</title>
       <link>https://www.jamesmoriarty.xyz/post/http-connect-by-example/</link>

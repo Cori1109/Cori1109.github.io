@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.96.0" />
+
+  <title>Consulting SRE Engagements &middot; James Moriarty</title>
+
+  <meta name="description" content="" />
+
+  
+
+<meta itemprop="name" content="Consulting SRE Engagements">
+<meta itemprop="description" content="This post is dedicated to how I would shape a “consulting” style Site Reliability Engineering (SRE) engagement."><meta itemprop="datePublished" content="2021-12-05T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-12-05T00:00:00+00:00" />
+<meta itemprop="wordCount" content="535">
+<meta itemprop="keywords" content="sre,consulting," />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Consulting SRE Engagements"/>
+<meta name="twitter:description" content="This post is dedicated to how I would shape a “consulting” style Site Reliability Engineering (SRE) engagement."/>
+
+
+<meta property="og:title" content="Consulting SRE Engagements" />
+<meta property="og:description" content="This post is dedicated to how I would shape a “consulting” style Site Reliability Engineering (SRE) engagement." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.jamesmoriarty.xyz/post/consulting-sre-engagements/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-12-05T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-12-05T00:00:00+00:00" />
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NHMWRM0LY9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NHMWRM0LY9');
+</script>
+
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://www.jamesmoriarty.xyz/css/print.css"
+        media="print">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://www.jamesmoriarty.xyz/css/poole.css">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://www.jamesmoriarty.xyz/css/hyde.css">
+
+  
+<style type="text/css">
+  .sidebar {
+    background-color: #313131;
+  }
+
+  .read-more-link a {
+    border-color: #313131;
+  }
+
+  .pagination li a {
+    color: #313131;
+    border: 1px solid #313131;
+  }
+
+  .pagination li.active a {
+    background-color: #313131;
+  }
+
+  .pagination li a:hover {
+    background-color: #313131;
+    opacity: 0.75;
+  }
+
+  footer a,
+  .content a,
+  .related-posts li a:hover {
+    color: #313131;
+  }
+</style>
+
+
+
+  <link type="text/css" rel="stylesheet" href="https://www.jamesmoriarty.xyz/css/custom.css">
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+        crossorigin="anonymous" />
+
+  <link rel="apple-touch-icon-precomposed"
+        sizes="144x144"
+        href="/apple-touch-icon-144-precomposed.png">
+
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  </head>
+<body>
+  <aside class="sidebar">
+  <div class="container">
+    <div class="sidebar-about">
+      
+        
+        <div class="author-image">
+          <img src="https://www.jamesmoriarty.xyz/images/james-moriarty.jpg" class="img-circle img-headshot center" alt="Profile Picture">
+        </div>
+        
+      
+
+      <h1>James Moriarty</h1>
+
+      
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li>
+          <a href="https://www.jamesmoriarty.xyz/">Home</a>
+        </li>
+        <li>
+          <a href="/posts/"> Posts </a>
+        </li><li>
+          <a href="/talks/"> Talks </a>
+        </li><li>
+          <a href="/about/"> About </a>
+        </li><li>
+          <a href="/diving/"> Diving </a>
+        </li><li>
+          <a href="/reading/"> Reading </a>
+        </li><li>
+          <a href="/software/"> Software </a>
+        </li><li>
+          <a href="/hardware/"> Hardware </a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="social-icons">
+      
+      <a href="https://www.linkedin.com/in/jamespaulmoriarty" rel="me" title="Linkedin">
+        <i class="fab fa-linkedin" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://github.com/jamesmoriarty" rel="me" title="GitHub">
+        <i class="fab fa-github" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://twitter.com/jamespmoriarty" rel="me" title="Twitter">
+        <i class="fab fa-twitter" aria-hidden="true"></i>
+      </a>
+      
+    </section>
+  </div>
+</aside>
+
+
+  <main class="content container">
+  <div class="post">
+  <h1>Consulting SRE Engagements</h1>
+
+  <div class="post-date">
+    
+  </div>
+
+  <p>This post is dedicated to how I would shape a “consulting” style Site Reliability Engineering (SRE) engagement.</p>
+<blockquote>
+<p>SRE is seen as a high modernist project, intent on scientifically managing their systems, all techne and no metis; all SLOs and Kubernetes and no systems knowledge and craft.</p>
+</blockquote>
+<p><a href="https://www.usenix.org/publications/loginonline/seeing-sre-site-reliability-engineering-high-modernism">Seeing Like an SRE: Site Reliability Engineering as High Modernism</a></p>
+<h3 id="1-engagement-charter">1. Engagement Charter</h3>
+<p>Start by formalizing the scope and activities as a charter.</p>
+<blockquote>
+<p>e.g. production readiness, operational responsibility, &hellip;</p>
+</blockquote>
+<h3 id="2-critical-user-journey-mapping">2. Critical User Journey Mapping</h3>
+<p>Discover and document user journeys prioritized by criticality to facilitate the remaining activities.</p>
+<table>
+<thead>
+<tr>
+<th>Critical User Journey</th>
+<th>Interaction</th>
+<th>Valid Event</th>
+<th>Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Checkout</td>
+<td>GET /checkout/new</td>
+<td>HTTP 200</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>Checkout</td>
+<td>POST /checkout</td>
+<td>HTTP 301</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>Checkout</td>
+<td>GET /orders/[id]</td>
+<td>HTTP 200,404</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>Add to cart</td>
+<td>PUT /cart/[product_id]</td>
+<td>HTTP 200</td>
+<td>10-100%</td>
+</tr>
+<tr>
+<td>View Product</td>
+<td>GET /products/[id]</td>
+<td>HTTP 200,404</td>
+<td>5-100%</td>
+</tr>
+<tr>
+<td>&hellip;</td>
+<td>&hellip;</td>
+<td>&hellip;</td>
+<td>&hellip;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-risk-analysis">3. Risk Analysis</h3>
+<p>Capture concrete and systemic risks against Critical User Journeys (CUJ). An example of systemic risk might be &ldquo;production access&rdquo; or &ldquo;lack of monitoring&rdquo;. An example of a concrete risk might be &ldquo;deployments cause downtime&rdquo; or a &ldquo;minor defect&rdquo;.</p>
+<table>
+<thead>
+<tr>
+<th>Risk</th>
+<th>ETTD</th>
+<th>ETTR</th>
+<th>Impact</th>
+<th>ETTF</th>
+<th>Incidents/Year</th>
+<th>Bad Minutes/Year</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>mins</td>
+<td>mins</td>
+<td>%</td>
+<td>days</td>
+<td>365/ETTF</td>
+<td>(ETTD + ETTR) * Impact * Incidents/Year</td>
+</tr>
+<tr>
+<td>deployment downtime</td>
+<td>0 mins</td>
+<td>3 mins</td>
+<td>100%</td>
+<td>7 days</td>
+<td>52</td>
+<td>156 mins</td>
+</tr>
+<tr>
+<td>minor defect</td>
+<td>60 mins</td>
+<td>60 mins</td>
+<td>2%</td>
+<td>21 days</td>
+<td>17</td>
+<td>41 mins</td>
+</tr>
+<tr>
+<td>&hellip;</td>
+<td>&hellip;</td>
+<td>&hellip;</td>
+<td>&hellip;</td>
+<td>&hellip;</td>
+<td>&hellip;</td>
+<td>&hellip;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4-service-level-objective-development">4. Service Level Objective Development</h3>
+<p>Figure out which metrics to use as SLIs that will most accurately track the user experience. 80% of the time - this is availability.</p>
+<blockquote>
+<p>98% of <code>POST /checkout</code> requests should return a <code>HTTP 301</code> status code successfully over rolling 28 day time window.</p>
+</blockquote>
+<p><em>See <a href="https://sre.google/resources/practices-and-processes/art-of-slos/">Art of SLOs</a></em></p>
+<table>
+<thead>
+<tr>
+<th>Availability %</th>
+<th>Downtime per year[note 1]</th>
+<th>Downtime per day (24 hours)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>90% (&ldquo;one nine&rdquo;)</td>
+<td>36.53 days</td>
+<td>2.40 hours</td>
+</tr>
+<tr>
+<td>99% (&ldquo;two nines&rdquo;)</td>
+<td>3.65 days</td>
+<td>14.40 minutes</td>
+</tr>
+<tr>
+<td>99.9% (&ldquo;three nines&rdquo;)</td>
+<td>8.77 hours</td>
+<td>1.44 minutes</td>
+</tr>
+<tr>
+<td>99.99% (&ldquo;four nines&rdquo;)</td>
+<td>52.60 minutes</td>
+<td>8.64 seconds</td>
+</tr>
+<tr>
+<td>99.999% (&ldquo;five nines&rdquo;)</td>
+<td>5.26 minutes</td>
+<td>864.00 milliseconds</td>
+</tr>
+<tr>
+<td>99.9999% (&ldquo;six nines&rdquo;)</td>
+<td>31.56 seconds</td>
+<td>86.40 milliseconds</td>
+</tr>
+<tr>
+<td>99.99999% (&ldquo;seven nines&rdquo;)</td>
+<td>3.16 seconds</td>
+<td>8.64 milliseconds</td>
+</tr>
+<tr>
+<td>99.999999% (&ldquo;eight nines&rdquo;)</td>
+<td>315.58 milliseconds</td>
+<td>864.00 microseconds</td>
+</tr>
+<tr>
+<td>99.9999999% (&ldquo;nine nines&rdquo;)</td>
+<td>31.56 milliseconds</td>
+<td>86.40 microseconds</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5-production-readiness-review">5. Production Readiness Review</h3>
+<p>Verify that the service meets accepted standards of production setup and operational readiness.</p>
+<p><em>See <a href="https://sre.google/sre-book/evolving-sre-engagement-model/">Evolving SRE Engagement Model</a></em></p>
+<h3 id="6-review-periodically">6. Review Periodically</h3>
+<p>Requirements will change and new information will become available. Here is some guidance from the <a href="https://sre.google/workbook/implementing-slos/">SRE Workbook - Implementing SLOs</a> on how to respond to your SLO measures.</p>
+<table>
+<thead>
+<tr>
+<th>SLO</th>
+<th>Toil</th>
+<th>Customer satisfaction</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Met</td>
+<td>Low</td>
+<td>High</td>
+<td>Choose to (a) relax release and deployment processes and increase velocity, or (b) step back from the engagement and focus engineering time on services that need more reliability.</td>
+</tr>
+<tr>
+<td>Met</td>
+<td>Low</td>
+<td>Low</td>
+<td>Tighten SLO.</td>
+</tr>
+<tr>
+<td>Met</td>
+<td>High</td>
+<td>High</td>
+<td>If alerting is generating false positives, reduce sensitivity. Otherwise, temporarily loosen the SLOs (or offload toil) and fix product and/or improve automated fault mitigation.</td>
+</tr>
+<tr>
+<td>Met</td>
+<td>High</td>
+<td>Low</td>
+<td>Tighten SLO.</td>
+</tr>
+<tr>
+<td>Missed</td>
+<td>Low</td>
+<td>High</td>
+<td>Loosen SLO.</td>
+</tr>
+<tr>
+<td>Missed</td>
+<td>Low</td>
+<td>Low</td>
+<td>Increase alerting sensitivity.</td>
+</tr>
+<tr>
+<td>Missed</td>
+<td>High</td>
+<td>High</td>
+<td>Loosen SLO.</td>
+</tr>
+<tr>
+<td>Missed</td>
+<td>High</td>
+<td>Low</td>
+<td>Offload toil and fix product and/or improve automated fault mitigation.</td>
+</tr>
+</tbody>
+</table>
+<p><em>See <a href="https://sre.google/workbook/implementing-slos/">SRE Workbook - Implementing SLOs</a></em></p>
+<h3 id="useful-activities">Useful activities</h3>
+<blockquote>
+<p>weekly production in review, runbooks, &ldquo;Wheel of Misfortune&rdquo;, pre-mortem, casual maps, human factors, team building activities, &hellip;</p>
+</blockquote>
+
+</div>
+
+
+  </main>
+
+  <footer>
+  <div>
+    &copy; James Moriarty 2022
+    ·
+    
+    <a href="https://creativecommons.org/licenses/by-sa/4.0"
+       target="_blank">CC BY-SA 4.0</a>
+    
+    
+  </div>
+</footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+          integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
+          crossorigin="anonymous"></script>
+
+  
+
+  
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/turbolinks/5.0.0/turbolinks.js"></script>
+  
+  <script>
+  Turbolinks.start()
+  </script>
+</body>
+</html>
