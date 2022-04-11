@@ -9,7 +9,7 @@ tags = [
 ]
 +++
 
-What happens when the routing changes for a stateful network protocol and arrives at another device?
+What happens when routing changes for a stateful network protocol and messages arrives at another device?
 
 ## Terminology
 
