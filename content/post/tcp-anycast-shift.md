@@ -13,15 +13,16 @@ What happens when the routing changes for a stateful network protocol and arrive
 
 ## Terminology
 
-* TCP is a stateful network protocol.* Anycast is a network addressing and routing method in which devices share a single destination IP address.
+* TCP is a stateful network protocol.
+* Anycast is a network addressing and routing method in which devices share a single destination IP address.
 
 ## Symptoms
 
 `tcpdump` illustrates the different behaviours when accessing the destination via regular and anycast IP. The regular returns the expected flags `[S][.][P.]...[F.]` while anycast returned `[S][.][P]...[R]`. Connection reset was reproducible with:
 
-* Specific origins
-* Larger payload
-* Persistent connections
+* Specific origins.
+* Larger payload.
+* Persistent connections.
 
 ## Explanation
 
