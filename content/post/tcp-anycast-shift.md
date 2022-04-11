@@ -59,4 +59,4 @@ sequenceDiagram
     end
 ```
 
-I’ve included lots of details in the following interaction diagram to help illustrate the stateful nature of the interaction. The main take away in “anycast shift” where packets arrives at a device without an established session. We experience this from origin with routes utilizing [Equal-cost multipath](https://www.noction.com/blog/equal-cost-multipath-ecmp).
+I’ve included lots of details in the following interaction diagram to help illustrate the stateful nature. Lets focus on “anycast shift” where packets arrives at a device without an established session. We experience this from origins with routes utilizing [equal-cost multipath](https://www.noction.com/blog/equal-cost-multipath-ecmp).
