@@ -35,9 +35,9 @@ sequenceDiagram
     participant DestDeviceOne
     participant DestDeviceTwo
 
-    Source->>DestDeviceOne: SYN i
-    DestDeviceOne-->>Source: SYN j, ACK = i + 1
-    Source->>DestDeviceOne: ACK j + 1
+    Source->>DestDeviceOne: SYN=i
+    DestDeviceOne-->>Source: SYN=j, ACK=i+1
+    Source->>DestDeviceOne: ACK=j+1
     Note over Source,DestDeviceOne: 3-way handshake
 
     loop
