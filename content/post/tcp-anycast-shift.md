@@ -25,7 +25,7 @@ What happens when routing changes for a stateful network protocol and messages a
 
 ## Explanation
 
-I’ve included lots of details in the following interaction diagram to help illustrate the stateful nature of the interaction. 
+Take the following interaction diagram illustrating the above:
 
 ```mermaid
 sequenceDiagram
@@ -55,6 +55,6 @@ sequenceDiagram
       DestDeviceOne-->>Source: ACK, ACK=n+1
       Note over Source,DestDeviceTwo: 4-way termination
     end
-
-
 ```
+
+I’ve included lots of details in the following interaction diagram to help illustrate the stateful nature of the interaction. The main take away in “anycast shift” where a stateful message arrives at a device without the preceding established connection.
