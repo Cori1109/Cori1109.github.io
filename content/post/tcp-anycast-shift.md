@@ -9,7 +9,7 @@ tags = [
 ]
 +++
 
-What happens when routing changes for a stateful network protocol and messages arrives at another device?
+What happens when routing changes for a stateful network protocol and unexpectedly arrives at a device without a session?
 
 ## Terminology
 
@@ -59,4 +59,4 @@ sequenceDiagram
     end
 ```
 
-I’ve included lots of details in the following interaction diagram to help illustrate the stateful nature. Lets focus on “anycast shift” where packets arrives at a device without an established session. We experience this from origins with routes utilizing [equal-cost multipath](https://www.noction.com/blog/equal-cost-multipath-ecmp).
+I’ve included lots of details in the following interaction diagram to help illustrate TCP's stateful nature. Lets focus on “anycast shift” where a packet unexpectedly arrives at a device without a session. This can result from origins with routes utilizing [equal-cost multipath](https://www.noction.com/blog/equal-cost-multipath-ecmp).
