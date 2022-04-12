@@ -19,7 +19,7 @@ What happens when routing changes for a stateful network protocol and unexpected
 
 ## Symptoms
 
-`tcpdump` from the source illustrates the different behaviours when accessing the destination via regular and anycast IP address. The regular returned the expected flags `[S][.][P.]...[F.]` while anycast returned `[S][.][P.]...[R]`. Where ` [S] (Start Connection)`, `[P] (Push Data)`, `[R] (Reset Connection)`, and `[F] (Finish Connection)`. Connection reset was reproducible with:
+`tcpdump` from the origin illustrates the different behaviours when accessing the destination via regular and anycast IP address. The regular returned the expected flags `[S][.][P.]...[F.]` while anycast returned `[S][.][P.]...[R]`. Where ` [S] (Start Connection)`, `[P] (Push Data)`, `[R] (Reset Connection)`, and `[F] (Finish Connection)`. Connection reset was reproducible with:
 
 * Specific origins.
 * Larger payloads.
@@ -31,32 +31,32 @@ Take the following interaction diagram illustrating the above:
 
 ```mermaid
 sequenceDiagram
-    participant Source
+    participant Origin
     participant DestDeviceOne
     participant DestDeviceTwo
 
-    Source->>DestDeviceOne: SYN=i
-    DestDeviceOne-->>Source: SYN=j, ACK=i+1
-    Source->>DestDeviceOne: ACK=j+1
-    Note over Source,DestDeviceOne: 3-way handshake
+    Origin->>DestDeviceOne: SYN=i
+    DestDeviceOne-->>Origin: SYN=j, ACK=i+1
+    Origin->>DestDeviceOne: ACK=j+1
+    Note over Origin,DestDeviceOne: 3-way handshake
 
     loop
-      Source->>DestDeviceOne: SEQ=a, ACK=b, DATA=c
-      DestDeviceOne-->>Source: ACK, SEQ=b, ACK=a+c
-      Note over Source,DestDeviceOne: data transfer
+      Origin->>DestDeviceOne: SEQ=a, ACK=b, DATA=c
+      DestDeviceOne-->>Origin: ACK, SEQ=b, ACK=a+c
+      Note over Origin,DestDeviceOne: data transfer
     end
 
     alt
-      Source->>DestDeviceTwo: SEQ=a, ACK=b, DATA=c
-      DestDeviceTwo-->>Source: RST
-      Note over Source,DestDeviceTwo: anycast shift
+      Origin->>DestDeviceTwo: SEQ=a, ACK=b, DATA=c
+      DestDeviceTwo-->>Origin: RST
+      Note over Origin,DestDeviceTwo: anycast shift
     else
-      Source->>DestDeviceOne: FIN, ACK, SEQ=m, ACK=n
-      DestDeviceOne-->>Source: ACK, ACK=m+1
-      Source->>DestDeviceOne: FIN, ACK, SEQ=n, ACK=m+1
-      DestDeviceOne-->>Source: ACK, ACK=n+1
-      Note over Source,DestDeviceTwo: 4-way termination
+      Origin->>DestDeviceOne: FIN, ACK, SEQ=m, ACK=n
+      DestDeviceOne-->>Origin: ACK, ACK=m+1
+      Origin->>DestDeviceOne: FIN, ACK, SEQ=n, ACK=m+1
+      DestDeviceOne-->>Origin: ACK, ACK=n+1
+      Note over Origin,DestDeviceTwo: 4-way termination
     end
 ```
 
-I’ve included lots of details in the following interaction diagram to help illustrate TCP's stateful nature. Lets focus on “anycast shift” where a packet unexpectedly arrives at a device without a session. This can result from origins with routes utilizing [equal-cost multipath](https://www.noction.com/blog/equal-cost-multipath-ecmp).
+I’ve included lots of details in the following interaction diagram to help illustrate TCP’s stateful nature. Let’s focus on “anycast shift” where a packet unexpectedly arrives at a device without a session. This can result from origins with routes using [equal-cost multipath](https://www.noction.com/blog/equal-cost-multipath-ecmp). The splitting of packets across links means the destination anycast IP may resolve to a different device resulting in reset connection.
