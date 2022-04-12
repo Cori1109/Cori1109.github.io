@@ -14,7 +14,9 @@ Someone recently asked me to help diagnose a mysterious delay. I’m quite excit
 
 ## Symptoms
 
-* There was an extra 100ms delay without TLS. 
+There was a globally deployed Elixir service experiencing:
+
+* 100 milliseconds delay without TLS. 
 * The delay could not be reproduced with other client types.
 
 This led to the investigation of client configuration and ['NO_DELAY' not being set without TLS](https://github.com/elixir-grpc/grpc/issues/176).
