@@ -27,7 +27,7 @@ What happens when routing changes for a stateful network protocol and unexpected
 
 ## Explanation
 
-Take the following interaction diagram illustrating the above:
+Take the following interaction diagram illustrating the above and TCP’s stateful nature:
 
 ```mermaid
 sequenceDiagram
@@ -41,22 +41,28 @@ sequenceDiagram
     Note over Origin,DestDeviceOne: 3-way handshake
 
     loop
-      Origin->>DestDeviceOne: SEQ=a, ACK=b, DATA=c
-      DestDeviceOne-->>Origin: ACK, SEQ=b, ACK=a+c
-      Note over Origin,DestDeviceOne: data transfer
+      alt
+        Origin->>DestDeviceOne: SEQ=a, ACK=b, DATA=c
+        DestDeviceOne-->>Origin: ACK, SEQ=b, ACK=a+c
+        Note over Origin,DestDeviceOne: data transfer
+      else
+        Origin->>DestDeviceTwo: SEQ=a, ACK=b, DATA=c
+        DestDeviceTwo-->>Origin: RST
+        Note over Origin,DestDeviceTwo: anycast shift
+      end
     end
 
-    alt
-      Origin->>DestDeviceTwo: SEQ=a, ACK=b, DATA=c
-      DestDeviceTwo-->>Origin: RST
-      Note over Origin,DestDeviceTwo: anycast shift
-    else
-      Origin->>DestDeviceOne: FIN, ACK, SEQ=m, ACK=n
-      DestDeviceOne-->>Origin: ACK, ACK=m+1
-      Origin->>DestDeviceOne: FIN, ACK, SEQ=n, ACK=m+1
-      DestDeviceOne-->>Origin: ACK, ACK=n+1
-      Note over Origin,DestDeviceTwo: 4-way termination
-    end
+    %%alt
+    %%  Origin->>DestDeviceTwo: SEQ=a, ACK=b, DATA=c
+    %%  DestDeviceTwo-->>Origin: RST
+    %%  Note over Origin,DestDeviceTwo: anycast shift
+    %%else
+    %%  Origin->>DestDeviceOne: FIN, ACK, SEQ=m, ACK=n
+    %%  DestDeviceOne-->>Origin: ACK, ACK=m+1
+    %%  Origin->>DestDeviceOne: FIN, ACK, SEQ=n, ACK=m+1
+    %%  DestDeviceOne-->>Origin: ACK, ACK=n+1
+    %%  Note over Origin,DestDeviceTwo: 4-way termination
+    %%end
 ```
 
-I’ve included lots of details in the following interaction diagram to help illustrate TCP’s stateful nature. Let’s focus on “anycast shift” where a packet unexpectedly arrives at a device without a session. This can result from origins with routes using [equal-cost multipath](https://www.noction.com/blog/equal-cost-multipath-ecmp). The splitting of packets across links means the destination anycast IP may resolve to a different device resulting in reset connection.
+Let’s focus on “anycast shift” where a packet unexpectedly arrives at a device without a session. This can result from origins with routes using [equal-cost multipath](https://www.noction.com/blog/equal-cost-multipath-ecmp). The splitting of packets across links means the destination anycast IP may resolve to a different device resulting in reset.
