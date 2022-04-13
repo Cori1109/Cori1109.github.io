@@ -27,7 +27,7 @@ What happens when routing changes for a stateful network protocol and unexpected
 
 ## Explanation
 
-Take the following interaction diagram illustrating the above and TCP’s stateful nature:
+Take the following interaction diagram illustrates the above and TCP’s stateful nature:
 
 ```mermaid
 sequenceDiagram
