@@ -19,9 +19,11 @@ There was a globally deployed Elixir service experiencing:
 * 100 milliseconds delay without TLS. 
 * The delay could not be reproduced with other client types.
 
-This led to the investigation of client configuration and ['NO_DELAY' not being set without TLS](https://github.com/elixir-grpc/grpc/issues/176).
+This led to the investigation of client.
 
 ## Explanation
+
+The initial investigation into the client configuration appeared correct, e.g. `nodelay: true`. Further investigation revealed the configuration wasn't being used without TLS enabled because of a [client defect](https://github.com/elixir-grpc/grpc/issues/176). This meant we were experiencing the following scenario:
 
 > This algorithm interacts badly with TCP delayed acknowledgments (delayed ACK), a feature introduced into TCP at roughly the same time in the early 1980s, but by a different group. With both algorithms enabled, applications that do two successive writes to a TCP connection, followed by a read that will not be fulfilled until after the data from the second write has reached the destination, experience a constant delay of up to 500 milliseconds, the "ACK delay". It is recommended to disable either, although traditionally it's easier to disable Nagle, since such a switch already exists for real-time applications.
 
