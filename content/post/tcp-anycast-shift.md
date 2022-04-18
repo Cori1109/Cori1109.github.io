@@ -69,14 +69,30 @@ Let’s focus on “anycast shift” where a packet unexpectedly arrives at a de
 
 ```mermaid
 graph LR
-Origin(Origin)
-DestDeviceOne(DestDeviceOne)
-DestDeviceTwo(DestDeviceTwo)
-HopOne((HopOne))
-HopTwo((HopTwo))
-HopThreeA((HopThreeA))
-HopThreeB((HopThreeB))
+
+Origin(Origin1)
+DestDeviceOne(DestDevice1)
+DestDeviceTwo(DestDevice2)
+HopOne((Hop1))
+HopTwo((Hop2))
+HopThreeA((Hop3A))
+HopThreeB((Hop3B))
+
 Origin --> HopOne --> HopTwo
 HopTwo -->|equal-cost multipath| HopThreeA --> |anycast| DestDeviceOne
 HopTwo -->|equal-cost multipath| HopThreeB --> |anycast| DestDeviceTwo
+```
+
+And without multipath.
+
+```mermaid
+graph LR
+
+Origin(Origin2)
+DestDeviceThree(DestDevice3)
+HopOne((Hop1))
+HopTwo((Hop2))
+HopThree((Hop3))
+
+Origin --> HopOne --> HopTwo --> HopThree --> |anycast| DestDeviceThree
 ```
