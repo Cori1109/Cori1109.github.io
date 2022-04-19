@@ -40,4 +40,4 @@ The client configuration appeared correct e.g. `nodelay: true`. Further investig
 
 [―Wikipedia](https://en.wikipedia.org/wiki/Nagle%27s_algorithm)
 
-N.B. I had previously facilitated SRE training sessions for this [scenario](https://github.com/jvns/twine-stories/blob/main/50ms-request.twee#L2) and this is the first time I've caught it in the wild.
+N.B. I had previously facilitated SRE training sessions for this [scenario](https://github.com/jvns/twine-stories/blob/main/50ms-request.twee#L2). This is the first time I've caught it in the wild.
