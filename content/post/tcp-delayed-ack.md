@@ -1,8 +1,9 @@
 +++
 author = "James Moriarty"
-title = "TCP Delayed ACK"
+title = "TCP Nagle's Delay"
 date = "2022-04-12"
 description = ""
+aliases = ["TCP Delayed ACK"]
 tags = [
   "tcp",
   "nodelay",
@@ -15,6 +16,7 @@ Someone recently asked me to help diagnose a mysterious delay on a globally depl
 ## Symptoms
 
 * ~100 milliseconds delay without TLS.
+* ~20 milliseconds response from the upstream.
 * The delay could not be reproduced with other client types.
 
 ## Diagram
