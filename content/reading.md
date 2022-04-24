@@ -6,6 +6,8 @@ aliases = ["reading"]
 author = "James Moriarty"
 +++
 
+> Hail Marry _by Andy Weir_
+
 > Grit _by Angela Duckworth_
 
 > The Happiest Man on Earth _By Eddie Jaku_
