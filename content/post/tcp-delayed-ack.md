@@ -15,11 +15,13 @@ Someone recently asked me to help diagnose a mysterious delay on a globally depl
 
 ## Symptoms
 
-* ~100 milliseconds delay without TLS.
-* ~20 milliseconds response from the upstream.
+* ~100 millisecond delay without TLS.
+* ~20 millisecond response from the upstream.
 * The delay could not be reproduced with other client types.
 
 ## Diagram
+
+With Nagle's algorithm e.g. without `TCP_NODELAY`
 
 ```mermaid
 sequenceDiagram
@@ -33,6 +35,19 @@ sequenceDiagram
     Client->>+Server: "ELLO"
     Server->>-Client: ACK
 ```
+
+Without Nagle's algorithm e.g. with `TCP_NODELAY`
+
+```mermaid
+sequenceDiagram
+    participant Client
+    participant Server
+
+    Client->>+Server: "H"
+    Client->>Server: "ELLO"
+    Server->>-Client: ACK
+```
+
 
 ## Explanation
 
