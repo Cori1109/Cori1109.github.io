@@ -27,8 +27,6 @@ The client configuration appeared correct e.g. `nodelay: true`. Further investig
 
 [―Wikipedia](https://en.wikipedia.org/wiki/Nagle%27s_algorithm)
 
-## Diagram
-
 With Nagle's algorithm e.g. without `TCP_NODELAY`
 
 ```mermaid
