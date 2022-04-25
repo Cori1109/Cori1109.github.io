@@ -10,10 +10,17 @@ This page is dedicated to my interest in diving. I've enjoyed free & scuba divin
 
 ## Contents
 
+- [Videos](#videos)
 - [Photos](#photos)
 - [Charts](#charts)
 - [Gear](#gear)
 - [Log](#log)
+
+## Videos
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1h1F-erbc6I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+> Rye Pier, Victoria, Australia, February 2022.
 
 ## Photos
 
