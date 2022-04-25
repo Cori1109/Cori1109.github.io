@@ -48,7 +48,6 @@ sequenceDiagram
     Server->>-Client: ACK
 ```
 
-
 ## Explanation
 
 The client configuration appeared correct e.g. `nodelay: true`. Further investigation revealed the configuration paramaters weren't being honored. We managed to trace it to this [client defect](https://github.com/elixir-grpc/grpc/issues/176). This resulted in the following condition:
