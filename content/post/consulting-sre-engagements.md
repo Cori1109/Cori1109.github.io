@@ -53,17 +53,19 @@ Figure out which metrics to use as SLIs that will most accurately track the user
 
 _See [Art of SLOs](https://sre.google/resources/practices-and-processes/art-of-slos/)_
 
-| Availability %                    | Downtime per year[note 1] | Downtime per day (24 hours) |
-|-----------------------------------|---------------------------|-----------------------------|
-| 90% ("one nine")                  | 36.53 days                | 2.40 hours                  |
-| 99% ("two nines")                 | 3.65 days                 | 14.40 minutes               |
-| 99.9% ("three nines")             | 8.77 hours                | 1.44 minutes                |
-| 99.99% ("four nines")             | 52.60 minutes             | 8.64 seconds                |
-| 99.999% ("five nines")            | 5.26 minutes              | 864.00 milliseconds         |
-| 99.9999% ("six nines")            | 31.56 seconds             | 86.40 milliseconds          |
-| 99.99999% ("seven nines")         | 3.16 seconds              | 8.64 milliseconds           |
-| 99.999999% ("eight nines")        | 315.58 milliseconds       | 864.00 microseconds         |
-| 99.9999999% ("nine nines")        | 31.56 milliseconds        | 86.40 microseconds          |
+| Availability %                    | Downtime per year[note 1] | Downtime per day (24 hours) | Cost Example |
+|-----------------------------------|---------------------------|-----------------------------| ------------ |
+| 90% ("one nine")                  | 36.53 days                | 2.40 hours                  |            0 |
+| 99% ("two nines")                 | 3.65 days                 | 14.40 minutes               |       $1,000 |
+| 99.9% ("three nines")             | 8.77 hours                | 1.44 minutes                |      $10,000 |
+| 99.99% ("four nines")             | 52.60 minutes             | 8.64 seconds                |     $100,000 |
+| 99.999% ("five nines")            | 5.26 minutes              | 864.00 milliseconds         |   $1,000,000 |
+| 99.9999% ("six nines")            | 31.56 seconds             | 86.40 milliseconds          |  $10,000,000 |
+| 99.99999% ("seven nines")         | 3.16 seconds              | 8.64 milliseconds           | $100,000,000 |
+| 99.999999% ("eight nines")        | 315.58 milliseconds       | 864.00 microseconds         | $...         |
+| 99.9999999% ("nine nines")        | 31.56 milliseconds        | 86.40 microseconds          | $...         |
+
+E.g. A Passenger plane engine might be designed for "five nines" of availability. 
 
 ### 5. Production Readiness Review
 
