@@ -54,7 +54,7 @@ Figure out which metrics to use as SLIs that will most accurately track the user
 _See [Art of SLOs](https://sre.google/resources/practices-and-processes/art-of-slos/)_
 
 | Availability %                    | Downtime per year[note 1] | Downtime per day (24 hours) | Cost Example |
-|-----------------------------------|---------------------------|-----------------------------| ------------ |
+|-----------------------------------|---------------------------|-----------------------------|--------------|
 | 90% ("one nine")                  | 36.53 days                | 2.40 hours                  |            0 |
 | 99% ("two nines")                 | 3.65 days                 | 14.40 minutes               |       $1,000 |
 | 99.9% ("three nines")             | 8.77 hours                | 1.44 minutes                |      $10,000 |
