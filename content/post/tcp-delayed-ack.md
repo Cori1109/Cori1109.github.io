@@ -27,7 +27,7 @@ The client configuration appeared correct e.g. `TCP_NODELAY`. Further investigat
 
 [―Wikipedia](https://en.wikipedia.org/wiki/Nagle%27s_algorithm)
 
-With Nagle's algorithm and delayed acknowledgments:
+With delayed acknowledgments and Nagle's algorithm:
 
 ```mermaid
 sequenceDiagram
@@ -42,7 +42,7 @@ sequenceDiagram
     Server->>-Client: ACK
 ```
 
-Without Nagle's algorithm and delayed acknowledgments:
+With delayed acknowledgments but without Nagle's algorithm:
 
 ```mermaid
 sequenceDiagram
