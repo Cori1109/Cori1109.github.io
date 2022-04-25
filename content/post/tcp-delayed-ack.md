@@ -54,4 +54,4 @@ sequenceDiagram
     Server->>-Client: ACK
 ```
 
-N.B. I have previously helped facilitate SRE training for this [scenario](https://github.com/jvns/twine-stories/blob/main/50ms-request.twee#L2). This is the first time I've caught it in the wild.
+N.B. I have previously helped facilitate SRE training for this [scenario](https://github.com/jvns/twine-stories/blob/main/50ms-request.twee#L2).
