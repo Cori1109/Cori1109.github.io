@@ -46,9 +46,9 @@ $ hdparm -Tt /dev/sda
  Timing buffered disk reads: 5822 MB in  3.00 seconds = 1940.50 MB/sec
 ```
 
-### Home Kubernetes
+### Home Lab
 
-I use this to run low power Intel NUC gitops K3s Kubernetes single node "cluster". I use this primarily for media, storage, and monitoring.
+I use this low power Intel NUC to run docker workload with gitops. I use this primarily for media, storage, and monitoring.
 
 - Intel i3-4010U 2 Core@1.7GHz
 - Corsair 8GB (1x8GB) DDR3@1600MHz
@@ -61,3 +61,7 @@ $ hdparm -Tt /dev/sda
  Timing cached reads:   7664 MB in  1.99 seconds = 3854.47 MB/sec
  Timing buffered disk reads: 1348 MB in  3.00 seconds = 448.90 MB/sec
 ```
+
+### Clouds
+
+I have workloads running in both AWS and GCP. I use these for testing work related experiements, best practices, and examples. e.g.. CI, CD, IAM, and networking patterns.
