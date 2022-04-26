@@ -67,5 +67,10 @@ $ hdparm -Tt /dev/sda
 I have workloads running in both AWS and GCP. I use these for running work related experiements, testing best practices, and creating examples. e.g. CI, CD, IAM, and networking patterns.
 
 ```
+$ yum install python python-pip -y \
+ && pip install --upgrade pip \
+ && pip install speedtest-cli \
+ && speedtest-cli
+
 Download: 3283.42 Mbit/s Upload: 2274.26 Mbit/s
 ```
