@@ -65,3 +65,7 @@ $ hdparm -Tt /dev/sda
 ### VPCs
 
 I have workloads running in both AWS and GCP. I use these for running work related experiements, testing best practices, and creating examples. e.g.. CI, CD, IAM, and networking patterns.
+
+```
+Download: 3283.42 Mbit/s Upload: 2274.26 Mbit/s
+```
