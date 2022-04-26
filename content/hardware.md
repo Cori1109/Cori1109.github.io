@@ -62,6 +62,6 @@ $ hdparm -Tt /dev/sda
  Timing buffered disk reads: 1348 MB in  3.00 seconds = 448.90 MB/sec
 ```
 
-### Clouds
+### VPCs
 
-I have workloads running in both AWS and GCP. I use these for testing work related experiements, best practices, and examples. e.g.. CI, CD, IAM, and networking patterns.
+I have workloads running in both AWS and GCP. I use these for running work related experiements, testing best practices, and creating examples. e.g.. CI, CD, IAM, and networking patterns.
