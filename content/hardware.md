@@ -9,7 +9,7 @@ author = "James Moriarty"
 ## Photos
 
 [![Grafana cluster dashboard](/images/hardware-grafana.png)](/images/hardware-grafana.png)
-> Grafana dashboards from kube-prometheus-stack monitoring for my home single node "cluster".
+> Grafana dashboards from my Home Lab.
 
 ## Systems
 
