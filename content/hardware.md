@@ -9,7 +9,7 @@ author = "James Moriarty"
 ## Photos
 
 [![Grafana cluster dashboard](/images/hardware-grafana.png)](/images/hardware-grafana.png)
-> Grafana dashboards from my Home Lab.
+> A Grafana dashboard for my Home Lab.
 
 ## Systems
 
@@ -64,7 +64,7 @@ $ hdparm -Tt /dev/sda
 
 ### VPCs
 
-I have workloads running in both AWS and GCP. I use these for running work related experiements, testing best practices, and creating examples. e.g.. CI, CD, IAM, and networking patterns.
+I have workloads running in both AWS and GCP. I use these for running work related experiements, testing best practices, and creating examples. e.g. CI, CD, IAM, and networking patterns.
 
 ```
 Download: 3283.42 Mbit/s Upload: 2274.26 Mbit/s
