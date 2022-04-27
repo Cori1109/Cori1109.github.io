@@ -9,13 +9,13 @@ author = "James Moriarty"
 ## Photos
 
 [![Grafana cluster dashboard](/images/hardware-grafana.png)](/images/hardware-grafana.png)
-> A Grafana dashboard for my Home Lab.
+> A Grafana dashboard form my Home Lab.
 
 ## Systems
 
 ### Personal Laptop
 
-After spending the majority of my professional career on MacBooks - I use a Surface Pro 6 to run ... Linux. I use this for general open source development.
+Despite the majority of my professional career on MacBooks - I use a Surface Pro 6 to run ... Linux. I use this for general open source development and admin.
 
 - Intel i5-8250U 4 Cores@1.6-3.4GHz
 - Samsung 8GB DDR3@1600MHz
@@ -31,11 +31,12 @@ $ hdparm -Tt /dev/sda
 
 ### Budget Build Desktop
 
-I've been continually impressed by the value of AMD's recent offerings. I use this desktop for development of Go, Windows, graphics, and security.
+I've love value builds.
 
 - AMD Ryzen 3 1300X 4 Core@3.5-3.7GHz
 - Corsair Vengeance LPX 16GB (2x8GB) DDR4@2400MHz
 - Samsung 960 EVO 250GB SSD NVMe
+- WD Green 250GB SSD mSATA
 - Asus Strix RX570@1300MHz (2048SP) 4GB DDR5@7000MHz
 
 ```
@@ -48,7 +49,7 @@ $ hdparm -Tt /dev/sda
 
 ### Home Lab
 
-I use this low power Intel NUC to run docker workload with gitops. I use this primarily for media, storage, and monitoring.
+I use this compact and low power Intel NUC to run docker workloads with gitops. I use this primarily for media, storage, and monitoring.
 
 - Intel i3-4010U 2 Core@1.7GHz
 - Corsair 8GB (1x8GB) DDR3@1600MHz
@@ -64,7 +65,7 @@ $ hdparm -Tt /dev/sda
 
 ### VPCs
 
-I have workloads running in both AWS and GCP. I use these for running work related experiements, testing best practices, and creating examples. e.g. CI, CD, IAM, and networking patterns.
+I have workloads running in both AWS and GCP. I use these for work related experiements, testing best practices, and creating examples e.g. CI, CD, IAM, and networking patterns.
 
 ```
 $ yum install python python-pip -y \
