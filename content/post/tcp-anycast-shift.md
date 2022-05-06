@@ -76,27 +76,12 @@ graph LR
 Origin(Origin1)
 DestDeviceOne(DestDevice1)
 DestDeviceTwo(DestDevice2)
-HopOne((Hop1))
-HopTwo((Hop2))
-HopThreeA((Hop3A))
-HopThreeB((Hop3B))
+HopOne((Hop))
+HopTwo((Hop))
+HopThreeA((Hop))
+HopThreeB((Hop))
 
-Origin --> HopOne --> HopTwo
-HopTwo -->|equal-cost multipath| HopThreeA --> |anycast| DestDeviceOne
-HopTwo -->|equal-cost multipath| HopThreeB --> |anycast| DestDeviceTwo
-```
-
-And without:
-
-```mermaid
-graph LR
-%%{init:{'flowchart':{'nodeSpacing': 80, 'rankSpacing': 50}}}%%
-
-Origin(Origin2)
-DestDeviceThree(DestDevice3)
-HopOne((Hop1))
-HopTwo((Hop2))
-HopThree((Hop3))
-
-Origin --> HopOne --> HopTwo --> |....................| HopThree --> |anycast| DestDeviceThree
+Origin -->|1.| HopOne -->|2.| HopTwo
+HopTwo -->|3. equal-cost multipath| HopThreeA --> |4. anycast| DestDeviceOne
+HopTwo -->|5. equal-cost multipath| HopThreeB --> |6. anycast| DestDeviceTwo
 ```
