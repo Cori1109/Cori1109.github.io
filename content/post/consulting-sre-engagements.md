@@ -69,7 +69,7 @@ E.g. A Passenger plane engine might be designed for "five nines" of availability
 
 ### 5. Production Readiness Review
 
-Verify that the service meets accepted standards of production setup and operational readiness.
+Verify that the service meets accepted standards of production and operational readiness. Examples of production rediness could include a esablished developement process, regular and reliable deployments, operational monitoring and documented procedures. 
 
 _See [Evolving SRE Engagement Model](https://sre.google/sre-book/evolving-sre-engagement-model/)_
 
