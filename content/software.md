@@ -57,7 +57,7 @@ A Go library to manipulate Windows processes. Useful for developing process memo
 
 [![AWS NAT](/images/software-nat.png)](/images/software-nat.png)
 
-Cloudformation for a NAT auto-healing instance running on Spot. Featured in [Last Week In AWS](https://www.lastweekinaws.com/).
+Cloudformation for a NAT auto-healing instance running on Spot. Featured in [Last Week In AWS](https://www.lastweekinaws.com/newsletter/word-level-overconfidence/).
 
 [Github](https://github.com/jamesmoriarty/cfn-cheapest-nat)
 
