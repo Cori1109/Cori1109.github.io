@@ -15,14 +15,14 @@ Incidents often result from contributing factors as opposed to a singular root c
 
 ```mermaid
 graph TD
-    A(Service Restarts)
-    B(Service Attempts To Connect To External Service)
-    C(Service Fails To Connect To External Service)
+    A(Instance Restarts)
+    B(Instance Attempts To Connect To External Service)
+    C(Instance Fails To Connect To External Service)
     D(Purchase External Service Plan With #3 Connection Limit)
     E(#3 Connections In Use)
-    F(Service Health Check Passes)
-    G(Service Recieves Traffic)
-    H(Service Endpoint Return Error)
+    F(Instance Health Check Passes)
+    G(Instance Recieves Traffic)
+    H(Instance Endpoint Return Error)
    
     A --> B --> C
     A --> F --> G
