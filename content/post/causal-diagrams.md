@@ -20,20 +20,25 @@ graph TD
     C(Service Fails To Connect To External Service)
     D(Purchase External Service Plan With #3 Connection Limit)
     E(#3 Connections In Use)
-    F(Service Endpoint Return Error)
+    F(Service Health Check Passes)
+    G(Service Recieves Traffic)
+    H(Service Endpoint Return Error)
    
-    A --> B
-    B --> C
+    A --> B --> C
+    A --> F --> G
+    C --> G
     E --> C
     D --> C
-    C --> F
+    G --> H
 ```
 
 From the above example we can derive how the incident might have been avoided:
 
+* The service wasn't restarted.
+* The health check didn't pass.
 * The purchased plan supported a higher number of connections.
 * Less existing connection were in use.
-* The service wasn't restarted.
+
 
 ## Tips
 
