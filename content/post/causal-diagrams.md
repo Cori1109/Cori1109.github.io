@@ -24,12 +24,11 @@ graph TD
     G(Instance Recieves Traffic)
     H(Instance Endpoint Return Error)
    
-    A --> B --> C
+    G --> B --> C
     A --> F --> G
-    C --> G
     E --> C
     D --> C
-    G --> H
+    C --> H
 ```
 
 From the above example we can derive how the incident might have been avoided:
