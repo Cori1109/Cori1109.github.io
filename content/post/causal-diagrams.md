@@ -36,7 +36,7 @@ From the above example we can derive how the incident might have been avoided:
 * The service wasn't restarted.
 * The health check didn't pass.
 * The purchased plan supported a higher number of connections.
-* Less existing connection were in use.
+* Less connections were in use.
 
 
 ## Tips
