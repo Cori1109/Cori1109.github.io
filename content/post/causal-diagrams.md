@@ -13,31 +13,28 @@ Incidents often result from contributing factors as opposed to a singular root c
 
 ## Example
 
+This is an example of an incident impacting availability of a service endpoint:
+
 ```mermaid
 graph TD
-    A(Instance Restarts)
-    B(Instance Attempts To Connect To External Service)
-    C(Instance Fails To Connect To External Service)
-    D(Purchase External Service Plan With #3 Connection Limit)
-    E(#3 Connections In Use)
-    F(Instance Health Check Passes)
-    G(Instance Recieves Traffic)
-    H(Instance Endpoint Return Error)
-   
-    G --> B --> C
-    A --> F --> G
-    E --> C
-    D --> C
-    C --> H
+  A(Instance Restarts)
+  B(Instance Health Check Passes & Recieves Traffic)
+  C(Instance Attempts & Fails To Connect To External Service)
+  D(Instance Endpoint Return Error)
+  E(Purchase External Service Plan With #3 Connection Limit)
+  F(#3 Connections In Use)
+  
+  A --> B --> C --> D
+  E --> C
+  F --> C
 ```
 
-From the above example we can derive how the incident might have been avoided:
+From the above example we can derive how the incident might have been avoided if:
 
 * The service wasn't restarted.
-* The health check didn't pass.
-* The purchased plan supported a higher number of connections.
+* The health check didn't pass allowing the instance to recieve traffic.
 * Less connections were in use.
-
+* The plan supported a higher number of connections.
 
 ## Tips
 
