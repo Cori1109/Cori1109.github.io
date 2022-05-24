@@ -28,7 +28,7 @@ graph TD
   E --> C
   F --> C
 ```
-Tips: Causal diagrams should consist of a list of linked events that contributed to the incident. These events should be things that happened as opposed to the absence of something.
+Tips: Causal diagrams should consist of a graph of linked events that contributed to the incident. These events should be things that happened as opposed to the absence of something.
 
 ## Insight
 
