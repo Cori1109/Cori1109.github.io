@@ -32,9 +32,9 @@ Tips: Causal diagrams should consist of a graph of linked events that contribute
 
 ## Insight
 
-From the above example we can derive the incident might have been avoided if we removed a contribnuting factor:
-* Less connections were in use.
-* The plan supported a higher number of connections.
+From the above example we can derive the incident might have been avoided if we removed a contributing factor:
+* Connection limit.
+* Connections in use.
 
 Or broke a link in a sequence:
 * The service wasn't restarted.
