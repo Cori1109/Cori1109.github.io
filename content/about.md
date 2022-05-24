@@ -17,13 +17,19 @@ I’m a husband, father of two boys, master burger cook, amateur commuter cyclis
 
 Here are some quotes that epitomize my personal philosophy.
 
-> "Wealth consists not in having great possessions, but in having few wants."
-_―Epictetus_
+
+> "The way to know life is to love many things."\
+_―Vincent Van Gogh_
 
 <hr />
 
 > "Climb mountains not so the world can see you, but so you can see the world."
-_―David McCullough Jr._
+_―David McCullough Jr_
+
+<hr />
+
+> "Wealth consists not in having great possessions, but in having few wants."
+_―Epictetus_
 
 <hr />
 
