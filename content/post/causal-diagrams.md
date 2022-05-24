@@ -28,15 +28,19 @@ graph TD
   E --> C
   F --> C
 ```
+Tips: Causal diagrams should consist of a list of linked events that contributed to the incident. These events should be things that happened as opposed to the absence of something.
 
-From the above example we can derive how the incident might have been avoided if:
+## Insight
 
-* The service wasn't restarted.
-* The health check didn't pass allowing the instance to recieve traffic.
+From the above example we can derive the incident might have been avoided if:
+
+Removed a contribnuting factor:
 * Less connections were in use.
 * The plan supported a higher number of connections.
 
-## Tips
+Broke a link in a sequence:
+* The service wasn't restarted.
+* The health check didn't pass allowing the instance to recieve traffic.
 
-* Causal diagrams should consist of a list of linked events that contributed to the incident.
-* These events should be things that happened as opposed to the absence of something.
+
+
