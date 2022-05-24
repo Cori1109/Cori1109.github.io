@@ -113,3 +113,4 @@ Total: $1731.59AUD
 | 22-41 | 2011-2019  | Hawkes Bay | Boat dives off Te Motu-o-Kura over Summer Holidays almost every year. Crew. |
 | 42    | 2022-01-22 | Flinders   | Pier dive. 53min. 4.8m max depth. 19'C. Observed first [Sea Dragon](https://en.wikipedia.org/wiki/Common_seadragon). Dads dive crew. |
 | 43    | 2022-02-12 | Rye        | Pier dive. 50min. 4.9m max depth. 16-20'C. Observed Flathead, Puffer Fish, Longfin Pike, Goat Fish, Leatherjacket, Wrasse, Magpie Perch, Southern Hulafish. Solo. |
+| 44    | 2022-05-20 | Blairgowrie | Pier dive. 50min. 5.1m max depth. 15-16'C. Observed Ray, Giant Australian Cuttlefish, Moonlighter, Globefish, Wrasse, Magpie Perch. Dads dive crew. |
