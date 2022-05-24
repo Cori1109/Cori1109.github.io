@@ -21,8 +21,8 @@ graph TD
   B(Instance Health Check Passes & Recieves Traffic)
   C(Instance Attempts & Fails To Connect To External Service)
   D(Instance Endpoint Return Error)
-  E(Purchase External Service Plan With #3 Connection Limit)
-  F(#3 Connections In Use)
+  E(Purchase External Service Plan With #5 Connection Limit)
+  F(#5 Connections In Use)
   
   A --> B --> C --> D
   E --> C
