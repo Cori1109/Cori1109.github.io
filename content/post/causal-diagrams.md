@@ -23,9 +23,10 @@ graph TD
   D(Instance Endpoint Return Error)
   E(Purchase External Service Plan With #5 Connection Limit)
   F(#5 Connections In Use)
+  G(Followed Policy To Minimize Cost)
   
   A --> B --> C --> D
-  E --> C
+  G --> E --> C
   F --> C
 ```
 Tips: Causal diagrams should consist of a graph of linked events that contributed to the incident. These events should be things that happened as opposed to the absence of something.
@@ -40,5 +41,5 @@ Or broke a link in a sequence:
 * The service wasn't restarted.
 * The health check didn't pass allowing the instance to recieve traffic.
 
-
-
+Address systemic factors:
+* Policy to minimize cost could be tempered with capacity planning.
