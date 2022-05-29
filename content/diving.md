@@ -22,6 +22,10 @@ This page is dedicated to my interest in diving. I've enjoyed free & scuba divin
 
 > Rye Pier, Victoria, Australia, February 2022.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/iWhEc-4uS0w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+> Rye Pier, Victoria, Australia, May 2022.
+
 ## Photos
 
 [!["The Boil" 3-25m 3km offshore, Te Motu-o-Kura, Hawkes Bay, New Zealand, December, 2016](/images/diving-hawkes-bay.jpg)](/images/diving-hawkes-bay.jpg)
