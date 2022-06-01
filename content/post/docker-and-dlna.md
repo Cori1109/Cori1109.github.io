@@ -60,4 +60,4 @@ NETWORK_ADAPTER=eno1
 NETWORK_DLNA_IP=192.168.0.212
 ```
 
-N.B. there is no route to cointainer from docker host.
+N.B. there is intentionally no route from cointainer from docker host with `macvlan`.
