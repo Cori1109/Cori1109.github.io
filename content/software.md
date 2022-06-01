@@ -92,7 +92,7 @@ ctrl-c to exit
 >
 ```
 
-Minimal Lisp interpreter in 75LOC using only Ruby only standard libraries (excluding REPL syntax highlighting). Inspired by Google Research Peter Norvig's [Lis.py](http://norvig.com/lispy.html).
+Minimal Lisp interpreter in 75LOC in Ruby using only standard libraries. Inspired by Google Research Peter Norvig's [Lis.py](http://norvig.com/lispy.html).
 
 [Github](https://github.com/jamesmoriarty/lisp)
 
