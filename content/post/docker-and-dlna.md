@@ -19,7 +19,7 @@ This is a more constrained alternative to the Docker network `host` driver.
 
 > As a result of routable IP addresses, containers communicate directly with resources that exist outside a Swarm cluster without the use of NAT and port mapping. This can aid in network visibility and troubleshooting. 
 
-This characteristic is useful for Digital Living Network Alliance (DLNA) / Simple Service Discovery Protocol (SSDP). These workloads utilize service advertisement and discover via UDP multicast and UHTTP. N.B. there is no route to cointainer from docker host.
+This characteristic is useful for Digital Living Network Alliance (DLNA) / Simple Service Discovery Protocol (SSDP). These workloads utilize service advertisement and discover via UDP multicast and UHTTP.
 
 ## Example
 
@@ -59,3 +59,5 @@ NETWORK_SUBNET=192.168.0.1/24
 NETWORK_ADAPTER=eno1
 NETWORK_DLNA_IP=192.168.0.212
 ```
+
+N.B. there is no route to cointainer from docker host.
