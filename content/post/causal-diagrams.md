@@ -29,7 +29,7 @@ graph TD
   G --> E --> C
   F --> C
 ```
-Tips: Causal diagrams should consist of a graph of linked events that contributed to the incident. These events should be things that happened as opposed to the absence of something.
+__Tip__: Causal diagrams should consist of a graph of linked events that contributed to the incident. These events should be things that happened as opposed to the absence of something.
 
 ## Insight
 
@@ -43,3 +43,5 @@ Or broke a link in a sequence:
 
 Address systemic factors:
 * Policy to minimize cost could be tempered with capacity planning.
+
+__Tip__: [5 Whys](https://www.mindtools.com/pages/article/newTMC_5W.htm) can be useful for finding preceeding events.
