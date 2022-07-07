@@ -17,7 +17,6 @@ I’m a husband, father of two boys, master burger cook, amateur commuter cyclis
 
 Here are some quotes that epitomize my personal philosophy.
 
-
 > "The way to know life is to love many things."\
 _―Vincent Van Gogh_
 

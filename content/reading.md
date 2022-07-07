@@ -6,6 +6,8 @@ aliases = ["reading"]
 author = "James Moriarty"
 +++
 
+> This is Going to Hurt _by Adam Kay_
+
 > Hail Marry _by Andy Weir_
 
 > Grit _by Angela Duckworth_
