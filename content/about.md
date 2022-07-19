@@ -6,7 +6,7 @@ aliases = []
 author = "James Moriarty"
 +++
 
-I’m a husband, father of two boys, master burger cook, amateur commuter cyclist, photographer, scuba diver, weightlifter, runner, and skater. I’m currently based in Hawke's Bay, New Zealand. I’ve been working in the software industry for over a decade across Australia & New Zealand.
+I’m a husband, father of two boys, master burger cook, amateur commuter cyclist, photographer, scuba diver, weightlifter, runner, and skater. Currently based in Hawke's Bay, New Zealand. I’ve been working in the software industry for over a decade across Australia & New Zealand.
 
 ## Photos
 
