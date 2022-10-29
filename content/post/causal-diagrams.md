@@ -24,10 +24,11 @@ graph TD
   E(Purchase External Service Plan With #5 External Service Connection Limit)
   F(#5 External Service Connections In Use)
   G(Followed Policy To Minimize Cost)
+  H(Followed Policy To Provision for High Availability)
   
   A --> B --> C --> D
   G --> E --> C
-  E --> F
+  H --> F
   F --> A
 ```
 __Tip__: Causal diagrams should consist of a graph of linked events that contributed to the incident. These events should be things that happened as opposed to the absence of something.
