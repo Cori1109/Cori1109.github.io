@@ -19,15 +19,16 @@ This is an example of an incident impacting availability of a service endpoint:
 graph TD
   A(Instance Restarts)
   B(Instance Health Check Passes & Recieves Traffic)
-  C(Instance Attempts & Fails To Connect To External Service)
-  D(Instance Endpoint Return Error)
-  E(Purchase External Service Plan With #5 Connection Limit)
-  F(#5 Connections In Use)
+  C(#6 External Service Connection Fails)
+  D(Instance Endpoint Returns Error)
+  E(Purchase External Service Plan With #5 External Service Connection Limit)
+  F(#5 External Service Connections In Use)
   G(Followed Policy To Minimize Cost)
   
   A --> B --> C --> D
   G --> E --> C
-  F --> C
+  E --> F
+  F --> A
 ```
 __Tip__: Causal diagrams should consist of a graph of linked events that contributed to the incident. These events should be things that happened as opposed to the absence of something.
 
