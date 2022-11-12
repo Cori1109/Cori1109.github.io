@@ -15,8 +15,8 @@ Someone recently asked me to help diagnose a mysterious delay on a globally depl
 
 ## Symptoms
 
-* ~100 millisecond delay without TLS.
-* ~20 millisecond response from the upstream.
+* ~100 millisecond round trip downstream latency without TLS.
+* ~20 millisecond round trip uptream latency.
 * The delay could not be reproduced with other client types.
 
 ## Explanation
