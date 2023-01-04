@@ -3,6 +3,22 @@ footer a, .content a, .related-posts li a:hover, .content a:hover {
   text-decoration: underline;
 }
 
+.yt-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+
+.yt-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .post h1, .post h1.post-title {
   margin-bottom: 1rem;
 }
