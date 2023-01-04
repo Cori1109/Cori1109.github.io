@@ -6,6 +6,23 @@ aliases = ["reading"]
 author = "James Moriarty"
 +++
 
+## 2022
+
+> Courage Is Calling _by Ryan Holiday_
+
+★★★☆☆
+
+> Columbus Day _by Craig Alanson_
+
+★★★★★
+
+> The Unicorn Project _by Gene Kim_
+
+★★★☆☆
+
+> Atomic Habits _by James Clear_
+
+★★★★☆
 
 > Phosphorescence _by Julia Baird_
 
